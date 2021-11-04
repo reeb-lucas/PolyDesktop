@@ -33,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\ConsoleApp1.csproj",
-      "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj",
+      "projectName": "PolyDesktopLauncher",
+      "projectPath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj",
       "packagesPath": "C:\\Users\\Tyler\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",

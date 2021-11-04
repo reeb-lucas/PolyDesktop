@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BK8hECGtzyTUs3Amvzp2WxnwXanhsf0wNYnUF+IH1j9McrQ11I2EZhD6sw6ZYCTyQCbSjvdVFOCUiBOdIoFh+Q==",
+  "dgSpecHash": "bd2OC+nbko34hHB9QgZZ2uTYbzFDlga99FAejuS8mGTlm1wnxx1rXIahbDU5hbdCtrjcBzjZ7OFxZChYnR42fA==",
   "success": false,
-  "projectFilePath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\ConsoleApp1.csproj",
+  "projectFilePath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj",
   "expectedPackageFiles": [],
   "logs": [
     {

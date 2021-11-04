@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+#Additional
+*.suo
+*.props
+*.targets
+*.cache
