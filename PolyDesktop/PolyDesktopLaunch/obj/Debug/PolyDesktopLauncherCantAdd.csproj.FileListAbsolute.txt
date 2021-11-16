@@ -1,0 +1,2 @@
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopLaunch\obj\Debug\PolyDesktopLauncherCantAdd.csprojAssemblyReference.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopLaunch\obj\Debug\PolyDesktopLauncherCantAdd.csproj.CoreCompileInputs.cache

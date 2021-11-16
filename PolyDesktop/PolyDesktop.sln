@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyDesktopGUI", "PolyDesktopGUI\PolyDesktopGUI.csproj", "{7D537F84-45B7-4448-A8A8-C653C7525007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyDesktopLauncher", "ConsoleApp1\PolyDesktopLauncher.csproj", "{54CC712A-1865-4828-BF66-435CCA23D593}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolyDesktopLauncherNotCompatible", "ConsoleApp1\PolyDesktopLauncherNotCompatible.csproj", "{54CC712A-1865-4828-BF66-435CCA23D593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

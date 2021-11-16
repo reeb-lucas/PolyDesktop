@@ -10,7 +10,7 @@
  * Overview:
  *      
  **************************************************************/
-namespace ConsoleApp1
+namespace PolyDesktopLauncher
 {
     class Program
     {
