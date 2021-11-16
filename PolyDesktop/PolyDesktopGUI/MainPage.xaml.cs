@@ -12,19 +12,40 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.ViewManagement;
+/**************************************************************
+ * Copyright (c) 2021
+ * Author: Tyler Lucas
+ * Filename: MainPage.cs
+ * Date Created: 11/16/2021
+ * Modifications: 11/16/2021 - Created Main Menu, Buttons do not have functionality
+ **************************************************************/
+/**************************************************************
+ * Overview:
+ *      This file creates the MainPage or Main Menu with 6 basic buttons. Functionality for each button
+ *      is described in the function comments.
+ **************************************************************/
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace PolyDesktopGUI
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Main menu page
     /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
         {
             this.InitializeComponent();
+
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(
+                new Size(
+                    500, // Width
+                    1000 // Height
+                    )
+                );//TODO: Fix Height stuck at 750 pixels
         }
+
     }
 }
