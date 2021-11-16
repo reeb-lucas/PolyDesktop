@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "PolyDesktopGUI/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/PolyDesktopGUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PolyDesktopGUI.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PolyDesktopGUI/1.0.0": {
+      "type": "project",
+      "path": "../PolyDesktopGUI/PolyDesktopGUI.csproj",
+      "msbuildProject": "../PolyDesktopGUI/PolyDesktopGUI.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "PolyDesktopGUI >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Tyler\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj": {
+              "projectPath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -68,5 +91,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project PolyDesktopGUI is not compatible with net5.0 (.NETCoreApp,Version=v5.0). Project PolyDesktopGUI supports: uap10.0.17763 (UAP,Version=v10.0.17763)",
+      "libraryId": "PolyDesktopGUI",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }
