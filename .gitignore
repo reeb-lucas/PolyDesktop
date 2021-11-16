@@ -36,3 +36,5 @@
 *.props
 *.targets
 *.cache
+PolyDesktop/.vs/PolyDesktop/v16/.suo
+*.cache

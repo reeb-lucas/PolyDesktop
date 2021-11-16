@@ -1,18 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bd2OC+nbko34hHB9QgZZ2uTYbzFDlga99FAejuS8mGTlm1wnxx1rXIahbDU5hbdCtrjcBzjZ7OFxZChYnR42fA==",
-  "success": false,
+  "dgSpecHash": "teVuIVzxmP4Lp5NAZ3IHyks1Pj2AcJG0OX/V1etI+ojBpiPMVd4LnJqA0glkwxwHSTmXdRBIvtwUMB6ZupzuWw==",
+  "success": true,
   "projectFilePath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project PolyDesktopGUI is not compatible with net5.0 (.NETCoreApp,Version=v5.0). Project PolyDesktopGUI supports: uap10.0.17763 (UAP,Version=v10.0.17763)",
-      "libraryId": "PolyDesktopGUI",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }

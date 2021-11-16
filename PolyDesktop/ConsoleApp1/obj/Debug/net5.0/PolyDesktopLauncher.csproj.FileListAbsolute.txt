@@ -1,0 +1,16 @@
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\bin\Debug\net5.0\PolyDesktopLauncher.exe
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\bin\Debug\net5.0\PolyDesktopLauncher.deps.json
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\bin\Debug\net5.0\PolyDesktopLauncher.runtimeconfig.json
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\bin\Debug\net5.0\PolyDesktopLauncher.runtimeconfig.dev.json
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\bin\Debug\net5.0\PolyDesktopLauncher.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\bin\Debug\net5.0\ref\PolyDesktopLauncher.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\bin\Debug\net5.0\PolyDesktopLauncher.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\obj\Debug\net5.0\PolyDesktopLauncher.csprojAssemblyReference.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\obj\Debug\net5.0\PolyDesktopLauncher.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\obj\Debug\net5.0\PolyDesktopLauncher.AssemblyInfoInputs.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\obj\Debug\net5.0\PolyDesktopLauncher.AssemblyInfo.cs
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\obj\Debug\net5.0\PolyDesktopLauncher.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\obj\Debug\net5.0\PolyDesktopLauncher.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\obj\Debug\net5.0\ref\PolyDesktopLauncher.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\obj\Debug\net5.0\PolyDesktopLauncher.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\ConsoleApp1\obj\Debug\net5.0\PolyDesktopLauncher.genruntimeconfig.cache
