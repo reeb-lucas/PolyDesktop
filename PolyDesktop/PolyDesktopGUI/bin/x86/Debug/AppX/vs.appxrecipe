@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D350D06AC9DF6EE92EA6EA357A5890CF7D6478F5C61B52F39946560C994005B7</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>415A6916B9072340E052C0DF76B41FDEF1A8D07F42D76FF5E094A9B365C07219</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>4db6ffbb-e182-47e7-9ef7-9c72321828fe_1.0.0.0_x86__t4c8gy7px9yc2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>4db6ffbb-e182-47e7-9ef7-9c72321828fe_t4c8gy7px9yc2!App</RegisteredUserModeAppID>
     <RegisteredPackageID>4db6ffbb-e182-47e7-9ef7-9c72321828fe</RegisteredPackageID>
@@ -30,17 +30,17 @@
     <AppXManifest Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-16T20:03:07.702</Modified>
+      <Modified>2021-11-17T07:36:26.820</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.exe">
       <PackagePath>entrypoint\PolyDesktopGUI.exe</PackagePath>
-      <Modified>2021-11-16T20:03:06.878</Modified>
+      <Modified>2021-11-17T07:36:26.067</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.11\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\Tyler\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
-      <Modified>2020-11-20T17:09:24.000</Modified>
+      <Modified>2021-10-10T13:49:52.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -94,15 +94,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.xr.xml">
       <PackagePath>PolyDesktopGUI.xr.xml</PackagePath>
-      <Modified>2021-11-16T19:45:47.310</Modified>
+      <Modified>2021-11-17T07:19:35.966</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-11-16T20:03:06.832</Modified>
+      <Modified>2021-11-17T07:36:25.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-11-16T20:03:06.832</Modified>
+      <Modified>2021-11-17T07:36:25.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -110,65 +110,65 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-11-16T20:03:06.987</Modified>
+      <Modified>2021-11-17T07:36:26.341</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Core\PolyDesktopGUI.exe">
       <PackagePath>PolyDesktopGUI.exe</PackagePath>
-      <Modified>2021-11-16T20:03:07.699</Modified>
+      <Modified>2021-11-17T07:36:26.811</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Tyler\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
-      <Version>2.2.27902.3</Version>
+      <Version>2.2.30527.2</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Tyler\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Tyler\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
-      <Version>2.2.27902.3</Version>
+      <Version>2.2.30527.2</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Tyler\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Tyler\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
-      <Version>2.2.27902.3</Version>
+      <Version>2.2.30527.2</Version>
       <Architecture>arm</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Tyler\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Tyler\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
-      <Version>2.2.29301.2</Version>
+      <Version>2.2.30316.1</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Tyler\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Tyler\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
-      <Version>2.2.29301.2</Version>
+      <Version>2.2.30316.1</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Tyler\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Tyler\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
-      <Version>2.2.29301.2</Version>
+      <Version>2.2.30316.1</Version>
       <Architecture>arm</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Tyler\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
