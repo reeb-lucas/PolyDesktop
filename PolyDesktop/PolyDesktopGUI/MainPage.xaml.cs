@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.UI.ViewManagement;
 /**************************************************************
  * Copyright (c) 2021
- * Author: Tyler Lucas
+ * Author: Tyler Lucas, Jacob Pressley
  * Filename: MainPage.cs
  * Date Created: 11/16/2021
  * Modifications: 11/16/2021 - Created Main Menu, Buttons do not have functionality
@@ -47,5 +47,9 @@ namespace PolyDesktopGUI
                 );//TODO: Fix Height stuck at 750 pixels
         }
 
+        private void DesktopPropertiesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DesktopProperties));
+        }
     }
 }
