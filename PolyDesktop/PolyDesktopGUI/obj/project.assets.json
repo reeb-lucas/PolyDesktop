@@ -203,7 +203,7 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.1": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.UI.Xaml": "2.7.0"
@@ -535,7 +535,7 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.1": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.UI.Xaml": "2.7.0"
@@ -1045,7 +1045,7 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.1": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.UI.Xaml": "2.7.0"
@@ -1556,7 +1556,7 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.1": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.UI.Xaml": "2.7.0"
@@ -2067,7 +2067,7 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.1": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.UI.Xaml": "2.7.0"
@@ -2577,7 +2577,7 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.1": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.UI.Xaml": "2.7.0"
@@ -3088,7 +3088,7 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.1": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.UI.Xaml": "2.7.0"
@@ -3598,7 +3598,7 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.1": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.UI.Xaml": "2.7.0"
@@ -4289,10 +4289,10 @@
         "runtime.json"
       ]
     },
-    "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.1": {
-      "sha512": "mTNAIO31DNIrWkKaMWIs2j1GSl0tzJvYEzzBjD9UOfKcPF5CKXlK+kpUpKaLLW4Syq8PxY64qermIqB0bLciNA==",
+    "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/7.1.2": {
+      "sha512": "aqdsOHg2wrLegNLw8Pa9TCX6mRKIudCOBtV4K7+4K5ByuASwR9RH6qWcdmbOOAGp3iSb/B/es+fJ584gDoROUw==",
       "type": "package",
-      "path": "microsoft.toolkit.uwp.ui.controls.datagrid/7.1.1",
+      "path": "microsoft.toolkit.uwp.ui.controls.datagrid/7.1.2",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -4307,7 +4307,7 @@
         "lib/uap10.0.17763/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.pri",
         "lib/uap10.0.17763/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xml",
         "lib/uap10.0.17763/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml",
-        "microsoft.toolkit.uwp.ui.controls.datagrid.7.1.1.nupkg.sha512",
+        "microsoft.toolkit.uwp.ui.controls.datagrid.7.1.2.nupkg.sha512",
         "microsoft.toolkit.uwp.ui.controls.datagrid.nuspec",
         "tools/VisualStudioToolsManifest.xml"
       ]
@@ -8402,22 +8402,23 @@
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.13",
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid >= 7.1.1"
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid >= 7.1.2",
+      "Microsoft.UI.Xaml >= 2.7.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\Tyler\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+      "projectUniqueName": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
       "projectName": "PolyDesktopGUI",
-      "projectPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\obj\\",
+      "projectPath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+      "packagesPath": "C:\\Users\\Tyler\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8425,7 +8426,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tyler\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8451,7 +8452,11 @@
           },
           "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid": {
             "target": "Package",
-            "version": "[7.1.1, )"
+            "version": "[7.1.2, )"
+          },
+          "Microsoft.UI.Xaml": {
+            "target": "Package",
+            "version": "[2.7.0, )"
           }
         },
         "imports": [
