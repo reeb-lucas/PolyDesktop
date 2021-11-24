@@ -334,11 +334,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jerro\\source\\repos\\Hardwarespecs\\Hardwarespecs\\HardwareSpecPuller.csproj",
+      "projectUniqueName": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\Hardwarespecs\\HardwareSpecPuller.csproj",
       "projectName": "HardwareSpecPuller",
-      "projectPath": "C:\\Users\\jerro\\source\\repos\\Hardwarespecs\\Hardwarespecs\\HardwareSpecPuller.csproj",
+      "projectPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\Hardwarespecs\\HardwareSpecPuller.csproj",
       "packagesPath": "C:\\Users\\jerro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jerro\\source\\repos\\Hardwarespecs\\Hardwarespecs\\obj\\",
+      "outputPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\Hardwarespecs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

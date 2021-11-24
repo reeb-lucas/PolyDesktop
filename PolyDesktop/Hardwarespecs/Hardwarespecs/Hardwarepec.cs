@@ -21,8 +21,44 @@ namespace Hardwarespecs
             GetCPUInfo();
             GetGPUInfo();
            // GetCpuSpeedInGHz();
-            GetRAMSize();
+            GetRAMInfo();
+            GetStorageInfo();
         }
+
+        private static void GetStorageInfo()
+        {
+            ManagementClass mc = new ManagementClass("win32_LogicalDisk");
+            ManagementObjectCollection moc = mc.GetInstances();
+            String info = string.Empty;
+            UInt64 t = 0;
+            UInt64 Free = 0;
+            foreach (ManagementObject mo in moc)                                          // Goes through all storage drives connected
+            {
+                t = (UInt64)mo.Properties["size"].Value;
+                t = (t / 1000) / 1000 / 1000 + 1;                                         // GB conversion  
+                Free = (UInt64)mo["FreeSpace"];
+                Free = (Free / 1000) / 1000 / 1000 + 1;                                   // GB conversion
+                info = (string)mo["Name"] + " has " + Free.ToString() + "GB available of " + t.ToString() + "GB";
+                Console.WriteLine(info);
+            }
+
+            { /*ManagementClass mc = new ManagementClass("win32_DiskDrive");
+            ManagementObjectCollection moc = mc.GetInstances();
+            String info = string.Empty;
+            UInt64 t = 0;
+            UInt64 Free = 0;
+            foreach (ManagementObject mo in moc)                        // Goes through all storage drives connected
+            {
+                t = (UInt64)mo.Properties["size"].Value;
+                t = (t / 1000) / 1000 / 1000;                           // GB conversion  
+              //  Free = (UInt64)mo["FreeSpace"];
+              //  Free = (Free / 1000) / 1000 / 1000 + 1;
+                info = (string)mo["Model"]  +", "+ t.ToString() + "GB";
+                Console.WriteLine(info);
+            }*/
+            }
+        }
+
         static void GetGPUInfo()
         {
             ManagementClass mc = new ManagementClass("win32_VideoController");
@@ -46,7 +82,7 @@ namespace Hardwarespecs
                     break;
                 }
             }
-            Console.WriteLine(GHz);
+            Console.WriteLine(GHz.ToString());
         }
 
         static void GetCPUInfo()
@@ -73,25 +109,27 @@ namespace Hardwarespecs
             }
             Console.WriteLine(info);
         }
-        static void GetRAMSize()
+        static void GetRAMInfo()
         {
-            ManagementScope oMs = new ManagementScope();
-            ObjectQuery oQuery = new ObjectQuery("SELECT Capacity FROM Win32_PhysicalMemory");
-            ManagementObjectSearcher oSearcher = new ManagementObjectSearcher(oMs, oQuery);
-            ManagementObjectCollection oCollection = oSearcher.Get();
+            
+            ManagementClass mc = new ManagementClass("Win32_PhysicalMemory");
+            ManagementObjectCollection oCollection = mc.GetInstances();
 
             long MemSize = 0;
             long mCap = 0;
-
-             // In case more than one Memory sticks are installed
+            String info = String.Empty;
+            UInt32 t = 0;
+            // In case more than one Memory sticks are installed
             foreach (ManagementObject obj in oCollection)
             {
+                t = (UInt32)obj["Speed"];
                 mCap = Convert.ToInt64(obj["Capacity"]);
-                MemSize += mCap;
+                MemSize += mCap;  
             }
             MemSize = (MemSize / 1024) / 1024 / 1024; // conversion to GB
             Console.WriteLine("Ram: " + MemSize.ToString() + "GB");
-           
+            Console.WriteLine("RamSpeed: "+ t.ToString());
+
         }
     }
 }
