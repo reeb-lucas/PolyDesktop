@@ -67,5 +67,6 @@
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="PolyDesktopGUI.MainPage" />
+    <RootType FullName="PolyDesktopGUI.ScriptStats" />
   </Roots.RootTypes>
 </Roots>

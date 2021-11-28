@@ -51,5 +51,10 @@ namespace PolyDesktopGUI
         {
             this.Frame.Navigate(typeof(DesktopProperties));
         }
+
+        private void ScriptStatsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ScriptStats));
+        }
     }
 }
