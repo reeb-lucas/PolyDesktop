@@ -3,7 +3,7 @@ using System.Management; // NuGet this if it throws an error
 /**************************************************************
  * Copyright (c) 2021
  * Author: Jerron Rhen
- * Filename: Program.cs
+ * Filename: Hardwarespec.cs
  * Date Created: 11/16/2021
  * Modifications:
  **************************************************************/
@@ -17,12 +17,30 @@ namespace Hardwarespecs
     {
         static void Main(string[] args)
         {
+            GetPCid();
             GetPCName();
             GetCPUInfo();
             GetGPUInfo();
-           // GetCpuSpeedInGHz();
+            GetCpuSpeedInGHz();
             GetRAMInfo();
             GetStorageInfo();
+        }
+
+        private static void GetPCid()
+        {
+            ManagementClass mc = new ManagementClass("win32_DiskDrive");
+            ManagementObjectCollection moc = mc.GetInstances();
+            String info = string.Empty;
+            foreach (ManagementObject mo in moc)
+            {
+               
+            
+                if ((string)mo["MediaType"] == "Fixed hard disk media")
+                {
+                     info += (string)mo["SerialNumber"];
+                }
+            }
+            Console.WriteLine(info);
         }
 
         private static void GetStorageInfo()
@@ -34,28 +52,13 @@ namespace Hardwarespecs
             UInt64 Free = 0;
             foreach (ManagementObject mo in moc)                                          // Goes through all storage drives connected
             {
+
                 t = (UInt64)mo.Properties["size"].Value;
                 t = (t / 1000) / 1000 / 1000 + 1;                                         // GB conversion  
                 Free = (UInt64)mo["FreeSpace"];
                 Free = (Free / 1000) / 1000 / 1000 + 1;                                   // GB conversion
                 info = (string)mo["Name"] + " has " + Free.ToString() + "GB available of " + t.ToString() + "GB";
                 Console.WriteLine(info);
-            }
-
-            { /*ManagementClass mc = new ManagementClass("win32_DiskDrive");
-            ManagementObjectCollection moc = mc.GetInstances();
-            String info = string.Empty;
-            UInt64 t = 0;
-            UInt64 Free = 0;
-            foreach (ManagementObject mo in moc)                        // Goes through all storage drives connected
-            {
-                t = (UInt64)mo.Properties["size"].Value;
-                t = (t / 1000) / 1000 / 1000;                           // GB conversion  
-              //  Free = (UInt64)mo["FreeSpace"];
-              //  Free = (Free / 1000) / 1000 / 1000 + 1;
-                info = (string)mo["Model"]  +", "+ t.ToString() + "GB";
-                Console.WriteLine(info);
-            }*/
             }
         }
 
@@ -90,8 +93,9 @@ namespace Hardwarespecs
             ManagementClass mc = new ManagementClass("win32_processor");
             ManagementObjectCollection moc = mc.GetInstances();
             String info = string.Empty;
+            
             foreach (ManagementObject mo in moc)
-            {
+            {    
                 info = (string)mo["Name"];
                 //name = name.Replace("(TM)", "™").Replace("(tm)", "™").Replace("(R)", "®").Replace("(r)", "®").Replace("(C)", "©").Replace("(c)", "©").Replace("    ", " ").Replace("  ", " ");
             }
