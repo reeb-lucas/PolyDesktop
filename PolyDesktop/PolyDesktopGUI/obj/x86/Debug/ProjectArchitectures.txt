@@ -1,1 +1,1 @@
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\PolyDesktopGUI.csproj;x86
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\PolyDesktopGUI.csproj;x86

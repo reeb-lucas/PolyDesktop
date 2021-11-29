@@ -17,13 +17,20 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+/**************************************************************
+ * Copyright (c) 2021
+ * Author: Jacob Pressley
+ * Filename: DesktopProperties.xaml.cs
+ * Date Created: 11/6/2021
+ * Modifications:
+ **************************************************************/
+/**************************************************************
+ * Overview:
+ *      
+ **************************************************************/
 
 namespace PolyDesktopGUI
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class DesktopProperties : Page
     {
         private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";

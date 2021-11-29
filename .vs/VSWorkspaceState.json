@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\PolyDesktop",
-    "\\PolyDesktop\\PolyDesktopGUI"
+    "\\PolyDesktop\\ConsoleApp1"
   ],
-  "SelectedNode": "\\PolyDesktop\\PolyDesktopGUI\\MainPage.xaml",
+  "SelectedNode": "\\PolyDesktop\\ConsoleApp1\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -8407,18 +8407,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\japre\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+      "projectUniqueName": "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
       "projectName": "PolyDesktopGUI",
-      "projectPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\obj\\",
+      "projectPath": "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+      "packagesPath": "C:\\Users\\japre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8426,7 +8426,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\japre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -16,9 +16,10 @@ using Windows.UI.ViewManagement;
 /**************************************************************
  * Copyright (c) 2021
  * Author: Tyler Lucas, Jacob Pressley
- * Filename: MainPage.cs
+ * Filename: MainPage.xaml.cs
  * Date Created: 11/16/2021
  * Modifications: 11/16/2021 - Created Main Menu, Buttons do not have functionality
+ *                  11/29/2021 - all main buttons have functionality
  **************************************************************/
 /**************************************************************
  * Overview:
@@ -30,9 +31,6 @@ using Windows.UI.ViewManagement;
 
 namespace PolyDesktopGUI
 {
-    /// <summary>
-    /// Main menu page
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -55,6 +53,11 @@ namespace PolyDesktopGUI
         private void ScriptStatsButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ScriptStats));
+        }
+
+        private void DesktopPresetsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(EditPresets));
         }
     }
 }
