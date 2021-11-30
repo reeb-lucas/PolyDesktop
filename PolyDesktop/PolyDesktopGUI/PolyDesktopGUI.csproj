@@ -119,18 +119,30 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BasicMode.xaml.cs">
+      <DependentUpon>BasicMode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DesktopProperties.xaml.cs">
       <DependentUpon>DesktopProperties.xaml</DependentUpon>
     </Compile>
     <Compile Include="EditPresets.xaml.cs">
       <DependentUpon>EditPresets.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GroupMode.xaml.cs">
+      <DependentUpon>GroupMode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OverlayMode.xaml.cs">
+      <DependentUpon>OverlayMode.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScriptStats.xaml.cs">
       <DependentUpon>ScriptStats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabMode.xaml.cs">
+      <DependentUpon>TabMode.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +167,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="BasicMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DesktopProperties.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -163,11 +179,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GroupMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="OverlayMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ScriptStats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabMode.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

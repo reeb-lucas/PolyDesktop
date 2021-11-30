@@ -24,8 +24,7 @@ using Windows.UI.Xaml.Navigation;
  * Modifications:
  **************************************************************/
 /**************************************************************
- * Overview: 
- *      
+ * Overview:    
  * Preset Saving Standard: "Name, Mode, # of computers, Computer ID, Nickname, Computer ID, Nickname, ..."
  *                          nickname will be void if none is present "Computer ID, , ..."
  *                          user can only have up to 100 presets
