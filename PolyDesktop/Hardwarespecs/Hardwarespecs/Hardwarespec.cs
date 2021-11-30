@@ -17,16 +17,17 @@ namespace Hardwarespecs
     {
         static void Main(string[] args)
         {
-            GetPCid();
-            GetPCName();
-            GetCPUInfo();
-            GetGPUInfo();
-            GetCpuSpeedInGHz();
-            GetRAMInfo();
-            GetStorageInfo();
+           Console.WriteLine( GetPCid());
+            Console.WriteLine(GetPCName());
+            Console.WriteLine(GetCPUInfo());
+            Console.WriteLine(GetGPUInfo());
+            Console.WriteLine(GetCpuSpeedInGHz());
+            Console.WriteLine(GetRAMsize());
+            Console.WriteLine(GetStorageInfo());
+            Console.WriteLine(GetRAMspeed());
         }
 
-        private static void GetPCid()
+        private static string GetPCid()
         {
             ManagementClass mc = new ManagementClass("win32_DiskDrive");
             ManagementObjectCollection moc = mc.GetInstances();
@@ -40,29 +41,30 @@ namespace Hardwarespecs
                      info += (string)mo["SerialNumber"];
                 }
             }
-            Console.WriteLine(info);
+            return(info);
         }
 
-        private static void GetStorageInfo()
+        private static string GetStorageInfo()
         {
             ManagementClass mc = new ManagementClass("win32_LogicalDisk");
             ManagementObjectCollection moc = mc.GetInstances();
             String info = string.Empty;
             UInt64 t = 0;
             UInt64 Free = 0;
-            foreach (ManagementObject mo in moc)                                          // Goes through all storage drives connected
+            foreach (ManagementObject mo in moc)                                          // Goes through all storage drives connected this dose include Thumb drives currently
             {
 
                 t = (UInt64)mo.Properties["size"].Value;
-                t = (t / 1000) / 1000 / 1000 + 1;                                         // GB conversion  
+                t = (t / 1000) / 1000 / 1000 + 1;                                                              // GB conversion  
                 Free = (UInt64)mo["FreeSpace"];
-                Free = (Free / 1000) / 1000 / 1000 + 1;                                   // GB conversion
+                Free = (Free / 1000) / 1000 / 1000 + 1;                                                  // GB conversion
                 info = (string)mo["Name"] + " has " + Free.ToString() + "GB available of " + t.ToString() + "GB";
-                Console.WriteLine(info);
+                break;
             }
+            return (info);
         }
 
-        static void GetGPUInfo()
+        static string GetGPUInfo()
         {
             ManagementClass mc = new ManagementClass("win32_VideoController");
             ManagementObjectCollection moc = mc.GetInstances();
@@ -70,11 +72,11 @@ namespace Hardwarespecs
 
             foreach (ManagementObject mo in moc)
             {
-                info = (string)mo["Name"];
+                info += (string)mo["Name"] + " ";
             }
-            Console.WriteLine(info);
+            return(info);
         }
-        static void GetCpuSpeedInGHz()
+        static string GetCpuSpeedInGHz()
         {
             double? GHz = null;
             using (ManagementClass mc = new ManagementClass("Win32_Processor"))
@@ -85,23 +87,22 @@ namespace Hardwarespecs
                     break;
                 }
             }
-            Console.WriteLine(GHz.ToString());
+            return(GHz.ToString());
         }
 
-        static void GetCPUInfo()
+        static string GetCPUInfo()
         {
             ManagementClass mc = new ManagementClass("win32_processor");
             ManagementObjectCollection moc = mc.GetInstances();
             String info = string.Empty;
-            
             foreach (ManagementObject mo in moc)
             {    
                 info = (string)mo["Name"];
                 //name = name.Replace("(TM)", "™").Replace("(tm)", "™").Replace("(R)", "®").Replace("(r)", "®").Replace("(C)", "©").Replace("(c)", "©").Replace("    ", " ").Replace("  ", " ");
             }
-            Console.WriteLine(info);
+            return(info);
         }
-        static void GetPCName()
+        static string GetPCName()
         {
             ManagementClass mc = new ManagementClass("Win32_ComputerSystem");
             ManagementObjectCollection moc = mc.GetInstances();
@@ -109,31 +110,37 @@ namespace Hardwarespecs
             foreach (ManagementObject mo in moc)
             {
                 info = (string)mo["Name"];
-               
             }
-            Console.WriteLine(info);
+            return(info);
         }
-        static void GetRAMInfo()
+        static string GetRAMsize()
         {
-            
             ManagementClass mc = new ManagementClass("Win32_PhysicalMemory");
             ManagementObjectCollection oCollection = mc.GetInstances();
 
             long MemSize = 0;
             long mCap = 0;
             String info = String.Empty;
+            // In case more than one Memory sticks are installed
+            foreach (ManagementObject obj in oCollection)
+            {
+                mCap = Convert.ToInt64(obj["Capacity"]);
+                MemSize += mCap;  
+            }
+            MemSize = (MemSize / 1024) / 1024 / 1024; // conversion to GB
+            return("Ram: " + MemSize.ToString() + "GB");
+        }
+        static string GetRAMspeed()
+        {
+            ManagementClass mc = new ManagementClass("Win32_PhysicalMemory");
+            ManagementObjectCollection oCollection = mc.GetInstances();
             UInt32 t = 0;
             // In case more than one Memory sticks are installed
             foreach (ManagementObject obj in oCollection)
             {
                 t = (UInt32)obj["Speed"];
-                mCap = Convert.ToInt64(obj["Capacity"]);
-                MemSize += mCap;  
             }
-            MemSize = (MemSize / 1024) / 1024 / 1024; // conversion to GB
-            Console.WriteLine("Ram: " + MemSize.ToString() + "GB");
-            Console.WriteLine("RamSpeed: "+ t.ToString());
-
+            return ("RamSpeed: " + t.ToString());
         }
     }
 }
