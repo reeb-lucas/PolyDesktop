@@ -13,10 +13,6 @@
         <Button x:Name="BackButton" Margin="-575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58" CornerRadius="5,5,5,5" Click="BackButton_Click">
             <SymbolIcon Symbol="Back"/>
         </Button>
-        <Button x:Name="WriteButton" Content="Write" Margin="321,336,0,0" VerticalAlignment="Top" Click="WriteButton_Click"/>
-        <TextBox x:Name="WriteBox" HorizontalAlignment="Left" Margin="303,262,0,0" Text="Write" TextWrapping="Wrap" VerticalAlignment="Top" Width="298"/>
-        <TextBlock x:Name="ReadBlock" HorizontalAlignment="Left" Margin="1084,264,0,0" Text="Read" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"/>
-        <Button x:Name="ReadButton" Content="Read" Margin="1081,330,0,0" VerticalAlignment="Top" Click="ReadButton_Click"/>
-        <GridView DisplayMemberPath="Name" ItemsSource="{x:Bind Presets}" Margin="0,165,0,0" />
+        <ListView DisplayMemberPath="Name" ItemsSource="{x:Bind Presets}" HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200" SelectionChanged="ListView_SelectionChanged" />
     </Grid>
 </Page>

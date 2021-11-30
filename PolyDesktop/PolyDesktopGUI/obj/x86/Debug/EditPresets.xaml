@@ -13,11 +13,7 @@
         <Button x:ConnectionId='2' x:Name="BackButton" Margin="-575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58" CornerRadius="5,5,5,5"                         >
             <SymbolIcon Symbol="Back"/>
         </Button>
-        <Button x:ConnectionId='3' x:Name="WriteButton" Content="Write" Margin="321,336,0,0" VerticalAlignment="Top"                          />
-        <TextBox x:ConnectionId='4' x:Name="WriteBox" HorizontalAlignment="Left" Margin="303,262,0,0" Text="Write" TextWrapping="Wrap" VerticalAlignment="Top" Width="298"/>
-        <TextBlock x:ConnectionId='5' x:Name="ReadBlock" HorizontalAlignment="Left" Margin="1084,264,0,0" Text="Read" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"/>
-        <Button x:ConnectionId='6' x:Name="ReadButton" Content="Read" Margin="1081,330,0,0" VerticalAlignment="Top"                         />
-        <GridView x:ConnectionId='7' DisplayMemberPath="Name"                                Margin="0,165,0,0" />
+        <ListView x:ConnectionId='3' DisplayMemberPath="Name"                                HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200"                                              />
     </Grid>
 </Page>
 

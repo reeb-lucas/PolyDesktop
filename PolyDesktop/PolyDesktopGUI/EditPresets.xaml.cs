@@ -38,32 +38,37 @@ namespace PolyDesktopGUI
         {
             this.InitializeComponent();
         }
-        private void WriteButton_Click(object sender, RoutedEventArgs e)
-        {
-            File.WriteAllText(filename + "0.txt", WriteBox.Text);
-        }
-        private void ReadButton_Click(object sender, RoutedEventArgs e)
-        {
-            ReadBlock.Text = File.ReadAllText(filename + "0.txt");
-
-        }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }
-        public Preset[] Presets { get; } = new Preset[]
-        {
-            ("Preset1", "Group", 6),
-            ("Preset2", "Tab", 3)
-        };
+        public Preset[] Presets { get { return GatherPresets(); } }
         public Preset[] GatherPresets()
         {
             Preset[] container = new Preset[100];
             for (int i = 0; i < 99; i++)
             {
-                string temp = File.ReadAllText(filename + i + ".txt"); //TODO: parse string and make Preset objects
+                try
+                {
+                    string temp = File.ReadAllText(filename + i + ".txt");
+                    string[] bucket = temp.Split(", ");
+                    Preset preset = new Preset();
+                    preset.Name = bucket[0];
+                    preset.Mode = bucket[1];
+                    preset.numComputers = Int32.Parse(bucket[2]);
+                    container[i] = preset;
+                }
+                catch
+                {
+                    break;
+                }
             }
             return container;
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Console.WriteLine("Selection Changed");
         }
     }
     public class Preset
@@ -71,9 +76,5 @@ namespace PolyDesktopGUI
         public string Name { get; set; }
         public string Mode { get; set; }
         public int numComputers { get; set; }
-        public static implicit operator Preset((string Name, string Mode, int numComputers) info)
-        {
-            return new Preset { Name = info.Name, Mode = info.Mode, numComputers = info.numComputers };
-        }
     }
 }
