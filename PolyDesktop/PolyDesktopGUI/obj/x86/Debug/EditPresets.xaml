@@ -14,14 +14,19 @@
             <SymbolIcon Symbol="Back"/>
         </Button>
         <ListView x:ConnectionId='3' Name="PresetList" DisplayMemberPath="Name"                                HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200"                                              />
-        <ComboBox x:ConnectionId='4' x:Name="ModeBox" Margin="962,252,0,0" Width="108"/>
-        <Button x:ConnectionId='5' x:Name="PresetSaveButton" Content="Save Preset" Margin="1092,251,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="831,252,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <ComboBox x:ConnectionId='4' x:Name="ModeBox" Margin="962,252,0,0" Width="108">
+            <x:String>Classic</x:String>
+            <x:String>Tab</x:String>
+            <x:String>Group</x:String>
+            <x:String>Overlay</x:String>
+        </ComboBox>
+        <Button x:ConnectionId='5' x:Name="PresetSaveButton" Content="Save Preset" Margin="1095,251,0,0" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='6' Name="NameBox" HorizontalAlignment="Left" Margin="831,252,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
         <TextBlock HorizontalAlignment="Left" Margin="996,222,0,0" Text="Mode:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="846,222,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <controls:DataGrid x:ConnectionId='6' x:Name="ComputerTable" Margin="831,335,736,0" AutoGenerateColumns="False"/>
-        <TextBox x:ConnectionId='7' x:Name="TestBox" HorizontalAlignment="Left" Margin="1373,135,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:ConnectionId='8' x:Name="TestButton" Content="Button" Margin="1400,185,0,0" VerticalAlignment="Top"                         />
+        <GridView x:ConnectionId='7' x:Name="ComputerTable" DisplayMemberPath="Name" Margin="831,335,736,0"                                 />
+        <TextBox x:ConnectionId='8' x:Name="TestBox" HorizontalAlignment="Left" Margin="1373,135,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:ConnectionId='9' x:Name="TestButton" Content="Button" Margin="1400,185,0,0" VerticalAlignment="Top"                         />
     </Grid>
 </Page>
 

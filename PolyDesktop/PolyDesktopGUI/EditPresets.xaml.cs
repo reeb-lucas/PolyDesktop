@@ -27,7 +27,6 @@ using Windows.UI.Xaml.Navigation;
  * Overview: 
  *      
  * Preset Saving Standard: "Name, Mode, # of computers, Computer ID, Nickname, Computer ID, Nickname, ..."
- *                          nickname will be void if none is present "Computer ID, , ..."
  *                          user can only have up to 100 presets
  **************************************************************/
 
@@ -70,35 +69,43 @@ namespace PolyDesktopGUI
         }
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string[,] source = GatherComputers(PresetList.SelectedIndex);
-            ComputerTable.ItemsSource = source; //This does NOT work
+            string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
+            string[] bucket = temp.Split(", ");
+            NameBox.Text = bucket[0];
+            ModeBox.PlaceholderText = bucket[1];
+            ComputerTable.ItemsSource = Computers;
         }
-        public string[,] GatherComputers(int preset)
+        private void ComputerTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //popout to view/change nickname, and remove computer
+            //if cell is empty, popup to add computer
+        }
+        public Computer[] Computers { get { return GatherComputers(); } }
+        public Computer[] GatherComputers()
+        {
+            Computer[] container = new Computer[100];
             try
             {
-                string temp = File.ReadAllText(filename + preset + ".txt");
+                string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
                 string[] bucket = temp.Split(", ");
-                string[,] container = new string[100, 3];
                 int j = 1;
                 for (int i = 0; i < 99; i++)
                 {
-                    j = j + 2;
-                    string[] cpu;
-                    container[i, 0] = bucket[j];
-                    container[i, 1] = "Computer Name";
-                    container[i, 2] = bucket[j + 1];
+                    j += 2;
+                    Computer preset = new Computer();
+                    preset.ID = bucket[j];
+                    preset.Name = "SAMPLENAME";
+                    preset.Nickname = bucket[j + 1];
+                    container[i] = preset;
                 }
-                return container;
             }
             catch
             {
-                Console.WriteLine("UUUHHH");
+                return container;
             }
-            string[,] exit = new string[1, 1];
-            return exit;
+            
+            return container;
         }
-
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
             File.WriteAllText(filename + 1 + ".txt", TestBox.Text);
@@ -114,6 +121,6 @@ namespace PolyDesktopGUI
     {
         public string ID { get; set; }
         public string Name { get; set; }
-        public string nickname { get; set; }
+        public string Nickname { get; set; }
     }
 }
