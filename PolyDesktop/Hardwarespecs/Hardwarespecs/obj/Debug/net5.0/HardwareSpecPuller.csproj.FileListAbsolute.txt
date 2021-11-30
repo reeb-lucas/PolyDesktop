@@ -1,0 +1,60 @@
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.exe
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.deps.json
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.runtimeconfig.json
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.runtimeconfig.dev.json
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.dll
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\ref\HardwareSpecPuller.dll
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.pdb
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\System.CodeDom.dll
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\System.Management.dll
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Management.dll
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.AssemblyInfoInputs.cache
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.AssemblyInfo.cs
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csproj.CoreCompileInputs.cache
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csproj.CopyComplete
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.dll
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\ref\HardwareSpecPuller.dll
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.pdb
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.genruntimeconfig.cache
+C:\Users\jerro\source\repos\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csproj.AssemblyReference.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.exe
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.deps.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.runtimeconfig.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.runtimeconfig.dev.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\ref\HardwareSpecPuller.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\System.CodeDom.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\System.Management.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Management.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csproj.AssemblyReference.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.GeneratedMSBuildEditorConfig.editorconfig
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.AssemblyInfoInputs.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.AssemblyInfo.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csproj.CoreCompileInputs.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csproj.CopyComplete
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\ref\HardwareSpecPuller.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.genruntimeconfig.cache
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\ref\HardwareSpecPuller.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.exe
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.deps.json
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.runtimeconfig.json
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.runtimeconfig.dev.json
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\ref\HardwareSpecPuller.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\HardwareSpecPuller.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\System.CodeDom.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\System.Management.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Management.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csprojAssemblyReference.cache
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.GeneratedMSBuildEditorConfig.editorconfig
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.AssemblyInfoInputs.cache
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.AssemblyInfo.cs
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csproj.CoreCompileInputs.cache
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csproj.CopyComplete
+S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.genruntimeconfig.cache
