@@ -187,7 +187,6 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.xbf
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\EditPresets.xbf
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\ScriptStats.xbf
-C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\PolyDesktopGUI.csprojAssemblyReference.cache
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.g.i.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\ScriptStats.g.i.cs
@@ -216,3 +215,4 @@ C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\D
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.xbf
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.xbf
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.xbf
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\PolyDesktopGUI.csprojAssemblyReference.cache

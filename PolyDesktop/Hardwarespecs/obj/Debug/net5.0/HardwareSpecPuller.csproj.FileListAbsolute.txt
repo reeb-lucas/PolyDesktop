@@ -77,3 +77,4 @@ C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Debug\
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Debug\net5.0\ref\HardwareSpecPuller.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.pdb
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.genruntimeconfig.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csprojAssemblyReference.cache

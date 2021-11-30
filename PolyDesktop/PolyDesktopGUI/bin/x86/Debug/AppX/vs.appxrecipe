@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-30T19:22:03.235</Modified>
+      <Modified>2021-11-30T20:08:54.032</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.exe">
       <PackagePath>entrypoint\PolyDesktopGUI.exe</PackagePath>
-      <Modified>2021-11-30T19:22:01.829</Modified>
+      <Modified>2021-11-30T20:08:53.463</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
@@ -102,43 +102,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.xr.xml">
       <PackagePath>PolyDesktopGUI.xr.xml</PackagePath>
-      <Modified>2021-11-30T19:22:01.720</Modified>
+      <Modified>2021-11-30T20:06:10.453</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-11-30T19:22:01.744</Modified>
+      <Modified>2021-11-30T20:08:53.402</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\BasicMode.xbf">
       <PackagePath>BasicMode.xbf</PackagePath>
-      <Modified>2021-11-30T19:22:01.744</Modified>
+      <Modified>2021-11-30T20:08:53.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\DesktopProperties.xbf">
       <PackagePath>DesktopProperties.xbf</PackagePath>
-      <Modified>2021-11-30T19:22:01.745</Modified>
+      <Modified>2021-11-30T20:08:53.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\EditPresets.xbf">
       <PackagePath>EditPresets.xbf</PackagePath>
-      <Modified>2021-11-30T19:22:01.745</Modified>
+      <Modified>2021-11-30T20:08:53.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\GroupMode.xbf">
       <PackagePath>GroupMode.xbf</PackagePath>
-      <Modified>2021-11-30T19:22:01.745</Modified>
+      <Modified>2021-11-30T20:08:53.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-11-30T19:22:01.745</Modified>
+      <Modified>2021-11-30T20:08:53.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\OverlayMode.xbf">
       <PackagePath>OverlayMode.xbf</PackagePath>
-      <Modified>2021-11-30T19:22:01.745</Modified>
+      <Modified>2021-11-30T20:08:53.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\ScriptStats.xbf">
       <PackagePath>ScriptStats.xbf</PackagePath>
-      <Modified>2021-11-30T19:22:01.745</Modified>
+      <Modified>2021-11-30T20:08:53.404</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\TabMode.xbf">
       <PackagePath>TabMode.xbf</PackagePath>
-      <Modified>2021-11-30T19:22:01.746</Modified>
+      <Modified>2021-11-30T20:08:53.404</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -150,11 +150,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-11-30T19:22:02.202</Modified>
+      <Modified>2021-11-30T20:06:10.672</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Core\PolyDesktopGUI.exe">
       <PackagePath>PolyDesktopGUI.exe</PackagePath>
-      <Modified>2021-11-30T19:22:03.230</Modified>
+      <Modified>2021-11-30T20:08:54.029</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tyler\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
