@@ -19,7 +19,7 @@ using Windows.UI.ViewManagement;
  * Filename: MainPage.xaml.cs
  * Date Created: 11/16/2021
  * Modifications: 11/16/2021 - Created Main Menu, Buttons do not have functionality
- *                  11/29/2021 - all main buttons have functionality
+ *                11/29/2021 - all main buttons have functionality
  **************************************************************/
 /**************************************************************
  * Overview:
@@ -58,6 +58,11 @@ namespace PolyDesktopGUI
         private void DesktopPresetsButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(EditPresets));
+        }
+
+        private void BasicMode_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BasicMode));
         }
     }
 }
