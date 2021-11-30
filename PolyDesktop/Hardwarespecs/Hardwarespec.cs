@@ -8,7 +8,7 @@ using System.Management; // NuGet this if it throws an error
  * Modifications:
  **************************************************************/
 /**************************************************************
- * Overview:
+ * Overview: Pulls the Hardware information of the current computer and uploads/updates a data base
  *      
  **************************************************************/
 namespace Hardwarespecs
@@ -17,7 +17,7 @@ namespace Hardwarespecs
     {
         static void Main(string[] args)
         {
-           Console.WriteLine( GetPCid());
+            Console.WriteLine(GetPCid());
             Console.WriteLine(GetPCName());
             Console.WriteLine(GetCPUInfo());
             Console.WriteLine(GetGPUInfo());
@@ -29,17 +29,16 @@ namespace Hardwarespecs
 
         private static string GetPCid()
         {
-            ManagementClass mc = new ManagementClass("win32_DiskDrive");
+            ManagementClass mc = new ManagementClass("win32_BIOS");
             ManagementObjectCollection moc = mc.GetInstances();
             String info = string.Empty;
             foreach (ManagementObject mo in moc)
             {
-               
-            
-                if ((string)mo["MediaType"] == "Fixed hard disk media")
-                {
-                     info += (string)mo["SerialNumber"];
-                }
+                //if ((string)mo["MediaType"] == "Fixed hard disk media")
+                //{
+                //     info += (string)mo["SerialNumber"];
+                //}
+                info += (string)mo["IdentificationCode"];
             }
             return(info);
         }
@@ -50,15 +49,11 @@ namespace Hardwarespecs
             ManagementObjectCollection moc = mc.GetInstances();
             String info = string.Empty;
             UInt64 t = 0;
-            UInt64 Free = 0;
             foreach (ManagementObject mo in moc)                                          // Goes through all storage drives connected this dose include Thumb drives currently
             {
-
                 t = (UInt64)mo.Properties["size"].Value;
                 t = (t / 1000) / 1000 / 1000 + 1;                                                              // GB conversion  
-                Free = (UInt64)mo["FreeSpace"];
-                Free = (Free / 1000) / 1000 / 1000 + 1;                                                  // GB conversion
-                info = (string)mo["Name"] + " has " + Free.ToString() + "GB available of " + t.ToString() + "GB";
+                info = t.ToString() + "GB";
                 break;
             }
             return (info);
@@ -139,6 +134,7 @@ namespace Hardwarespecs
             foreach (ManagementObject obj in oCollection)
             {
                 t = (UInt32)obj["Speed"];
+                break;
             }
             return ("RamSpeed: " + t.ToString());
         }
