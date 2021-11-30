@@ -180,3 +180,8 @@ C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj
 C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.xbf
 C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\EditPresets.xbf
 C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\PolyDesktopGUI.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\EditPresets.xbf
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.g.i.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.g.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.xaml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.xbf

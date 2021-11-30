@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj": {}
+    "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj": {}
   },
   "projects": {
-    "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj": {
+    "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj",
+        "projectUniqueName": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj",
         "projectName": "PolyDesktopLauncher",
-        "projectPath": "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj",
-        "packagesPath": "C:\\Users\\japre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\obj\\",
+        "projectPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\japre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

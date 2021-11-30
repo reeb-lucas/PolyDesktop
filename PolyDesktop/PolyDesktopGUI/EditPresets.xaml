@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PolyDesktopGUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:data="using:System.Data" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -13,6 +13,14 @@
         <Button x:Name="BackButton" Margin="-575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58" CornerRadius="5,5,5,5" Click="BackButton_Click">
             <SymbolIcon Symbol="Back"/>
         </Button>
-        <ListView DisplayMemberPath="Name" ItemsSource="{x:Bind Presets}" HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200" SelectionChanged="ListView_SelectionChanged" />
+        <ListView Name="PresetList" DisplayMemberPath="Name" ItemsSource="{x:Bind Presets}" HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200" SelectionChanged="ListView_SelectionChanged" />
+        <ComboBox x:Name="ModeBox" Margin="962,252,0,0" Width="108"/>
+        <Button x:Name="PresetSaveButton" Content="Save Preset" Margin="1092,251,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="831,252,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <TextBlock HorizontalAlignment="Left" Margin="996,222,0,0" Text="Mode:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="846,222,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <controls:DataGrid x:Name="ComputerTable" Margin="831,335,736,0" AutoGenerateColumns="False"/>
+        <TextBox x:Name="TestBox" HorizontalAlignment="Left" Margin="1373,135,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="TestButton" Content="Button" Margin="1400,185,0,0" VerticalAlignment="Top" Click="TestButton_Click"/>
     </Grid>
 </Page>

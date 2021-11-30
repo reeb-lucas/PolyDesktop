@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Uwp.UI.Controls;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -65,10 +68,40 @@ namespace PolyDesktopGUI
             }
             return container;
         }
-
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Console.WriteLine("Selection Changed");
+            string[,] source = GatherComputers(PresetList.SelectedIndex);
+            ComputerTable.ItemsSource = source; //This does NOT work
+        }
+        public string[,] GatherComputers(int preset)
+        {
+            try
+            {
+                string temp = File.ReadAllText(filename + preset + ".txt");
+                string[] bucket = temp.Split(", ");
+                string[,] container = new string[100, 3];
+                int j = 1;
+                for (int i = 0; i < 99; i++)
+                {
+                    j = j + 2;
+                    string[] cpu;
+                    container[i, 0] = bucket[j];
+                    container[i, 1] = "Computer Name";
+                    container[i, 2] = bucket[j + 1];
+                }
+                return container;
+            }
+            catch
+            {
+                Console.WriteLine("UUUHHH");
+            }
+            string[,] exit = new string[1, 1];
+            return exit;
+        }
+
+        private void TestButton_Click(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllText(filename + 1 + ".txt", TestBox.Text);
         }
     }
     public class Preset
@@ -76,5 +109,11 @@ namespace PolyDesktopGUI
         public string Name { get; set; }
         public string Mode { get; set; }
         public int numComputers { get; set; }
+    }
+    public class Computer
+    {
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string nickname { get; set; }
     }
 }
