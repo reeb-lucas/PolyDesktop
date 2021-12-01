@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -35,6 +36,8 @@ namespace PolyDesktopGUI
     {
         static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         string filename = Path.Combine(localApplicationData, "Preset");
+        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
+        string[] bucket;
         public EditPresets()
         {
             this.InitializeComponent();
@@ -69,15 +72,21 @@ namespace PolyDesktopGUI
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
-            string[] bucket = temp.Split(", ");
+            bucket = temp.Split(", ");
             NameBox.Text = bucket[0];
             ModeBox.PlaceholderText = bucket[1];
             ComputerTable.ItemsSource = Computers;
         }
         private void ComputerTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //popout to view/change nickname, and remove computer
-            //if cell is empty, popup to add computer
+            if(ComputerTable.SelectedItem != null)
+            {
+                //popout to view/change nickname, and remove computer
+            }
+            else
+            {
+                //if cell is empty, popup list of computers to add computer
+            }
         }
         public Computer[] Computers { get { return GatherComputers(); } }
         public Computer[] GatherComputers()
@@ -86,14 +95,14 @@ namespace PolyDesktopGUI
             try
             {
                 string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
-                string[] bucket = temp.Split(", ");
+                bucket = temp.Split(", ");
                 int j = 1;
                 for (int i = 0; i < 99; i++)
                 {
                     j += 2;
                     Computer preset = new Computer();
                     preset.ID = bucket[j];
-                    preset.Name = "SAMPLENAME";
+                    preset.Name = ExecuteQuery(j);
                     preset.Nickname = bucket[j + 1];
                     container[i] = preset;
                 }
@@ -105,9 +114,23 @@ namespace PolyDesktopGUI
             
             return container;
         }
+        private string ExecuteQuery(int index)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = "SELECT c_name FROM PolyDestopn.dbo.desktop WHERE c_ID = " + bucket[index];
+                return command.ExecuteScalar().ToString();
+            }
+        }
+            private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            //write back to file using bucket object
+        }
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText(filename + 1 + ".txt", TestBox.Text);
+            File.WriteAllText(filename + 0 + ".txt", TestBox.Text);
         }
     }
     public class Preset
