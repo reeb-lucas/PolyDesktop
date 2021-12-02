@@ -27,5 +27,6 @@
         <GridView x:Name="ComputerTable" HorizontalAlignment="Center" DisplayMemberPath="Name" Margin="831,335,736,0" ItemsSource="{x:Bind Computers}" SelectionChanged="ComputerTable_SelectionChanged"/>
         <TextBox x:Name="TestBox" HorizontalAlignment="Left" Margin="1243,80,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button x:Name="TestButton" Content="Button" Margin="1242,165,0,0" VerticalAlignment="Top" Click="TestButton_Click"/>
+        <Button x:Name="AddComputerButton" Content="+" Margin="1242,301,0,0" VerticalAlignment="Top" Click="AddComputerButton_Click"/>
     </Grid>
 </Page>

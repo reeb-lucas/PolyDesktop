@@ -83,10 +83,10 @@ namespace PolyDesktopGUI
             {
                 //popout to view/change nickname, and remove computer
             }
-            else
-            {
-                //if cell is empty, popup list of computers to add computer
-            }
+        }
+        private void AddComputerButton_Click(object sender, RoutedEventArgs e)
+        {
+            //popup to add computer from list to bucket and set nickname
         }
         public Computer[] Computers { get { return GatherComputers(); } }
         public Computer[] GatherComputers()
@@ -102,7 +102,10 @@ namespace PolyDesktopGUI
                     j += 2;
                     Computer preset = new Computer();
                     preset.ID = bucket[j];
-                    preset.Name = ExecuteQuery(j);
+                    if (bucket[j] != null)
+                    {
+                        preset.Name = ExecuteQuery(j);
+                    }
                     preset.Nickname = bucket[j + 1];
                     container[i] = preset;
                 }
@@ -118,13 +121,25 @@ namespace PolyDesktopGUI
         {
             using (var connection = new SqlConnection(connectionString))
             {
+                string sql = "SELECT c_name FROM PolyDestopn.dbo.desktop WHERE c_ID = " + bucket[index];
                 connection.Open();
-                var command = connection.CreateCommand();
-                command.CommandText = "SELECT c_name FROM PolyDestopn.dbo.desktop WHERE c_ID = " + bucket[index];
-                return command.ExecuteScalar().ToString();
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        string name = "No Name Found";
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            name = reader.GetString(0);
+                            reader.Close();
+                        }
+                        return name;
+                    }
+                }
             }
         }
-            private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
+        private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
         {
             //write back to file using bucket object
         }

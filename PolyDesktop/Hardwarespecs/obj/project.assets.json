@@ -327,23 +327,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\japre\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
+      "projectUniqueName": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
       "projectName": "HardwareSpecPuller",
-      "projectPath": "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
-      "packagesPath": "C:\\Users\\japre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\japre\\Source\\Repos\\reeblucas\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\obj\\",
+      "projectPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\japre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

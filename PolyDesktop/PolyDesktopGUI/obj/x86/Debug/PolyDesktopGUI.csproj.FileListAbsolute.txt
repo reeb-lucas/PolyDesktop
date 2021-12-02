@@ -118,12 +118,37 @@ C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj
 C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.xaml
 C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.xbf
 C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\EditPresets.xbf
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\BasicMode.xbf
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\GroupMode.xbf
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\OverlayMode.xbf
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\TabMode.xbf
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.g.i.cs
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.g.cs
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.g.i.cs
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.g.cs
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.g.i.cs
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.g.cs
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.g.i.cs
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.g.cs
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.xaml
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.xaml
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.xaml
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.xaml
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.xbf
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.xbf
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.xbf
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.xbf
+C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\PolyDesktopGUI.csproj.AssemblyReference.cache
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\App.xbf
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\BasicMode.xbf
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\DesktopProperties.xbf
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\EditPresets.xbf
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\GroupMode.xbf
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\MainPage.xbf
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\OverlayMode.xbf
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\ScriptStats.xbf
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\TabMode.xbf
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.xr.xml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.exe
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.pdb
@@ -138,25 +163,41 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\App.g.i.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\App.g.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.g.i.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\DesktopProperties.g.i.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\DesktopProperties.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.g.i.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.g.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.g.i.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\MainPage.g.i.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\MainPage.g.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.g.i.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\ScriptStats.g.i.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\ScriptStats.g.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.g.i.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\App.xaml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.xaml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\DesktopProperties.xaml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.xaml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.xaml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\MainPage.xaml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.xaml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\ScriptStats.xaml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.xaml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\App.xbf
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.xbf
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\DesktopProperties.xbf
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\EditPresets.xbf
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.xbf
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\MainPage.xbf
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.xbf
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\ScriptStats.xbf
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.xbf
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\PolyDesktopGUI.csproj.CoreCompileInputs.cache
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\PolyDesktopGUI.csproj.CopyComplete
@@ -183,25 +224,3 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637425103200000000.json
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\PolyDesktopGUI.csproj.AssemblyReference.cache
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\BasicMode.xbf
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\GroupMode.xbf
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\OverlayMode.xbf
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\TabMode.xbf
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.g.i.cs
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.g.cs
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.g.i.cs
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.g.cs
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.g.i.cs
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.g.cs
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.g.i.cs
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.g.cs
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.xaml
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.xaml
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.xaml
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.xaml
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\BasicMode.xbf
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\GroupMode.xbf
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\OverlayMode.xbf
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\TabMode.xbf
-C:\Users\japre\Source\Repos\reeblucas\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\PolyDesktopGUI.csproj.AssemblyReference.cache
