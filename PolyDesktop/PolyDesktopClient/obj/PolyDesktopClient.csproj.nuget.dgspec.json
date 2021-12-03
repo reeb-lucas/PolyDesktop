@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj": {}
+    "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj": {
+    "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj",
-        "projectName": "PolyDesktopLauncher",
-        "projectPath": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\PolyDesktopLauncher.csproj",
+        "projectUniqueName": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj",
+        "projectName": "PolyDesktopClient",
+        "projectPath": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj",
         "packagesPath": "C:\\Users\\nate2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\ConsoleApp1\\obj\\",
+        "outputPath": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
