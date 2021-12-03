@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Management; // NuGet this if it throws an error
+using System.Data.SqlClient;
+using System.Diagnostics;
+using System.Management;        // NuGet this if it throws an error
 /**************************************************************
  * Copyright (c) 2021
  * Author: Jerron Rhen
@@ -8,7 +10,7 @@ using System.Management; // NuGet this if it throws an error
  * Modifications:
  **************************************************************/
 /**************************************************************
- * Overview: Pulls the Hardware information of the current computer and uploads/updates a data base
+ * Overview: Pulls the Hardware information of the current computer (ONLY WORKS FOR WINDOWS MACHINES) and uploads/updates a data base
  *      
  **************************************************************/
 namespace Hardwarespecs
@@ -25,22 +27,48 @@ namespace Hardwarespecs
             Console.WriteLine(GetRAMsize());
             Console.WriteLine(GetStorageInfo());
             Console.WriteLine(GetRAMspeed());
+
+            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
+            String INquery = "INSERT INTO PolyDestopn.dbo.desktop Values('" + GetPCid() + "','"
+              + GetPCName() + "' , '" + GetCPUInfo() + "' , '" + GetCpuSpeedInGHz() + "' , '"
+              + GetGPUInfo() + "' , '" + GetRAMspeed() + "' , '" + GetRAMsize() + "' , '"
+              + GetStorageInfo() + "');";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    if (conn.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqlCommand cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = INquery;
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (Exception eSql)
+            {
+                Debug.WriteLine("Exception: " + eSql.Message);
+            }
+
         }
 
         private static string GetPCid()
         {
-            ManagementClass mc = new ManagementClass("win32_BIOS");
+            ManagementClass mc = new ManagementClass("win32_DiskDrive");
             ManagementObjectCollection moc = mc.GetInstances();
             String info = string.Empty;
             foreach (ManagementObject mo in moc)
             {
-                //if ((string)mo["MediaType"] == "Fixed hard disk media")
-                //{
-                //     info += (string)mo["SerialNumber"];
-                //}
-                info += (string)mo["IdentificationCode"];
+                if ((string)mo["MediaType"] == "Fixed hard disk media")
+                {
+                    info += (string)mo["SerialNumber"];
+                    break;
+                }
             }
-            return(info);
+            return info;
         }
 
         private static string GetStorageInfo()
@@ -49,14 +77,14 @@ namespace Hardwarespecs
             ManagementObjectCollection moc = mc.GetInstances();
             String info = string.Empty;
             UInt64 t = 0;
-            foreach (ManagementObject mo in moc)                                          // Goes through all storage drives connected this dose include Thumb drives currently
+            foreach (ManagementObject mo in moc)                                                       
             {
                 t = (UInt64)mo.Properties["size"].Value;
-                t = (t / 1000) / 1000 / 1000 + 1;                                                              // GB conversion  
+                t = (t / 1000) / 1000 / 1000 + 1;                                                              // GB conversion: Storage companys cant decide if 1000 or 1024 per unit is needed for the next one, Windows uses 1000 per unit
                 info = t.ToString() + "GB";
                 break;
             }
-            return (info);
+            return info;
         }
 
         static string GetGPUInfo()
@@ -69,7 +97,7 @@ namespace Hardwarespecs
             {
                 info += (string)mo["Name"] + " ";
             }
-            return(info);
+            return info;
         }
         static string GetCpuSpeedInGHz()
         {
@@ -82,7 +110,7 @@ namespace Hardwarespecs
                     break;
                 }
             }
-            return(GHz.ToString());
+            return GHz.ToString();
         }
 
         static string GetCPUInfo()
@@ -91,11 +119,10 @@ namespace Hardwarespecs
             ManagementObjectCollection moc = mc.GetInstances();
             String info = string.Empty;
             foreach (ManagementObject mo in moc)
-            {    
+            {
                 info = (string)mo["Name"];
-                //name = name.Replace("(TM)", "™").Replace("(tm)", "™").Replace("(R)", "®").Replace("(r)", "®").Replace("(C)", "©").Replace("(c)", "©").Replace("    ", " ").Replace("  ", " ");
             }
-            return(info);
+            return info;
         }
         static string GetPCName()
         {
@@ -106,7 +133,7 @@ namespace Hardwarespecs
             {
                 info = (string)mo["Name"];
             }
-            return(info);
+            return info;
         }
         static string GetRAMsize()
         {
@@ -116,13 +143,13 @@ namespace Hardwarespecs
             long MemSize = 0;
             long mCap = 0;
             String info = String.Empty;
-            // In case more than one Memory sticks are installed
+            // In case more than one Memory stick are installed
             foreach (ManagementObject obj in oCollection)
             {
                 mCap = Convert.ToInt64(obj["Capacity"]);
-                MemSize += mCap;  
+                MemSize += mCap;
             }
-            MemSize = (MemSize / 1024) / 1024 / 1024; // conversion to GB
+            MemSize = (MemSize / 1024) / 1024 / 1024;                   // conversion to GB
             return("Ram: " + MemSize.ToString() + "GB");
         }
         static string GetRAMspeed()
@@ -130,7 +157,7 @@ namespace Hardwarespecs
             ManagementClass mc = new ManagementClass("Win32_PhysicalMemory");
             ManagementObjectCollection oCollection = mc.GetInstances();
             UInt32 t = 0;
-            // In case more than one Memory sticks are installed
+            // In case more than one Memory stick are installed
             foreach (ManagementObject obj in oCollection)
             {
                 t = (UInt32)obj["Speed"];
