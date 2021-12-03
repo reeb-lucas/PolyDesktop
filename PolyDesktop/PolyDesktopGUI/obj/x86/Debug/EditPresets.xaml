@@ -14,20 +14,35 @@
             <SymbolIcon Symbol="Back"/>
         </Button>
         <ListView x:ConnectionId='3' Name="PresetList" DisplayMemberPath="Name"                                HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200"                                              />
-        <ComboBox x:ConnectionId='4' x:Name="ModeBox" Margin="1101,251,0,0" Width="108">
-            <x:String>Classic</x:String>
+        <ComboBox x:ConnectionId='4' x:Name="ModeBox" Margin="997,252,0,0" Width="108"                                            >
+            <x:String>Basic</x:String>
             <x:String>Tab</x:String>
             <x:String>Group</x:String>
             <x:String>Overlay</x:String>
         </ComboBox>
-        <Button x:ConnectionId='5' x:Name="PresetSaveButton" Content="Save Preset" Margin="1242,251,0,0" VerticalAlignment="Top"                               />
-        <TextBox x:ConnectionId='6' Name="NameBox" HorizontalAlignment="Left" Margin="960,251,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1136,222,0,0" Text="Mode:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="975,222,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <GridView x:ConnectionId='7' x:Name="ComputerTable" HorizontalAlignment="Center" DisplayMemberPath="Name" Margin="831,335,736,0"                                                                                   />
-        <TextBox x:ConnectionId='8' x:Name="TestBox" HorizontalAlignment="Left" Margin="1243,80,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:ConnectionId='9' x:Name="TestButton" Content="Button" Margin="1242,165,0,0" VerticalAlignment="Top"                         />
-        <Button x:ConnectionId='10' x:Name="AddComputerButton" Content="+" Margin="1242,301,0,0" VerticalAlignment="Top"                                />
+        <Button x:ConnectionId='5' x:Name="PresetSaveButton" Content="Save Preset" Margin="1242,301,0,0" VerticalAlignment="Top"                               />
+        <TextBox x:ConnectionId='6' Name="NameBox" HorizontalAlignment="Left" Margin="854,252,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1030,220,0,0" Text="Mode:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="870,219,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <GridView x:ConnectionId='7' x:Name="ComputerTable" HorizontalAlignment="Left" DisplayMemberPath="Name" Margin="811,300,0,0"                                                                                    Width="410">
+            <FlyoutBase.AttachedFlyout>
+                <Flyout>
+                    <StackPanel>
+                        <TextBlock Text="Computer ID:"/>
+                        <TextBlock x:ConnectionId='12' Name="FlyoutIDBlock" Text="Unknown ID"/>
+                        <TextBlock Text="Computer Name:" Margin="0,7,0,0"/>
+                        <TextBlock x:ConnectionId='13' Name="FlyoutNameBlock" Text="Unknown Name"/>
+                        <TextBlock Text="Nickname:" Margin="0,7,0,0"/>
+                        <TextBox x:ConnectionId='14' Name="FlyoutNicknameBox" Text="Unknown Nickname"/>
+                        <Button x:ConnectionId='15' Name="NicknameChangeButton" Content="Change" Margin="0,7,0,0"/>
+                    </StackPanel>
+                </Flyout>
+            </FlyoutBase.AttachedFlyout>
+        </GridView>
+        <Button x:ConnectionId='8' x:Name="TestButton" Content="Fill Test Presets" Margin="1242,103,0,0" VerticalAlignment="Top"                         />
+        <Button x:ConnectionId='9' x:Name="AddComputerButton" Content="+" Margin="1242,353,0,0" VerticalAlignment="Top"                                />
+        <TextBlock x:ConnectionId='10' Name="NumberOfComputersLabel" HorizontalAlignment="Left" Margin="1113,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:ConnectionId='11' Name="NumBlock" HorizontalAlignment="Left" Margin="1169,259,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
 </Page>
 

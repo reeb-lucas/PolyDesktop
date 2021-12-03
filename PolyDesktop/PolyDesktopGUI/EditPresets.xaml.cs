@@ -71,22 +71,43 @@ namespace PolyDesktopGUI
         }
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
-            bucket = temp.Split(", ");
-            NameBox.Text = bucket[0];
-            ModeBox.PlaceholderText = bucket[1];
-            ComputerTable.ItemsSource = Computers;
+            try
+            {
+                string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
+                bucket = temp.Split(", ");
+                NameBox.Text = bucket[0];
+                ModeBox.PlaceholderText = bucket[1];
+                ComputerTable.ItemsSource = Computers;
+                int index = 0;
+                for (int i = 2; i < bucket.Length; i += 2)
+                {
+                    if (bucket[i] != "")
+                    {
+                        index++;
+                    }
+                }
+                NumBlock.Text = (index - 1).ToString();
+
+            }
+            catch { }
         }
         private void ComputerTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if(ComputerTable.SelectedItem != null)
             {
-                //popout to view/change nickname, and remove computer
+                int index = 1;
+                for (int i = 0; i < ComputerTable.SelectedIndex + 1; i++)
+                {
+                    index += 2;
+                }
+                if (bucket[index] != null)
+                {
+                    FlyoutIDBlock.Text = bucket[index];
+                    FlyoutNameBlock.Text = ExecuteQuery(index);
+                    FlyoutNicknameBox.Text = bucket[index + 1];
+                }
+                FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
             }
-        }
-        private void AddComputerButton_Click(object sender, RoutedEventArgs e)
-        {
-            //popup to add computer from list to bucket and set nickname
         }
         public Computer[] Computers { get { return GatherComputers(); } }
         public Computer[] GatherComputers()
@@ -101,12 +122,19 @@ namespace PolyDesktopGUI
                 {
                     j += 2;
                     Computer preset = new Computer();
-                    preset.ID = bucket[j];
                     if (bucket[j] != null)
                     {
+                        preset.ID = bucket[j];
                         preset.Name = ExecuteQuery(j);
+                        if (bucket[j + 1] != null)
+                        {
+                            preset.Nickname = bucket[j + 1];
+                        }
+                        else
+                        {
+                            preset.Nickname = preset.Name;
+                        }
                     }
-                    preset.Nickname = bucket[j + 1];
                     container[i] = preset;
                 }
             }
@@ -139,13 +167,52 @@ namespace PolyDesktopGUI
                 }
             }
         }
+        private void NicknameChangeButton_Click(object sender, RoutedEvent e)
+        {
+            int index = 2;
+            for (int i = 0; i < ComputerTable.SelectedIndex + 1; i++)
+            {
+                index += 2;
+            }
+            if (FlyoutNicknameBox.Text == null)
+            {
+                bucket[index] = bucket[index - 1];
+
+            }
+            else if (bucket[index] != null)
+            {
+                bucket[index] = FlyoutNicknameBox.Text;
+            }
+        }
         private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
         {
             //write back to file using bucket object
+            string saveString = NameBox.Text + ", " + bucket[1] + ", " + NumBlock.Text;
+            for (int i = 3; i < bucket.Length; i++)
+            {
+                saveString = saveString + ", " + bucket[i];
+            }
+            if (saveString != null)
+            {
+                NumberOfComputersLabel.Text = saveString;
+                //File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", saveString);
+            }
+        }
+        private void AddComputerButton_Click(object sender, RoutedEventArgs e)
+        {
+            //popup to add computer from list to bucket and set nickname
         }
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText(filename + 0 + ".txt", TestBox.Text);
+            File.WriteAllText(filename + 0 + ".txt", "TestPreset1, Tab, 3, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2");
+            File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4, 5, TestNickname 5");
+            File.WriteAllText(filename + 2 + ".txt", "TestPreset3, Basic, 4, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3");
+            File.WriteAllText(filename + 3 + ".txt", "TestPreset4, Overlay, 5, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4");
+        }
+
+        private void ModeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            bucket[1] = ModeBox.SelectedValue.ToString();
         }
     }
     public class Preset
