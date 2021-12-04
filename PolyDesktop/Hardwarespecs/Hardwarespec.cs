@@ -28,30 +28,30 @@ namespace Hardwarespecs
             Console.WriteLine(GetStorageInfo());
             Console.WriteLine(GetRAMspeed());
 
-            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
-            String INquery = "INSERT INTO PolyDestopn.dbo.desktop Values('" + GetPCid() + "','"
-              + GetPCName() + "' , '" + GetCPUInfo() + "' , '" + GetCpuSpeedInGHz() + "' , '"
-              + GetGPUInfo() + "' , '" + GetRAMspeed() + "' , '" + GetRAMsize() + "' , '"
-              + GetStorageInfo() + "');";
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    if (conn.State == System.Data.ConnectionState.Open)
-                    {
-                        using (SqlCommand cmd = conn.CreateCommand())
-                        {
-                            cmd.CommandText = INquery;
-                            cmd.ExecuteNonQuery();
-                        }
-                    }
-                }
-            }
-            catch (Exception eSql)
-            {
-                Debug.WriteLine("Exception: " + eSql.Message);
-            }
+            //string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
+            //String INquery = "INSERT INTO PolyDestopn.dbo.desktop Values('" + GetPCid() + "','"
+            //  + GetPCName() + "' , '" + GetCPUInfo() + "' , '" + GetCpuSpeedInGHz() + "' , '"
+            //  + GetGPUInfo() + "' , '" + GetRAMspeed() + "' , '" + GetRAMsize() + "' , '"
+            //  + GetStorageInfo() + "');";
+            //try
+            //{
+            //    using (SqlConnection conn = new SqlConnection(connectionString))
+            //    {
+            //        conn.Open();
+            //        if (conn.State == System.Data.ConnectionState.Open)
+            //        {
+            //            using (SqlCommand cmd = conn.CreateCommand())
+            //            {
+            //                cmd.CommandText = INquery;
+            //                cmd.ExecuteNonQuery();
+            //            }
+            //        }
+            //    }
+            //}
+            //catch (Exception eSql)
+            //{
+            //    Debug.WriteLine("Exception: " + eSql.Message);
+            //}
 
         }
 

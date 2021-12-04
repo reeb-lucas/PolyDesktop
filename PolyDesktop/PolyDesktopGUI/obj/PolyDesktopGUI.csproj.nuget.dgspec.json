@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj": {}
+    "S:\\CST 316\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj": {}
   },
   "projects": {
-    "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj": {
+    "S:\\CST 316\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+        "projectUniqueName": "S:\\CST 316\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
         "projectName": "PolyDesktopGUI",
-        "projectPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+        "projectPath": "S:\\CST 316\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
         "packagesPath": "C:\\Users\\jerro\\.nuget\\packages\\",
-        "outputPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\obj\\",
+        "outputPath": "S:\\CST 316\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

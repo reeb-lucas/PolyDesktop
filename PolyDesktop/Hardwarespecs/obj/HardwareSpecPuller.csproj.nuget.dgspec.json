@@ -1,21 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj": {}
+    "S:\\CST 316\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj": {}
   },
   "projects": {
-    "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj": {
+    "S:\\CST 316\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
+        "projectUniqueName": "S:\\CST 316\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
         "projectName": "HardwareSpecPuller",
-        "projectPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
+        "projectPath": "S:\\CST 316\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
         "packagesPath": "C:\\Users\\jerro\\.nuget\\packages\\",
-        "outputPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\obj\\",
+        "outputPath": "S:\\CST 316\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\jerro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
