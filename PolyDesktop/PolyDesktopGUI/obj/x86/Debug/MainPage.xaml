@@ -14,9 +14,9 @@
             <Button.Flyout>
                 <MenuFlyout Placement="Bottom">
                     <MenuFlyoutItem x:ConnectionId='8' Text="Basic Mode Preset" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Basic mode displays only one desktop."                        ></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Tab Mode Preset" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Tab mode displays one desktop across the whole screen with a tab sytem of navigation at the top, similar to an internet browser."></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Group Mode Preset" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Group mode displays one desktop primarily with several others in a column on the right side, similar to a video call with multiple participants."></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Overlay Mode Preset WARNING: EXPERIMENTAL" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Overlay mode overlays all desktops selected as 'one screen'. This mode is currently marked experimental. It may not work as advertised"></MenuFlyoutItem>
+                    <MenuFlyoutItem x:ConnectionId='9' Text="Tab Mode Preset" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Tab mode displays one desktop across the whole screen with a tab sytem of navigation at the top, similar to an internet browser."                      ></MenuFlyoutItem>
+                    <MenuFlyoutItem x:ConnectionId='10' Text="Group Mode Preset" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Group mode displays one desktop primarily with several others in a column on the right side, similar to a video call with multiple participants."                        ></MenuFlyoutItem>
+                    <MenuFlyoutItem x:ConnectionId='11' Text="Overlay Mode Preset WARNING: EXPERIMENTAL" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Overlay mode overlays all desktops selected as 'one screen'. This mode is currently marked experimental. It may not work as advertised"                          ></MenuFlyoutItem>
                 </MenuFlyout>
             </Button.Flyout>
         </Button>
