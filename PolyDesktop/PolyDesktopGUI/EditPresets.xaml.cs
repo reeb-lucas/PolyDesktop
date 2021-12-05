@@ -167,7 +167,7 @@ namespace PolyDesktopGUI
                 }
             }
         }
-        private void NicknameChangeButton_Click(object sender, RoutedEvent e)
+        private void NicknameChangeButton_Click(object sender, RoutedEventArgs e)
         {
             int index = 2;
             for (int i = 0; i < ComputerTable.SelectedIndex + 1; i++)
@@ -181,26 +181,31 @@ namespace PolyDesktopGUI
             }
             else if (bucket[index] != null)
             {
-                bucket[index] = FlyoutNicknameBox.Text;
+                bucket[index] = NormalizeInput(FlyoutNicknameBox.Text);
             }
         }
         private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
         {
             //write back to file using bucket object
-            string saveString = NameBox.Text + ", " + bucket[1] + ", " + NumBlock.Text;
-            for (int i = 3; i < bucket.Length; i++)
+            if (PresetList.SelectedIndex != -1)
             {
-                saveString = saveString + ", " + bucket[i];
+                string saveString = NormalizeInput(NameBox.Text) + ", " + bucket[1] + ", " + NormalizeInput(NumBlock.Text);
+                for (int i = 3; i < bucket.Length; i++)
+                {
+                    saveString = saveString + ", " + bucket[i];
+                }
+                if (saveString != null)
+                {
+                    File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", saveString);
+                    ComputerTable.ItemsSource = Computers;
+                }
             }
-            if (saveString != null)
-            {
-                NumberOfComputersLabel.Text = saveString;
-                //File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", saveString);
-            }
+            PresetList.ItemsSource = Presets;
         }
         private void AddComputerButton_Click(object sender, RoutedEventArgs e)
         {
             //popup to add computer from list to bucket and set nickname
+            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
@@ -213,6 +218,11 @@ namespace PolyDesktopGUI
         private void ModeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             bucket[1] = ModeBox.SelectedValue.ToString();
+        }
+
+        private string NormalizeInput(string input)
+        {
+            return input.Replace(",", "");
         }
     }
     public class Preset
