@@ -1,0 +1,5 @@
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopClient\bin\Debug\net5.0\publish\PolyDesktopClient.exe
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopClient\bin\Debug\net5.0\publish\PolyDesktopClient.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopClient\bin\Debug\net5.0\publish\PolyDesktopClient.deps.json
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopClient\bin\Debug\net5.0\publish\PolyDesktopClient.runtimeconfig.json
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopClient\bin\Debug\net5.0\publish\PolyDesktopClient.pdb

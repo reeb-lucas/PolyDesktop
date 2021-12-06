@@ -28,6 +28,7 @@ using Windows.UI.Xaml.Navigation;
  * Overview:    
  * Preset Saving Standard: "Name, Mode, # of computers, Computer ID, Nickname, Computer ID, Nickname, ..."
  *                          user can only have up to 100 presets
+ *                          each preset can have up to 100 computers
  **************************************************************/
 
 namespace PolyDesktopGUI
@@ -42,7 +43,7 @@ namespace PolyDesktopGUI
         {
             this.InitializeComponent();
         }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e) //back to main menu
         {
             this.Frame.Navigate(typeof(MainPage));
         }
@@ -69,7 +70,7 @@ namespace PolyDesktopGUI
             }
             return container;
         }
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e) //when preset is selected, display all preset info from file and populate computertable
         {
             try
             {
@@ -91,7 +92,7 @@ namespace PolyDesktopGUI
             }
             catch { }
         }
-        private void ComputerTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComputerTable_SelectionChanged(object sender, SelectionChangedEventArgs e) //ListView object holding all computers in a preset
         {
             if(ComputerTable.SelectedItem != null)
             {
@@ -106,7 +107,7 @@ namespace PolyDesktopGUI
                     FlyoutNameBlock.Text = ExecuteQuery(index);
                     FlyoutNicknameBox.Text = bucket[index + 1];
                 }
-                FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+                FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender); //flyout with computer info and oportunity to change nickname
             }
         }
         public Computer[] Computers { get { return GatherComputers(); } }
@@ -145,7 +146,7 @@ namespace PolyDesktopGUI
             
             return container;
         }
-        private string ExecuteQuery(int index)
+        private string ExecuteQuery(int index) //fetch computer name given c_ID
         {
             using (var connection = new SqlConnection(connectionString))
             {
@@ -184,9 +185,8 @@ namespace PolyDesktopGUI
                 bucket[index] = NormalizeInput(FlyoutNicknameBox.Text);
             }
         }
-        private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
+        private void PresetSaveButton_Click(object sender, RoutedEventArgs e) //write back to file using bucket object
         {
-            //write back to file using bucket object
             if (PresetList.SelectedIndex != -1)
             {
                 string saveString = NormalizeInput(NameBox.Text) + ", " + bucket[1] + ", " + NormalizeInput(NumBlock.Text);
@@ -202,40 +202,35 @@ namespace PolyDesktopGUI
             }
             PresetList.ItemsSource = Presets;
         }
-        private void AddComputerButton_Click(object sender, RoutedEventArgs e)
+        private void AddComputerButton_Click(object sender, RoutedEventArgs e) //popup to add computer from list to bucket and set nickname
         {
-            //popup to add computer from list to bucket and set nickname
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
-        private void TestButton_Click(object sender, RoutedEventArgs e)
+        private void TestButton_Click(object sender, RoutedEventArgs e) //this fills the computer with test presets
         {
-            //this fills the computer with test presets
             File.WriteAllText(filename + 0 + ".txt", "TestPreset1, Tab, 3, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2");
             File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4, 5, TestNickname 5");
             File.WriteAllText(filename + 2 + ".txt", "TestPreset3, Basic, 4, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3");
             File.WriteAllText(filename + 3 + ".txt", "TestPreset4, Overlay, 5, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4");
-            //File.WriteAllText(filename + "numPresets.txt", "4");
             PresetList.ItemsSource = Presets;
         }
 
-        private void ModeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ModeBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //write new mode to bucket
         {
             bucket[1] = ModeBox.SelectedValue.ToString();
         }
 
-        private string NormalizeInput(string input)
+        private string NormalizeInput(string input) //remove commas from input to make sure file is structured correctly
         {
             return input.Replace(",", "");
         }
 
-        private void DeletePresetButton_Click(object sender, RoutedEventArgs e)
-        {
-            //pop-up to confirm deletion
+        private void DeletePresetButton_Click(object sender, RoutedEventArgs e) //pop-up to confirm deletion
+        { 
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
-        private void FlyoutDeletePresetButton_Click(object sender, RoutedEventArgs e)
+        private void FlyoutDeletePresetButton_Click(object sender, RoutedEventArgs e) //delete .txt file for index selected and shift all following files up a name
         {
-            //delete .txt file for index selected and shift all following files up a name
             File.Delete(filename + PresetList.SelectedIndex + ".txt");
             for (int i = PresetList.SelectedIndex + 1; i < 100; i++)
             {
