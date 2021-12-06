@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Management;        // NuGet this if it throws an error
+using System.Management;        
 using System.Text;
 /**************************************************************
 * Copyright (c) 2021
@@ -20,16 +20,15 @@ namespace Hardwarespecs
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(GetPCid());
-            Console.WriteLine(GetPCName());
-            Console.WriteLine(GetCPUInfo());
-            Console.WriteLine(GetGPUInfo());
-            Console.WriteLine(GetCpuSpeedInGHz());
-            Console.WriteLine("Ram: " + GetRAMsize() + "GB");
-            Console.WriteLine("RamSpeed: " + GetRAMspeed());
-            Console.WriteLine(GetStorageInfo() + "GB");
-            Console.WriteLine("Press any key to continue");
-            Console.ReadKey();
+            //Console.WriteLine(GetPCid());
+            //Console.WriteLine(GetPCName());
+            //Console.WriteLine(GetCPUInfo());
+            //Console.WriteLine(GetGPUInfo());
+            //Console.WriteLine(GetCpuSpeedInGHz());
+            //Console.WriteLine("Ram: " + GetRAMsize() + "GB");
+            //Console.WriteLine("RamSpeed: " + GetRAMspeed());
+            //Console.WriteLine(GetStorageInfo() + "GB");
+
             
             // CREATE TABLE dbo.desktop(c_ID int, c_name varchar(MAX), CPU varchar(MAX), CPU_speed float, GPU varchar(MAX), RAM_speed int, RAM_size int, drive_size float)
             string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
@@ -56,7 +55,8 @@ namespace Hardwarespecs
             {
                 Debug.WriteLine("Exception: " + eSql.Message);
             }
-
+            //Console.WriteLine("Press enter to continue");
+            //Console.ReadKey();
         }
 
         private static string GetPCid()
@@ -74,7 +74,7 @@ namespace Hardwarespecs
                     for (int i = 0; i < info.Length; i++)
                     {
                         char c = info[i];
-                        if (c < '0') continue;
+                        if (c < '1') continue;
                         if (c > '9') continue;
                         bs.Append(info[i]);
                     }
