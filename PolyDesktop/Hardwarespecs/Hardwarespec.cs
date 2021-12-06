@@ -27,6 +27,8 @@ namespace Hardwarespecs
             Console.WriteLine(GetRAMsize());
             Console.WriteLine(GetStorageInfo());
             Console.WriteLine(GetRAMspeed());
+            Console.WriteLine("Press any key to exit");
+            Console.ReadLine();
 
             //string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
             //String INquery = "INSERT INTO PolyDestopn.dbo.desktop Values('" + GetPCid() + "','"
