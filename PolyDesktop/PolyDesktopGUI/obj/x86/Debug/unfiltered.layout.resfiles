@@ -9,9 +9,13 @@ Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
+BasicMode.xbf
 DesktopProperties.xbf
 EditPresets.xbf
+GroupMode.xbf
 MainPage.xbf
+OverlayMode.xbf
 PolyDesktopGUI.xr.xml
 ScriptStats.xbf
+TabMode.xbf
 Properties\Default.rd.xml

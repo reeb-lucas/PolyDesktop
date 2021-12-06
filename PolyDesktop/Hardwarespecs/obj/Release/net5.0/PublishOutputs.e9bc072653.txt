@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\HardwareSpecPuller.exe
+C:\Users\User\Desktop\HardwareSpecPuller.dll
+C:\Users\User\Desktop\HardwareSpecPuller.deps.json
+C:\Users\User\Desktop\HardwareSpecPuller.runtimeconfig.json
+C:\Users\User\Desktop\HardwareSpecPuller.pdb
+C:\Users\User\Desktop\System.CodeDom.dll
+C:\Users\User\Desktop\System.Management.dll
+C:\Users\User\Desktop\runtimes\win\lib\netcoreapp3.1\System.Management.dll
