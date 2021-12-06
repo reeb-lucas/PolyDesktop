@@ -387,4 +387,3 @@ S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\qualifiers.txt.i
 S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\ProjectArchitectures.txt
 S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637425067200000000.json
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637425103200000000.json

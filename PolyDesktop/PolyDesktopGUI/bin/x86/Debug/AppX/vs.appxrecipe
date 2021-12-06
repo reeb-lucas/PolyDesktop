@@ -30,13 +30,13 @@
     <AppXManifest Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-03T19:32:09.254</Modified>
+      <Modified>2021-12-06T22:12:03.724</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.exe">
       <PackagePath>entrypoint\PolyDesktopGUI.exe</PackagePath>
-      <Modified>2021-12-03T19:32:05.660</Modified>
+      <Modified>2021-12-06T22:12:01.386</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jerro\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
@@ -106,39 +106,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-12-03T19:32:05.521</Modified>
+      <Modified>2021-12-06T22:12:01.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\BasicMode.xbf">
       <PackagePath>BasicMode.xbf</PackagePath>
-      <Modified>2021-12-03T19:32:05.522</Modified>
+      <Modified>2021-12-06T22:12:01.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\DesktopProperties.xbf">
       <PackagePath>DesktopProperties.xbf</PackagePath>
-      <Modified>2021-12-03T19:32:05.522</Modified>
+      <Modified>2021-12-06T22:12:01.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\EditPresets.xbf">
       <PackagePath>EditPresets.xbf</PackagePath>
-      <Modified>2021-12-03T19:32:05.522</Modified>
+      <Modified>2021-12-06T22:12:01.263</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\GroupMode.xbf">
       <PackagePath>GroupMode.xbf</PackagePath>
-      <Modified>2021-12-03T19:32:05.522</Modified>
+      <Modified>2021-12-06T22:12:01.263</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-12-03T19:32:05.522</Modified>
+      <Modified>2021-12-06T22:12:01.263</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\OverlayMode.xbf">
       <PackagePath>OverlayMode.xbf</PackagePath>
-      <Modified>2021-12-03T19:32:05.522</Modified>
+      <Modified>2021-12-06T22:12:01.263</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\ScriptStats.xbf">
       <PackagePath>ScriptStats.xbf</PackagePath>
-      <Modified>2021-12-03T19:32:05.522</Modified>
+      <Modified>2021-12-06T22:12:01.263</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\TabMode.xbf">
       <PackagePath>TabMode.xbf</PackagePath>
-      <Modified>2021-12-03T19:32:05.522</Modified>
+      <Modified>2021-12-06T22:12:01.263</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -150,11 +150,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-12-03T19:32:06.440</Modified>
+      <Modified>2021-12-06T22:12:02.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Core\PolyDesktopGUI.exe">
       <PackagePath>PolyDesktopGUI.exe</PackagePath>
-      <Modified>2021-12-03T19:32:09.243</Modified>
+      <Modified>2021-12-06T22:12:03.715</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
