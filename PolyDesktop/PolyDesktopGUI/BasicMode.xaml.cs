@@ -12,8 +12,17 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+/**************************************************************
+ * Copyright (c) 2021
+ * Author: Tyler Lucas
+ * Filename: BasicMode.xaml.cs
+ * Date Created: 11/30/2021
+ * Modifications: 11/30/2021 - Created Basic Mode, WIP label waiting on remoting capabilities
+ **************************************************************/
+/**************************************************************
+ * Overview:
+ *      This page displays one desktop for the user along with the computer id
+ **************************************************************/
 
 namespace PolyDesktopGUI
 {
@@ -25,6 +34,11 @@ namespace PolyDesktopGUI
         public BasicMode()
         {
             this.InitializeComponent();
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

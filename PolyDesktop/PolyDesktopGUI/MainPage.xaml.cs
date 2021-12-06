@@ -60,9 +60,29 @@ namespace PolyDesktopGUI
             this.Frame.Navigate(typeof(EditPresets));
         }
 
+        private void PresetDialog_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(EditPresets));
+        }
+
         private void BasicMode_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BasicMode));
+        }
+
+        private void TabMode_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TabMode));
+        }
+
+        private void GroupMode_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GroupMode));
+        }
+
+        private void OverlayMode_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OverlayMode));
         }
     }
 }
