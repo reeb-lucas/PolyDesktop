@@ -60,6 +60,11 @@ namespace PolyDesktopGUI
             this.Frame.Navigate(typeof(EditPresets));
         }
 
+        private void PresetDialog_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(EditPresets));
+        }
+
         private void BasicMode_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BasicMode));
