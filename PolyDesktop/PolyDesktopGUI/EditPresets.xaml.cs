@@ -22,10 +22,10 @@ using Windows.UI.Xaml.Navigation;
  * Author: Jacob Pressley
  * Filename: EditPresets.xaml.cs
  * Date Created: 11/29/2021
- * Modifications:
+ * Modifications: 12/6/2021 - Added additional coments
  **************************************************************/
 /**************************************************************
- * Overview:    
+ * Overview: Allows user to edit the presets saved in .txt files and allow users to delete presets.
  * Preset Saving Standard: "Name, Mode, # of computers, Computer ID, Nickname, Computer ID, Nickname, ..."
  *                          user can only have up to 100 presets
  *                          each preset can have up to 100 computers
