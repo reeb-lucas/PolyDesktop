@@ -35,7 +35,7 @@ namespace PolyDesktopGUI
     public sealed partial class EditPresets : Page
     {
         static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-        string filename = Path.Combine(localApplicationData, "Preset");
+        string filename = Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
         private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
         string[] bucket;
         public EditPresets()
@@ -47,9 +47,9 @@ namespace PolyDesktopGUI
             this.Frame.Navigate(typeof(MainPage));
         }
         public Preset[] Presets { get { return GatherPresets(); } }
-        public Preset[] GatherPresets()
+        public Preset[] GatherPresets() //returns all presets in an observable object for the listview to display
         {
-            Preset[] container = new Preset[100];
+            Preset[] container = new Preset[Directory.GetFiles(localApplicationData).Length]; //sees how many files are in the directory for presets and sets the array size
             for (int i = 0; i < 99; i++)
             {
                 try
@@ -110,13 +110,13 @@ namespace PolyDesktopGUI
             }
         }
         public Computer[] Computers { get { return GatherComputers(); } }
-        public Computer[] GatherComputers()
+        public Computer[] GatherComputers() //returns all computers in an observable array to populate listview
         {
-            Computer[] container = new Computer[100];
+            string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
+            bucket = temp.Split(", ");
+            Computer[] container = new Computer[Int32.Parse(bucket[2])];
             try
             {
-                string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
-                bucket = temp.Split(", ");
                 int j = 1;
                 for (int i = 0; i < 99; i++)
                 {
@@ -214,6 +214,7 @@ namespace PolyDesktopGUI
             File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4, 5, TestNickname 5");
             File.WriteAllText(filename + 2 + ".txt", "TestPreset3, Basic, 4, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3");
             File.WriteAllText(filename + 3 + ".txt", "TestPreset4, Overlay, 5, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4");
+            //File.WriteAllText(filename + "numPresets.txt", "4");
             PresetList.ItemsSource = Presets;
         }
 
