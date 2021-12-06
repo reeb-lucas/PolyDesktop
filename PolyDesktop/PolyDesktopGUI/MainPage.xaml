@@ -20,9 +20,9 @@
                 </MenuFlyout>
             </Button.Flyout>
         </Button>
-        <Button x:Name="DesktopPresetsButton" Content="Edit Desktop Presets" Margin="0,245,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="250" CornerRadius="5,5,5,5" Click="DesktopPresetsButton_Click"/>
-        <Button x:Name="DesktopPropertiesButton" Content="View Desktop Properites" Margin="0,325,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="250" CornerRadius="5,5,5,5" Click="DesktopPropertiesButton_Click" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Displays hardware information about each computer connected to."/>
-        <Button x:Name="ScriptStatsButton" Content="View Script Stats" Margin="0,405,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="250" CornerRadius="5,5,5,5" Click="ScriptStatsButton_Click"/>
+        <Button x:Name="DesktopPresetsButton" Content="Edit Desktop Presets" Margin="0,245,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="250" CornerRadius="5,5,5,5" Click="DesktopPresetsButton_Click" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Click to edit PolyDesktop Presets"/>
+        <Button x:Name="DesktopPropertiesButton" Content="View Desktop Properites" Margin="0,325,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="250" CornerRadius="5,5,5,5" Click="DesktopPropertiesButton_Click" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Displays hardware information about each computer in a database"/>
+        <Button x:Name="ScriptStatsButton" Content="View Script Stats" Margin="0,405,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="250" CornerRadius="5,5,5,5" Click="ScriptStatsButton_Click" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Displays information on all scripts and installers run vis PolyBay"/>
         <Button x:Name="TutorialButton" Content="Tutorial" VerticalAlignment="Top" Width="182" CornerRadius="5,5,5,5" Height="50" Margin="63,485,0,0" HorizontalAlignment="Center"/>
         <Button x:Name="SettingsButton" Margin="-190,485,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58" CornerRadius="5,5,5,5">
             <SymbolIcon Symbol="Setting"/>

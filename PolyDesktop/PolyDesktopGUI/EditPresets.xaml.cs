@@ -209,10 +209,12 @@ namespace PolyDesktopGUI
         }
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
+            //this fills the computer with test presets
             File.WriteAllText(filename + 0 + ".txt", "TestPreset1, Tab, 3, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2");
             File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4, 5, TestNickname 5");
             File.WriteAllText(filename + 2 + ".txt", "TestPreset3, Basic, 4, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3");
             File.WriteAllText(filename + 3 + ".txt", "TestPreset4, Overlay, 5, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4");
+            PresetList.ItemsSource = Presets;
         }
 
         private void ModeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -224,17 +226,39 @@ namespace PolyDesktopGUI
         {
             return input.Replace(",", "");
         }
+
+        private void DeletePresetButton_Click(object sender, RoutedEventArgs e)
+        {
+            //pop-up to confirm deletion
+            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+        }
+        private void FlyoutDeletePresetButton_Click(object sender, RoutedEventArgs e)
+        {
+            //delete .txt file for index selected and shift all following files up a name
+            File.Delete(filename + PresetList.SelectedIndex + ".txt");
+            for (int i = PresetList.SelectedIndex + 1; i < 100; i++)
+            {
+                try
+                {
+                    System.IO.File.Move(filename + i + ".txt", filename + (i - 1) + ".txt");
+                }
+                catch { }
+            }
+            PresetList.ItemsSource = Presets;
+        }
     }
     public class Preset
     {
         public string Name { get; set; }
         public string Mode { get; set; }
         public int numComputers { get; set; }
+        public bool isFull { get; set; } = false;
     }
     public class Computer
     {
         public string ID { get; set; }
         public string Name { get; set; }
         public string Nickname { get; set; }
+        public bool isFull { get; set; } = false;
     }
 }

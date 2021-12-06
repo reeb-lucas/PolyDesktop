@@ -13,32 +13,32 @@
         <Button x:ConnectionId='2' x:Name="BackButton" Margin="-575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58" CornerRadius="5,5,5,5"                         >
             <SymbolIcon Symbol="Back"/>
         </Button>
-        <ListView x:ConnectionId='3' Name="PresetList" DisplayMemberPath="Name"                                HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200"                                              CornerRadius="5,5,5,5"/>
-        <ComboBox x:ConnectionId='4' x:Name="ModeBox" Margin="180,252,0,0" Width="108"                                             HorizontalAlignment="Center" CornerRadius="5,5,5,5">
+        <ListView x:ConnectionId='3' Name="PresetList" DisplayMemberPath="Name"                                HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200"                                              CornerRadius="5,5,5,5" SelectedIndex="0"/>
+        <ComboBox x:ConnectionId='4' x:Name="ModeBox" Margin="1032,252,0,0" Width="108"                                             CornerRadius="5,5,5,5">
             <x:String>Basic</x:String>
             <x:String>Tab</x:String>
             <x:String>Group</x:String>
             <x:String>Overlay</x:String>
         </ComboBox>
         <Button x:ConnectionId='5' x:Name="PresetSaveButton" CornerRadius="5,5,5,5" HorizontalAlignment="Center" Content="Save Preset" Margin="660,301,0,0" VerticalAlignment="Top"                               />
-        <TextBox x:ConnectionId='6' Name="NameBox" CornerRadius="5,5,5,5" HorizontalAlignment="Center" Margin="-100,252,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
-        <TextBlock HorizontalAlignment="Center" Margin="180,220,0,0" Text="Mode:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Center" Margin="-100,219,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <GridView x:ConnectionId='7' x:Name="ComputerTable" CornerRadius="5,5,5,5" HorizontalAlignment="Center" DisplayMemberPath="Name" Margin="120,300,0,0"                                                                                    Width="410">
+        <TextBox x:ConnectionId='6' Name="NameBox" CornerRadius="5,5,5,5" HorizontalAlignment="Center" Margin="0,252,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1067,220,0,0" Text="Mode:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,219,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ListView x:ConnectionId='7' x:Name="ComputerTable" CornerRadius="5,5,5,5" HorizontalAlignment="Center" DisplayMemberPath="Name" Margin="120,300,0,0"                                                                                    Width="410">
             <FlyoutBase.AttachedFlyout>
                 <Flyout>
                     <StackPanel>
                         <TextBlock Text="Computer ID:"/>
-                        <TextBlock x:ConnectionId='12' Name="FlyoutIDBlock" Text="Unknown ID"/>
+                        <TextBlock x:ConnectionId='14' Name="FlyoutIDBlock" Text="Unknown ID"/>
                         <TextBlock Text="Computer Name:" Margin="0,7,0,0"/>
-                        <TextBlock x:ConnectionId='13' Name="FlyoutNameBlock" Text="Unknown Name"/>
+                        <TextBlock x:ConnectionId='15' Name="FlyoutNameBlock" Text="Unknown Name"/>
                         <TextBlock Text="Nickname:" Margin="0,7,0,0"/>
-                        <TextBox x:ConnectionId='14' Name="FlyoutNicknameBox" Text="Unknown Nickname" CornerRadius="5,5,5,5"/>
-                        <Button x:ConnectionId='15' Name="NicknameChangeButton" Content="Change" Margin="0,7,0,0"                                    CornerRadius="5,5,5,5"/>
+                        <TextBox x:ConnectionId='16' Name="FlyoutNicknameBox" Text="Unknown Nickname" CornerRadius="5,5,5,5"/>
+                        <Button x:ConnectionId='17' Name="NicknameChangeButton" Content="Change" Margin="0,7,0,0"                                    CornerRadius="5,5,5,5"/>
                     </StackPanel>
                 </Flyout>
             </FlyoutBase.AttachedFlyout>
-        </GridView>
+        </ListView>
         <Button x:ConnectionId='8' x:Name="TestButton" CornerRadius="5,5,5,5" Content="Fill Test Presets" HorizontalAlignment="Center" Margin="652,103,0,0" VerticalAlignment="Top"                         />
         <Button x:ConnectionId='9' x:Name="AddComputerButton" CornerRadius="5,5,5,5" HorizontalAlignment="Center" Content="+" Margin="600,353,0,0" VerticalAlignment="Top"                                >
             <FlyoutBase.AttachedFlyout>
@@ -49,8 +49,18 @@
                 </Flyout>
             </FlyoutBase.AttachedFlyout>
         </Button>
-        <TextBlock x:ConnectionId='10' Name="NumberOfComputersLabel" HorizontalAlignment="Center" Margin="413,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:ConnectionId='11' Name="NumBlock" HorizontalAlignment="Center" Margin="413,259,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:ConnectionId='10' Name="NumberOfComputersLabel" HorizontalAlignment="Left" Margin="1133,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:ConnectionId='11' Name="NumBlock" HorizontalAlignment="Left" Margin="1203,259,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:ConnectionId='12' x:Name="DeletePresetButton" CornerRadius="5,5,5,5" Content="Delete" Margin="824,251,0,0" VerticalAlignment="Top"                                 >
+            <FlyoutBase.AttachedFlyout>
+                <Flyout>
+                    <StackPanel>
+                        <TextBlock Text="Are you sure you want to delete this preset?"/>
+                        <Button x:ConnectionId='13' Name="FlyoutDeletePresetButton" Content="Delete" Margin="0,7,0,0"                                        CornerRadius="5,5,5,5"/>
+                    </StackPanel>
+                </Flyout>
+            </FlyoutBase.AttachedFlyout>
+        </Button>
     </Grid>
 </Page>
 
