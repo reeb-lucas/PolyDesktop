@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Management;        // NuGet this if it throws an error
+using System.Management;        
+using System.Text;
 /**************************************************************
- * Copyright (c) 2021
- * Author: Jerron Rhen
- * Filename: Hardwarespec.cs
- * Date Created: 11/16/2021
- * Modifications:
- **************************************************************/
+* Copyright (c) 2021
+* Author: Jerron Rhen
+* Filename: Hardwarespec.cs
+* Date Created: 11/16/2021
+* Modifications:
+**************************************************************/
 /**************************************************************
  * Overview: Pulls the Hardware information of the current computer (ONLY WORKS FOR WINDOWS MACHINES) and uploads/updates a data base
  *      
@@ -19,42 +20,43 @@ namespace Hardwarespecs
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(GetPCid());
-            Console.WriteLine(GetPCName());
-            Console.WriteLine(GetCPUInfo());
-            Console.WriteLine(GetGPUInfo());
-            Console.WriteLine(GetCpuSpeedInGHz());
-            Console.WriteLine(GetRAMsize());
-            Console.WriteLine(GetStorageInfo());
-            Console.WriteLine(GetRAMspeed());
-            Console.WriteLine("Press any key...");
-            Console.ReadKey();
+            //Console.WriteLine(GetPCid());
+            //Console.WriteLine(GetPCName());
+            //Console.WriteLine(GetCPUInfo());
+            //Console.WriteLine(GetGPUInfo());
+            //Console.WriteLine(GetCpuSpeedInGHz());
+            //Console.WriteLine("Ram: " + GetRAMsize() + "GB");
+            //Console.WriteLine("RamSpeed: " + GetRAMspeed());
+            //Console.WriteLine(GetStorageInfo() + "GB");
 
-            //string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
-            //String INquery = "INSERT INTO PolyDestopn.dbo.desktop Values('" + GetPCid() + "','"
-            //  + GetPCName() + "' , '" + GetCPUInfo() + "' , '" + GetCpuSpeedInGHz() + "' , '"
-            //  + GetGPUInfo() + "' , '" + GetRAMspeed() + "' , '" + GetRAMsize() + "' , '"
-            //  + GetStorageInfo() + "');";
-            //try
-            //{
-            //    using (SqlConnection conn = new SqlConnection(connectionString))
-            //    {
-            //        conn.Open();
-            //        if (conn.State == System.Data.ConnectionState.Open)
-            //        {
-            //            using (SqlCommand cmd = conn.CreateCommand())
-            //            {
-            //                cmd.CommandText = INquery;
-            //                cmd.ExecuteNonQuery();
-            //            }
-            //        }
-            //    }
-            //}
-            //catch (Exception eSql)
-            //{
-            //    Debug.WriteLine("Exception: " + eSql.Message);
-            //}
-
+            
+            // CREATE TABLE dbo.desktop(c_ID int, c_name varchar(MAX), CPU varchar(MAX), CPU_speed float, GPU varchar(MAX), RAM_speed int, RAM_size int, drive_size float)
+            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
+            String INquery = "INSERT INTO PolyDestopn.dbo.desktop(c_ID, c_name, CPU, CPU_speed, GPU, RAM_speed, RAM_size, drive_size) Values('" + GetPCid() + "','"
+              + GetPCName() + "' , '" + GetCPUInfo() + "' , '" + GetCpuSpeedInGHz() + "' , '"
+              + GetGPUInfo() + "' , '" + GetRAMspeed() + "' , '" + GetRAMsize() + "' , '"
+              + GetStorageInfo() + "');";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    if (conn.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqlCommand cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = INquery;
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (Exception eSql)
+            {
+                Debug.WriteLine("Exception: " + eSql.Message);
+            }
+            //Console.WriteLine("Press enter to continue");
+            //Console.ReadKey();
         }
 
         private static string GetPCid()
@@ -67,6 +69,16 @@ namespace Hardwarespecs
                 if ((string)mo["MediaType"] == "Fixed hard disk media")
                 {
                     info += (string)mo["SerialNumber"];
+
+                    StringBuilder bs = new StringBuilder(info.Length);
+                    for (int i = 0; i < info.Length; i++)
+                    {
+                        char c = info[i];
+                        if (c < '1') continue;
+                        if (c > '9') continue;
+                        bs.Append(info[i]);
+                    }
+                    info = bs.ToString();
                     break;
                 }
             }
@@ -83,7 +95,7 @@ namespace Hardwarespecs
             {
                 t = (UInt64)mo.Properties["size"].Value;
                 t = (t / 1000) / 1000 / 1000 + 1;                                                              // GB conversion: Storage companys cant decide if 1000 or 1024 per unit is needed for the next one, Windows uses 1000 per unit
-                info = t.ToString() + "GB";
+                info = t.ToString();
                 break;
             }
             return info;
@@ -152,7 +164,7 @@ namespace Hardwarespecs
                 MemSize += mCap;
             }
             MemSize = (MemSize / 1024) / 1024 / 1024;                   // conversion to GB
-            return("Ram: " + MemSize.ToString() + "GB");
+            return( MemSize.ToString());
         }
         static string GetRAMspeed()
         {
@@ -165,7 +177,7 @@ namespace Hardwarespecs
                 t = (UInt32)obj["Speed"];
                 break;
             }
-            return ("RamSpeed: " + t.ToString());
+            return ( t.ToString());
         }
     }
 }
