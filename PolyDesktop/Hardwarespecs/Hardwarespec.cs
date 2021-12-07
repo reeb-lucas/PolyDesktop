@@ -20,7 +20,7 @@ namespace Hardwarespecs
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine(GetPCid());
+            Console.WriteLine(GetPCid());
             //Console.WriteLine(GetPCName());
             //Console.WriteLine(GetCPUInfo());
             //Console.WriteLine(GetGPUInfo());
@@ -69,14 +69,32 @@ namespace Hardwarespecs
                 if ((string)mo["MediaType"] == "Fixed hard disk media")
                 {
                     info += (string)mo["SerialNumber"];
-
+                    int count = 0;
+                    char ch = 'c';
                     StringBuilder bs = new StringBuilder(info.Length);
-                    for (int i = 0; i < info.Length; i++)
+                    foreach (char c in info)
                     {
-                        char c = info[i];
-                        if (c < '1') continue;
+                        
+                        if (c < '0') continue;
                         if (c > '9') continue;
-                        bs.Append(info[i]);
+                        if (bs.Length == 0 && c == '0')
+                        {
+                            bs.Append('1');
+                            count++;
+                        }
+                        else if (c == ch)
+                        {
+
+                        }
+                        else 
+                        {
+                            bs.Append(c);
+                            count++;
+                        }
+                        ch = bs[count-1];
+                        if (count == 9)
+                        { break; }
+                        
                     }
                     info = bs.ToString();
                     break;

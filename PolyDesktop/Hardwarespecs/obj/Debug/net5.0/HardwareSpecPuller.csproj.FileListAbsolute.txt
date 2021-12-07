@@ -128,3 +128,4 @@ S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPu
 S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Debug\net5.0\ref\HardwareSpecPuller.dll
 S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.pdb
 S:\CST 316\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.genruntimeconfig.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Debug\net5.0\HardwareSpecPuller.csproj.AssemblyReference.cache
