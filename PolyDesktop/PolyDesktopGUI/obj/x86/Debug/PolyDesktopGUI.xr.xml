@@ -40,6 +40,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Label" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="Flyout" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="PolyDesktopGUI.BasicMode" />
@@ -131,13 +134,9 @@
       <RootMethod Name="GetToolTip" />
       <RootMethod Name="SetToolTip" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyout">
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBarFlyout">
       <RootProperty Name="Placement" />
-      <RootProperty Name="Items" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutItem">
-      <RootProperty Name="Text" />
-      <RootEvent Name="Click" />
+      <RootProperty Name="SecondaryCommands" />
     </RootType>
     <RootType FullName="PolyDesktopGUI.MainPage" />
     <RootType FullName="PolyDesktopGUI.OverlayMode" />

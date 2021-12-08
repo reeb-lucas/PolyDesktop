@@ -62,9 +62,14 @@ namespace PolyDesktopGUI
                     preset.Mode = bucket[1];
                     preset.numComputers = Int32.Parse(bucket[2]);
                     container[i] = preset;
+                    PresetList.Header = "Presets";
                 }
                 catch
                 {
+                    if (i == 0)
+                    {
+                        PresetList.Header = "No Presets Found";
+                    }
                     break;
                 }
             }
@@ -112,39 +117,41 @@ namespace PolyDesktopGUI
         }
         public Computer[] Computers { get { return GatherComputers(); } }
         public Computer[] GatherComputers() //returns all computers in an observable array to populate listview
-        {
-            string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
-            bucket = temp.Split(", ");
-            Computer[] container = new Computer[Int32.Parse(bucket[2])];
-            try
+        {   try
             {
-                int j = 1;
-                for (int i = 0; i < 99; i++)
+                string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
+                bucket = temp.Split(", ");
+                Computer[] container = new Computer[Int32.Parse(bucket[2])];
+                try
                 {
-                    j += 2;
-                    Computer preset = new Computer();
-                    if (bucket[j] != null)
+                    int j = 1;
+                    for (int i = 0; i < 99; i++)
                     {
-                        preset.ID = bucket[j];
-                        preset.Name = ExecuteQuery(j);
-                        if (bucket[j + 1] != null)
+                        j += 2;
+                        Computer preset = new Computer();
+                        if (bucket[j] != null)
                         {
-                            preset.Nickname = bucket[j + 1];
+                            preset.ID = bucket[j];
+                            preset.Name = ExecuteQuery(j);
+                            if (bucket[j + 1] != null)
+                            {
+                                preset.Nickname = bucket[j + 1];
+                            }
+                            else
+                            {
+                                preset.Nickname = preset.Name;
+                            }
                         }
-                        else
-                        {
-                            preset.Nickname = preset.Name;
-                        }
+                        container[i] = preset;
                     }
-                    container[i] = preset;
+                }
+                catch
+                {
+                    return container;
                 }
             }
-            catch
-            {
-                return container;
-            }
-            
-            return container;
+            catch { }
+            return new Computer[0];
         }
         private string ExecuteQuery(int index) //fetch computer name given c_ID
         {
@@ -208,16 +215,19 @@ namespace PolyDesktopGUI
         }
         private void TestButton_Click(object sender, RoutedEventArgs e) //this fills the computer with test presets
         {
-            File.WriteAllText(filename + 0 + ".txt", "TestPreset1, Tab, 3, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2");
-            File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4, 5, TestNickname 5");
-            File.WriteAllText(filename + 2 + ".txt", "TestPreset3, Basic, 4, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3");
-            File.WriteAllText(filename + 3 + ".txt", "TestPreset4, Overlay, 5, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4");
+            File.WriteAllText(filename + 0 + ".txt", "TestPreset1, Tab, 3, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2");
+            File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2, 213286983, TestNickname 3, 102538501, TestNickname 4, 25389172, TestNickname 5");
+            File.WriteAllText(filename + 2 + ".txt", "TestPreset3, Basic, 4, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2, 213286983, TestNickname 3");
+            File.WriteAllText(filename + 3 + ".txt", "TestPreset4, Overlay, 5, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2, 213286983, TestNickname 3, 102538501, TestNickname 4");
             PresetList.ItemsSource = Presets;
         }
 
         private void ModeBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //write new mode to bucket
         {
-            bucket[1] = ModeBox.SelectedValue.ToString();
+            if (PresetList.Header.ToString() != "No Presets Found")
+            {
+                bucket[1] = ModeBox.SelectedValue.ToString();
+            }
         }
 
         private string NormalizeInput(string input) //remove commas from input to make sure file is structured correctly
