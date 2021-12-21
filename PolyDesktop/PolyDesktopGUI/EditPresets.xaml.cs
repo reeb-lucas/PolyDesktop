@@ -37,7 +37,7 @@ namespace PolyDesktopGUI
     {
         static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         string filename = Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
-        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
+        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
         string[] bucket;
         public EditPresets()
         {
@@ -157,7 +157,7 @@ namespace PolyDesktopGUI
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                string sql = "SELECT c_name FROM PolyDestopn.dbo.desktop WHERE c_ID = " + bucket[index];
+                string sql = "SELECT c_name FROM PolyDesktop.dbo.desktop WHERE c_ID = " + bucket[index];
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {

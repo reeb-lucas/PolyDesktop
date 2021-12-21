@@ -31,7 +31,7 @@ namespace Hardwarespecs
 
             
             // CREATE TABLE dbo.desktop(c_ID int, c_name varchar(MAX), CPU varchar(MAX), CPU_speed float, GPU varchar(MAX), RAM_speed int, RAM_size int, drive_size float)
-            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
+            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
             String INquery = "INSERT INTO PolyDestopn.dbo.desktop(c_ID, c_name, CPU, CPU_speed, GPU, RAM_speed, RAM_size, drive_size) Values('" + GetPCid() + "','"
               + GetPCName() + "' , '" + GetCPUInfo() + "' , '" + GetCpuSpeedInGHz() + "' , '"
               + GetGPUInfo() + "' , '" + GetRAMspeed() + "' , '" + GetRAMsize() + "' , '"

@@ -34,12 +34,12 @@ namespace PolyDesktopGUI
 {
     public sealed partial class DesktopProperties : Page
     {
-        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
+        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
         private DataTable dataTable;
         public DesktopProperties()
         {
             this.InitializeComponent();
-            ExecuteQuery("SELECT * FROM PolyDestopn.dbo.desktop");
+            ExecuteQuery("SELECT * FROM PolyDesktop.dbo.desktop");
         }
         private async void ExecuteQuery(string query)
         {
