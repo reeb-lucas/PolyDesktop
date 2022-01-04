@@ -144,6 +144,7 @@
     <RootType FullName="Microsoft.UI.Xaml.Controls.TabView">
       <RootProperty Name="CanDragTabs" />
       <RootEvent Name="TabCloseRequested" />
+      <RootEvent Name="AddTabButtonClick" />
     </RootType>
     <RootType FullName="PolyDesktopGUI.TabMode" />
   </Roots.RootTypes>

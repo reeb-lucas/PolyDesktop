@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.UI.Xaml.Controls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -32,14 +33,23 @@ namespace PolyDesktopGUI
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        /*private void Tabs_AddTabButtonClick(Microsoft.UI.Xaml.Controls.TabView sender, Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs args)
-        {
-            
-        }*/
-
-        private void Tabs_TabCloseRequested(Microsoft.UI.Xaml.Controls.TabView sender, Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs args)
+        private void Tabs_TabCloseRequested(TabView sender, TabViewTabCloseRequestedEventArgs args)
         {
             sender.TabItems.Remove(args.Tab);
+        }
+
+        private void TabView_AddTabButtonClick(TabView sender, object args)
+        {
+            var newTab = new TabViewItem();
+            //newTab.IconSource = new SymbolIconSource() { Symbol = Symbol.Document }; //TODO: give actual symbol
+            newTab.Header = "New Document";
+
+            // The Content of a TabViewItem is often a frame which hosts a page.
+            Frame frame = new Frame();
+            newTab.Content = frame;
+            frame.Navigate(typeof(MainPage)); //TODO: display desktopstream here
+
+            sender.TabItems.Add(newTab);
         }
     }
 }

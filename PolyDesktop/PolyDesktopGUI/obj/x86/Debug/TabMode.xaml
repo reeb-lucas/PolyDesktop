@@ -12,7 +12,7 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="626,487,0,0" Text="WIP Page. Please navigate back to the main menu." TextWrapping="Wrap" VerticalAlignment="Top" Height="185" Width="705" FontSize="40" TextAlignment="Center"/>
         <AppBarButton x:ConnectionId='2' x:Name="BackButton" Icon="Back" Margin="10,40,0,0" Height="48" Width="45" Opacity="0.4"                         />
-        <Custom:TabView x:ConnectionId='3' CanDragTabs="True"                                           />
+        <Custom:TabView x:ConnectionId='3' CanDragTabs="True"                                                                                         />
 
     </Grid>
 </Page>
