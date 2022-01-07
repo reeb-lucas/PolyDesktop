@@ -94,6 +94,7 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="SelectedIndex" />
       <RootProperty Name="Header" />
+      <RootProperty Name="FontSize" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -123,6 +124,10 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.SearchBox">
+      <RootProperty Name="CornerRadius" />
+      <RootEvent Name="QueryChanged" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="System.String" />

@@ -153,6 +153,54 @@ namespace PolyDesktopGUI
             catch { }
             return new Computer[0];
         }
+        public Computer[] AllComputers { get { return GatherComputers(); } }
+        public Computer[] GatherAllComputers() //returns all computers in an observable array to populate listview
+        {
+            try
+            {
+                Computer[] container = new Computer[Int32.Parse(bucket[2])];
+                try
+                {
+                    int j = 1;
+                    for (int i = 0; i < 99; i++)
+                    {
+                        j += 2;
+                        Computer preset = new Computer();
+                        if (bucket[j] != null)
+                        {
+                            preset.ID = bucket[j];
+                            using (var connection = new SqlConnection(connectionString))
+                            {
+                                string sql = "SELECT c_name FROM PolyDesktop.dbo.desktop";
+                                connection.Open();
+                                using (SqlCommand command = new SqlCommand(sql, connection))
+                                {
+                                    using (SqlDataReader reader = command.ExecuteReader())
+                                    {
+                                        string name = "No Name Found";
+                                        if (reader.HasRows)
+                                        {
+                                            reader.Read();
+                                            name = reader.GetString(0);
+                                            reader.Close();
+                                        }
+                                        preset.Name = name;
+                                    }
+                                }
+                            }
+                            preset.Nickname = preset.Name;
+                        }
+                        container[i] = preset;
+                    }
+                }
+                catch
+                {
+                    return container;
+                }
+            }
+            catch { }
+            return new Computer[0];
+        }
         private string ExecuteQuery(int index) //fetch computer name given c_ID
         {
             using (var connection = new SqlConnection(connectionString))
@@ -212,6 +260,7 @@ namespace PolyDesktopGUI
         private void AddComputerButton_Click(object sender, RoutedEventArgs e) //popup to add computer from list to bucket and set nickname
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+
         }
         private void TestButton_Click(object sender, RoutedEventArgs e) //this fills the computer with test presets
         {
@@ -251,6 +300,11 @@ namespace PolyDesktopGUI
                 catch { }
             }
             PresetList.ItemsSource = Presets;
+        }
+
+        private void search_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
+        {
+
         }
     }
     public class Preset

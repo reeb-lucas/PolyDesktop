@@ -44,7 +44,8 @@
             <FlyoutBase.AttachedFlyout>
                 <Flyout>
                     <StackPanel>
-                        <TextBlock Text="WORK IN PROGRESS"/>
+                        <SearchBox x:Name="search" QueryChanged="search_QueryChanged" CornerRadius="5,5,5,5"/>
+                        <ListView x:Name="SearchListBox" FontSize="26" ItemsSource="{x:Bind AllComputers}" DisplayMemberPath="Name"/>
                     </StackPanel>
                 </Flyout>
             </FlyoutBase.AttachedFlyout>
