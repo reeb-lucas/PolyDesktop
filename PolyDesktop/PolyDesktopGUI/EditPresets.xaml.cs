@@ -153,22 +153,21 @@ namespace PolyDesktopGUI
             catch { }
             return new Computer[0];
         }
-        public Computer[] AllComputers { get { return GatherComputers(); } }
+        public Computer[] AllComputers { get { return GatherAllComputers(); } }
         public Computer[] GatherAllComputers() //returns all computers in an observable array to populate listview
         {
             try
             {
-                Computer[] container = new Computer[Int32.Parse(bucket[2])];
+                Computer[] container = new Computer[15];
                 try
                 {
-                    int j = 1;
+                    int j = -1;
                     for (int i = 0; i < 99; i++)
                     {
-                        j += 2;
+                        j++;
                         Computer preset = new Computer();
-                        if (bucket[j] != null)
-                        {
-                            preset.ID = bucket[j];
+
+                            //preset.ID = bucket[j];
                             using (var connection = new SqlConnection(connectionString))
                             {
                                 string sql = "SELECT c_name FROM PolyDesktop.dbo.desktop";
@@ -178,18 +177,17 @@ namespace PolyDesktopGUI
                                     using (SqlDataReader reader = command.ExecuteReader())
                                     {
                                         string name = "No Name Found";
-                                        if (reader.HasRows)
-                                        {
-                                            reader.Read();
-                                            name = reader.GetString(0);
+                                    reader.Read();
+                                        
+                                            name = reader.GetString(0); //UUUUUUHHHHHHH, I can't get more than the first row
                                             reader.Close();
-                                        }
+                                        
                                         preset.Name = name;
                                     }
                                 }
                             }
                             preset.Nickname = preset.Name;
-                        }
+                        
                         container[i] = preset;
                     }
                 }
