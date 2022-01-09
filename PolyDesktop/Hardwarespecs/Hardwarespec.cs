@@ -20,7 +20,7 @@ namespace Hardwarespecs
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(GetPCid());
+            //Console.WriteLine(GetPCid());
             //Console.WriteLine(GetPCName());
             //Console.WriteLine(GetCPUInfo());
             //Console.WriteLine(GetGPUInfo());
@@ -28,14 +28,22 @@ namespace Hardwarespecs
             //Console.WriteLine("Ram: " + GetRAMsize() + "GB");
             //Console.WriteLine("RamSpeed: " + GetRAMspeed());
             //Console.WriteLine(GetStorageInfo() + "GB");
-
+            string PCid = GetPCid();
+            string PCName = GetPCName();
+            string CPUinfo = GetCPUInfo();
+            string CPUspeed = GetCpuSpeedInGHz();
+            string GPUinfo = GetGPUInfo();
+            string RAMsize = GetRAMsize();
+            string RAMSpeed = GetRAMspeed();
+            string StorageInfo = GetStorageInfo();
             
             // CREATE TABLE dbo.desktop(c_ID int, c_name varchar(MAX), CPU varchar(MAX), CPU_speed float, GPU varchar(MAX), RAM_speed int, RAM_size int, drive_size float)
-            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
-            String INquery = "INSERT INTO PolyDestopn.dbo.desktop(c_ID, c_name, CPU, CPU_speed, GPU, RAM_speed, RAM_size, drive_size) Values('" + GetPCid() + "','"
-              + GetPCName() + "' , '" + GetCPUInfo() + "' , '" + GetCpuSpeedInGHz() + "' , '"
-              + GetGPUInfo() + "' , '" + GetRAMspeed() + "' , '" + GetRAMsize() + "' , '"
-              + GetStorageInfo() + "');";
+            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
+            String INquery = "INSERT INTO PolyDesktop.dbo.desktop(c_ID, c_name, CPU, CPU_speed, GPU, RAM_speed, RAM_size, drive_size) Values("+ "@PCid" +  ","
+              + "@PCName" + " , " + "@CPUInfo" + " , " + "@CpuSpeed" + " , "
+              + "@GPUInfo" + " , " + "@RAMspeed" + " , " + "@RAMsize" + " , "
+              + "@StorageInfo" + ");";
+            
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -46,6 +54,15 @@ namespace Hardwarespecs
                         using (SqlCommand cmd = conn.CreateCommand())
                         {
                             cmd.CommandText = INquery;
+                            cmd.Parameters.AddWithValue("@PCid", PCid);
+                            cmd.Parameters.AddWithValue("@PCName", PCName);
+                            cmd.Parameters.AddWithValue("@CPUInfo", CPUinfo);
+                            cmd.Parameters.AddWithValue("@CpuSpeed", CPUspeed);
+                            cmd.Parameters.AddWithValue("@GPUInfo", GPUinfo);
+                            cmd.Parameters.AddWithValue("@RAMspeed", RAMSpeed);
+                            cmd.Parameters.AddWithValue("@RAMsize", RAMsize);
+                            cmd.Parameters.AddWithValue("@StorageInfo", StorageInfo);
+
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -195,7 +212,7 @@ namespace Hardwarespecs
                 t = (UInt32)obj["Speed"];
                 break;
             }
-            return ( t.ToString());
+            return (t.ToString());
         }
     }
 }
