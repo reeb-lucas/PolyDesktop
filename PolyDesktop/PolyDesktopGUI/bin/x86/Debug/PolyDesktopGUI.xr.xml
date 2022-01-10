@@ -95,6 +95,7 @@
       <RootProperty Name="SelectedIndex" />
       <RootProperty Name="Header" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="MaxHeight" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">

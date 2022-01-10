@@ -99,7 +99,7 @@ namespace PolyDesktopGUI
         }
         private void ComputerTable_SelectionChanged(object sender, SelectionChangedEventArgs e) //ListView object holding all computers in a preset
         {
-            if(ComputerTable.SelectedItem != null)
+            if (ComputerTable.SelectedItem != null)
             {
                 int index = 1;
                 for (int i = 0; i < ComputerTable.SelectedIndex + 1; i++)
@@ -117,7 +117,8 @@ namespace PolyDesktopGUI
         }
         public Computer[] Computers { get { return GatherComputers(); } }
         public Computer[] GatherComputers() //returns all computers in an observable array to populate listview
-        {   try
+        {
+            try
             {
                 string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
                 bucket = temp.Split(", ");
@@ -154,50 +155,35 @@ namespace PolyDesktopGUI
             return new Computer[0];
         }
         public Computer[] AllComputers { get { return GatherAllComputers(); } }
-        public Computer[] GatherAllComputers() //returns all computers in an observable array to populate listview
+        public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
         {
-            try
-            {
-                Computer[] container = new Computer[15];
-                try
-                {
-                    int j = -1;
-                    for (int i = 0; i < 99; i++)
-                    {
-                        j++;
-                        Computer preset = new Computer();
+            Computer[] container = new Computer[5];
 
-                            //preset.ID = bucket[j];
-                            using (var connection = new SqlConnection(connectionString))
-                            {
-                                string sql = "SELECT c_name FROM PolyDesktop.dbo.desktop";
-                                connection.Open();
-                                using (SqlCommand command = new SqlCommand(sql, connection))
-                                {
-                                    using (SqlDataReader reader = command.ExecuteReader())
-                                    {
-                                        string name = "No Name Found";
-                                    reader.Read();
-                                        
-                                            name = reader.GetString(0); //UUUUUUHHHHHHH, I can't get more than the first row
-                                            reader.Close();
-                                        
-                                        preset.Name = name;
-                                    }
-                                }
-                            }
-                            preset.Nickname = preset.Name;
-                        
-                        container[i] = preset;
+            using (var connection = new SqlConnection(connectionString))
+            {
+                string sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop";
+                if (searchTerm != null)
+                {
+                    sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop WHERE c_name LIKE'%" + searchTerm + "%' OR c_ID LIKE '%" + searchTerm + "%'";
+                }
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        for (int i = 0; i < 5 && reader.Read(); i++) //only returns a max of 15 results
+                        {
+                            Computer temp = new Computer();
+                            temp.ID = reader.GetInt32(0).ToString();
+                            temp.Name = reader.GetString(1); //UUUUUUHHHHHHH, I can't get more than the first row
+                            temp.Nickname = temp.Name;
+                            container[i] = temp;
+                        }
+                        reader.Close();
                     }
                 }
-                catch
-                {
-                    return container;
-                }
             }
-            catch { }
-            return new Computer[0];
+            return container;
         }
         private string ExecuteQuery(int index) //fetch computer name given c_ID
         {
@@ -239,6 +225,10 @@ namespace PolyDesktopGUI
             }
         }
         private void PresetSaveButton_Click(object sender, RoutedEventArgs e) //write back to file using bucket object
+        {
+            SavePreset();
+        }
+        private void SavePreset()
         {
             if (PresetList.SelectedIndex != -1)
             {
@@ -283,7 +273,7 @@ namespace PolyDesktopGUI
         }
 
         private void DeletePresetButton_Click(object sender, RoutedEventArgs e) //pop-up to confirm deletion
-        { 
+        {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
         private void FlyoutDeletePresetButton_Click(object sender, RoutedEventArgs e) //delete .txt file for index selected and shift all following files up a name
@@ -302,7 +292,15 @@ namespace PolyDesktopGUI
 
         private void search_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
         {
-
+            SearchListBox.ItemsSource = GatherAllComputers(search.QueryText);
+        }
+        private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //write new mode to bucket
+        {
+            string tempBucket = string.Join(", ", bucket); //need to concat new computer
+            Computer temp = (Computer)SearchListBox.SelectedItem;
+            tempBucket = tempBucket + ", " + temp.ID + ", " + temp.Name;
+            File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", tempBucket);
+            SavePreset(); // doesn't save properly, and doesn't visually update, and popup needs to go away
         }
     }
     public class Preset

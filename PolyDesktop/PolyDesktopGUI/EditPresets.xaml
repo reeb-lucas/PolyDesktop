@@ -14,16 +14,16 @@
             <SymbolIcon Symbol="Back"/>
         </Button>
         <ListView Name="PresetList" DisplayMemberPath="Name" ItemsSource="{x:Bind Presets}" HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200" SelectionChanged="ListView_SelectionChanged" CornerRadius="5,5,5,5" SelectedIndex="0" Header="Presets"/>
-        <ComboBox x:Name="ModeBox" Margin="250,250,0,0" Width="108" SelectionChanged="ModeBox_SelectionChanged" CornerRadius="5,5,5,5" HorizontalAlignment="Center">
+        <ComboBox x:Name="ModeBox" Margin="320,250,0,0" Width="108" SelectionChanged="ModeBox_SelectionChanged" CornerRadius="5,5,5,5" HorizontalAlignment="Center">
             <x:String>Basic</x:String>
             <x:String>Tab</x:String>
             <x:String>Group</x:String>
             <x:String>Overlay</x:String>
         </ComboBox>
         <Button x:Name="PresetSaveButton" CornerRadius="5,5,5,5" HorizontalAlignment="Center" Content="Save Preset" Margin="660,301,0,0" VerticalAlignment="Top" Click="PresetSaveButton_Click"/>
-        <TextBox Name="NameBox" CornerRadius="5,5,5,5" HorizontalAlignment="Center" Margin="0,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
-        <TextBlock HorizontalAlignment="Center" Margin="250,220,0,0" Text="Mode" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,220,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="NameBox" CornerRadius="5,5,5,5" HorizontalAlignment="Center" Margin="70,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <TextBlock HorizontalAlignment="Center" Margin="320,220,0,0" Text="Mode" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="70,220,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <ListView x:Name="ComputerTable" Header="Computers" CornerRadius="5,5,5,5" HorizontalAlignment="Center" DisplayMemberPath="Name" Margin="120,300,0,0" ItemsSource="{x:Bind Computers}" SelectionChanged="ComputerTable_SelectionChanged" Width="410">
             <FlyoutBase.AttachedFlyout>
                 <Flyout>
@@ -40,19 +40,19 @@
             </FlyoutBase.AttachedFlyout>
         </ListView>
         <Button x:Name="TestButton" CornerRadius="5,5,5,5" Content="Fill Test Presets" HorizontalAlignment="Center" Margin="652,103,0,0" VerticalAlignment="Top" Click="TestButton_Click"/>
-        <Button x:Name="AddComputerButton" CornerRadius="5,5,5,5" HorizontalAlignment="Center" Content="+" Margin="600,353,0,0" VerticalAlignment="Top" Click="AddComputerButton_Click">
+        <Button x:Name="AddComputerButton" CornerRadius="5,5,5,5" HorizontalAlignment="Center" Content="Add Computer" Margin="-185,250,0,0" VerticalAlignment="Top" Click="AddComputerButton_Click">
             <FlyoutBase.AttachedFlyout>
                 <Flyout>
                     <StackPanel>
                         <SearchBox x:Name="search" QueryChanged="search_QueryChanged" CornerRadius="5,5,5,5"/>
-                        <ListView x:Name="SearchListBox" FontSize="26" ItemsSource="{x:Bind AllComputers}" DisplayMemberPath="Name"/>
+                        <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" FontSize="26" MaxHeight="400" ItemsSource="{x:Bind AllComputers}" DisplayMemberPath="Name"/>
                     </StackPanel>
                 </Flyout>
             </FlyoutBase.AttachedFlyout>
         </Button>
-        <TextBlock Name="NumberOfComputersLabel" HorizontalAlignment="Center" Margin="490,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock Name="NumBlock" HorizontalAlignment="Center" Margin="490,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="DeletePresetButton" CornerRadius="5,5,5,5" Content="Delete" Margin="-205,250,0,0" VerticalAlignment="Top" Click="DeletePresetButton_Click" HorizontalAlignment="Center">
+        <TextBlock Name="NumberOfComputersLabel" HorizontalAlignment="Center" Margin="560,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Name="NumBlock" HorizontalAlignment="Center" Margin="560,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="DeletePresetButton" CornerRadius="5,5,5,5" Content="Delete Preset" Margin="670,353,0,0" VerticalAlignment="Top" Click="DeletePresetButton_Click" HorizontalAlignment="Center">
             <FlyoutBase.AttachedFlyout>
                 <Flyout>
                     <StackPanel>
