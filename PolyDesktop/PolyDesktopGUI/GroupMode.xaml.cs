@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+/**************************************************************
+ * Copyright (c) 2021
+ * Author: Tyler Lucas
+ * Filename: TabMode.xaml.cs
+ * Date Created: 11/30/2021
+ * Modifications: 11/30/2021 - Created Group Mode File, WIP label waiting on remoting capabilities and feature implementation
+ *                12/4/2021 - Implemented navigation back to main menu with back button
+ **************************************************************/
+/**************************************************************
+ * Overview:
+ *      This page displays multiple desktops with one in "focus" at a larger size with the remaining desktops at the side in a scrolable column
+ **************************************************************/
 
 namespace PolyDesktopGUI
 {

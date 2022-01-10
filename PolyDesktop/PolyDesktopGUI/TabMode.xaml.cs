@@ -1,20 +1,21 @@
 ﻿using Microsoft.UI.Xaml.Controls;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+/**************************************************************
+ * Copyright (c) 2021
+ * Author: Tyler Lucas
+ * Filename: TabMode.xaml.cs
+ * Date Created: 11/30/2021
+ * Modifications: 11/30/2021 - Created Tab Mode File, WIP label waiting on remoting capabilities and feature implementation
+ *                12/4/2021 - Implemented navigation back to main menu with back button
+ *                1/4/2022 - Sucessfully implemented browser-like UI and navigation. Currently defaults to Main Menu page, 
+ *                           waiting on remoting capabilities
+ **************************************************************/
+/**************************************************************
+ * Overview:
+ *      This page displays a browser-like navigation system for the user to access differernt desktops and the PolyBay drive system
+ **************************************************************/
 
 namespace PolyDesktopGUI
 {

@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Navigation;
  * Filename: BasicMode.xaml.cs
  * Date Created: 11/30/2021
  * Modifications: 11/30/2021 - Created Basic Mode, WIP label waiting on remoting capabilities
+ *                12/4/2021 - Implemented navigation back to main menu with back button
  **************************************************************/
 /**************************************************************
  * Overview:
