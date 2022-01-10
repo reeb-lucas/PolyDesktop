@@ -38,3 +38,6 @@
 *.cache
 PolyDesktop/.vs/PolyDesktop/v16/.suo
 *.cache
+*.editorconfig
+*.json
+*.pdb

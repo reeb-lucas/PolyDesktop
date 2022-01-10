@@ -1,19 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+
+/**************************************************************
+ * Copyright (c) 2021
+ * Author: Tyler Lucas
+ * Filename: OverlayMode.xaml.cs
+ * Date Created: 11/30/2021
+ * Modifications: 11/30/2021 - Created Overlay Mode File, WIP label waiting on remoting capabilities and feature implementation
+ *                12/4/2021 - Implemented navigation back to main menu with back button
+ **************************************************************/
+/**************************************************************
+ * Overview:
+ *      This page displays any number of desktops overlayed at 55% opacity to allow for simultaneous work at full screen resolution
+ **************************************************************/
 
 namespace PolyDesktopGUI
 {
