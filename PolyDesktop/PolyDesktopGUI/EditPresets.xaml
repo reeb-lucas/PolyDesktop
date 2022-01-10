@@ -42,7 +42,7 @@
         <Button x:Name="TestButton" CornerRadius="5,5,5,5" Content="Fill Test Presets" HorizontalAlignment="Center" Margin="652,103,0,0" VerticalAlignment="Top" Click="TestButton_Click"/>
         <Button x:Name="AddComputerButton" CornerRadius="5,5,5,5" HorizontalAlignment="Center" Content="Add Computer" Margin="-185,250,0,0" VerticalAlignment="Top" Click="AddComputerButton_Click">
             <FlyoutBase.AttachedFlyout>
-                <Flyout>
+                <Flyout x:Name="AddComputerFlyout">
                     <StackPanel>
                         <SearchBox x:Name="search" QueryChanged="search_QueryChanged" CornerRadius="5,5,5,5"/>
                         <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" FontSize="26" MaxHeight="400" ItemsSource="{x:Bind AllComputers}" DisplayMemberPath="Name"/>

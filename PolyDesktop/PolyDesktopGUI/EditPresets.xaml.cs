@@ -116,7 +116,7 @@ namespace PolyDesktopGUI
             }
         }
         public Computer[] Computers { get { return GatherComputers(); } }
-        public Computer[] GatherComputers() //returns all computers in an observable array to populate listview
+        public Computer[] GatherComputers() //returns all computers in a preset in an observable array to populate listview
         {
             try
             {
@@ -294,13 +294,32 @@ namespace PolyDesktopGUI
         {
             SearchListBox.ItemsSource = GatherAllComputers(search.QueryText);
         }
-        private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //write new mode to bucket
+        private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //TODO: give flyout saying computer is already in preset
         {
-            string tempBucket = string.Join(", ", bucket); //need to concat new computer
-            Computer temp = (Computer)SearchListBox.SelectedItem;
-            tempBucket = tempBucket + ", " + temp.ID + ", " + temp.Name;
-            File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", tempBucket);
-            SavePreset(); // doesn't save properly, and doesn't visually update, and popup needs to go away
+            if (SearchListBox.SelectedItem != null)
+            {
+                bool alreadyExists = false;
+                Computer temp = (Computer)SearchListBox.SelectedItem;
+                for (int i = 0; i < Convert.ToInt32(bucket[2]); i++)
+                {
+                    i++; //add another to skip over computer names ans just check ID
+                    if (bucket[i + 2] == temp.ID)
+                    {
+                        alreadyExists = true;
+                        //GIVE FLYOUT
+                        break;
+                    }
+                }
+                if (!alreadyExists)
+                {
+                    bucket[2] = (Convert.ToInt32(bucket[2]) + 1).ToString();
+                    string tempBucket = string.Join(", ", bucket);
+                    tempBucket = tempBucket + ", " + temp.ID + ", " + temp.Name;
+                    File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", tempBucket);
+                    ComputerTable.ItemsSource = Computers;
+                }
+                AddComputerFlyout.Hide();
+            }
         }
     }
     public class Preset
