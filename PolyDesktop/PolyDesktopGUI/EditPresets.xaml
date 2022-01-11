@@ -34,7 +34,10 @@
                         <TextBlock Name="FlyoutNameBlock" Text="Unknown Name"/>
                         <TextBlock Text="Nickname:" Margin="0,7,0,0"/>
                         <TextBox Name="FlyoutNicknameBox" Text="Unknown Nickname" CornerRadius="5,5,5,5"/>
-                        <Button Name="NicknameChangeButton" Content="Change" Margin="0,7,0,0" Click="NicknameChangeButton_Click" CornerRadius="5,5,5,5"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Name="NicknameChangeButton" Content="Change" Margin="0,7,0,0" Click="NicknameChangeButton_Click" CornerRadius="5,5,5,5"/>
+                            <Button Name="RemoveComputerButton" Content="Remove" Margin="0,7,0,0" Click="RemoveComputerButton_Click" CornerRadius="5,5,5,5" Background="#674ea7" Foreground="White"/>
+                        </StackPanel>
                     </StackPanel>
                 </Flyout>
             </FlyoutBase.AttachedFlyout>
@@ -52,12 +55,12 @@
         </Button>
         <TextBlock Name="NumberOfComputersLabel" HorizontalAlignment="Center" Margin="560,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock Name="NumBlock" HorizontalAlignment="Center" Margin="560,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="DeletePresetButton" CornerRadius="5,5,5,5" Content="Delete Preset" Margin="670,353,0,0" VerticalAlignment="Top" Click="DeletePresetButton_Click" HorizontalAlignment="Center">
+        <Button x:Name="DeletePresetButton" CornerRadius="5,5,5,5" Content="Delete Preset" Margin="670,353,0,0" VerticalAlignment="Top" Click="DeletePresetButton_Click" HorizontalAlignment="Center" Background="#674ea7" Foreground="White">
             <FlyoutBase.AttachedFlyout>
                 <Flyout>
                     <StackPanel>
                         <TextBlock Text="Are you sure you want to delete this preset?"/>
-                        <Button Name="FlyoutDeletePresetButton" Content="Delete" Margin="0,7,0,0" Click="FlyoutDeletePresetButton_Click" CornerRadius="5,5,5,5"/>
+                        <Button Name="FlyoutDeletePresetButton" Content="Delete" Margin="0,7,0,0" Click="FlyoutDeletePresetButton_Click" CornerRadius="5,5,5,5" Background="#674ea7" Foreground="White"/>
                     </StackPanel>
                 </Flyout>
             </FlyoutBase.AttachedFlyout>

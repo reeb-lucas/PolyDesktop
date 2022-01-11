@@ -9,6 +9,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -250,10 +251,26 @@ namespace PolyDesktopGUI
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
 
         }
+        private void RemoveComputerButton_Click(object sender, RoutedEventArgs e) //remove computer from preset
+        {
+            int numComputers = Convert.ToInt32(bucket[2]);
+            for (int i = (ComputerTable.SelectedIndex * 2) + 3; i < (numComputers * 2) + 1; i++) //shift up following computers
+            {
+                string a = bucket[i];
+                string b = bucket[i + 2];
+                bucket[i] = bucket[i + 2];
+            }
+            bucket = bucket.SkipLast(2).ToArray(); //remove last computer
+            bucket[2] = (numComputers - 1).ToString();
+            string temp = string.Join(", ", bucket);
+            bucket = temp.Split(", ");
+            File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", temp);
+            ComputerTable.ItemsSource = Computers;
+        }
         private void TestButton_Click(object sender, RoutedEventArgs e) //this fills the computer with test presets
         {
             File.WriteAllText(filename + 0 + ".txt", "TestPreset1, Tab, 3, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2");
-            File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2, 213286983, TestNickname 3, 102538501, TestNickname 4, 25389172, TestNickname 5");
+            File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 14252351, TestNickname 0, 213286983, TestNickname 1, 158964, TestNickname 2, 162, TestNickname 3, 102538501, TestNickname 4, 25389172, TestNickname 5");
             File.WriteAllText(filename + 2 + ".txt", "TestPreset3, Basic, 4, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2, 213286983, TestNickname 3");
             File.WriteAllText(filename + 3 + ".txt", "TestPreset4, Overlay, 5, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2, 213286983, TestNickname 3, 102538501, TestNickname 4");
             PresetList.ItemsSource = Presets;
@@ -294,7 +311,7 @@ namespace PolyDesktopGUI
         {
             SearchListBox.ItemsSource = GatherAllComputers(search.QueryText);
         }
-        private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //TODO: give flyout saying computer is already in preset
+        private async void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
         {
             if (SearchListBox.SelectedItem != null)
             {
@@ -302,11 +319,12 @@ namespace PolyDesktopGUI
                 Computer temp = (Computer)SearchListBox.SelectedItem;
                 for (int i = 0; i < Convert.ToInt32(bucket[2]); i++)
                 {
-                    i++; //add another to skip over computer names ans just check ID
+                    i++; //add another to skip over computer names and just check ID
                     if (bucket[i + 2] == temp.ID)
                     {
                         alreadyExists = true;
-                        //GIVE FLYOUT
+                        MessageDialog dialog = new MessageDialog("Computer is already added in preset");
+                        await dialog.ShowAsync();//GIVE FLYOUT
                         break;
                     }
                 }
@@ -315,6 +333,7 @@ namespace PolyDesktopGUI
                     bucket[2] = (Convert.ToInt32(bucket[2]) + 1).ToString();
                     string tempBucket = string.Join(", ", bucket);
                     tempBucket = tempBucket + ", " + temp.ID + ", " + temp.Name;
+                    bucket = tempBucket.Split(", ");
                     File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", tempBucket);
                     ComputerTable.ItemsSource = Computers;
                 }

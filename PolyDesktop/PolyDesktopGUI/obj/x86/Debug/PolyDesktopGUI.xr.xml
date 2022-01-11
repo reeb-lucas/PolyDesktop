@@ -62,6 +62,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Name" />
       <RootProperty Name="Flyout" />
       <RootEvent Name="Click" />
@@ -125,6 +127,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
+      <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SearchBox">
       <RootProperty Name="CornerRadius" />
