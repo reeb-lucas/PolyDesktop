@@ -149,11 +149,18 @@
     </RootType>
     <RootType FullName="PolyDesktopGUI.MainPage" />
     <RootType FullName="PolyDesktopGUI.OverlayMode" />
+    <RootType FullName="PolyDesktopGUI.PolyBayTab" />
     <RootType FullName="PolyDesktopGUI.ScriptStats" />
     <RootType FullName="Microsoft.UI.Xaml.Controls.TabView">
+      <RootProperty Name="TabWidthMode" />
       <RootProperty Name="CanDragTabs" />
+      <RootProperty Name="TabItems" />
       <RootEvent Name="TabCloseRequested" />
       <RootEvent Name="AddTabButtonClick" />
+    </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.Controls.TabViewItem">
+      <RootProperty Name="Header" />
+      <RootProperty Name="IsClosable" />
     </RootType>
     <RootType FullName="PolyDesktopGUI.TabMode" />
   </Roots.RootTypes>
