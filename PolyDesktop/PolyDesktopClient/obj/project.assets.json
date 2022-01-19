@@ -9,19 +9,21 @@
   },
   "packageFolders": {
     "C:\\Users\\jerro\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\CST 316\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj",
+      "projectUniqueName": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj",
       "projectName": "PolyDesktopClient",
-      "projectPath": "S:\\CST 316\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj",
+      "projectPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj",
       "packagesPath": "C:\\Users\\jerro\\.nuget\\packages\\",
-      "outputPath": "S:\\CST 316\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\obj\\",
+      "outputPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\jerro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

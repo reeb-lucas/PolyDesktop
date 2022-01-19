@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bll88gqSieOAFoMNEdSBaMlvvcl0QsICge8hw3+8TcaPtQvdE1pRj+IJz6nhp/JBRJRvqoqEnvki34fDthdi6w==",
+  "dgSpecHash": "Gbue4nfFd03V8e6Y2W/wLPdX/sHy+bimUHNeR58WixLsKUcTqbdOEZHW1rwbrgLt9kXmIAT3SsWZAtuSElSa6w==",
   "success": true,
-  "projectFilePath": "S:\\CST 316\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+  "projectFilePath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jerro\\.nuget\\packages\\microsoft.net.native.compiler\\2.2.11-rel-30601-02\\microsoft.net.native.compiler.2.2.11-rel-30601-02.nupkg.sha512",
     "C:\\Users\\jerro\\.nuget\\packages\\microsoft.net.uwpcoreruntimesdk\\2.2.13\\microsoft.net.uwpcoreruntimesdk.2.2.13.nupkg.sha512",

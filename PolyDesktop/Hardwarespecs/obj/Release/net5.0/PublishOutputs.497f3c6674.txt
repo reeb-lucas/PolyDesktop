@@ -4,5 +4,11 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPu
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\HardwareSpecPuller.runtimeconfig.json
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\HardwareSpecPuller.pdb
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\System.CodeDom.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\System.Data.SqlClient.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\System.Management.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\runtimes\win-arm64\native\sni.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\runtimes\win-x64\native\sni.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\runtimes\win-x86\native\sni.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\HardwareSpecPuller\runtimes\win\lib\netcoreapp3.1\System.Management.dll

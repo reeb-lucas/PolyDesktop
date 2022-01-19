@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Management;        
 using System.Text;
+using System.IO;
 /**************************************************************
 * Copyright (c) 2021
 * Author: Jerron Rhen
@@ -20,15 +21,20 @@ namespace Hardwarespecs
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine(GetPCid());
-            //Console.WriteLine(GetPCName());
-            //Console.WriteLine(GetCPUInfo());
-            //Console.WriteLine(GetGPUInfo());
-            //Console.WriteLine(GetCpuSpeedInGHz());
-            //Console.WriteLine("Ram: " + GetRAMsize() + "GB");
-            //Console.WriteLine("RamSpeed: " + GetRAMspeed());
-            //Console.WriteLine(GetStorageInfo() + "GB");
-            string PCid = GetPCid();
+            string UID;
+            try
+            {
+                string fPath = "c:\\Program Files\\PolyDesktop\\UID.txt";
+                UID = File.ReadAllText(fPath);
+            }
+            catch
+            {
+                WriteToDB();
+            }
+        }
+
+        private static void WriteToDB()
+        {
             string PCName = GetPCName();
             string CPUinfo = GetCPUInfo();
             string CPUspeed = GetCpuSpeedInGHz();
@@ -36,14 +42,22 @@ namespace Hardwarespecs
             string RAMsize = GetRAMsize();
             string RAMSpeed = GetRAMspeed();
             string StorageInfo = GetStorageInfo();
-            
-            // CREATE TABLE dbo.desktop(c_ID int, c_name varchar(MAX), CPU varchar(MAX), CPU_speed float, GPU varchar(MAX), RAM_speed int, RAM_size int, drive_size float)
+            string UID;
+            try
+            {
+                string fPath = "c:\\Program Files\\PolyDesktop\\UID.txt";
+                UID = File.ReadAllText(fPath);
+            }
+            catch
+            {
+                UID = GetPCid();
+            }
+            // CREATE TABLE dbo.pesktop(c_ID int, c_name varchar(MAX), CPU varchar(MAX), CPU_speed float, GPU varchar(MAX), RAM_speed int, RAM_size int, drive_size float)
             string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
-            String INquery = "INSERT INTO PolyDesktop.dbo.desktop(c_ID, c_name, CPU, CPU_speed, GPU, RAM_speed, RAM_size, drive_size) Values("+ "@PCid" +  ","
+            String INquery = "INSERT INTO PolyDesktop.dbo.desktop(c_ID, c_name, CPU, CPU_speed, GPU, RAM_speed, RAM_size, drive_size) Values(" + "@UID" + ","
               + "@PCName" + " , " + "@CPUInfo" + " , " + "@CpuSpeed" + " , "
               + "@GPUInfo" + " , " + "@RAMspeed" + " , " + "@RAMsize" + " , "
               + "@StorageInfo" + ");";
-            
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -54,7 +68,7 @@ namespace Hardwarespecs
                         using (SqlCommand cmd = conn.CreateCommand())
                         {
                             cmd.CommandText = INquery;
-                            cmd.Parameters.AddWithValue("@PCid", PCid);
+                            cmd.Parameters.AddWithValue("@UID", UID);
                             cmd.Parameters.AddWithValue("@PCName", PCName);
                             cmd.Parameters.AddWithValue("@CPUInfo", CPUinfo);
                             cmd.Parameters.AddWithValue("@CpuSpeed", CPUspeed);
@@ -75,47 +89,63 @@ namespace Hardwarespecs
             //Console.WriteLine("Press enter to continue");
             //Console.ReadKey();
         }
-
         private static string GetPCid()
         {
-            ManagementClass mc = new ManagementClass("win32_DiskDrive");
-            ManagementObjectCollection moc = mc.GetInstances();
+            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
             String info = string.Empty;
-            foreach (ManagementObject mo in moc)
+            String IDQuery = "DECLARE @myid uniqueidentifier = NEWID();  SELECT CONVERT(CHAR(36), @myid) AS 'char'; ";
+            try
             {
-                if ((string)mo["MediaType"] == "Fixed hard disk media")
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    info += (string)mo["SerialNumber"];
-                    int count = 0;
-                    char ch = 'c';
-                    StringBuilder bs = new StringBuilder(info.Length);
-                    foreach (char c in info)
+                    conn.Open();
+                    if (conn.State == System.Data.ConnectionState.Open)
                     {
-                        
-                        if (c < '0') continue;
-                        if (c > '9') continue;
-                        if (bs.Length == 0 && c == '0')
+                        using (SqlCommand cmd = conn.CreateCommand())
                         {
-                            bs.Append('1');
-                            count++;
+                            cmd.CommandText = IDQuery;
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    info = reader.GetString(0);                                 ////
+                                    int count = 0;
+                                    char ch = 'c';
+                                    StringBuilder bs = new StringBuilder(info.Length);
+                                    foreach (char c in info)
+                                    {
+                                        if (c < '0') continue;
+                                        if (c > '9') continue;
+                                        if (bs.Length == 0 && c == '0')
+                                        {
+                                            bs.Append('1');
+                                            count++;
+                                        }
+                                        else if (c == ch) { }
+                                        else
+                                        {
+                                            bs.Append(c);
+                                            count++;
+                                        }
+                                        ch = bs[count - 1];
+                                        if (count == 9)
+                                        { break; }
+                                    }
+                                    info = bs.ToString();
+                                    Directory.CreateDirectory("c:\\Program Files\\PolyDesktop\\");
+                                    string fPath = "c:\\Program Files\\PolyDesktop\\UID.txt"; 
+                                    File.WriteAllText(fPath, info);
+                                    break;
+                                }
+                            }
+                            cmd.ExecuteNonQuery();
                         }
-                        else if (c == ch)
-                        {
-
-                        }
-                        else 
-                        {
-                            bs.Append(c);
-                            count++;
-                        }
-                        ch = bs[count-1];
-                        if (count == 9)
-                        { break; }
-                        
                     }
-                    info = bs.ToString();
-                    break;
                 }
+            }
+            catch (Exception eSql)
+            {
+                Debug.WriteLine("Exception: " + eSql.Message);
             }
             return info;
         }
