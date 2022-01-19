@@ -8414,11 +8414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\tyler-lucas\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
       "projectName": "PolyDesktopGUI",
-      "projectPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\tyler-lucas\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\obj\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\tyler-lucas\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
