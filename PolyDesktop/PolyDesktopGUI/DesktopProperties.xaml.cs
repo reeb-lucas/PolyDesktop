@@ -22,10 +22,11 @@ using Windows.UI.Xaml.Navigation;
  * Author: Jacob Pressley
  * Filename: DesktopProperties.xaml.cs
  * Date Created: 11/6/2021
- * Modifications:
+ * Modifications: 12/6/2021 - Added additional coments
  **************************************************************/
 /**************************************************************
- * Overview:
+ * Overview: querys the DB and populates a table with the data.
+ *          columns are dynamically added from database, so this code is completely independant of the content of the table.
  *      
  **************************************************************/
 
@@ -33,12 +34,12 @@ namespace PolyDesktopGUI
 {
     public sealed partial class DesktopProperties : Page
     {
-        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
+        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
         private DataTable dataTable;
         public DesktopProperties()
         {
             this.InitializeComponent();
-            ExecuteQuery("SELECT * FROM PolyDestopn.dbo.desktop");
+            ExecuteQuery("SELECT * FROM PolyDesktop.dbo.desktop");
         }
         private async void ExecuteQuery(string query)
         {
@@ -67,7 +68,7 @@ namespace PolyDesktopGUI
             }
         }
 
-        private void BindTable(DataTable table, DataGrid grid)
+        private void BindTable(DataTable table, DataGrid grid) //bind table to the data gathered by the query
         {
             // Generate columns with index binding
 
@@ -108,9 +109,8 @@ namespace PolyDesktopGUI
             RefreshContents(table, grid);
         }
 
-        private void RefreshContents(DataTable table, DataGrid grid)
-        {
-            // Create collection
+        private void RefreshContents(DataTable table, DataGrid grid) // Create collection
+        { 
             var collection = new ObservableCollection<object>();
             foreach (DataRow row in table.Rows)
             {
@@ -120,7 +120,7 @@ namespace PolyDesktopGUI
             grid.ItemsSource = collection;
         }
 
-        private void dataGrid_Sorting(object sender, DataGridColumnEventArgs e)
+        private void dataGrid_Sorting(object sender, DataGridColumnEventArgs e) //Allow sorting by values
         {
             var currentSortDirection = e.Column.SortDirection;
 

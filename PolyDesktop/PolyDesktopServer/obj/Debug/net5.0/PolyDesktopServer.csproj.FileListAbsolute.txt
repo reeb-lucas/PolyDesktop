@@ -1,16 +1,48 @@
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.exe
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.deps.json
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.runtimeconfig.json
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.runtimeconfig.dev.json
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.dll
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\ref\PolyDesktopServer.dll
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.pdb
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.csproj.AssemblyReference.cache
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.GeneratedMSBuildEditorConfig.editorconfig
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.AssemblyInfoInputs.cache
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.AssemblyInfo.cs
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.csproj.CoreCompileInputs.cache
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.dll
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\ref\PolyDesktopServer.dll
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.pdb
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.genruntimeconfig.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.exe
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.deps.json
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.runtimeconfig.json
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.runtimeconfig.dev.json
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\ref\PolyDesktopServer.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.pdb
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.AssemblyInfo.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\ref\PolyDesktopServer.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.pdb
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.genruntimeconfig.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.exe
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.deps.json
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.runtimeconfig.json
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.runtimeconfig.dev.json
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\ref\PolyDesktopServer.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.csprojAssemblyReference.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.AssemblyInfoInputs.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.AssemblyInfo.cs
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\ref\PolyDesktopServer.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.genruntimeconfig.cache
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.exe
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.deps.json
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.runtimeconfig.json
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.runtimeconfig.dev.json
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.dll
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\ref\PolyDesktopServer.dll
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\bin\Debug\net5.0\PolyDesktopServer.pdb
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.csproj.AssemblyReference.cache
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.AssemblyInfoInputs.cache
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.AssemblyInfo.cs
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.dll
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\ref\PolyDesktopServer.dll
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.pdb
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopServer\obj\Debug\net5.0\PolyDesktopServer.genruntimeconfig.cache

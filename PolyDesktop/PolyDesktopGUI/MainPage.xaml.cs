@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 using Windows.UI.ViewManagement;
+
 /**************************************************************
  * Copyright (c) 2021
  * Author: Tyler Lucas, Jacob Pressley
@@ -33,6 +25,8 @@ namespace PolyDesktopGUI
 {
     public sealed partial class MainPage : Page
     {
+        static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        string filename = Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
         public MainPage()
         {
             this.InitializeComponent();
@@ -59,12 +53,37 @@ namespace PolyDesktopGUI
         {
             this.Frame.Navigate(typeof(EditPresets));
         }
-
-        private void PresetDialog_Click(object sender, RoutedEventArgs e)
+        public Preset[] Presets { get { return GatherPresets(); } }
+        public Preset[] GatherPresets() //returns all presets in an observable object for the listview to display
         {
-            this.Frame.Navigate(typeof(EditPresets));
+            Preset[] container = new Preset[Directory.GetFiles(localApplicationData).Length]; //sees how many files are in the directory for presets and sets the array size
+            for (int i = 0; i < 99; i++)
+            {
+                try
+                {
+                    string temp = File.ReadAllText(filename + i + ".txt");
+                    string[] bucket = temp.Split(", ");
+                    Preset preset = new Preset();
+                    preset.Name = bucket[0];
+                    preset.Mode = bucket[1];
+                    preset.numComputers = Int32.Parse(bucket[2]);
+                    container[i] = preset;
+                }
+                catch
+                {
+                    if (i == 0)
+                    {
+                        PresetList.Header = "No Presets Found";
+                    }
+                    break;
+                }
+            }
+            return container;
         }
-
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e) //when preset is selected, display all preset info from file and populate computertable
+        {
+            //start preset
+        }
         private void BasicMode_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BasicMode));

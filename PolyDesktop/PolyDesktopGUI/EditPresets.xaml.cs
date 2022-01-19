@@ -9,6 +9,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,12 +23,13 @@ using Windows.UI.Xaml.Navigation;
  * Author: Jacob Pressley
  * Filename: EditPresets.xaml.cs
  * Date Created: 11/29/2021
- * Modifications:
+ * Modifications: 12/6/2021 - Added additional coments
  **************************************************************/
 /**************************************************************
- * Overview:    
+ * Overview: Allows user to edit the presets saved in .txt files and allow users to delete presets.
  * Preset Saving Standard: "Name, Mode, # of computers, Computer ID, Nickname, Computer ID, Nickname, ..."
  *                          user can only have up to 100 presets
+ *                          each preset can have up to 100 computers
  **************************************************************/
 
 namespace PolyDesktopGUI
@@ -36,13 +38,13 @@ namespace PolyDesktopGUI
     {
         static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         string filename = Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
-        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDestopn; UID=PolyCode; password=P0lyC0d3";
+        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
         string[] bucket;
         public EditPresets()
         {
             this.InitializeComponent();
         }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e) //back to main menu
         {
             this.Frame.Navigate(typeof(MainPage));
         }
@@ -61,15 +63,20 @@ namespace PolyDesktopGUI
                     preset.Mode = bucket[1];
                     preset.numComputers = Int32.Parse(bucket[2]);
                     container[i] = preset;
+                    PresetList.Header = "Presets";
                 }
                 catch
                 {
+                    if (i == 0)
+                    {
+                        PresetList.Header = "No Presets Found";
+                    }
                     break;
                 }
             }
             return container;
         }
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e) //when preset is selected, display all preset info from file and populate computertable
         {
             try
             {
@@ -91,9 +98,9 @@ namespace PolyDesktopGUI
             }
             catch { }
         }
-        private void ComputerTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComputerTable_SelectionChanged(object sender, SelectionChangedEventArgs e) //ListView object holding all computers in a preset
         {
-            if(ComputerTable.SelectedItem != null)
+            if (ComputerTable.SelectedItem != null)
             {
                 int index = 1;
                 for (int i = 0; i < ComputerTable.SelectedIndex + 1; i++)
@@ -106,50 +113,84 @@ namespace PolyDesktopGUI
                     FlyoutNameBlock.Text = ExecuteQuery(index);
                     FlyoutNicknameBox.Text = bucket[index + 1];
                 }
-                FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+                FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender); //flyout with computer info and oportunity to change nickname
             }
         }
         public Computer[] Computers { get { return GatherComputers(); } }
-        public Computer[] GatherComputers() //returns all computers in an observable array to populate listview
+        public Computer[] GatherComputers() //returns all computers in a preset in an observable array to populate listview
         {
-            string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
-            bucket = temp.Split(", ");
-            Computer[] container = new Computer[Int32.Parse(bucket[2])];
             try
             {
-                int j = 1;
-                for (int i = 0; i < 99; i++)
+                string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
+                bucket = temp.Split(", ");
+                Computer[] container = new Computer[Int32.Parse(bucket[2])];
+                try
                 {
-                    j += 2;
-                    Computer preset = new Computer();
-                    if (bucket[j] != null)
+                    int j = 1;
+                    for (int i = 0; i < 99; i++)
                     {
-                        preset.ID = bucket[j];
-                        preset.Name = ExecuteQuery(j);
-                        if (bucket[j + 1] != null)
+                        j += 2;
+                        Computer preset = new Computer();
+                        if (bucket[j] != null)
                         {
-                            preset.Nickname = bucket[j + 1];
+                            preset.ID = bucket[j];
+                            preset.Name = ExecuteQuery(j);
+                            if (bucket[j + 1] != null)
+                            {
+                                preset.Nickname = bucket[j + 1];
+                            }
+                            else
+                            {
+                                preset.Nickname = preset.Name;
+                            }
                         }
-                        else
-                        {
-                            preset.Nickname = preset.Name;
-                        }
+                        container[i] = preset;
                     }
-                    container[i] = preset;
+                }
+                catch
+                {
+                    return container;
                 }
             }
-            catch
+            catch { }
+            return new Computer[0];
+        }
+        public Computer[] AllComputers { get { return GatherAllComputers(); } }
+        public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
+        {
+            Computer[] container = new Computer[5];
+
+            using (var connection = new SqlConnection(connectionString))
             {
-                return container;
+                string sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop";
+                if (searchTerm != null)
+                {
+                    sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop WHERE c_name LIKE'%" + searchTerm + "%' OR c_ID LIKE '%" + searchTerm + "%'";
+                }
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        for (int i = 0; i < 5 && reader.Read(); i++) //only returns a max of 15 results
+                        {
+                            Computer temp = new Computer();
+                            temp.ID = reader.GetInt32(0).ToString();
+                            temp.Name = reader.GetString(1); //UUUUUUHHHHHHH, I can't get more than the first row
+                            temp.Nickname = temp.Name;
+                            container[i] = temp;
+                        }
+                        reader.Close();
+                    }
+                }
             }
-            
             return container;
         }
-        private string ExecuteQuery(int index)
+        private string ExecuteQuery(int index) //fetch computer name given c_ID
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                string sql = "SELECT c_name FROM PolyDestopn.dbo.desktop WHERE c_ID = " + bucket[index];
+                string sql = "SELECT c_name FROM PolyDesktop.dbo.desktop WHERE c_ID = " + bucket[index];
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
@@ -184,9 +225,12 @@ namespace PolyDesktopGUI
                 bucket[index] = NormalizeInput(FlyoutNicknameBox.Text);
             }
         }
-        private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
+        private void PresetSaveButton_Click(object sender, RoutedEventArgs e) //write back to file using bucket object
         {
-            //write back to file using bucket object
+            SavePreset();
+        }
+        private void SavePreset()
+        {
             if (PresetList.SelectedIndex != -1)
             {
                 string saveString = NormalizeInput(NameBox.Text) + ", " + bucket[1] + ", " + NormalizeInput(NumBlock.Text);
@@ -202,40 +246,55 @@ namespace PolyDesktopGUI
             }
             PresetList.ItemsSource = Presets;
         }
-        private void AddComputerButton_Click(object sender, RoutedEventArgs e)
+        private void AddComputerButton_Click(object sender, RoutedEventArgs e) //popup to add computer from list to bucket and set nickname
         {
-            //popup to add computer from list to bucket and set nickname
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+
         }
-        private void TestButton_Click(object sender, RoutedEventArgs e)
+        private void RemoveComputerButton_Click(object sender, RoutedEventArgs e) //remove computer from preset
         {
-            //this fills the computer with test presets
-            File.WriteAllText(filename + 0 + ".txt", "TestPreset1, Tab, 3, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2");
-            File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4, 5, TestNickname 5");
-            File.WriteAllText(filename + 2 + ".txt", "TestPreset3, Basic, 4, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3");
-            File.WriteAllText(filename + 3 + ".txt", "TestPreset4, Overlay, 5, 0, TestNickname 0, 1, TestNickname 1, 2, TestNickname 2, 3, TestNickname 3, 4, TestNickname 4");
-            //File.WriteAllText(filename + "numPresets.txt", "4");
+            int numComputers = Convert.ToInt32(bucket[2]);
+            for (int i = (ComputerTable.SelectedIndex * 2) + 3; i < (numComputers * 2) + 1; i++) //shift up following computers
+            {
+                string a = bucket[i];
+                string b = bucket[i + 2];
+                bucket[i] = bucket[i + 2];
+            }
+            bucket = bucket.SkipLast(2).ToArray(); //remove last computer
+            bucket[2] = (numComputers - 1).ToString();
+            string temp = string.Join(", ", bucket);
+            bucket = temp.Split(", ");
+            File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", temp);
+            ComputerTable.ItemsSource = Computers;
+        }
+        private void TestButton_Click(object sender, RoutedEventArgs e) //this fills the computer with test presets
+        {
+            File.WriteAllText(filename + 0 + ".txt", "TestPreset1, Tab, 3, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2");
+            File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 14252351, TestNickname 0, 213286983, TestNickname 1, 158964, TestNickname 2, 162, TestNickname 3, 102538501, TestNickname 4, 25389172, TestNickname 5");
+            File.WriteAllText(filename + 2 + ".txt", "TestPreset3, Basic, 4, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2, 213286983, TestNickname 3");
+            File.WriteAllText(filename + 3 + ".txt", "TestPreset4, Overlay, 5, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2, 213286983, TestNickname 3, 102538501, TestNickname 4");
             PresetList.ItemsSource = Presets;
         }
 
-        private void ModeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ModeBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //write new mode to bucket
         {
-            bucket[1] = ModeBox.SelectedValue.ToString();
+            if (PresetList.Header.ToString() != "No Presets Found")
+            {
+                bucket[1] = ModeBox.SelectedValue.ToString();
+            }
         }
 
-        private string NormalizeInput(string input)
+        private string NormalizeInput(string input) //remove commas from input to make sure file is structured correctly
         {
             return input.Replace(",", "");
         }
 
-        private void DeletePresetButton_Click(object sender, RoutedEventArgs e)
+        private void DeletePresetButton_Click(object sender, RoutedEventArgs e) //pop-up to confirm deletion
         {
-            //pop-up to confirm deletion
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
-        private void FlyoutDeletePresetButton_Click(object sender, RoutedEventArgs e)
+        private void FlyoutDeletePresetButton_Click(object sender, RoutedEventArgs e) //delete .txt file for index selected and shift all following files up a name
         {
-            //delete .txt file for index selected and shift all following files up a name
             File.Delete(filename + PresetList.SelectedIndex + ".txt");
             for (int i = PresetList.SelectedIndex + 1; i < 100; i++)
             {
@@ -246,6 +305,40 @@ namespace PolyDesktopGUI
                 catch { }
             }
             PresetList.ItemsSource = Presets;
+        }
+
+        private void search_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
+        {
+            SearchListBox.ItemsSource = GatherAllComputers(search.QueryText);
+        }
+        private async void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
+        {
+            if (SearchListBox.SelectedItem != null)
+            {
+                bool alreadyExists = false;
+                Computer temp = (Computer)SearchListBox.SelectedItem;
+                for (int i = 0; i < Convert.ToInt32(bucket[2]); i++)
+                {
+                    i++; //add another to skip over computer names and just check ID
+                    if (bucket[i + 2] == temp.ID)
+                    {
+                        alreadyExists = true;
+                        MessageDialog dialog = new MessageDialog("Computer is already added in preset");
+                        await dialog.ShowAsync();//GIVE FLYOUT
+                        break;
+                    }
+                }
+                if (!alreadyExists)
+                {
+                    bucket[2] = (Convert.ToInt32(bucket[2]) + 1).ToString();
+                    string tempBucket = string.Join(", ", bucket);
+                    tempBucket = tempBucket + ", " + temp.ID + ", " + temp.Name;
+                    bucket = tempBucket.Split(", ");
+                    File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", tempBucket);
+                    ComputerTable.ItemsSource = Computers;
+                }
+                AddComputerFlyout.Hide();
+            }
         }
     }
     public class Preset

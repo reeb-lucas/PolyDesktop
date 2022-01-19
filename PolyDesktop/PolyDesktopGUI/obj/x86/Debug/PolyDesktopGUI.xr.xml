@@ -40,6 +40,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Label" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="Flyout" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="PolyDesktopGUI.BasicMode" />
@@ -59,6 +62,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Name" />
       <RootProperty Name="Flyout" />
       <RootEvent Name="Click" />
@@ -91,6 +96,8 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="SelectedIndex" />
       <RootProperty Name="Header" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="MaxHeight" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -120,6 +127,11 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
+      <RootProperty Name="Orientation" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.SearchBox">
+      <RootProperty Name="CornerRadius" />
+      <RootEvent Name="QueryChanged" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="System.String" />
@@ -131,20 +143,24 @@
       <RootMethod Name="GetToolTip" />
       <RootMethod Name="SetToolTip" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyout">
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBarFlyout">
       <RootProperty Name="Placement" />
-      <RootProperty Name="Items" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutItem">
-      <RootProperty Name="Text" />
-      <RootEvent Name="Click" />
+      <RootProperty Name="SecondaryCommands" />
     </RootType>
     <RootType FullName="PolyDesktopGUI.MainPage" />
     <RootType FullName="PolyDesktopGUI.OverlayMode" />
+    <RootType FullName="PolyDesktopGUI.PolyBayTab" />
     <RootType FullName="PolyDesktopGUI.ScriptStats" />
     <RootType FullName="Microsoft.UI.Xaml.Controls.TabView">
+      <RootProperty Name="TabWidthMode" />
       <RootProperty Name="CanDragTabs" />
+      <RootProperty Name="TabItems" />
       <RootEvent Name="TabCloseRequested" />
+      <RootEvent Name="AddTabButtonClick" />
+    </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.Controls.TabViewItem">
+      <RootProperty Name="Header" />
+      <RootProperty Name="IsClosable" />
     </RootType>
     <RootType FullName="PolyDesktopGUI.TabMode" />
   </Roots.RootTypes>

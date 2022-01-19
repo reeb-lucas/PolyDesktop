@@ -12,13 +12,21 @@
         <Image Source="Assets/PolyDesktopBanner.png" Height="499" Width="500" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-175,0,0"/>
         <Button x:Name="StartPDButton" Content="Start PolyDesktop" Margin="0,165,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="250" CornerRadius="5,5,5,5" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Click to begin remoting into computers." >
             <Button.Flyout>
-                <MenuFlyout Placement="Bottom">
-                    <MenuFlyoutItem Text="Select Custom Preset WARNING: EXPERIMENTAL" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="This mode allows you to select a preset you created in the 'Edit Desktop Presets' menu. This mode is currently marked experimental. It may not work as advertised" Click="PresetDialog_Click"></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Basic Mode" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Basic mode displays only one desktop." Click="BasicMode_Click"></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Tab Mode" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Tab mode displays one desktop across the whole screen with a tab sytem of navigation at the top, similar to an internet browser." Click="TabMode_Click"></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Group Mode" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Group mode displays one desktop primarily with several others in a column on the right side, similar to a video call with multiple participants." Click="GroupMode_Click"></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Overlay Mode WARNING: EXPERIMENTAL" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Overlay mode overlays all desktops selected as 'one screen'. This mode is currently marked experimental. It may not work as advertised." Click="OverlayMode_Click"></MenuFlyoutItem>
-                </MenuFlyout>
+                <CommandBarFlyout Placement="Bottom" x:Name="MenuBarFlyout">
+                    <CommandBarFlyout.SecondaryCommands>
+                        <AppBarButton  Label="Custom Preset" CornerRadius="5,5,5,5" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="This mode allows you to select a preset you created in the 'Edit Desktop Presets' menu.">
+                            <AppBarButton.Flyout>
+                                <Flyout>
+                                    <ListView Name="PresetList" DisplayMemberPath="Name" ItemsSource="{x:Bind Presets}" HorizontalAlignment="Center" Width="200" SelectionChanged="ListView_SelectionChanged" CornerRadius="5,5,5,5"/>
+                                </Flyout>
+                            </AppBarButton.Flyout>
+                        </AppBarButton>
+                        <AppBarButton  Label="Basic Mode" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Basic mode displays only one desktop." Click="BasicMode_Click" CornerRadius="5,5,5,5"/>
+                        <AppBarButton  Label="Tab Mode" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Tab mode displays one desktop across the whole screen with a tab sytem of navigation at the top, similar to an internet browser." Click="TabMode_Click" CornerRadius="5,5,5,5"/>
+                        <AppBarButton  Label="Group Mode" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Group mode displays one desktop primarily with several others in a column on the right side, similar to a video call with multiple participants." Click="GroupMode_Click" CornerRadius="5,5,5,5"/>
+                        <AppBarButton  Label="Overlay Mode EXPERIMENTAL" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Overlay mode overlays all desktops selected as 'one screen'. This mode is currently marked experimental. It may not work as advertised." Click="OverlayMode_Click" CornerRadius="5,5,5,5"/>
+                    </CommandBarFlyout.SecondaryCommands>
+                </CommandBarFlyout>
             </Button.Flyout>
         </Button>
         <Button x:Name="DesktopPresetsButton" Content="Edit Desktop Presets" Margin="0,245,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="250" CornerRadius="5,5,5,5" Click="DesktopPresetsButton_Click" ToolTipService.Placement="Mouse" ToolTipService.ToolTip="Click to edit PolyDesktop Presets"/>
