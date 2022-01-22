@@ -21,16 +21,7 @@ namespace Hardwarespecs
     {
         static void Main(string[] args)
         {
-            string UID;
-            try
-            {
-                string fPath = "c:\\Program Files\\PolyDesktop\\UID.txt";
-                UID = File.ReadAllText(fPath);
-            }
-            catch
-            {
-                WriteToDB();
-            }
+            WriteToDB();
         }
 
         private static void WriteToDB()
@@ -43,51 +34,80 @@ namespace Hardwarespecs
             string RAMSpeed = GetRAMspeed();
             string StorageInfo = GetStorageInfo();
             string UID;
+            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
+            String INquery = "INSERT INTO PolyDesktop.dbo.desktop(c_ID, c_name, CPU, CPU_speed, GPU, RAM_speed, RAM_size, drive_size) Values(" + "@UID" + ","
+                 + "@PCName" + " , " + "@CPUInfo" + " , " + "@CpuSpeed" + " , " + "@GPUInfo" + " , " + "@RAMspeed" + " , " + "@RAMsize" + " , "+ "@StorageInfo" + ");";
             try
             {
                 string fPath = "c:\\Program Files\\PolyDesktop\\UID.txt";
                 UID = File.ReadAllText(fPath);
+                string DELquery = "DELETE FROM PolyDesktop.dbo.desktop WHERE c_ID = " + UID;
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    {
+                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Open)
+                        {
+                            using (SqlCommand cmd = conn.CreateCommand())
+                            {
+                                cmd.CommandText = DELquery;
+                                cmd.ExecuteNonQuery();
+
+                                cmd.CommandText = INquery;
+                                cmd.Parameters.AddWithValue("@UID", UID);
+                                cmd.Parameters.AddWithValue("@PCName", PCName);
+                                cmd.Parameters.AddWithValue("@CPUInfo", CPUinfo);
+                                cmd.Parameters.AddWithValue("@CpuSpeed", CPUspeed);
+                                cmd.Parameters.AddWithValue("@GPUInfo", GPUinfo);
+                                cmd.Parameters.AddWithValue("@RAMspeed", RAMSpeed);
+                                cmd.Parameters.AddWithValue("@RAMsize", RAMsize);
+                                cmd.Parameters.AddWithValue("@StorageInfo", StorageInfo);
+
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }
+                catch (Exception eSql)
+                {
+                    Debug.WriteLine("Exception: " + eSql.Message);
+                }
             }
             catch
             {
                 UID = GetPCid();
-            }
-            // CREATE TABLE dbo.pesktop(c_ID int, c_name varchar(MAX), CPU varchar(MAX), CPU_speed float, GPU varchar(MAX), RAM_speed int, RAM_size int, drive_size float)
-            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
-            String INquery = "INSERT INTO PolyDesktop.dbo.desktop(c_ID, c_name, CPU, CPU_speed, GPU, RAM_speed, RAM_size, drive_size) Values(" + "@UID" + ","
-              + "@PCName" + " , " + "@CPUInfo" + " , " + "@CpuSpeed" + " , "
-              + "@GPUInfo" + " , " + "@RAMspeed" + " , " + "@RAMsize" + " , "
-              + "@StorageInfo" + ");";
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    if (conn.State == System.Data.ConnectionState.Open)
+                    using (SqlConnection conn = new SqlConnection(connectionString))
                     {
-                        using (SqlCommand cmd = conn.CreateCommand())
+                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Open)
                         {
-                            cmd.CommandText = INquery;
-                            cmd.Parameters.AddWithValue("@UID", UID);
-                            cmd.Parameters.AddWithValue("@PCName", PCName);
-                            cmd.Parameters.AddWithValue("@CPUInfo", CPUinfo);
-                            cmd.Parameters.AddWithValue("@CpuSpeed", CPUspeed);
-                            cmd.Parameters.AddWithValue("@GPUInfo", GPUinfo);
-                            cmd.Parameters.AddWithValue("@RAMspeed", RAMSpeed);
-                            cmd.Parameters.AddWithValue("@RAMsize", RAMsize);
-                            cmd.Parameters.AddWithValue("@StorageInfo", StorageInfo);
+                            using (SqlCommand cmd = conn.CreateCommand())
+                            {
+                                cmd.CommandText = INquery;
+                                cmd.Parameters.AddWithValue("@UID", UID);
+                                cmd.Parameters.AddWithValue("@PCName", PCName);
+                                cmd.Parameters.AddWithValue("@CPUInfo", CPUinfo);
+                                cmd.Parameters.AddWithValue("@CpuSpeed", CPUspeed);
+                                cmd.Parameters.AddWithValue("@GPUInfo", GPUinfo);
+                                cmd.Parameters.AddWithValue("@RAMspeed", RAMSpeed);
+                                cmd.Parameters.AddWithValue("@RAMsize", RAMsize);
+                                cmd.Parameters.AddWithValue("@StorageInfo", StorageInfo);
 
-                            cmd.ExecuteNonQuery();
+                                cmd.ExecuteNonQuery();
+                            }
                         }
                     }
                 }
+                catch (Exception eSql)
+                {
+                    Debug.WriteLine("Exception: " + eSql.Message);
+                }
+
             }
-            catch (Exception eSql)
-            {
-                Debug.WriteLine("Exception: " + eSql.Message);
-            }
-            //Console.WriteLine("Press enter to continue");
-            //Console.ReadKey();
+            // CREATE TABLE dbo.pesktop(c_ID int, c_name varchar(MAX), CPU varchar(MAX), CPU_speed float, GPU varchar(MAX), RAM_speed int, RAM_size int, drive_size float)
         }
         private static string GetPCid()
         {
