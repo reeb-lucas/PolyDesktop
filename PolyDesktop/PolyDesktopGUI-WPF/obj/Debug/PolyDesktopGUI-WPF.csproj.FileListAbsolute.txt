@@ -12,3 +12,6 @@ C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\D
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CoreCompileInputs.cache
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csprojAssemblyReference.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ChoosePolyDesktopType.g.cs
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ChoosePolyDesktopType.baml

@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PolyDesktopGUI_WPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ChoosePolyDesktopType.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ChoosePolyDesktopType : Window
     {
-        public MainWindow()
+        public ChoosePolyDesktopType()
         {
             InitializeComponent();
-        }
-
-        private void StartPD_Click(object sender, RoutedEventArgs e)
-        {
-            var CPD = new ChoosePolyDesktopType();
-            CPD.Show();
         }
     }
 }
