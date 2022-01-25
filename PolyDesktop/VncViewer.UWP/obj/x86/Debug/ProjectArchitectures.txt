@@ -1,1 +1,0 @@
-C:\Users\User\source\repos\tyler-lucas\PolyDesktop\PolyDesktop\VncViewer.UWP\VncViewer.UWP.csproj;x86
