@@ -5,10 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
         mc:Ignorable="d"
-        Title="Main Menu" Height="450" Width="800">
+        Title="PolyDesktop" Height="450" Width="800">
     <Grid>
-        <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="235,-115,235,0"/>
-        <Button x:Name="StartPDButton" Content="Start PolyDesktop" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="335,91,335,0" ToolTip="Click to begin remoting into computers." Click="StartPD_Click" Height="33" Width="111"/>
-
+        <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

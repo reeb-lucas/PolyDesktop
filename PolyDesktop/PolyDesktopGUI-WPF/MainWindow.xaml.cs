@@ -1,17 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/**************************************************************
+ * Copyright (c) 2022
+ * Author: Tyler Lucas
+ * Filename: MainWindow.xaml.cs
+ * Date Created: 1/23/2022
+ * Modifications: 1/23/2022 - Created Main Window with no functionality
+ *                1/25/2022 - Began adding navigation functionality
+ * 
+ **************************************************************/
+/**************************************************************
+ * Overview:
+ *      This window holds all pages for the PolyDesktop application
+ *      
+ **************************************************************/
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PolyDesktopGUI_WPF
 {
@@ -20,15 +23,33 @@ namespace PolyDesktopGUI_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int count = 0;
         public MainWindow()
         {
+            count++;
             InitializeComponent();
+            if (count == 1)
+            {
+                Uri uri = new Uri("MainPage.xaml", UriKind.Relative);
+                NavFrame.Navigate(uri);
+            }
+
         }
 
-        private void StartPD_Click(object sender, RoutedEventArgs e)
+        
+        /// <summary>
+        /// Uses navString to change the frame to the .xaml specified
+        /// </summary>
+        /// <param name="navString">
+        /// Contains a .xaml file name
+        /// </param>
+        public void Nav(string navString)
         {
-            var CPD = new ChoosePolyDesktopType();
-            CPD.Show();
+            Uri uri = new Uri(navString, UriKind.Relative);
+
+            NavFrame.Navigate(uri);            
         }
+
+        
     }
 }

@@ -3,36 +3,35 @@
  * Author: Tyler Lucas
  * Filename: ChoosePolyDesktopType.xaml.cs
  * Date Created: 1/25/2022
- * Modifications: 1/25/2022 - Created Choose window, began implementing functionality for basic mode
+ * Modifications: 1/25/2022 - Created start button to bring a pop-up where the user chooses remoting mode
  * 
  **************************************************************/
 /**************************************************************
  * Overview:
- *      This window allows the user to select the desktop remoting mode
+ *      This page is the main menu providing
  *      
  **************************************************************/
 using System;
 using System.Windows;
+using System.Windows.Controls;
 
 
 namespace PolyDesktopGUI_WPF
 {
     /// <summary>
-    /// Interaction logic for ChoosePolyDesktopType.xaml
+    /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class ChoosePolyDesktopType : Window
+    public partial class MainPage : Page
     {
-        public ChoosePolyDesktopType()
+        public MainPage()
         {
             InitializeComponent();
         }
 
-
-        private void BasicModeButton_Click(object sender, RoutedEventArgs e)
+        private void StartPDButton_Click(object sender, RoutedEventArgs e)
         {
-            var MW = new MainPage();
-            MW.NavigationService.Navigate("BasicModePage.xaml");
-            this.Close();
+            var CPD = new ChoosePolyDesktopType();
+            CPD.Show();
         }
     }
 }

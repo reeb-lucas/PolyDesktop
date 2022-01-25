@@ -8,7 +8,7 @@
         Title="" Height="152.364" Width="299.16" ResizeMode="NoResize">
     <Grid x:Name="grdMessageBox" Margin="0,0,2,6">
         <TextBlock x:Name="tbMessageBoxMessage" FontSize="15" Text="Pick Remoting Experience:" Margin="10,44,95,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="BasicModeButton" FontWeight="SemiBold" Content="Basic Mode" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="80" />
+        <Button x:Name="BasicModeButton" FontWeight="SemiBold" Content="Basic Mode" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="80" Click="BasicModeButton_Click"/>
         <Button x:Name="TabModeButton" FontWeight="SemiBold" Content="Tab Mode" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,35,10,0" Width="80" />
         <Button x:Name="GroupModeButton" FontWeight="SemiBold" Content="Group Mode" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,10,0" Width="80"/>
     </Grid>
