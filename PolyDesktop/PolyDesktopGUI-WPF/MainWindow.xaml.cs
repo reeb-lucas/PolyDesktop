@@ -23,20 +23,23 @@ namespace PolyDesktopGUI_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int count = 0;
         public MainWindow()
         {
-            count++;
             InitializeComponent();
-            if (count == 1)
-            {
-                Uri uri = new Uri("MainPage.xaml", UriKind.Relative);
-                NavFrame.Navigate(uri);
-            }
-
         }
 
-        
+        private void StartPDBox_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            if (StartPDBox.SelectedIndex == 0)
+                NavFrame.Navigate(new BasicModePage()); //Preset
+            if (StartPDBox.SelectedIndex == 1)
+                NavFrame.Navigate(new BasicModePage()); //Basic
+            if (StartPDBox.SelectedIndex == 2)
+                NavFrame.Navigate(new BasicModePage()); //Tab
+            if (StartPDBox.SelectedIndex == 3)
+                NavFrame.Navigate(new BasicModePage()); //Group
+
+        }
         /// <summary>
         /// Uses navString to change the frame to the .xaml specified
         /// </summary>
@@ -47,7 +50,7 @@ namespace PolyDesktopGUI_WPF
         {
             Uri uri = new Uri(navString, UriKind.Relative);
 
-            NavFrame.Navigate(uri);            
+            NavFrame.Navigate(uri);
         }
     }
 }

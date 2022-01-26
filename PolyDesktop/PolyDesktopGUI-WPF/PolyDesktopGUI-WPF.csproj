@@ -64,17 +64,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ChoosePolyDesktopType.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ConnectionDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -86,12 +78,6 @@
     </Compile>
     <Compile Include="BasicModePage.xaml.cs">
       <DependentUpon>BasicModePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ChoosePolyDesktopType.xaml.cs">
-      <DependentUpon>ChoosePolyDesktopType.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

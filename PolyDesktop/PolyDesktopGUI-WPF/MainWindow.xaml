@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="PolyDesktop" Height="450" Width="800">
     <Grid>
+        <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="235,-115,235,0"/>
+        <ComboBox x:Name="StartPDBox" Text="Start PolyDesktop" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="335,91,335,0" ToolTip="Click to begin remoting into computers." SelectionChanged="StartPDBox_SelectionChanged" Height="33" Width="111">
+            <ComboBoxItem>Preset</ComboBoxItem>
+            <ComboBoxItem>Basic Mode</ComboBoxItem>
+            <ComboBoxItem>Tab Mode</ComboBoxItem>
+            <ComboBoxItem>Group Mode</ComboBoxItem>
+        </ComboBox>
         <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

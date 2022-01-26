@@ -47,8 +47,7 @@ namespace PolyDesktopGUI_WPF
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            var MW = new BasicModePage();
-            MW.NavigationService.GoBack();
+            NavigationService.Navigate(null);
         }
         private void InitializeCommands()
         {

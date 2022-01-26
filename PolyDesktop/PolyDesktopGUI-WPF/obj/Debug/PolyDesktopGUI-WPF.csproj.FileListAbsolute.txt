@@ -28,15 +28,11 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.pdb
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.AssemblyReference.cache
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\BasicModePage.g.cs
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ChoosePolyDesktopType.g.cs
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainPage.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.cache
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.lref
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\BasicModePage.baml
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ChoosePolyDesktopType.baml
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainPage.baml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.baml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.g.resources
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI_WPF.Properties.Resources.resources
