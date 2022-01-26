@@ -30,8 +30,8 @@ namespace PolyDesktopGUI_WPF
 
         private void BasicModeButton_Click(object sender, RoutedEventArgs e)
         {
-            var MW = new MainPage();
-            MW.NavigationService.Navigate("BasicModePage.xaml");
+            var BM = new BasicModePage();
+            BM.NavigationService.Navigate(new Uri("BasicModePage.xaml", UriKind.Relative));
             this.Close();
         }
     }

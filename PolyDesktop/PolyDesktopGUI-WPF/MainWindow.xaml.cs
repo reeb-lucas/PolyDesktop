@@ -49,7 +49,5 @@ namespace PolyDesktopGUI_WPF
 
             NavFrame.Navigate(uri);            
         }
-
-        
     }
 }
