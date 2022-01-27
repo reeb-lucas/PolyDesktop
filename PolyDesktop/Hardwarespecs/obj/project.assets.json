@@ -533,23 +533,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\Tyler\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
+      "projectUniqueName": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
       "projectName": "HardwareSpecPuller",
-      "projectPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\obj\\",
+      "projectPath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
+      "packagesPath": "C:\\Users\\Tyler\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tyler\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tyler\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -600,7 +600,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

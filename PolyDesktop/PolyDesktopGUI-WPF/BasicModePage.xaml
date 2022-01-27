@@ -9,7 +9,7 @@
       Title="BasicModePage"
       xmlns:Controls="clr-namespace:PollRobots.OmotVnc.Controls;assembly=OmotVnc.Controls">
 
-    <Grid>
+    <Grid Background="Black">
         <DockPanel>
             <Menu Name="MainMenu" DockPanel.Dock="Top">
                 <MenuItem Header="File">
@@ -38,5 +38,6 @@
         <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,20,0,0">
             <Image Source="Resources/PolyDesktopTrayIcon.png" Height="53" Width="53"/>
         </Button>
+        
     </Grid>
 </Page>
