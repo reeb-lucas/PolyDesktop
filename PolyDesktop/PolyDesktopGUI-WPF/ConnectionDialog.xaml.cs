@@ -23,10 +23,6 @@ namespace OmotVnc
     using System.Windows;
     using System.Windows.Threading;
 
-#if USING_BONJOUR
-    using Bonjour;
-#endif
-
     /// <summary>The dialog used to get connection information.</summary>
     public partial class ConnectionDialog : Window, INotifyPropertyChanged
     {
@@ -45,13 +41,6 @@ namespace OmotVnc
         /// <summary>The backing store for the password property</summary>
         private string password;
 
-#if USING_BONJOUR
-        private DNSSDEventManager eventManager;
-        private DNSSDService service;
-        private DNSSDService browser;
-        private Dictionary<DNSSDService, string> inProgress = new Dictionary<DNSSDService, string>();
-#endif
-
         /// <summary>
         /// Initializes a new instance of the <see cref="ConnectionDialog"/> class.
         /// </summary>
@@ -60,19 +49,6 @@ namespace OmotVnc
             this.InitializeComponent();
             
             this.DataContext = this;
-            
-#if USING_BONJOUR
-            this.eventManager = new DNSSDEventManager();
-
-            this.eventManager.ServiceFound += this.ServiceFound;
-            this.eventManager.ServiceLost += this.ServiceLost;
-            this.eventManager.ServiceResolved += this.ServiceResolved;
-            this.eventManager.AddressFound += this.AddressFound;
-            
-            this.service = new DNSSDService();
-            
-            this.browser = this.service.Browse(0, 0, RfbType, null, this.eventManager);
-#endif
         }
 
         /// <summary>The property changed event.</summary>

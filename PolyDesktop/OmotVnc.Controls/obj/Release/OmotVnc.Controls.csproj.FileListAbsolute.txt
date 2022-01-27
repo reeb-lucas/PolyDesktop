@@ -1,0 +1,14 @@
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Release\OmotVnc.Controls.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Release\OmotVnc.Controls.pdb
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Release\OmotVnc.Protocol.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\OmotVnc.Controls.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\VncHost.baml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\VncHost.g.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\OmotVnc.Controls_MarkupCompile.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\OmotVnc.Controls.g.resources
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\PollRobots.OmotVnc.Controls.Properties.Resources.resources
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\OmotVnc.Controls.csproj.GenerateResource.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\OmotVnc.Controls.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\OmotVnc.Controls.csproj.CopyComplete
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\OmotVnc.Controls.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Release\OmotVnc.Controls.pdb
