@@ -26,3 +26,31 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CopyComplete
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.config
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.manifest
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.application
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.AssemblyReference.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ConnectionDialog.baml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\BasicModePage.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ConnectionDialog.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.lref
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\BasicModePage.baml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.baml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.g.resources
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI_WPF.Properties.Resources.resources
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.GenerateResource.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CoreCompileInputs.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe.manifest
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.application
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CopyComplete
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb

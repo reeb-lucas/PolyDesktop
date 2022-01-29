@@ -40,6 +40,20 @@ namespace PolyDesktopGUI_WPF
                 NavFrame.Navigate(new BasicModePage()); //Group
 
         }
+        private void EditDeskPre_Click(object sender, RoutedEventArgs e)
+        {
+            //NavFrame.Navigate(new EditDesktopPrests());
+        }
+
+        private void ViewDeskPro_Click(object sender, RoutedEventArgs e)
+        {
+            //NavFrame.Navigate(new ViewDesktopProperties());
+        }
+
+        private void ViewScirptS_Click(object sender, RoutedEventArgs e)
+        {
+            //NavFrame.Navigate(new ViewSctriptStats());
+        }
         /// <summary>
         /// Uses navString to change the frame to the .xaml specified
         /// </summary>
@@ -51,6 +65,16 @@ namespace PolyDesktopGUI_WPF
             Uri uri = new Uri(navString, UriKind.Relative);
 
             NavFrame.Navigate(uri);
+        }
+
+        private void Tutorial_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

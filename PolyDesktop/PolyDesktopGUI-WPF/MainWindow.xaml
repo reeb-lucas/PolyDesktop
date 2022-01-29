@@ -5,15 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
         mc:Ignorable="d"
-        Title="PolyDesktop" Height="450" Width="800">
+        Title="PolyDesktop" Height="720" Width="1280">
     <Grid>
         <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="235,-115,235,0"/>
-        <ComboBox x:Name="StartPDBox" Text="Start PolyDesktop" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="335,91,335,0" ToolTip="Click to begin remoting into computers." SelectionChanged="StartPDBox_SelectionChanged" Height="33" Width="111">
+        <ComboBox x:Name="StartPDBox" Text="Start PolyDesktop" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="561,95,561,0" ToolTip="Click to begin remoting into computers." SelectionChanged="StartPDBox_SelectionChanged" Height="30" Width="140">
             <ComboBoxItem>Preset</ComboBoxItem>
             <ComboBoxItem>Basic Mode</ComboBoxItem>
             <ComboBoxItem>Tab Mode</ComboBoxItem>
             <ComboBoxItem>Group Mode</ComboBoxItem>
         </ComboBox>
+        <Button x:Name="EditDeskPre" Click="EditDeskPre_Click" Height="30" Width="140" VerticalAlignment="Top" Margin="561,160,561,0">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            Edit Desktop Presets
+        </Button>
+        <Button x:Name="ViewDeskPro" Click="ViewDeskPro_Click" Height="30" Width="140" VerticalAlignment="Top" Margin="561,225,561,0">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            View Desktop Properites
+        </Button>
+        <Button x:Name="ViewScirptS" Click="ViewScirptS_Click" Height="30" Width="140" VerticalAlignment="Top" Margin="561,290,561,0">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            View Script Stats
+        </Button>
+        <Button x:Name="Settings" Click="Settings_Click" Height="30" Width="30" VerticalAlignment="Top" Margin="566,354,676,0">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Image Source="Resources/PolyDesktopTrayIcon.png" Height="25" Width="25"></Image>
+        </Button>
+        <Button x:Name="Tutorial" Click="Tutorial_Click" Content="Tutorial" Height="30" Width="100" VerticalAlignment="Top" Margin="606,354,566,0">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
         <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
