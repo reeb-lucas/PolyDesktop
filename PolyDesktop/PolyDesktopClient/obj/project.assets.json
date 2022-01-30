@@ -8,25 +8,23 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jerro\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj",
+      "projectUniqueName": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj",
       "projectName": "PolyDesktopClient",
-      "projectPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj",
-      "packagesPath": "C:\\Users\\jerro\\.nuget\\packages\\",
-      "outputPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\obj\\",
+      "projectPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\PolyDesktopClient.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\OneDrive\\College\\Junior\\Fall\\Junior Project\\Project\\PolyDesktop\\PolyDesktop\\PolyDesktopClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\jerro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

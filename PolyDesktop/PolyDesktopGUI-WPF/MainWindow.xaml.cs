@@ -12,6 +12,7 @@
  *      This window holds all pages for the PolyDesktop application
  *      
  **************************************************************/
+using MahApps.Metro.Controls;
 using System;
 using System.Windows;
 using System.Windows.Navigation;
@@ -21,7 +22,7 @@ namespace PolyDesktopGUI_WPF
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
@@ -42,7 +43,7 @@ namespace PolyDesktopGUI_WPF
         }
         private void EditDeskPre_Click(object sender, RoutedEventArgs e)
         {
-            //NavFrame.Navigate(new EditDesktopPrests());
+            NavFrame.Navigate(new EditPresets());
         }
 
         private void ViewDeskPro_Click(object sender, RoutedEventArgs e)

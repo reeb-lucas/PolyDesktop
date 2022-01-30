@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="PolyDesktopGUI-WPF.exe.manifest" size="4816">
+    <dependentAssembly dependencyType="install" codebase="PolyDesktopGUI-WPF.exe.manifest" size="7566">
       <assemblyIdentity name="PolyDesktopGUI-WPF.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Eg00CJFoKKo+brkO2kNjtd4dxsyxeWGBdnqiRCwF1EY=</dsig:DigestValue>
+        <dsig:DigestValue>6zXg69/Odx8E9Om5j8uREYtGL71DyftKfccA0gnp8FI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
