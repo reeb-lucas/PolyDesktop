@@ -268,6 +268,13 @@ namespace PolyDesktopGUI_WPF
             {
                 bucket[1] = ModeBox.SelectedValue.ToString();
             }*/
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow).ModePickerFlyout.IsOpen = true;
+                }
+            }
         }
 
         private string NormalizeInput(string input) //remove commas from input to make sure file is structured correctly
