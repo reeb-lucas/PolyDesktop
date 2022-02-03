@@ -15,12 +15,7 @@
             <Image Source="Resources/PolyDesktopTrayIcon.png" Height="53" Width="53"/>
         </Button>
         <ListView Name="PresetList" DisplayMemberPath="Name" HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200" SelectionChanged="ListView_SelectionChanged" SelectedIndex="0"/>
-        <ComboBox x:Name="ModeBox" Margin="320,250,0,0" Width="108" SelectionChanged="ModeBox_SelectionChanged" HorizontalAlignment="Center">
-            <ComboBoxItem>Basic</ComboBoxItem>
-            <ComboBoxItem>Tab</ComboBoxItem>
-            <ComboBoxItem>Group</ComboBoxItem>
-            <ComboBoxItem>Overlay</ComboBoxItem>
-        </ComboBox>
+        <Button x:Name="ModeButton" Margin="320,250,0,400" Width="108" VerticalAlignment="Top" HorizontalAlignment="Center" Click="ModeButton_Click"/>
         <Button x:Name="PresetSaveButton" HorizontalAlignment="Center" Content="Save Preset" Margin="660,301,0,0" VerticalAlignment="Top" Click="PresetSaveButton_Click"/>
         <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="70,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
         <TextBlock HorizontalAlignment="Center" Margin="320,220,0,0" Text="Mode" TextWrapping="Wrap" VerticalAlignment="Top"/>

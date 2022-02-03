@@ -41,36 +41,36 @@ namespace PolyDesktopGUI_WPF
             Preset[] container = new Preset[Directory.GetFiles(localApplicationData).Length]; //sees how many files are in the directory for presets and sets the array size
             for (int i = 0; i < 99; i++)
             {
-                /*try
+                try
                 {
                     string temp = File.ReadAllText(filename + i + ".txt");
-                    string[] bucket = temp.Split(", ");
+                    string[] bucket = temp.Split(','); //used to Split(", ")
                     Preset preset = new Preset();
                     preset.Name = bucket[0];
                     preset.Mode = bucket[1];
                     preset.numComputers = Int32.Parse(bucket[2]);
                     container[i] = preset;
-                    PresetList.Header = "Presets";
+                    //PresetList.Header = "Presets";
                 }
                 catch
                 {
                     if (i == 0)
                     {
-                        PresetList.Header = "No Presets Found";
+                        //PresetList.Header = "No Presets Found";
                     }
                     break;
-                }*/
+                }
             }
             return container;
         }
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e) //when preset is selected, display all preset info from file and populate computertable
         {
-            /*try
+            try
             {
                 string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
-                bucket = temp.Split(", ");
+                bucket = temp.Split(',');
                 NameBox.Text = bucket[0];
-                ModeBox.PlaceholderText = bucket[1];
+                ModeButton.Content = bucket[1];
                 ComputerTable.ItemsSource = Computers;
                 int index = 0;
                 for (int i = 2; i < bucket.Length; i += 2)
@@ -83,7 +83,7 @@ namespace PolyDesktopGUI_WPF
                 NumBlock.Text = (index - 1).ToString();
 
             }
-            catch { }*/
+            catch { }
         }
         private void ComputerTable_SelectionChanged(object sender, SelectionChangedEventArgs e) //ListView object holding all computers in a preset
         {
@@ -109,7 +109,7 @@ namespace PolyDesktopGUI_WPF
             try
             {
                 string temp = File.ReadAllText(filename + PresetList.SelectedIndex + ".txt");
-                //bucket = temp.Split(", ");
+                bucket = temp.Split(',');
                 Computer[] container = new Computer[Int32.Parse(bucket[2])];
                 try
                 {
@@ -220,10 +220,10 @@ namespace PolyDesktopGUI_WPF
         {
             /*if (PresetList.SelectedIndex != -1)
             {
-                string saveString = NormalizeInput(NameBox.Text) + ", " + bucket[1] + ", " + NormalizeInput(NumBlock.Text);
+                string saveString = NormalizeInput(NameBox.Text) + "," + bucket[1] + "," + NormalizeInput(NumBlock.Text);
                 for (int i = 3; i < bucket.Length; i++)
                 {
-                    saveString = saveString + ", " + bucket[i];
+                    saveString = saveString + "," + bucket[i];
                 }
                 if (saveString != null)
                 {
@@ -249,21 +249,20 @@ namespace PolyDesktopGUI_WPF
             }
             bucket = bucket.SkipLast(2).ToArray(); //remove last computer
             bucket[2] = (numComputers - 1).ToString();
-            string temp = string.Join(", ", bucket);
-            bucket = temp.Split(", ");
+            string temp = string.Join(",", bucket);
+            bucket = temp.Split(',');
             File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", temp);
             ComputerTable.ItemsSource = Computers;*/
         }
         private void TestButton_Click(object sender, RoutedEventArgs e) //this fills the computer with test presets
         {
-            /*File.WriteAllText(filename + 0 + ".txt", "TestPreset1, Tab, 3, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2");
-            File.WriteAllText(filename + 1 + ".txt", "TestPreset2, Group, 6, 14252351, TestNickname 0, 213286983, TestNickname 1, 158964, TestNickname 2, 162, TestNickname 3, 102538501, TestNickname 4, 25389172, TestNickname 5");
-            File.WriteAllText(filename + 2 + ".txt", "TestPreset3, Basic, 4, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2, 213286983, TestNickname 3");
-            File.WriteAllText(filename + 3 + ".txt", "TestPreset4, Overlay, 5, 14252351, TestNickname 0, 162, TestNickname 1, 158964, TestNickname 2, 213286983, TestNickname 3, 102538501, TestNickname 4");
-            PresetList.ItemsSource = Presets;*/
+            File.WriteAllText(filename + 0 + ".txt", "TestPreset1,Tab,3,14252351,TestNickname 0,162,TestNickname 1,158964,TestNickname 2");
+            File.WriteAllText(filename + 1 + ".txt", "TestPreset2,Group,6,14252351,TestNickname 0,213286983,TestNickname 1,158964,TestNickname 2,162,TestNickname 3,102538501,TestNickname 4,25389172,TestNickname 5");
+            File.WriteAllText(filename + 2 + ".txt", "TestPreset3,Basic,4,14252351,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3");
+            File.WriteAllText(filename + 3 + ".txt", "TestPreset4,Overlay,5,14252351,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3,102538501,TestNickname 4");
+            PresetList.ItemsSource = Presets;
         }
-
-        private void ModeBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //write new mode to bucket
+        private void ModeButton_Click(object sender, RoutedEventArgs e)
         {
             /*if (PresetList.Header.ToString() != "No Presets Found")
             {
