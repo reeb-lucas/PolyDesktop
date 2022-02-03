@@ -62,5 +62,12 @@
                 </Flyout>
             </FlyoutBase.AttachedFlyout-->
         </Button>
+        <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Position="Right" Width="250" IsOpen="False">
+            <StackPanel>
+                <Button Name="BasicButton" Content="Basic"/>
+                <Button Name="TabButton" Content="Tab"/>
+                <Button Name="GroupButton" Content="Group"/>
+            </StackPanel>
+        </mah:Flyout>
     </Grid>
 </Page>

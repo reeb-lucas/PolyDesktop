@@ -57,19 +57,5 @@
 
         <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
-    <mah:MetroWindow.Flyouts>
-        <mah:FlyoutsControl>
-            <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Position="Right" Width="250" IsOpen="False" x:FieldModifier="public">
-                <StackPanel>
-                    <Button Name="BasicButton" Content="Basic"/>
-                    <Button Name="TabButton" Content="Tab"/>
-                    <Button Name="GroupButton" Content="Group"/>
-                </StackPanel>
-            </mah:Flyout>
-
-            <mah:Flyout Header="About" IsOpen="{Binding IsAboutFlyoutOpen}" Position="Right" Width="300">
-                <!-- The content goes here -->
-            </mah:Flyout>
-        </mah:FlyoutsControl>
-    </mah:MetroWindow.Flyouts>
+    
 </mah:MetroWindow>
