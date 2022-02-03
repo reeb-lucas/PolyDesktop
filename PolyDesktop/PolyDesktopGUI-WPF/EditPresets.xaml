@@ -6,10 +6,10 @@
       xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
       xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="EditPresets">
 
-    <Grid Background="White">
+    <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
         <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="235,-115,235,0"/>
 
         <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
@@ -62,7 +62,7 @@
                 </Flyout>
             </FlyoutBase.AttachedFlyout-->
         </Button>
-        <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Position="Right" Width="250" IsOpen="False">
+        <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
             <StackPanel>
                 <Button Name="BasicButton" Content="Basic"/>
                 <Button Name="TabButton" Content="Tab"/>

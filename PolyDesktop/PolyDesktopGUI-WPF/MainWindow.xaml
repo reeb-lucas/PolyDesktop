@@ -9,12 +9,14 @@
         Title="PolyDesktop" Height="720" Width="1280">
     <Grid>
         <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="235,-115,235,0"/>
-        <ComboBox x:Name="StartPDBox" Text="Start PolyDesktop" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="561,95,561,0" ToolTip="Click to begin remoting into computers." SelectionChanged="StartPDBox_SelectionChanged" Height="30" Width="140">
-            <ComboBoxItem>Preset</ComboBoxItem>
-            <ComboBoxItem>Basic Mode</ComboBoxItem>
-            <ComboBoxItem>Tab Mode</ComboBoxItem>
-            <ComboBoxItem>Group Mode</ComboBoxItem>
-        </ComboBox>
+        <Button x:Name="StartPDButton" Click="StartPDButton_Click" Height="30" Width="140" VerticalAlignment="Top" Margin="561,95,561,0" ToolTip="Click to begin remoting into computers.">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            Start PolyDesktop
+        </Button>
         <Button x:Name="EditDeskPre" Click="EditDeskPre_Click" Height="30" Width="140" VerticalAlignment="Top" Margin="561,160,561,0">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -56,6 +58,13 @@
         </Button>
 
         <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden"/>
+        <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Theme="Adapt" Position="Top" Width="326" Height="125" IsOpen="False">
+            <StackPanel VerticalAlignment="Center">
+                <Button Name="PresetButton" Content="Preset"/>
+                <Button Name="BasicButton" Content="Basic Mode" Click="BasicButton_Click"/>
+                <Button Name="TabButton" Content="Tab Mode"/>
+                <Button Name="GroupButton" Content="Group Mode"/>
+            </StackPanel>
+        </mah:Flyout>
     </Grid>
-    
 </mah:MetroWindow>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControlzEx.Theming;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
@@ -29,6 +30,8 @@ namespace PolyDesktopGUI_WPF
         public EditPresets()
         {
             InitializeComponent();
+            ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
+            ThemeManager.Current.SyncTheme();
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
@@ -264,10 +267,6 @@ namespace PolyDesktopGUI_WPF
         }
         private void ModeButton_Click(object sender, RoutedEventArgs e)
         {
-            /*if (PresetList.Header.ToString() != "No Presets Found")
-            {
-                bucket[1] = ModeBox.SelectedValue.ToString();
-            }*/
             ModePickerFlyout.IsOpen = true;
         }
 

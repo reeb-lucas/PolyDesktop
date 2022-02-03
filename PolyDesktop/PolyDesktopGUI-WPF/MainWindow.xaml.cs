@@ -12,6 +12,7 @@
  *      This window holds all pages for the PolyDesktop application
  *      
  **************************************************************/
+using ControlzEx.Theming;
 using MahApps.Metro.Controls;
 using System;
 using System.Windows;
@@ -27,19 +28,8 @@ namespace PolyDesktopGUI_WPF
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void StartPDBox_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-            if (StartPDBox.SelectedIndex == 0)
-                NavFrame.Navigate(new BasicModePage()); //Preset
-            if (StartPDBox.SelectedIndex == 1)
-                NavFrame.Navigate(new BasicModePage()); //Basic
-            if (StartPDBox.SelectedIndex == 2)
-                NavFrame.Navigate(new BasicModePage()); //Tab
-            if (StartPDBox.SelectedIndex == 3)
-                NavFrame.Navigate(new BasicModePage()); //Group
-
+            ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
+            ThemeManager.Current.SyncTheme();
         }
         private void EditDeskPre_Click(object sender, RoutedEventArgs e)
         {
@@ -75,7 +65,17 @@ namespace PolyDesktopGUI_WPF
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
+            
+        }
+        private void StartPDButton_Click(object sender, RoutedEventArgs e)
+        {
+            ModePickerFlyout.IsOpen = true;
+        }
 
+        private void BasicButton_Click(object sender, RoutedEventArgs e)
+        {
+            ModePickerFlyout.IsOpen = false;
+            NavFrame.Navigate(new BasicModePage()); //Basic
         }
     }
 }

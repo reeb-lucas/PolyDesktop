@@ -9,7 +9,7 @@
       Title="BasicModePage"
       xmlns:Controls="clr-namespace:PollRobots.OmotVnc.Controls;assembly=OmotVnc.Controls">
 
-    <Grid Background="Black">
+    <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
         <DockPanel>
             <Menu Name="MainMenu" DockPanel.Dock="Top">
                 <MenuItem Header="File">

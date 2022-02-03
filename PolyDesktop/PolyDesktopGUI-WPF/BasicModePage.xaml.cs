@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ControlzEx.Theming;
 using OmotVnc;
 using OmotVnc.View.ViewModel;
 
@@ -41,6 +42,9 @@ namespace PolyDesktopGUI_WPF
             InitializeCommands();
 
             InitializeComponent();
+
+            ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
+            ThemeManager.Current.SyncTheme();
 
             DataContext = this;
         }
