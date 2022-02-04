@@ -103,7 +103,7 @@ namespace PolyDesktopGUI_WPF
                     FlyoutNameBlock.Text = ExecuteQuery(index);
                     FlyoutNicknameBox.Text = bucket[index + 1];
                 }
-                FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender); //flyout with computer info and oportunity to change nickname*/
+                FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);*/ //flyout with computer info and oportunity to change nickname
             }
         }
         public Computer[] Computers { get { return GatherComputers(); } }
@@ -221,9 +221,9 @@ namespace PolyDesktopGUI_WPF
         }
         private void SavePreset()
         {
-            /*if (PresetList.SelectedIndex != -1)
+            if (PresetList.SelectedIndex != -1)
             {
-                string saveString = NormalizeInput(NameBox.Text) + "," + bucket[1] + "," + NormalizeInput(NumBlock.Text);
+                string saveString = NormalizeInput(NameBox.Text) + "," + NormalizeInput(ModeButton.Content.ToString()) + "," + NormalizeInput(NumBlock.Text);
                 for (int i = 3; i < bucket.Length; i++)
                 {
                     saveString = saveString + "," + bucket[i];
@@ -234,7 +234,7 @@ namespace PolyDesktopGUI_WPF
                     ComputerTable.ItemsSource = Computers;
                 }
             }
-            PresetList.ItemsSource = Presets;*/
+            PresetList.ItemsSource = Presets;
         }
         private void AddComputerButton_Click(object sender, RoutedEventArgs e) //popup to add computer from list to bucket and set nickname
         {
@@ -269,7 +269,18 @@ namespace PolyDesktopGUI_WPF
         {
             ModePickerFlyout.IsOpen = true;
         }
-
+        private void BasicButton_Click(object sender, RoutedEventArgs e)
+        {
+            ModeButton.Content = "Basic";
+        }
+        private void TabButton_Click(object sender, RoutedEventArgs e)
+        {
+            ModeButton.Content = "Tab";
+        }
+        private void GroupButton_Click(object sender, RoutedEventArgs e)
+        {
+            ModeButton.Content = "Group";
+        }
         private string NormalizeInput(string input) //remove commas from input to make sure file is structured correctly
         {
             return input.Replace(",", "");
@@ -277,22 +288,22 @@ namespace PolyDesktopGUI_WPF
 
         private void DeletePresetButton_Click(object sender, RoutedEventArgs e) //pop-up to confirm deletion
         {
-            //FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
-        }
-        private void FlyoutDeletePresetButton_Click(object sender, RoutedEventArgs e) //delete .txt file for index selected and shift all following files up a name
-        {
-            /*File.Delete(filename + PresetList.SelectedIndex + ".txt");
-            for (int i = PresetList.SelectedIndex + 1; i < 100; i++)
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
             {
-                try
+                File.Delete(filename + PresetList.SelectedIndex + ".txt");
+                for (int i = PresetList.SelectedIndex + 1; i < 100; i++)
                 {
-                    System.IO.File.Move(filename + i + ".txt", filename + (i - 1) + ".txt");
+                    try
+                    {
+                        System.IO.File.Move(filename + i + ".txt", filename + (i - 1) + ".txt");
+                    }
+                    catch { }
                 }
-                catch { }
+                PresetList.ItemsSource = Presets;
             }
-            PresetList.ItemsSource = Presets;*/
-        }
 
+        }
         /*private void search_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
         {
             SearchListBox.ItemsSource = GatherAllComputers(search.QueryText);

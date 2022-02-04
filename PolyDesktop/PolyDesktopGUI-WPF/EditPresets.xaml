@@ -64,9 +64,9 @@
         </Button>
         <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
             <StackPanel>
-                <Button Name="BasicButton" Content="Basic"/>
-                <Button Name="TabButton" Content="Tab"/>
-                <Button Name="GroupButton" Content="Group"/>
+                <Button Name="BasicButton" Content="Basic" Click="BasicButton_Click"/>
+                <Button Name="TabButton" Content="Tab" Click="TabButton_Click"/>
+                <Button Name="GroupButton" Content="Group" Click="GroupButton_Click"/>
             </StackPanel>
         </mah:Flyout>
     </Grid>
