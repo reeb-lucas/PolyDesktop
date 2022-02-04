@@ -69,5 +69,25 @@
                 <Button Name="GroupButton" Content="Group" Click="GroupButton_Click"/>
             </StackPanel>
         </mah:Flyout>
+        <mah:Flyout x:Name="ComputerFlyout" Header="Computer Info" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
+            <StackPanel>
+                <TextBlock Text="Computer ID:"/>
+                <TextBlock Name="FlyoutIDBlock" Text="Unknown ID"/>
+                <TextBlock Text="Computer Name:" Margin="0,7,0,0"/>
+                <TextBlock Name="FlyoutNameBlock" Text="Unknown Name"/>
+                <TextBlock Text="Nickname:" Margin="0,7,0,0"/>
+                <TextBox Name="FlyoutNicknameBox" Text="Unknown Nickname"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="NicknameChangeButton" Content="Change" Margin="0,7,0,0" Click="NicknameChangeButton_Click"/>
+                    <Button Name="RemoveComputerButton" Content="Remove" Margin="0,7,0,0" Click="RemoveComputerButton_Click" Background="#674ea7" Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+        </mah:Flyout>
+        <mah:Flyout x:Name="AddComputerFlyout" Header="Computers" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
+            <StackPanel>
+                <!--SearchBox x:Name="search" QueryChanged="search_QueryChanged" CornerRadius="5,5,5,5"/-->
+                <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" FontSize="26" MaxHeight="400" DisplayMemberPath="Name"/>
+            </StackPanel>
+        </mah:Flyout>
     </Grid>
 </Page>

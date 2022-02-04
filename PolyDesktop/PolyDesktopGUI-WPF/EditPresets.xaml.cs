@@ -92,7 +92,7 @@ namespace PolyDesktopGUI_WPF
         {
             if (ComputerTable.SelectedItem != null)
             {
-                /*int index = 1;
+                int index = 1;
                 for (int i = 0; i < ComputerTable.SelectedIndex + 1; i++)
                 {
                     index += 2;
@@ -103,7 +103,7 @@ namespace PolyDesktopGUI_WPF
                     FlyoutNameBlock.Text = ExecuteQuery(index);
                     FlyoutNicknameBox.Text = bucket[index + 1];
                 }
-                FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);*/ //flyout with computer info and oportunity to change nickname
+                ComputerFlyout.IsOpen = true; //flyout with computer info and oportunity to change nickname
             }
         }
         public Computer[] Computers { get { return GatherComputers(); } }
@@ -200,7 +200,7 @@ namespace PolyDesktopGUI_WPF
         }
         private void NicknameChangeButton_Click(object sender, RoutedEventArgs e)
         {
-            /*int index = 2;
+            int index = 2;
             for (int i = 0; i < ComputerTable.SelectedIndex + 1; i++)
             {
                 index += 2;
@@ -213,7 +213,7 @@ namespace PolyDesktopGUI_WPF
             else if (bucket[index] != null)
             {
                 bucket[index] = NormalizeInput(FlyoutNicknameBox.Text);
-            }*/
+            }
         }
         private void PresetSaveButton_Click(object sender, RoutedEventArgs e) //write back to file using bucket object
         {
@@ -239,23 +239,24 @@ namespace PolyDesktopGUI_WPF
         private void AddComputerButton_Click(object sender, RoutedEventArgs e) //popup to add computer from list to bucket and set nickname
         {
             //FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+            AddComputerFlyout.IsOpen = true;
 
         }
         private void RemoveComputerButton_Click(object sender, RoutedEventArgs e) //remove computer from preset
         {
-            /*int numComputers = Convert.ToInt32(bucket[2]);
+            int numComputers = Convert.ToInt32(bucket[2]);
             for (int i = (ComputerTable.SelectedIndex * 2) + 3; i < (numComputers * 2) + 1; i++) //shift up following computers
             {
                 string a = bucket[i];
                 string b = bucket[i + 2];
                 bucket[i] = bucket[i + 2];
             }
-            bucket = bucket.SkipLast(2).ToArray(); //remove last computer
+            bucket = bucket.Take(bucket.Length - 2).ToArray(); //remove last computer
             bucket[2] = (numComputers - 1).ToString();
             string temp = string.Join(",", bucket);
             bucket = temp.Split(',');
             File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", temp);
-            ComputerTable.ItemsSource = Computers;*/
+            ComputerTable.ItemsSource = Computers;
         }
         private void TestButton_Click(object sender, RoutedEventArgs e) //this fills the computer with test presets
         {
