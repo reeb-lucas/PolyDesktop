@@ -38,7 +38,7 @@ namespace PolyDesktopGUI_WPF
 
         private void ViewDeskPro_Click(object sender, RoutedEventArgs e)
         {
-            //NavFrame.Navigate(new ViewDesktopProperties());
+            NavFrame.Navigate(new DesktopProperties());
         }
 
         private void ViewScirptS_Click(object sender, RoutedEventArgs e)

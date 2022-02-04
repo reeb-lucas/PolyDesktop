@@ -97,7 +97,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dzdhTu81dtikP81rafum0OToFsx70iPCQjdi/2ZC3/w=</dsig:DigestValue>
+        <dsig:DigestValue>xSoNemA1593uWMTI4u8Zzjhu+LdC71IHidLFj3Dvhq0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,19 +109,27 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LqatDUtTlYlE/Tgb4SBWwT4NNSxdIpxXZBSeeV9z7Eg=</dsig:DigestValue>
+        <dsig:DigestValue>7JmyC5u1DFaM1mWGiLADl4MIQG3fm289Nw8iTQz2DAs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< Updated upstream
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="91072">
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="97216">
+>>>>>>> Stashed changes
       <assemblyIdentity name="PolyDesktopGUI-WPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< Updated upstream
         <dsig:DigestValue>BTxn9pifUVQbDOOz+GL1cFbuWhnnCFwr1pEJZyBxIVU=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>VoR7V3JfwpvEIxIh+tu45KqatFkqdFHT6spx4DLTrbU=</dsig:DigestValue>
+>>>>>>> Stashed changes
       </hash>
     </dependentAssembly>
   </dependency>
