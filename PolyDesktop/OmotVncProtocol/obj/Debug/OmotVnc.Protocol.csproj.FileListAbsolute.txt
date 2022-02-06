@@ -9,3 +9,9 @@ S:\School\Fall2021\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Pro
 S:\School\Fall2021\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.CoreCompileInputs.cache
 S:\School\Fall2021\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.pdb
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Protocol.dll
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Protocol.pdb
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.CoreCompileInputs.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.dll
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.pdb
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.AssemblyReference.cache

@@ -1,0 +1,36 @@
+﻿<Page x:Class="PolyDesktopGUI_WPF.ScriptStats"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ScriptStats">
+
+    <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
+        <Image Source="Resources/PolyDesktopBanner.png" Height="499" Width="500" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-175,0,0"/>
+        <Button x:Name="RefreshButton" Margin="575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58" Click="RefreshButton_Click">
+            <!--Placeholder image-->
+            <Image Source="Resources/PolyDesktopTrayIcon.png" Height="53" Width="53"/>
+        </Button>
+        <Button x:Name="BackButton" Margin="-575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58" Click="BackButton_Click">
+            <!--Placeholder image-->
+            <Image Source="Resources/PolyDesktopTrayIcon.png" Height="53" Width="53"/>
+        </Button>
+        <DataGrid x:Name="dataGrid"
+                           RowDetailsVisibilityMode="VisibleWhenSelected"
+                           Visibility="Collapsed"
+                           CanUserSortColumns="True"
+                           Sorting="dataGrid_Sorting"
+                           BorderThickness="2"
+                           BorderBrush="Gray"
+                           GridLinesVisibility="All"
+                           AutoGenerateColumns="False"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Stretch"
+                           Margin="20 140 20 20"
+                           Grid.Row="2"
+                           Grid.Column="1"/>
+    </Grid>
+</Page>
