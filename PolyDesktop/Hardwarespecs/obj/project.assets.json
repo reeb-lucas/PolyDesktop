@@ -533,23 +533,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nate2\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\jerro\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
+      "projectUniqueName": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
       "projectName": "HardwareSpecPuller",
-      "projectPath": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
-      "packagesPath": "C:\\Users\\nate2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\obj\\",
+      "projectPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\HardwareSpecPuller.csproj",
+      "packagesPath": "C:\\Users\\jerro\\.nuget\\packages\\",
+      "outputPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\Hardwarespecs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\nate2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jerro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -600,7 +602,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -19,7 +19,7 @@
             </Button.Resources>
         </Button>
         <Button x:Name="BackButton" Margin="-575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58"  Click="BackButton_Click" ToolTip="Back">
-            <Image Source="Resources/PolyDesktopTrayIcon.png"></Image>
+            <Image Source="Resources/PDBackArrowV_J03.png"></Image>
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>

@@ -82,7 +82,6 @@ S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesk
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.g.cs
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.baml
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.baml
 C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.AssemblyReference.cache
@@ -129,3 +128,5 @@ C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\D
 C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ScriptStats.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ScriptStats.baml

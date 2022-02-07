@@ -196,5 +196,14 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PDBackArrowV_J01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PDBackArrowv_J03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PDBackArrowV_J02.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

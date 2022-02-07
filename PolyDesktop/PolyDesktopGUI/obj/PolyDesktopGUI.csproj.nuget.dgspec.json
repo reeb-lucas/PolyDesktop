@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj": {}
+    "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj": {
+    "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+        "projectUniqueName": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
         "projectName": "PolyDesktopGUI",
-        "projectPath": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
-        "packagesPath": "C:\\Users\\nate2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nate2\\Documents\\GitHub\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\obj\\",
+        "projectPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\PolyDesktopGUI.csproj",
+        "packagesPath": "C:\\Users\\jerro\\.nuget\\packages\\",
+        "outputPath": "S:\\School\\Fall2021\\PolyDesktop\\PolyDesktop\\PolyDesktopGUI\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\nate2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jerro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
