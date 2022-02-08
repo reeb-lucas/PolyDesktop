@@ -43,3 +43,18 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.csproj.CopyComplete
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Debug\OmotVnc.Controls.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Debug\OmotVnc.Controls.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Debug\OmotVnc.Protocol.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Debug\OmotVnc.Protocol.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.csprojAssemblyReference.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\VncHost.baml
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\VncHost.g.cs
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls_MarkupCompile.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.g.resources
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\PollRobots.OmotVnc.Controls.Properties.Resources.resources
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.csproj.GenerateResource.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.csproj.CopyComplete
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.pdb

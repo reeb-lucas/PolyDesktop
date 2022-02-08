@@ -80,5 +80,11 @@ namespace PolyDesktopGUI_WPF
             ModePickerFlyout.IsOpen = false;
             NavFrame.Navigate(new BasicModePage()); //Basic
         }
+
+        private void TabButton_Click(object sender, RoutedEventArgs e)
+        {
+            ModePickerFlyout.IsOpen = false;
+            NavFrame.Navigate(new TabModePage()); //Tabs
+        }
     }
 }

@@ -62,7 +62,7 @@
             <StackPanel VerticalAlignment="Center">
                 <Button Name="PresetButton" Content="Preset"/>
                 <Button Name="BasicButton" Content="Basic Mode" Click="BasicButton_Click"/>
-                <Button Name="TabButton" Content="Tab Mode"/>
+                <Button Name="TabButton" Content="Tab Mode" Click="TabButton_Click"/>
                 <Button Name="GroupButton" Content="Group Mode"/>
             </StackPanel>
         </mah:Flyout>
