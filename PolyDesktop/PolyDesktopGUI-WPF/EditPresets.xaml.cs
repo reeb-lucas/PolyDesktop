@@ -37,7 +37,6 @@ namespace PolyDesktopGUI_WPF
         {
             NavigationService.Navigate(null);
         }
-
         public Preset[] Presets { get { return GatherPresets(); } }
         public Preset[] GatherPresets() //returns all presets in an observable object for the listview to display
         {
@@ -103,7 +102,7 @@ namespace PolyDesktopGUI_WPF
                     FlyoutNameBlock.Text = ExecuteQuery(index);
                     FlyoutNicknameBox.Text = bucket[index + 1];
                 }
-                ComputerFlyout.IsOpen = true; //flyout with computer info and oportunity to change nickname
+                OpenSingleFlyout(ComputerFlyout); //flyout with computer info and oportunity to change nickname
             }
         }
         public Computer[] Computers { get { return GatherComputers(); } }
@@ -239,7 +238,8 @@ namespace PolyDesktopGUI_WPF
         private void AddComputerButton_Click(object sender, RoutedEventArgs e) //popup to add computer from list to bucket and set nickname
         {
             //FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
-            AddComputerFlyout.IsOpen = true;
+            OpenSingleFlyout(AddComputerFlyout);
+            SearchListBox.ItemsSource = GatherAllComputers();
 
         }
         private void RemoveComputerButton_Click(object sender, RoutedEventArgs e) //remove computer from preset
@@ -268,7 +268,7 @@ namespace PolyDesktopGUI_WPF
         }
         private void ModeButton_Click(object sender, RoutedEventArgs e)
         {
-            ModePickerFlyout.IsOpen = true;
+            OpenSingleFlyout(ModePickerFlyout);
         }
         private void BasicButton_Click(object sender, RoutedEventArgs e)
         {
@@ -286,7 +286,13 @@ namespace PolyDesktopGUI_WPF
         {
             return input.Replace(",", "");
         }
-
+        private void OpenSingleFlyout(MahApps.Metro.Controls.Flyout flyout)
+        {
+            ModePickerFlyout.IsOpen = false;
+            ComputerFlyout.IsOpen = false;
+            AddComputerFlyout.IsOpen = false;
+            flyout.IsOpen = true;
+        }
         private void DeletePresetButton_Click(object sender, RoutedEventArgs e) //pop-up to confirm deletion
         {
             MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
@@ -303,15 +309,14 @@ namespace PolyDesktopGUI_WPF
                 }
                 PresetList.ItemsSource = Presets;
             }
-
         }
-        /*private void search_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
+        private void search_QueryChanged(object sender, TextChangedEventArgs e)
         {
-            SearchListBox.ItemsSource = GatherAllComputers(search.QueryText);
-        }*/
-        private async void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
+            SearchListBox.ItemsSource = GatherAllComputers(SearchBox.Text);
+        }
+        private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
         {
-            /*if (SearchListBox.SelectedItem != null)
+            if (SearchListBox.SelectedItem != null && PresetList.HasItems)
             {
                 bool alreadyExists = false;
                 Computer temp = (Computer)SearchListBox.SelectedItem;
@@ -321,22 +326,22 @@ namespace PolyDesktopGUI_WPF
                     if (bucket[i + 2] == temp.ID)
                     {
                         alreadyExists = true;
-                        MessageDialog dialog = new MessageDialog("Computer is already added in preset");
-                        await dialog.ShowAsync();//GIVE FLYOUT
+                        MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Selected computer already in preset.", "Add Computer Error", System.Windows.MessageBoxButton.OK);                        
                         break;
                     }
                 }
+
                 if (!alreadyExists)
                 {
                     bucket[2] = (Convert.ToInt32(bucket[2]) + 1).ToString();
-                    string tempBucket = string.Join(", ", bucket);
-                    tempBucket = tempBucket + ", " + temp.ID + ", " + temp.Name;
-                    bucket = tempBucket.Split(", ");
+                    string tempBucket = string.Join(",", bucket);
+                    tempBucket = tempBucket + "," + temp.ID + "," + temp.Name;
+                    bucket = tempBucket.Split(',');
                     File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", tempBucket);
                     ComputerTable.ItemsSource = Computers;
+                    AddComputerFlyout.IsOpen = false;
                 }
-                AddComputerFlyout.Hide();
-            }*/
+            }
         }
     }
     public class Preset

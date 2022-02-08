@@ -33,16 +33,19 @@ namespace PolyDesktopGUI_WPF
         }
         private void EditDeskPre_Click(object sender, RoutedEventArgs e)
         {
+            ModePickerFlyout.IsOpen = false;
             NavFrame.Navigate(new EditPresets());
         }
 
         private void ViewDeskPro_Click(object sender, RoutedEventArgs e)
         {
+            ModePickerFlyout.IsOpen = false;
             NavFrame.Navigate(new DesktopProperties());
         }
 
         private void ViewScirptS_Click(object sender, RoutedEventArgs e)
         {
+            ModePickerFlyout.IsOpen = false;
             //NavFrame.Navigate(new ViewSctriptStats());
         }
         /// <summary>
@@ -60,12 +63,12 @@ namespace PolyDesktopGUI_WPF
 
         private void Tutorial_Click(object sender, RoutedEventArgs e)
         {
-
+            ModePickerFlyout.IsOpen = false;
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            
+            ModePickerFlyout.IsOpen = false;
         }
         private void StartPDButton_Click(object sender, RoutedEventArgs e)
         {
