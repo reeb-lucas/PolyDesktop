@@ -1,1 +1,1 @@
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\PolyDesktopGUI.csproj;x86
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\PolyDesktopGUI.csproj;x86

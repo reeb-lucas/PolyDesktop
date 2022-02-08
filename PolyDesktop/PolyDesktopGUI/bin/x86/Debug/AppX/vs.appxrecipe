@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-THEUNIT</Machine>
-    <WindowsUser>jerro</WindowsUser>
+    <Machine>DESKTOP-FEE7LAQ</Machine>
+    <WindowsUser>nate2</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>4db6ffbb-e182-47e7-9ef7-9c72321828fe</PackageIdentityName>
     <PackageIdentityPublisher>CN=Tyler</PackageIdentityPublisher>
-    <IntermediateOutputPath>S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>97E46E426D8E26A3C6EEFDE8BDE6E75F551935167AF8221A8A1AE6B59E917223</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>BB9D1E51A4B25868CB791404BBAED0E082B25F38C8E3DC8BA1E3E0153BDCED6C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>4db6ffbb-e182-47e7-9ef7-9c72321828fe_1.0.0.0_x86__t4c8gy7px9yc2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>4db6ffbb-e182-47e7-9ef7-9c72321828fe_t4c8gy7px9yc2!App</RegisteredUserModeAppID>
     <RegisteredPackageID>4db6ffbb-e182-47e7-9ef7-9c72321828fe</RegisteredPackageID>
@@ -27,241 +27,241 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-02-04T01:31:52.086</Modified>
+      <Modified>2022-02-05T22:20:49.512</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.exe">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.exe">
       <PackagePath>entrypoint\PolyDesktopGUI.exe</PackagePath>
-      <Modified>2022-02-04T01:31:51.415</Modified>
+      <Modified>2022-02-05T22:20:48.145</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jerro\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
+    <AppxPackagedFile Include="C:\Users\nate2\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
       <Modified>2021-11-18T22:29:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jerro\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\nate2\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-10-10T06:49:52.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
-      <Modified>2020-12-02T12:52:00.000</Modified>
+      <Modified>2020-12-02T11:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jerro\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
+    <AppxPackagedFile Include="C:\Users\nate2\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml</PackagePath>
       <Modified>2021-11-18T21:54:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\PolyDesktopBanner.png">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\PolyDesktopBanner.png">
       <PackagePath>Assets\PolyDesktopBanner.png</PackagePath>
-      <Modified>2021-11-16T03:24:18.791</Modified>
+      <Modified>2021-11-16T18:44:11.264</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\PolyDesktopTrayIcon.png">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\PolyDesktopTrayIcon.png">
       <PackagePath>Assets\PolyDesktopTrayIcon.png</PackagePath>
-      <Modified>2021-11-16T03:24:18.791</Modified>
+      <Modified>2021-11-16T18:44:11.264</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2021-11-16T03:24:18.790</Modified>
+      <Modified>2021-11-16T18:44:11.263</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-16T03:24:18.791</Modified>
+      <Modified>2022-02-04T23:39:44.546</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-16T03:24:18.791</Modified>
+      <Modified>2022-02-04T23:39:44.547</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-16T03:24:18.792</Modified>
+      <Modified>2022-02-04T23:39:44.547</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-16T03:24:18.792</Modified>
+      <Modified>2022-02-04T23:39:44.548</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-16T03:24:18.818</Modified>
+      <Modified>2022-02-04T23:39:44.548</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-16T03:24:18.819</Modified>
+      <Modified>2022-02-04T23:39:44.549</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-11-16T03:24:18.821</Modified>
+      <Modified>2021-11-16T18:44:11.272</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.xr.xml">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyDesktopGUI.xr.xml">
       <PackagePath>PolyDesktopGUI.xr.xml</PackagePath>
-      <Modified>2022-01-23T22:38:32.225</Modified>
+      <Modified>2022-01-22T23:56:40.549</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-02-04T01:31:51.356</Modified>
+      <Modified>2022-02-05T22:20:48.033</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\BasicMode.xbf">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\BasicMode.xbf">
       <PackagePath>BasicMode.xbf</PackagePath>
-      <Modified>2022-02-04T01:31:51.356</Modified>
+      <Modified>2022-02-05T22:20:48.033</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\DesktopProperties.xbf">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\DesktopProperties.xbf">
       <PackagePath>DesktopProperties.xbf</PackagePath>
-      <Modified>2022-02-04T01:31:51.356</Modified>
+      <Modified>2022-02-05T22:20:48.033</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\EditPresets.xbf">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\EditPresets.xbf">
       <PackagePath>EditPresets.xbf</PackagePath>
-      <Modified>2022-02-04T01:31:51.352</Modified>
+      <Modified>2022-02-05T22:20:48.026</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\GroupMode.xbf">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\GroupMode.xbf">
       <PackagePath>GroupMode.xbf</PackagePath>
-      <Modified>2022-02-04T01:31:51.357</Modified>
+      <Modified>2022-02-05T22:20:48.034</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-02-04T01:31:51.354</Modified>
+      <Modified>2022-02-05T22:20:48.029</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\OverlayMode.xbf">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\OverlayMode.xbf">
       <PackagePath>OverlayMode.xbf</PackagePath>
-      <Modified>2022-02-04T01:31:51.357</Modified>
+      <Modified>2022-02-05T22:20:48.034</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyBayTab.xbf">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\PolyBayTab.xbf">
       <PackagePath>PolyBayTab.xbf</PackagePath>
-      <Modified>2022-02-04T01:31:51.357</Modified>
+      <Modified>2022-02-05T22:20:48.034</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\ScriptStats.xbf">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\ScriptStats.xbf">
       <PackagePath>ScriptStats.xbf</PackagePath>
-      <Modified>2022-02-04T01:31:51.357</Modified>
+      <Modified>2022-02-05T22:20:48.034</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\TabMode.xbf">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\TabMode.xbf">
       <PackagePath>TabMode.xbf</PackagePath>
-      <Modified>2022-02-04T01:31:51.357</Modified>
+      <Modified>2022-02-05T22:20:48.034</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
-      <Modified>2020-12-02T12:59:30.000</Modified>
+      <Modified>2020-12-02T11:59:30.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2020-12-02T10:52:06.000</Modified>
+      <Modified>2020-12-02T09:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-02-04T00:05:37.726</Modified>
+      <Modified>2022-02-05T22:20:48.390</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Core\PolyDesktopGUI.exe">
+    <AppxPackagedFile Include="C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI\bin\x86\Debug\Core\PolyDesktopGUI.exe">
       <PackagePath>PolyDesktopGUI.exe</PackagePath>
-      <Modified>2022-02-04T01:31:52.084</Modified>
+      <Modified>2022-02-05T22:20:49.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2021-09-14T09:06:08.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>Win32</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>arm64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.30527.2</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.30527.2</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.30527.2</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.30316.1</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.30316.1</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jerro\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\nate2\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.30316.1</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jerro\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\nate2\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
