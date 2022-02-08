@@ -46,7 +46,7 @@ namespace PolyDesktopGUI_WPF
         private void ViewScirptS_Click(object sender, RoutedEventArgs e)
         {
             ModePickerFlyout.IsOpen = false;
-            //NavFrame.Navigate(new ViewSctriptStats());
+            NavFrame.Navigate(new ScriptStats());
         }
         /// <summary>
         /// Uses navString to change the frame to the .xaml specified
