@@ -4,19 +4,18 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
+      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ScriptStats">
 
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
-        <Image Source="Resources/PolyDesktopBanner.png" Height="499" Width="500" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-175,0,0"/>
+        <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="235,-115,235,0"/>
         <Button x:Name="RefreshButton" Margin="575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58" Click="RefreshButton_Click">
-            <!--Placeholder image-->
-            <Image Source="Resources/PolyDesktopTrayIcon.png" Height="53" Width="53"/>
+            <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE895;"/>
         </Button>
         <Button x:Name="BackButton" Margin="-575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58" Click="BackButton_Click">
-            <!--Placeholder image-->
-            <Image Source="Resources/PolyDesktopTrayIcon.png" Height="53" Width="53"/>
+            <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
         </Button>
         <DataGrid x:Name="dataGrid"
                            RowDetailsVisibilityMode="VisibleWhenSelected"

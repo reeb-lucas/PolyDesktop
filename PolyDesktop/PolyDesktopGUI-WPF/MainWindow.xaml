@@ -47,7 +47,7 @@
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
-            <Image Source="Resources/PolyDesktopTrayIcon.png" Height="25" Width="25"></Image>
+            <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#59155;"/>
         </Button>
         <Button x:Name="Tutorial" Click="Tutorial_Click" Content="Tutorial" Height="30" Width="100" VerticalAlignment="Top" Margin="606,354,566,0">
             <Button.Resources>
