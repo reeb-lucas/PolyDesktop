@@ -9,7 +9,7 @@
         Title="PolyDesktop" Height="720" Width="1280">
     <Grid>
         <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="235,-115,235,0"/>
-        <Button x:Name="StartPDButton" Click="StartPDButton_Click" Height="30" Width="150" VerticalAlignment="Top" Margin="561,95,561,0" ToolTip="Click to begin remoting into computers.">
+        <Button x:Name="StartPDButton" Click="StartPDButton_Click" Height="34" Width="150" VerticalAlignment="Top" Margin="561,95,561,0" ToolTip="Click to begin remoting into computers.">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -17,7 +17,7 @@
             </Button.Resources>
             Start PolyDesktop
         </Button>
-        <Button x:Name="EditDeskPre" Click="EditDeskPre_Click" Height="30" Width="150" VerticalAlignment="Top" Margin="561,160,561,0">
+        <Button x:Name="EditDeskPre" Click="EditDeskPre_Click" Height="34" Width="150" VerticalAlignment="Top" Margin="561,160,561,0">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -25,7 +25,7 @@
             </Button.Resources>
             Edit Desktop Presets
         </Button>
-        <Button x:Name="ViewDeskPro" Click="ViewDeskPro_Click" Height="30" Width="150" VerticalAlignment="Top" Margin="561,225,561,0">
+        <Button x:Name="ViewDeskPro" Click="ViewDeskPro_Click" Height="34" Width="150" VerticalAlignment="Top" Margin="561,225,561,0">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -33,7 +33,7 @@
             </Button.Resources>
             View Desktop Properites
         </Button>
-        <Button x:Name="ViewScirptS" Click="ViewScirptS_Click" Height="30" Width="150" VerticalAlignment="Top" Margin="561,290,561,0">
+        <Button x:Name="ViewScirptS" Click="ViewScirptS_Click" Height="34" Width="150" VerticalAlignment="Top" Margin="561,290,561,0">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -41,15 +41,15 @@
             </Button.Resources>
             View Script Stats
         </Button>
-        <Button x:Name="Settings" Click="Settings_Click" Height="30" Width="30" VerticalAlignment="Top" Margin="566,354,676,0">
+        <Button x:Name="Settings" Click="Settings_Click" Height="34" Width="34" VerticalAlignment="Top" Margin="561,354,677,0">
+            <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#59155;" />
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
-            <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#59155;"/>
         </Button>
-        <Button x:Name="Tutorial" Click="Tutorial_Click" Content="Tutorial" Height="30" Width="100" VerticalAlignment="Top" Margin="606,354,566,0">
+        <Button x:Name="Tutorial" Click="Tutorial_Click" Content="Tutorial" Height="34" Width="100" VerticalAlignment="Top" Margin="611,354,561,0">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -58,7 +58,7 @@
         </Button>
 
         <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden"/>
-        <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Theme="Adapt" Position="Top" Width="326" Height="125" IsOpen="False">
+        <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Theme="Adapt" Position="Top" Width="326" Height="130" IsOpen="False">
             <StackPanel VerticalAlignment="Center">
                 <Button Name="PresetButton" Content="Preset"/>
                 <Button Name="BasicButton" Content="Basic Mode" Click="BasicButton_Click"/>
