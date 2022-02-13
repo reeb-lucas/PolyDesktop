@@ -1,0 +1,58 @@
+﻿<Page x:Class="PolyDesktopGUI_WPF.EditPresets"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
+      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="EditPresets">
+
+    <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
+        <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="235,-115,235,0"/>
+
+        <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
+            <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
+        </Button>
+        <ListView Name="PresetList" DisplayMemberPath="Name" HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200" SelectionChanged="ListView_SelectionChanged" SelectedIndex="0"/>
+        <Button x:Name="ModeButton" Margin="320,250,0,400" Width="108" VerticalAlignment="Top" HorizontalAlignment="Center" Click="ModeButton_Click"/>
+        <Button x:Name="PresetSaveButton" HorizontalAlignment="Center" Content="Save Preset" Margin="660,301,0,0" VerticalAlignment="Top" Click="PresetSaveButton_Click"/>
+        <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="70,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <TextBlock HorizontalAlignment="Center" Margin="320,220,0,0" Text="Mode" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Center" Margin="70,220,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ListView x:Name="ComputerTable" HorizontalAlignment="Center" DisplayMemberPath="Name" Margin="120,300,0,0" SelectionChanged="ComputerTable_SelectionChanged" Width="410"/>
+        <Button x:Name="TestButton" Content="Fill Test Presets" HorizontalAlignment="Center" Margin="652,103,0,0" VerticalAlignment="Top" Click="TestButton_Click"/>
+        <Button x:Name="AddComputerButton" HorizontalAlignment="Center" Content="Add Computer" Margin="-185,250,0,0" VerticalAlignment="Top" Click="AddComputerButton_Click"/>
+        <TextBlock Name="NumberOfComputersLabel" HorizontalAlignment="Center" Margin="560,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Name="NumBlock" HorizontalAlignment="Center" Margin="560,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="DeletePresetButton" Content="Delete Preset" Margin="670,353,0,0" VerticalAlignment="Top" Click="DeletePresetButton_Click" HorizontalAlignment="Center" Background="#674ea7" Foreground="White"/>
+        <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
+            <StackPanel>
+                <Button Name="BasicButton" Content="Basic" Click="BasicButton_Click"/>
+                <Button Name="TabButton" Content="Tab" Click="TabButton_Click"/>
+                <Button Name="GroupButton" Content="Group" Click="GroupButton_Click"/>
+            </StackPanel>
+        </mah:Flyout>
+        <mah:Flyout x:Name="ComputerFlyout" Header="Computer Info" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
+            <StackPanel>
+                <TextBlock Text="Computer ID:"/>
+                <TextBlock Name="FlyoutIDBlock" Text="Unknown ID"/>
+                <TextBlock Text="Computer Name:" Margin="0,7,0,0"/>
+                <TextBlock Name="FlyoutNameBlock" Text="Unknown Name"/>
+                <TextBlock Text="Nickname:" Margin="0,7,0,0"/>
+                <TextBox Name="FlyoutNicknameBox" Text="Unknown Nickname"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="NicknameChangeButton" Content="Change" Margin="0,7,0,0" Click="NicknameChangeButton_Click"/>
+                    <Button Name="RemoveComputerButton" Content="Remove" Margin="0,7,0,0" Click="RemoveComputerButton_Click" Background="#674ea7" Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+        </mah:Flyout>
+        <mah:Flyout x:Name="AddComputerFlyout" Header="Computers" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
+            <StackPanel>
+                <TextBox x:Name="SearchBox" TextChanged="search_QueryChanged"/>
+                <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" DisplayMemberPath="Name"/>
+            </StackPanel>
+        </mah:Flyout>
+    </Grid>
+</Page>

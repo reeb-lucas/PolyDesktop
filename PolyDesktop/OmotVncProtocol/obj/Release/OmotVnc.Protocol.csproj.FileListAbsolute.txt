@@ -1,0 +1,4 @@
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Release\OmotVnc.Protocol.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Release\OmotVnc.Protocol.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Release\OmotVnc.Protocol.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Release\OmotVnc.Protocol.dll

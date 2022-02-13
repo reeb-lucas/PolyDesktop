@@ -137,6 +137,9 @@
     <Compile Include="OverlayMode.xaml.cs">
       <DependentUpon>OverlayMode.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PolyBayTab.xaml.cs">
+      <DependentUpon>PolyBayTab.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScriptStats.xaml.cs">
       <DependentUpon>ScriptStats.xaml</DependentUpon>
@@ -188,6 +191,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="OverlayMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PolyBayTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

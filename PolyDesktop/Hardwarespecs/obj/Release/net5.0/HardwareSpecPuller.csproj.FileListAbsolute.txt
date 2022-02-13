@@ -1,0 +1,46 @@
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.exe
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.deps.json
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.runtimeconfig.json
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.runtimeconfig.dev.json
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\ref\HardwareSpecPuller.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.pdb
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\System.CodeDom.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\System.Management.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\runtimes\win\lib\netcoreapp3.1\System.Management.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.AssemblyInfo.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.csproj.CopyComplete
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\ref\HardwareSpecPuller.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.pdb
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.genruntimeconfig.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.exe
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.deps.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.runtimeconfig.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.runtimeconfig.dev.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\ref\HardwareSpecPuller.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\HardwareSpecPuller.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\System.CodeDom.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\System.Data.SqlClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\System.Management.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\runtimes\win-arm64\native\sni.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\runtimes\win-x64\native\sni.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\runtimes\win-x86\native\sni.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\runtimes\win\lib\netcoreapp3.1\System.Management.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.csproj.AssemblyReference.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.GeneratedMSBuildEditorConfig.editorconfig
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.AssemblyInfoInputs.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.AssemblyInfo.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.csproj.CoreCompileInputs.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.csproj.CopyComplete
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\ref\HardwareSpecPuller.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\HardwareSpecPuller.genruntimeconfig.cache

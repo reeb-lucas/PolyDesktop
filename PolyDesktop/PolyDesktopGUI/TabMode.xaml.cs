@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls;
  *                12/4/2021 - Implemented navigation back to main menu with back button
  *                1/4/2022 - Sucessfully implemented browser-like UI and navigation. Currently defaults to Main Menu page, 
  *                           waiting on remoting capabilities
+ *                1/15/2021 - Added PolyBay Tab home screen with back button
  **************************************************************/
 /**************************************************************
  * Overview:
@@ -27,6 +28,14 @@ namespace PolyDesktopGUI
         public TabMode()
         {
             this.InitializeComponent();
+            InitPolyBayTab();
+        }
+
+        private void InitPolyBayTab()
+        {
+            Frame frame = new Frame();
+            PolyBayTab.Content = frame;
+            frame.Navigate(typeof(PolyBayTab));
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

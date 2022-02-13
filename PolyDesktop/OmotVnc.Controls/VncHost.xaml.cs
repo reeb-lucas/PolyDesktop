@@ -25,7 +25,7 @@ namespace PollRobots.OmotVnc.Controls
         private const int DEFAULT_FRAME_WIDTH = 320;
         private const int DEFAULT_FRAME_HEIGHT = 240;
 
-        private const int DEFAULT_SCALE = 1;
+        private const double DEFAULT_SCALE = 0.5;
 
         private double _scaleX;
         private double _scaleY;
