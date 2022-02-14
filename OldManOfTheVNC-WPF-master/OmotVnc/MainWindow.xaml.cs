@@ -1,31 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using ControlzEx.Theming;
-using OmotVnc;
-using OmotVnc.View.ViewModel;
-using PollRobots.OmotVnc.Controls;
+﻿// -----------------------------------------------------------------------------
+// <copyright file="MainWindow.xaml.cs" company="Paul C. Roberts">
+//  Copyright 2012 Paul C. Roberts
+//
+//  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file 
+//  except in compliance with the License. You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software distributed under the 
+//  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+//  either express or implied. See the License for the specific language governing permissions and 
+//  limitations under the License.
+// </copyright>
+// -----------------------------------------------------------------------------
 
-namespace PolyDesktopGUI_WPF
+namespace OmotVnc
 {
-    /// <summary>
-    /// Interaction logic for BasicModePage.xaml
-    /// </summary>
-    public partial class BasicModePage : Page
+    using System;
+    using System.ComponentModel;
+    using System.Runtime.CompilerServices;
+    using System.Windows;
+    using System.Windows.Input;
+    using View.ViewModel;
+
+    public partial class MainWindow 
+        : Window, INotifyPropertyChanged
     {
         private int _scale;
         private bool _scaleToFit;
@@ -39,69 +38,21 @@ namespace PolyDesktopGUI_WPF
         private RelayCommand _connectCommand;
         private RelayCommand _disconnectCommand;
         private RelayCommand _toggleLocalCursorCommand;
-        public BasicModePage()
+        private RelayCommand _exitCommand;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// </summary>
+        /// <param name="taskQueue">The CCR task queue to use.</param>
+        public MainWindow()
         {
             InitializeCommands();
-
+                     
             InitializeComponent();
 
-            ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
-            ThemeManager.Current.SyncTheme();
-
             DataContext = this;
-
-            SearchListBox.ItemsSource = GatherAllComputers();
         }
 
-        private async void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(null);
-            await VncHost.DisconnectAsync();
-        }
-        public Computer[] AllComputers { get { return GatherAllComputers(); } }
-        public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
-        {
-            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
-            Computer[] container = new Computer[5];
-
-            using (var connection = new SqlConnection(connectionString))
-            {
-                string sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop";
-                if (searchTerm != null)
-                {
-                    sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop WHERE c_name LIKE'%" + searchTerm + "%' OR c_ID LIKE '%" + searchTerm + "%'";
-                }
-                connection.Open();
-                using (SqlCommand command = new SqlCommand(sql, connection))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        for (int i = 0; i < 5 && reader.Read(); i++) //only returns a max of 15 results
-                        {
-                            Computer temp = new Computer();
-                            temp.ID = reader.GetInt32(0).ToString();
-                            temp.Name = reader.GetString(1); //UUUUUUHHHHHHH, I can't get more than the first row
-                            temp.Nickname = temp.Name;
-                            container[i] = temp;
-                        }
-                        reader.Close();
-                    }
-                }
-            }
-            return container;
-        }
-        private void search_QueryChanged(object sender, TextChangedEventArgs e)
-        {
-            SearchListBox.ItemsSource = GatherAllComputers(SearchBox.Text);
-        }
-        private async void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
-        {
-            ComputerPanel.Visibility = Visibility.Hidden;
-            //start Connection
-            await VncHost.ConnectAsync(SearchListBox.SelectedValue.ToString(), 5901, "1234"); //TODO: PW CHANGE
-            await Task.Delay(150);
-            Application.Current.MainWindow.WindowState = WindowState.Maximized;
-        }
         private void InitializeCommands()
         {
             _setScaleCommand = new RelayCommand((param) =>
@@ -166,6 +117,11 @@ namespace PolyDesktopGUI_WPF
             _toggleLocalCursorCommand = new RelayCommand((param) =>
             {
                 UseLocalCursor = !UseLocalCursor;
+            });
+
+            _exitCommand = new RelayCommand((param) =>
+            {
+                Close();
             });
         }
 
@@ -236,6 +192,17 @@ namespace PolyDesktopGUI_WPF
         }
 
         /// <summary>
+        /// Gets the command that exits the application.
+        /// </summary>
+        public ICommand ExitCommand
+        {
+            get
+            {
+                return _exitCommand;
+            }
+        }
+
+        /// <summary>
         /// Gets or sets the scale in percentage.
         /// </summary>
         public int Scale
@@ -283,22 +250,22 @@ namespace PolyDesktopGUI_WPF
             }
         }
 
-        ///// <summary>Handles the window being closed.</summary>
-        ///// <param name="e">The parameter is not used.</param>
-        //protected override void OnClosed(EventArgs e)
-        //{
-        //    VncHost.DisconnectAsync();
-        //
-        //    base.OnClosed(e);
-        //}
+        /// <summary>Handles the window being closed.</summary>
+        /// <param name="e">The parameter is not used.</param>
+        protected override void OnClosed(EventArgs e)
+        {
+            VncHost.DisconnectAsync();
+
+            base.OnClosed(e);
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void RaisePropertyChanged([CallerMemberName] string propertyName = "")
+        public void RaisePropertyChanged([CallerMemberName]string propertyName = "")
         {
             var propertyChangedEventHandler = PropertyChanged;
 
-            if (propertyChangedEventHandler != null)
+            if(propertyChangedEventHandler != null)
             {
                 propertyChangedEventHandler(this, new PropertyChangedEventArgs(propertyName));
             }

@@ -25,7 +25,7 @@ namespace PollRobots.OmotVnc.Controls
         private const int DEFAULT_FRAME_WIDTH = 320;
         private const int DEFAULT_FRAME_HEIGHT = 240;
 
-        private const double DEFAULT_SCALE = 0.5;
+        private const int DEFAULT_SCALE = 1;
 
         private double _scaleX;
         private double _scaleY;
@@ -193,7 +193,7 @@ namespace PollRobots.OmotVnc.Controls
         /// </summary>
         public bool ScaleToFit
         {
-            get { return true; } //(bool)GetValue(ScaleToFitProperty)
+            get { return (bool)GetValue(ScaleToFitProperty); }
             set { SetValue(ScaleToFitProperty, value); }
         }
 
@@ -561,12 +561,12 @@ namespace PollRobots.OmotVnc.Controls
         /// <summary>Handles the display size changing.</summary>
         /// <param name="sender">The parameter is not used.</param>
         /// <param name="e">The parameter is not used.</param>
-        public void DisplayAreaSizeChanged(object sender = null, SizeChangedEventArgs e = null)
+        private void DisplayAreaSizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (ScaleToFit)
             {
-                ScaleX = DisplayArea.ActualWidth / FrameWidth / 1.01; //Thin bezels
-                ScaleY = DisplayArea.ActualHeight / FrameHeight / 1.01;
+                ScaleX = DisplayArea.ActualWidth / FrameWidth;
+                ScaleY = DisplayArea.ActualHeight / FrameHeight;
             }
         }
 

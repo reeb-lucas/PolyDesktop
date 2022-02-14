@@ -17,6 +17,7 @@
                 Name="Scroller"
                 HorizontalScrollBarVisibility="Auto" 
                 VerticalScrollBarVisibility="Auto"
+                Background="#8000"
                 Focusable="false">
                 <Image
                     Name="DisplaySurface"
@@ -51,7 +52,7 @@
             <TextBlock 
                 Text="{Binding ConnectionStatusString, ElementName=root, Mode=OneWay}"
                 Visibility="{Binding ConnectionStatusStringVisibility, ElementName=root, Mode=OneWay}"
-                Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"
+                Foreground="White"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"/>
 

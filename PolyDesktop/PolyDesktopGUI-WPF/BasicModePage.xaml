@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="BasicModePage"
-      xmlns:Controls="clr-namespace:PollRobots.OmotVnc.Controls;assembly=OmotVnc.Controls">
+      xmlns:Controls="clr-namespace:PollRobots.OmotVnc.Controls;assembly=OmotVnc.Controls" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls">
 
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
-        <DockPanel>
+        <DockPanel Visibility="Hidden"> <!--Unused-->
             <Menu Name="MainMenu" DockPanel.Dock="Top">
                 <MenuItem Header="File">
                     <MenuItem Header="Connect..." Command="{Binding ConnectCommand}"/>
@@ -32,12 +32,39 @@
                     <MenuItem Header="Toggle local cursor" Command="{Binding ToggleLocalCursorCommand}"/>
                 </MenuItem>
             </Menu>
-
-            <Controls:VncHost x:Name="VncHost" Scale="{Binding Scale}" ScaleToFit="{Binding ScaleToFit}" />
-        </DockPanel>
-        <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,20,0,0">
-            <Image Source="Resources/PolyDesktopTrayIcon.png" Height="53" Width="53"/>
+        </DockPanel> <!--Unused-->
+        <Controls:VncHost x:Name="VncHost" ScaleToFit="{Binding ScaleToFit}" />
+        <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
+            <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
         </Button>
-        
+        <StackPanel Name="ComputerPanel" HorizontalAlignment="Center" Margin="0,150,0,0" Width="300">
+            <Border Width="300" Height="300">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1, 1">
+                        <GradientStop Color="#674ea7" Offset="0.0"/>
+                        <GradientStop Color="#0090ac" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,300,300"/>
+                </Border.Clip>
+                
+                <Border Width="250" Height="250" Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
+                    
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,250,250"/>
+                    </Border.Clip>
+                    
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="Search Databased Computers" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
+                            <TextBox x:Name="SearchBox" TextChanged="search_QueryChanged" Height="5" Width="200"/>
+                            <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" DisplayMemberPath="Name" SelectedValuePath="Name"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>
