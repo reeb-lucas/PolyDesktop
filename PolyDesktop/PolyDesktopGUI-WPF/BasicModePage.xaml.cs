@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -17,6 +18,7 @@ using System.Windows.Shapes;
 using ControlzEx.Theming;
 using OmotVnc;
 using OmotVnc.View.ViewModel;
+using PollRobots.OmotVnc.Controls;
 
 namespace PolyDesktopGUI_WPF
 {
@@ -47,11 +49,58 @@ namespace PolyDesktopGUI_WPF
             ThemeManager.Current.SyncTheme();
 
             DataContext = this;
+
+            SearchListBox.ItemsSource = GatherAllComputers();
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private async void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
+            await VncHost.DisconnectAsync();
+        }
+        public Computer[] AllComputers { get { return GatherAllComputers(); } }
+        public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
+        {
+            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
+            Computer[] container = new Computer[5];
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                string sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop";
+                if (searchTerm != null)
+                {
+                    sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop WHERE c_name LIKE'%" + searchTerm + "%' OR c_ID LIKE '%" + searchTerm + "%'";
+                }
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        for (int i = 0; i < 5 && reader.Read(); i++) //only returns a max of 15 results
+                        {
+                            Computer temp = new Computer();
+                            temp.ID = reader.GetInt32(0).ToString();
+                            temp.Name = reader.GetString(1); //UUUUUUHHHHHHH, I can't get more than the first row
+                            temp.Nickname = temp.Name;
+                            container[i] = temp;
+                        }
+                        reader.Close();
+                    }
+                }
+            }
+            return container;
+        }
+        private void search_QueryChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchListBox.ItemsSource = GatherAllComputers(SearchBox.Text);
+        }
+        private async void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
+        {
+            ComputerPanel.Visibility = Visibility.Hidden;
+            //start Connection
+            await VncHost.ConnectAsync(SearchListBox.SelectedValue.ToString(), 5901, "1234"); //TODO: PW CHANGE
+            await Task.Delay(150);
+            Application.Current.MainWindow.WindowState = WindowState.Maximized;
         }
         private void InitializeCommands()
         {

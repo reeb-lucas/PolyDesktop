@@ -193,7 +193,7 @@ namespace PollRobots.OmotVnc.Controls
         /// </summary>
         public bool ScaleToFit
         {
-            get { return (bool)GetValue(ScaleToFitProperty); }
+            get { return true; } //(bool)GetValue(ScaleToFitProperty)
             set { SetValue(ScaleToFitProperty, value); }
         }
 
@@ -561,12 +561,12 @@ namespace PollRobots.OmotVnc.Controls
         /// <summary>Handles the display size changing.</summary>
         /// <param name="sender">The parameter is not used.</param>
         /// <param name="e">The parameter is not used.</param>
-        private void DisplayAreaSizeChanged(object sender, SizeChangedEventArgs e)
+        public void DisplayAreaSizeChanged(object sender = null, SizeChangedEventArgs e = null)
         {
             if (ScaleToFit)
             {
-                ScaleX = DisplayArea.ActualWidth / FrameWidth;
-                ScaleY = DisplayArea.ActualHeight / FrameHeight;
+                ScaleX = DisplayArea.ActualWidth / FrameWidth / 1.01; //Thin bezels
+                ScaleY = DisplayArea.ActualHeight / FrameHeight / 1.01;
             }
         }
 
