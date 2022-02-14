@@ -21,3 +21,4 @@ C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debu
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.CoreCompileInputs.cache
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csprojAssemblyReference.cache

@@ -12,13 +12,10 @@
 
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
          <!--TODO:MahApps Tab Control with individual dock panels for each VNC instance-->
-        <mah:MetroAnimatedSingleRowTabControl>
-            <mah:MetroTabItem Header="PolyBay">
+        <mah:MetroAnimatedSingleRowTabControl Name="tabControl" ItemsSource="{Binding}">
+            <!--<mah:MetroTabItem Header="PolyBay" CloseButtonEnabled="False">
                 <Label Content="Dock Panel For PolyBay Here"/>
-            </mah:MetroTabItem>
-            <mah:MetroTabItem Header="Tab2" CloseButtonEnabled="True">
-                <Label Content="Dock Panel 2 Here"/>
-            </mah:MetroTabItem>
+            </mah:MetroTabItem>-->
         </mah:MetroAnimatedSingleRowTabControl>
     </Grid>
 </Page>
