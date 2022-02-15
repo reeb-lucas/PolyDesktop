@@ -15,13 +15,67 @@
         <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
             <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
         </Button>
-        <ListView Name="PresetList" DisplayMemberPath="Name" HorizontalAlignment="Center" Margin="-500,165,0,0" Width="200" SelectionChanged="ListView_SelectionChanged" SelectedIndex="0"/>
+        <StackPanel Margin="-500,165,0,0" HorizontalAlignment="Center" Width="200">
+            <Border Width="200" Height="290">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1, 1">
+                        <GradientStop Color="#674ea7" Offset="1"/>
+                        <GradientStop Color="#0090ac" Offset="0.0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,200,270"/>
+                </Border.Clip>
+
+                <Border Width="180" Height="230" HorizontalAlignment="Center" Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
+
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,180,230"/>
+                    </Border.Clip>
+
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Center">
+                            <ListView Name="PresetList" DisplayMemberPath="Name" HorizontalAlignment="Center" Width="180" SelectionChanged="ListView_SelectionChanged" SelectedIndex="0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Border>
+        </StackPanel>
+        <TextBlock Text="Presets" Margin="-640,170,0,0" HorizontalAlignment="Center" Foreground="White"/>
         <Button x:Name="ModeButton" Margin="320,250,0,400" Width="108" VerticalAlignment="Top" HorizontalAlignment="Center" Click="ModeButton_Click"/>
         <Button x:Name="PresetSaveButton" HorizontalAlignment="Center" Content="Save Preset" Margin="660,301,0,0" VerticalAlignment="Top" Click="PresetSaveButton_Click"/>
         <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="70,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
         <TextBlock HorizontalAlignment="Center" Margin="320,220,0,0" Text="Mode" TextWrapping="Wrap" VerticalAlignment="Top" />
         <TextBlock HorizontalAlignment="Center" Margin="70,220,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <ListView x:Name="ComputerTable" HorizontalAlignment="Center" DisplayMemberPath="Name" Margin="120,300,0,0" SelectionChanged="ComputerTable_SelectionChanged" Width="410"/>
+        <StackPanel Margin="120,300,0,0" HorizontalAlignment="Center" Width="400">
+            <Border Width="400" Height="290">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1, 1">
+                        <GradientStop Color="#674ea7" Offset="0.0"/>
+                        <GradientStop Color="#0090ac" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,400,270"/>
+                </Border.Clip>
+
+                <Border Width="380" Height="230" HorizontalAlignment="Center" Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
+
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,380,230"/>
+                    </Border.Clip>
+
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Center">
+                            <ListView x:Name="ComputerTable" HorizontalAlignment="Center" DisplayMemberPath="Name" SelectionChanged="ComputerTable_SelectionChanged" Width="385"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Border>
+        </StackPanel>
+        <TextBlock Text="Computers" Margin="-200,305,0,0" HorizontalAlignment="Center" Foreground="White"/>
         <Button x:Name="TestButton" Content="Fill Test Presets" HorizontalAlignment="Center" Margin="652,103,0,0" VerticalAlignment="Top" Click="TestButton_Click"/>
         <Button x:Name="AddComputerButton" HorizontalAlignment="Center" Content="Add Computer" Margin="-185,250,0,0" VerticalAlignment="Top" Click="AddComputerButton_Click"/>
         <TextBlock Name="NumberOfComputersLabel" HorizontalAlignment="Center" Margin="560,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
