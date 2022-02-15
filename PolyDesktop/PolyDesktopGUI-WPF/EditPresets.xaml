@@ -42,7 +42,7 @@
                 </Border>
             </Border>
         </StackPanel>
-        <TextBlock Text="Presets" Margin="-640,170,0,0" HorizontalAlignment="Center" Foreground="White"/>
+        <TextBlock Text="Presets" Margin="-640,170,0,500" HorizontalAlignment="Center" Foreground="White"/>
         <Button x:Name="ModeButton" Margin="320,250,0,400" Width="108" VerticalAlignment="Top" HorizontalAlignment="Center" Click="ModeButton_Click"/>
         <Button x:Name="PresetSaveButton" HorizontalAlignment="Center" Content="Save Preset" Margin="660,301,0,0" VerticalAlignment="Top" Click="PresetSaveButton_Click"/>
         <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="70,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
@@ -75,7 +75,7 @@
                 </Border>
             </Border>
         </StackPanel>
-        <TextBlock Text="Computers" Margin="-200,305,0,0" HorizontalAlignment="Center" Foreground="White"/>
+        <TextBlock Text="Computers" Margin="-200,305,0,360" HorizontalAlignment="Center" Foreground="White"/>
         <Button x:Name="TestButton" Content="Fill Test Presets" HorizontalAlignment="Center" Margin="652,103,0,0" VerticalAlignment="Top" Click="TestButton_Click"/>
         <Button x:Name="AddComputerButton" HorizontalAlignment="Center" Content="Add Computer" Margin="-185,250,0,0" VerticalAlignment="Top" Click="AddComputerButton_Click"/>
         <TextBlock Name="NumberOfComputersLabel" HorizontalAlignment="Center" Margin="560,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
