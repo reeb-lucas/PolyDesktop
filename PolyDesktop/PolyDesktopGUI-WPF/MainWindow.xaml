@@ -7,7 +7,8 @@
         xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
         mc:Ignorable="d"
         Title="PolyDesktop" Height="720" Width="1280" MinHeight="700" MinWidth="1000">
-    <Grid Width="1000" HorizontalAlignment="Center" VerticalAlignment="Top">
+    <Grid>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
         <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-115,0,0"/>
         <Button x:Name="StartPDButton" Click="StartPDButton_Click" Height="34" Width="150" VerticalAlignment="Top" Margin="0,95,0,0" ToolTip="Click to begin remoting into computers.">
             <Button.Resources>
@@ -56,7 +57,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-
+        </Grid>
         <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden"/>
         <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Theme="Adapt" Position="Top" Width="326" Height="130" IsOpen="False">
             <StackPanel VerticalAlignment="Center">

@@ -276,6 +276,7 @@ namespace PollRobots.OmotVnc.Protocol
             }
         }
 
+
         /// <summary>
         /// Handles the set pointer message, this sends the pointer 
         /// position and button state to the server.
