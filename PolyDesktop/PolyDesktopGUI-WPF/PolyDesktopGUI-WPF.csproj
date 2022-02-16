@@ -113,6 +113,9 @@
     <Compile Include="TabModePage.xaml.cs">
       <DependentUpon>TabModePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VncPage.xaml.cs">
+      <DependentUpon>VncPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="BasicModePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,6 +152,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TabModePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VncPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

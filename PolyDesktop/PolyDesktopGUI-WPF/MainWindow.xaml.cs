@@ -69,6 +69,7 @@ namespace PolyDesktopGUI_WPF
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             ModePickerFlyout.IsOpen = false;
+            NavFrame.Navigate(new VncPage()); //TEST
         }
         private void StartPDButton_Click(object sender, RoutedEventArgs e)
         {

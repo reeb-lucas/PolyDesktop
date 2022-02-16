@@ -86,10 +86,9 @@ namespace PolyDesktopGUI_WPF
             tab.CloseButtonEnabled = true;
 
             //adds content to tab
-            //TODO: add VNC content
-            TextBlock testtext = new TextBlock();
-            testtext.Text = "Put VNC here";
-            tab.Content = testtext;
+            Frame VncFrame = new Frame();
+            tab.Content = VncFrame;
+            VncFrame.Navigate(new VncPage());
 
             m_tabItemList.Insert(count - 1, tab);
             return tab;
