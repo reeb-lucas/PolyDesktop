@@ -93,5 +93,9 @@ namespace PolyDesktopGUI_WPF
             m_tabItemList.Insert(count - 1, tab);
             return tab;
         }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(null);
+        }
     }
 }

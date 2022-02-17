@@ -12,10 +12,13 @@
 
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
          <!--TODO:MahApps Tab Control with individual dock panels for each VNC instance-->
-        <mah:MetroAnimatedSingleRowTabControl Name="tabControl" ItemsSource="{Binding}">
+        <mah:MetroAnimatedSingleRowTabControl Margin="0,0,0,0" Name="tabControl" ItemsSource="{Binding}">
             <!--<mah:MetroTabItem Header="PolyBay" CloseButtonEnabled="False">
                 <Label Content="Dock Panel For PolyBay Here"/>
             </mah:MetroTabItem>-->
         </mah:MetroAnimatedSingleRowTabControl>
+        <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
+            <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
+        </Button>
     </Grid>
 </Page>
