@@ -81,8 +81,8 @@ namespace PolyDesktopGUI_WPF
 
             //tab creation
             MetroTabItem tab = new MetroTabItem();
-            tab.Header = string.Format("Test Tab {0}", count); //TODO: Computer Name here
-            tab.Name = string.Format("TestTab{0}", count); //TODO: Computer Name here
+            tab.Header = string.Format("Computer {0}", count); //TODO: Computer Name here
+            tab.Name = string.Format("Computer{0}", count); //TODO: Computer Name here
             tab.CloseButtonEnabled = true;
 
             //adds content to tab
@@ -93,9 +93,30 @@ namespace PolyDesktopGUI_WPF
             m_tabItemList.Insert(count - 1, tab);
             return tab;
         }
+
+        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MetroTabItem tab = tabControl.SelectedItem as MetroTabItem;
+            if (tab != null && tab.Header != null)
+            {
+                if (tab.Header.Equals("+"))
+                {
+                    //clear tabControl binding
+                    tabControl.DataContext = null;
+
+                    //adds new tab, binds tab control, and seclects
+                    MetroTabItem newTab = this.AddTabItem();
+                    tabControl.DataContext = m_tabItemList;
+                    tabControl.SelectedItem = newTab;
+                }
+            }
+        }
+
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
         }
+
+
     }
 }
