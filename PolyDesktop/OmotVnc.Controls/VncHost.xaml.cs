@@ -14,9 +14,7 @@ using System.Windows.Threading;
 
 namespace PollRobots.OmotVnc.Controls
 {
-    /// <summary>
     /// Interaction logic for VncHost.xaml
-    /// </summary>
     public partial class VncHost
         : UserControl, INotifyPropertyChanged
     {
@@ -44,7 +42,6 @@ namespace PollRobots.OmotVnc.Controls
 
         private string _connectionStatusString;
         private Visibility _connectionStatusStringVisibility;
-
         public VncHost()
         {
             _connectionStatusString = DEFAULT_CONNECTIONSTATUS_STRING;
@@ -59,112 +56,72 @@ namespace PollRobots.OmotVnc.Controls
 
             InitializeComponent();
         }
-
-        /// <summary>
         /// Gets the frame buffer.
-        /// </summary>
         public WriteableBitmap Framebuffer
         {
-            get
-            {
-                return _framebuffer;
-            }
-
+            get { return _framebuffer; }
             private set
             {
                 _framebuffer = value;
                 RaisePropertyChanged();
             }
         }
-
-        /// <summary>
         /// Gets the connection status string.
-        /// </summary>
         public string ConnectionStatusString
         {
-            get
-            {
-                return _connectionStatusString;
-            }
+            get { return _connectionStatusString; }
             private set
             {
                 _connectionStatusString = value;
                 RaisePropertyChanged();
             }
         }
-
-        /// <summary>
         /// Gets the connection status string visibility.
-        /// </summary>
         public Visibility ConnectionStatusStringVisibility
         {
-            get
-            {
-                return _connectionStatusStringVisibility;
-            }
+            get { return _connectionStatusStringVisibility; }
             private set
             {
                 _connectionStatusStringVisibility = value;
                 RaisePropertyChanged();
             }
         }
-
-        /// <summary>
         /// Gets the X scale.
-        /// </summary>
         public double ScaleX
         {
-            get
-            {
-                return _scaleX;
-            }
+            get { return _scaleX; }
             private set
             {
                 _scaleX = value;
                 RaisePropertyChanged();
             }
         }
-
-        /// <summary>
         /// Gets the Y scale.
-        /// </summary>
         public double ScaleY
         {
-            get
-            {
-                return _scaleY;
-            }
+            get { return _scaleY; }
             private set
             {
                 _scaleY = value;
                 RaisePropertyChanged();
             }
         }
-
-        /// <summary>
         /// Gets or sets a flag that indicates if the vnc host is connected.
-        /// </summary>
         public bool IsConnected
         {
             get { return (bool)GetValue(IsConnectedProperty); }
             set { SetValue(IsConnectedProperty, value); }
         }
-
         public static readonly DependencyProperty IsConnectedProperty =
             DependencyProperty.Register("IsConnected", typeof(bool), typeof(VncHost));
-
-        /// <summary>
         /// Gets or sets the scale to be applied (in percentage). 
-        /// </summary>
         public int Scale
         {
             get { return (int)GetValue(ScaleProperty); }
             set { SetValue(ScaleProperty, value); }
         }
-
         public static readonly DependencyProperty ScaleProperty =
             DependencyProperty.Register("Scale", typeof(int), typeof(VncHost), new PropertyMetadata(OnScaleChanged));
-
         private static void OnScaleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var vncHost = d as VncHost;
@@ -175,31 +132,22 @@ namespace PollRobots.OmotVnc.Controls
             vncHost.Scroller.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
             vncHost.Scroller.HorizontalScrollBarVisibility = ScrollBarVisibility.Auto;
         }
-
-        /// <summary>
         /// Gets or sets a property that indicates if the bell notifications should be shown.
-        /// </summary>
         public bool ShowBellNotifications
         {
             get { return (bool)GetValue(ShowBellNotificationsProperty); }
             set { SetValue(ShowBellNotificationsProperty, value); }
         }
-
         public static readonly DependencyProperty ShowBellNotificationsProperty =
             DependencyProperty.Register("ShowBellNotifications", typeof(bool), typeof(VncHost), new PropertyMetadata(false));
-
-        /// <summary>
         /// Gets or sets a value that indicates if the scale should fit the window.
-        /// </summary>
         public bool ScaleToFit
         {
             get { return true; } //(bool)GetValue(ScaleToFitProperty)
             set { SetValue(ScaleToFitProperty, value); }
         }
-
         public static readonly DependencyProperty ScaleToFitProperty =
             DependencyProperty.Register("ScaleToFit", typeof(bool), typeof(VncHost), new PropertyMetadata(OnScaleFitChanged));
-
         private static void OnScaleFitChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
             var vncHost = sender as VncHost;
@@ -221,19 +169,14 @@ namespace PollRobots.OmotVnc.Controls
                 vncHost.Scroller.HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden;
             }
         }
-
-        /// <summary>
         /// Gets or sets a property that indicates if the local cursor should be enabled.
-        /// </summary>
         public bool UseLocalCursor
         {
-            get { return (bool)GetValue(UseLocalCursorProperty); }
+            get { return true; } //(bool)GetValue(UseLocalCursorProperty);
             set { SetValue(UseLocalCursorProperty, value); }
         }
-
         public static readonly DependencyProperty UseLocalCursorProperty =
             DependencyProperty.Register("UseLocalCursor", typeof(bool), typeof(VncHost), new PropertyMetadata(OnUseLocalCursorChanged));
-
         private static void OnUseLocalCursorChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
         {
             var vncHost = sender as VncHost;
@@ -252,39 +195,26 @@ namespace PollRobots.OmotVnc.Controls
                 }
             }
         }
-
-        /// <summary>
         /// Gets or sets the frame width.
-        /// </summary>
         public int FrameWidth
         {
-            get
-            {
-                return _frameWidth;
-            }
+            get { return _frameWidth; }
             private set
             {
                 _frameWidth = value;
                 RaisePropertyChanged();
             }
         }
-
-        /// <summary>
         /// Gets or sets the frame height.
-        /// </summary>
         public int FrameHeight
         {
-            get
-            {
-                return _frameHeight;
-            }
+            get { return _frameHeight; }
             private set
             {
                 _frameHeight = value;
                 RaisePropertyChanged();
             }
         }
-
         public async Task ConnectAsync(string server, int port, string password)
         {
             bool isConnected = false;
@@ -322,8 +252,7 @@ namespace PollRobots.OmotVnc.Controls
 
             IsConnected = isConnected;
         }
-
-        /// <summary>Disconnect from the server if possible</summary>
+        /// Disconnect from the server if possible
         public async Task DisconnectAsync()
         {
             if (_connection != null)
@@ -341,10 +270,7 @@ namespace PollRobots.OmotVnc.Controls
             }
 
             IsConnected = false;
-
-            //TODO: we should clean up the image and set the label visibility.
         }
-
         /// <summary>Handles ticks on the frame update timer.</summary>
         /// <param name="sender">The paramter is not used.</param>
         /// <param name="e">The parameter is not used.</param>
@@ -359,7 +285,6 @@ namespace PollRobots.OmotVnc.Controls
                 _connection.UpdateAsync(false);
             }
         }
-
         /// <summary>Run the VNC protocol connection process</summary>
         /// <param name="password">The password.</param>
         /// <returns>Standard CCR task enumerator</returns>
@@ -426,7 +351,6 @@ namespace PollRobots.OmotVnc.Controls
 
             return true;
         }
-
         /// <summary>Initialize the frame buffer with the reported width and 
         /// height from the server.</summary>
         /// <param name="info">The connection info.</param>
@@ -466,7 +390,6 @@ namespace PollRobots.OmotVnc.Controls
                 _timer.Start();
             });
         }
-
         public async Task UpdateAsync()
         {
             if (_connection != null)
@@ -474,7 +397,6 @@ namespace PollRobots.OmotVnc.Controls
                 await _connection.UpdateAsync(true);
             }
         }
-
         /// <summary>Handles an update to a rectangle in the frame buffer</summary>
         /// <remarks>This assumes that the rectangle is completely within the
         /// frame buffer dimensions and that the pixel format is BGR32</remarks>
@@ -494,7 +416,6 @@ namespace PollRobots.OmotVnc.Controls
                 Framebuffer.WritePixels(rectangle, update.Pixels, stride, 0);
             });
         }
-
         private void HandleBell()
         {
             if (ShowBellNotifications)
@@ -508,7 +429,6 @@ namespace PollRobots.OmotVnc.Controls
                 storyboard.Begin();
             }
         }
-
         /// <summary>Handles a change in the connection state as reported by 
         /// the protocol service.</summary>
         /// <param name="state">The new state.</param>
@@ -530,7 +450,6 @@ namespace PollRobots.OmotVnc.Controls
                 });
             }
         }
-
         /// <summary>Displays any error message from the protocol</summary>
         /// <param name="exception">The exception raised by the protocol 
         /// service.</param>
@@ -538,12 +457,10 @@ namespace PollRobots.OmotVnc.Controls
         {
             SetStatusText("Error from protocol: ", exception);
         }
-
         private void SetStatusText(string newstatus)
         {
             ConnectionStatusString = newstatus;
         }
-
         private void SetStatusText(string message, Exception exception)
         {
             if (exception.InnerException != null)
@@ -557,7 +474,6 @@ namespace PollRobots.OmotVnc.Controls
 
             DoInvoke(async () => await DisconnectAsync());
         }
-
         /// <summary>Handles the display size changing.</summary>
         /// <param name="sender">The parameter is not used.</param>
         /// <param name="e">The parameter is not used.</param>
@@ -569,7 +485,6 @@ namespace PollRobots.OmotVnc.Controls
                 ScaleY = DisplayArea.ActualHeight / FrameHeight / 1.01;
             }
         }
-
         /// <summary>Handles mouse move events in the display area.</summary>
         /// <remarks>This sends pointer events to the server if there is a 
         /// connection, and the display service is focussed</remarks>
@@ -599,7 +514,6 @@ namespace PollRobots.OmotVnc.Controls
                 await _connection.SetPointerAsync(buttons, (int)point.X, (int)point.Y);
             }
         }
-
         private void HandleMouseWheel(object sender, MouseWheelEventArgs e)
         {
             if (_connection != null)
@@ -627,7 +541,6 @@ namespace PollRobots.OmotVnc.Controls
                 }
             }
         }
-
         /// <summary>Handles text input events, sending a sequence of down, up
         /// messages to the server, followed by a single update.</summary>
         /// <param name="sender">The parameter is not used.</param>
@@ -647,7 +560,6 @@ namespace PollRobots.OmotVnc.Controls
 
             await _connection.UpdateAsync(false);
         }
-
         /// <summary>Handles key up and down events<summary>
         /// <remarks>This translates the key-code from windows to VNC and
         /// sends the key operation to the server. The Left and Right windows
@@ -782,7 +694,6 @@ namespace PollRobots.OmotVnc.Controls
 
             await _connection.SendKeyAsync(e.IsDown, key, update: true);
         }
-
         private char TranslateKey(bool isShifted, Key key)
         {
             switch (key)
@@ -857,11 +768,8 @@ namespace PollRobots.OmotVnc.Controls
                     return '?';
             }
         }
-
-        /// <summary>
         /// If the mouse is near the edge of the visible region and scroll bars
         /// are visible, then automatically scroll to the obvious direction
-        /// </summary>
         /// <param name="x">The x-coordinate of the mouse</param>
         /// <param name="y">The y-coordinate of the moust</param>
         private void AutoScroll(double x, double y)
@@ -896,14 +804,11 @@ namespace PollRobots.OmotVnc.Controls
                 }
             }
         }
-
         public void DoInvoke(Action action)
         {
             _dispatcher.BeginInvoke(action);
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
-
         public void RaisePropertyChanged([CallerMemberName]string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

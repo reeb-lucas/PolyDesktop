@@ -232,6 +232,5 @@ C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Mi
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.g.cs
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.baml
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.baml
