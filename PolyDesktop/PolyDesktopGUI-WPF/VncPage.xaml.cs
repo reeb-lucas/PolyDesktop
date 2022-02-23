@@ -275,14 +275,12 @@ namespace PolyDesktopGUI_WPF
             }
         }
 
-        ///// <summary>Handles the window being closed.</summary>
-        ///// <param name="e">The parameter is not used.</param>
-        //protected override void OnClosed(EventArgs e)
-        //{
-        //    VncHost.DisconnectAsync();
-        //
-        //    base.OnClosed(e);
-        //}
+        /// <summary>Handles the window being closed.</summary>
+        /// <param name="e">The parameter is not used.</param>
+        public async void Disconnect()
+        {
+            await VncHost.DisconnectAsync();
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

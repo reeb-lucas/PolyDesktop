@@ -41,7 +41,7 @@ namespace PolyDesktopGUI_WPF
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
-            //_child.Disconnect();
+            _child.Disconnect();
         }
     }
 }

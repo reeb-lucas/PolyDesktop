@@ -37,11 +37,13 @@ namespace PolyDesktopGUI_WPF
     public partial class TabModePage : Page
     {
         private List<MetroTabItem> m_tabItemList;
+        private List<VncPage> m_VNCList;
         public TabModePage()
         {
             InitializeComponent();
 
             m_tabItemList = new List<MetroTabItem>();
+            m_VNCList = new List<VncPage>();
 
             //this tab will hold PolyBay
             MetroTabItem tabPolyBay = new MetroTabItem();
@@ -88,9 +90,12 @@ namespace PolyDesktopGUI_WPF
             //adds content to tab
             Frame VncFrame = new Frame();
             tab.Content = VncFrame;
-            VncFrame.Navigate(new VncPage());
+            VncPage localSession = new VncPage();
+            VncFrame.Navigate(localSession);
 
             m_tabItemList.Insert(count - 1, tab);
+            m_VNCList.Insert(count - 2, localSession);
+
             return tab;
         }
 
@@ -115,6 +120,10 @@ namespace PolyDesktopGUI_WPF
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
+            for(int i = 0; i < m_VNCList.Count; i++)
+            {
+                m_VNCList[i].Disconnect();
+            }
         }
 
 
