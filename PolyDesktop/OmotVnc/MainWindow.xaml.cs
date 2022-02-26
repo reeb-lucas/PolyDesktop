@@ -252,12 +252,12 @@ namespace OmotVnc
 
         /// <summary>Handles the window being closed.</summary>
         /// <param name="e">The parameter is not used.</param>
-        protected override void OnClosed(EventArgs e)
-        {
-            VncHost.DisconnectAsync();
-
-            base.OnClosed(e);
-        }
+        //protected override void OnClosed(EventArgs e)
+        //{
+        //    VncHost.DisconnectAsync();
+        //
+        //    base.OnClosed(e);
+        //}
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -481,8 +481,8 @@ namespace PollRobots.OmotVnc.Controls
         {
             if (ScaleToFit)
             {
-                ScaleX = DisplayArea.ActualWidth / FrameWidth / 1.01; //Thin bezels
-                ScaleY = DisplayArea.ActualHeight / FrameHeight / 1.01;
+                ScaleY = DisplayArea.ActualHeight / FrameHeight / 1.01; //Thin bezels
+                ScaleX = ScaleY; //DisplayArea.ActualWidth / FrameWidth / 1.01;
             }
         }
         /// <summary>Handles mouse move events in the display area.</summary>
