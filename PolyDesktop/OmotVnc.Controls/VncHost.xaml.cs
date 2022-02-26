@@ -682,8 +682,8 @@ namespace PollRobots.OmotVnc.Controls
                     break;
                 default:
                     var modifiers = Keyboard.Modifiers;
-                    if (!modifiers.HasFlag(ModifierKeys.Control) &&
-                        !modifiers.HasFlag(ModifierKeys.Alt))
+                    if ((!modifiers.HasFlag(ModifierKeys.Control) && !modifiers.HasFlag(ModifierKeys.Alt)) 
+                        || modifiers.HasFlag(ModifierKeys.Alt))
                     {
                         return;
                     }
