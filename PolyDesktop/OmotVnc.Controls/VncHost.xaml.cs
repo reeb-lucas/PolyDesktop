@@ -55,6 +55,8 @@ namespace PollRobots.OmotVnc.Controls
             _dispatcher = Application.Current.Dispatcher;
 
             InitializeComponent();
+
+            this.DisplaySurface.Cursor = Cursors.Arrow; //Keeps the local cursor visible
         }
         /// Gets the frame buffer.
         public WriteableBitmap Framebuffer
