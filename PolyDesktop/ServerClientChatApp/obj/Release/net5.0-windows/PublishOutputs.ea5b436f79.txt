@@ -1,0 +1,5 @@
+C:\Users\nate2\Desktop\JPTesting\ChatClient.exe
+C:\Users\nate2\Desktop\JPTesting\ChatClient.dll
+C:\Users\nate2\Desktop\JPTesting\ChatClient.deps.json
+C:\Users\nate2\Desktop\JPTesting\ChatClient.runtimeconfig.json
+C:\Users\nate2\Desktop\JPTesting\ChatClient.pdb
