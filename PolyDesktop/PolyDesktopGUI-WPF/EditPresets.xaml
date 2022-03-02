@@ -83,7 +83,6 @@
         <Button x:Name="DeletePresetButton" Content="Delete Preset" Margin="670,353,0,0" VerticalAlignment="Top" Click="DeletePresetButton_Click" HorizontalAlignment="Center" Background="#674ea7" Foreground="White"/>
         <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
             <StackPanel>
-                <Button Name="BasicButton" Content="Basic" Click="BasicButton_Click"/>
                 <Button Name="TabButton" Content="Tab" Click="TabButton_Click"/>
                 <Button Name="GroupButton" Content="Group" Click="GroupButton_Click"/>
             </StackPanel>

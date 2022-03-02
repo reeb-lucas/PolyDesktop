@@ -36,6 +36,8 @@ namespace PolyDesktopGUI_WPF
         private RelayCommand _connectCommand;
         private RelayCommand _disconnectCommand;
         private RelayCommand _toggleLocalCursorCommand;
+
+        private string _connectedName = "";
         public VncPage()
         {
             InitializeCommands();
@@ -48,6 +50,10 @@ namespace PolyDesktopGUI_WPF
             DataContext = this;
 
             SearchListBox.ItemsSource = GatherAllComputers();
+        }
+        public string GetConnectedName()
+        {
+            return _connectedName;
         }
         public Computer[] AllComputers { get { return GatherAllComputers(); } }
         public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
@@ -89,7 +95,8 @@ namespace PolyDesktopGUI_WPF
         {
             ComputerPanel.Visibility = Visibility.Hidden;
             
-            await VncHost.ConnectAsync(SearchListBox.SelectedValue.ToString(), 5900, "1234"); //TODO: PW CHANGE
+            await VncHost.ConnectAsync(SearchListBox.SelectedValue.ToString(), 5901, "1234"); //TODO: PW CHANGE
+            _connectedName = SearchListBox.SelectedValue.ToString();
             await Task.Delay(150);
             Application.Current.MainWindow.WindowState = WindowState.Normal;
             Application.Current.MainWindow.WindowState = WindowState.Maximized;
@@ -123,7 +130,7 @@ namespace PolyDesktopGUI_WPF
             _connectCommand = new RelayCommand(async (param) =>
             {
                 var server = string.Empty;
-                var port = 5900;
+                var port = 5901;
                 var password = string.Empty;
 
                 if (connectionDialog != null)

@@ -82,7 +82,7 @@ namespace OmotVnc
             _connectCommand = new RelayCommand(async (param) =>
             {
                 var server = string.Empty;
-                var port = 5900;
+                var port = 5901;
                 var password = string.Empty;
 
                 if (connectionDialog != null)

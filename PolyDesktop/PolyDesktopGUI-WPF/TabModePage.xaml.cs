@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -83,8 +84,8 @@ namespace PolyDesktopGUI_WPF
 
             //tab creation
             MetroTabItem tab = new MetroTabItem();
-            tab.Header = string.Format("Computer {0}", count); //TODO: Computer Name here
-            tab.Name = string.Format("Computer{0}", count); //TODO: Computer Name here
+            tab.Header = string.Format("Computer {0}", count - 1);
+            tab.Name = string.Format("Computer{0}", count - 1); //TODO: Computer Name here
             tab.CloseButtonEnabled = true;
 
             //adds content to tab
@@ -116,7 +117,23 @@ namespace PolyDesktopGUI_WPF
                 }
             }
         }
-
+        private void UpdateNames() //updates the names of all tabs TODO: Figure out how/where to call it
+        {
+            if (m_tabItemList != null)
+            {
+                for (int i = 1; i < m_tabItemList.Count - 2; i++)
+                {
+                    try
+                    {
+                        if (m_VNCList[i - 1].GetConnectedName() != "")
+                        {
+                            m_tabItemList[i].Header = m_VNCList[i - 1].GetConnectedName();
+                        }
+                    }
+                    catch { }
+                }
+            }
+        }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);

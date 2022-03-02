@@ -23,7 +23,8 @@ namespace PolyDesktopGUI_WPF
     /// </summary>
     public partial class EditPresets : Page
     {
-        static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\PolyDesktop\\Presets\\";
+        DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
         string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
         private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
         string[] bucket;
@@ -32,6 +33,8 @@ namespace PolyDesktopGUI_WPF
             InitializeComponent();
             ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
             ThemeManager.Current.SyncTheme();
+            PresetList.ItemsSource = Presets;
+            ComputerTable.ItemsSource = Computers;
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
@@ -260,19 +263,15 @@ namespace PolyDesktopGUI_WPF
         }
         private void TestButton_Click(object sender, RoutedEventArgs e) //this fills the computer with test presets
         {
-            File.WriteAllText(filename + 0 + ".txt", "TestPreset1,Tab,3,14252351,TestNickname 0,162,TestNickname 1,158964,TestNickname 2");
-            File.WriteAllText(filename + 1 + ".txt", "TestPreset2,Group,6,14252351,TestNickname 0,213286983,TestNickname 1,158964,TestNickname 2,162,TestNickname 3,102538501,TestNickname 4,25389172,TestNickname 5");
-            File.WriteAllText(filename + 2 + ".txt", "TestPreset3,Basic,4,14252351,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3");
-            File.WriteAllText(filename + 3 + ".txt", "TestPreset4,Overlay,5,14252351,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3,102538501,TestNickname 4");
+            File.WriteAllText(filename + 0 + ".txt", "TestPreset1,Tab,3,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2");
+            File.WriteAllText(filename + 1 + ".txt", "TestPreset2,Group,6,948516,TestNickname 0,213286983,TestNickname 1,158964,TestNickname 2,162,TestNickname 3,102538501,TestNickname 4,25389172,TestNickname 5");
+            File.WriteAllText(filename + 2 + ".txt", "TestPreset3,Group,4,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3");
+            File.WriteAllText(filename + 3 + ".txt", "TestPreset4,Tab,5,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3,102538501,TestNickname 4");
             PresetList.ItemsSource = Presets;
         }
         private void ModeButton_Click(object sender, RoutedEventArgs e)
         {
             OpenSingleFlyout(ModePickerFlyout);
-        }
-        private void BasicButton_Click(object sender, RoutedEventArgs e)
-        {
-            ModeButton.Content = "Basic";
         }
         private void TabButton_Click(object sender, RoutedEventArgs e)
         {

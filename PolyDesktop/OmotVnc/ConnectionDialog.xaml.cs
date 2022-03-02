@@ -40,7 +40,7 @@ namespace OmotVnc
         private ServerInfo currentServer;
 
         /// <summary>The backing store for the port property</summary>
-        private int port = 5900;
+        private int port = 5901;
 
         /// <summary>The backing store for the password property</summary>
         private string password;
