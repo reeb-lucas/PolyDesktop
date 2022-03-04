@@ -83,8 +83,8 @@ namespace PolyDesktopGUI_WPF
 
             //tab creation
             MetroTabItem tab = new MetroTabItem();
-            tab.Header = string.Format("Computer {0}", count); //TODO: Computer Name here
-            tab.Name = string.Format("Computer{0}", count); //TODO: Computer Name here
+            tab.Header = string.Format("Computer {0}", count-1); //TODO: Computer Name here
+            tab.Name = string.Format("Computer{0}", count-1); //TODO: Computer Name here
             tab.CloseButtonEnabled = true;
 
             //adds content to tab
