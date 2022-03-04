@@ -186,7 +186,7 @@ namespace Examples.ExamplesChat.WPF
                 //Start listening for new incoming TCP connections
                 //We want to select a random port on all available adaptors so provide 
                 //an IPEndPoint using IPAddress.Any and port 0.
-                Connection.StartListening(ConnectionType.TCP, new IPEndPoint(IPAddress.Any, 0));
+                Connection.StartListening(ConnectionType.TCP, new IPEndPoint(IPAddress.Any, 5069));
 
                 //Write the IP addresses and ports that we are listening on to the chatBox
                 AppendLineToChatHistory("Listening for incoming TCP connections on:");

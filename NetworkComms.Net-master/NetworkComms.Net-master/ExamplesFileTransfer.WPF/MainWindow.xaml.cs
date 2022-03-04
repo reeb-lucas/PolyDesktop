@@ -251,7 +251,7 @@ namespace Examples.ExamplesFileTransfer.WPF
             //Start listening for TCP connections
             //We want to select a random port on all available adaptors so provide 
             //an IPEndPoint using IPAddress.Any and port 0.
-            Connection.StartListening(ConnectionType.TCP, new IPEndPoint(IPAddress.Any, 0));
+            Connection.StartListening(ConnectionType.TCP, new IPEndPoint(IPAddress.Any, 5069));
 
             //Write out some useful debugging information the log window
             AddLineToLog("Initialised WPF file transfer example. Accepting TCP connections on:");

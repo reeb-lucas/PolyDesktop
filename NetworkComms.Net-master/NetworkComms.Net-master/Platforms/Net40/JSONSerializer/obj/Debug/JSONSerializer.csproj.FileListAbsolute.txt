@@ -1,0 +1,13 @@
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\bin\Debug\JSONSerializer.dll
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\bin\Debug\JSONSerializer.pdb
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\bin\Debug\NetworkCommsDotNet.dll
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\bin\Debug\Newtonsoft.Json.dll
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\bin\Debug\InTheHand.Net.Personal.dll
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\bin\Debug\NetworkCommsDotNet.pdb
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\bin\Debug\Newtonsoft.Json.xml
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\bin\Debug\InTheHand.Net.Personal.xml
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\obj\Debug\JSONSerializer.csproj.AssemblyReference.cache
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\obj\Debug\JSONSerializer.csproj.CoreCompileInputs.cache
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\obj\Debug\JSONSerializer.csproj.CopyComplete
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\obj\Debug\JSONSerializer.dll
+S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\JSONSerializer\obj\Debug\JSONSerializer.pdb
