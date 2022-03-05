@@ -64,9 +64,6 @@ namespace PolyDesktopGUI_WPF
 
             m_tabItemList.Add(tabAdder);
 
-            //Add tabAdder tab
-            this.AddTabItem();
-
             //bind tab list
             tabControl.DataContext = m_tabItemList;
             tabControl.SelectedIndex = 0;
@@ -91,12 +88,11 @@ namespace PolyDesktopGUI_WPF
             //adds content to tab
             Frame VncFrame = new Frame();
             tab.Content = VncFrame;
-            VncPage localSession = new VncPage();
+            VncPage localSession = new VncPage(this);
             VncFrame.Navigate(localSession);
 
             m_tabItemList.Insert(count - 1, tab);
             m_VNCList.Insert(count - 2, localSession);
-
             return tab;
         }
 
@@ -117,7 +113,7 @@ namespace PolyDesktopGUI_WPF
                 }
             }
         }
-        private void UpdateNames() //updates the names of all tabs TODO: Figure out how/where to call it
+        public void UpdateNames() //updates the names of all tabs called in VncPage
         {
             if (m_tabItemList != null)
             {
@@ -142,7 +138,5 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList[i].Disconnect();
             }
         }
-
-
     }
 }

@@ -36,9 +36,10 @@ namespace PolyDesktopGUI_WPF
         private RelayCommand _connectCommand;
         private RelayCommand _disconnectCommand;
         private RelayCommand _toggleLocalCursorCommand;
+        private TabModePage _tab = null;
 
         private string _connectedName = "";
-        public VncPage()
+       /* public VncPage()
         {
             InitializeCommands();
 
@@ -50,6 +51,23 @@ namespace PolyDesktopGUI_WPF
             DataContext = this;
 
             SearchListBox.ItemsSource = GatherAllComputers();
+        }*/
+        public VncPage(TabModePage tab = null)
+        {
+            InitializeCommands();
+
+            InitializeComponent();
+
+            ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
+            ThemeManager.Current.SyncTheme();
+
+            DataContext = this;
+
+            SearchListBox.ItemsSource = GatherAllComputers();
+            if (tab != null)
+            {
+                _tab = tab;
+            }
         }
         public string GetConnectedName()
         {
@@ -98,8 +116,11 @@ namespace PolyDesktopGUI_WPF
             await VncHost.ConnectAsync(SearchListBox.SelectedValue.ToString(), 5901, "1234"); //TODO: PW CHANGE
             _connectedName = SearchListBox.SelectedValue.ToString();
             await Task.Delay(150);
-            Application.Current.MainWindow.WindowState = WindowState.Normal;
-            Application.Current.MainWindow.WindowState = WindowState.Maximized;
+            VncHost.DisplayAreaSizeChanged(); //initialize scaling
+            if (_tab != null)//check to see if we are in a tab mode page
+            {
+                _tab.UpdateNames();
+            }
         }
         private void InitializeCommands()
         {
