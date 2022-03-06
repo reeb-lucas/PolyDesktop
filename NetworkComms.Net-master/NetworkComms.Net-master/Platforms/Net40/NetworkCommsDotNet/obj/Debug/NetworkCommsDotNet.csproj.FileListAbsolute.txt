@@ -1,8 +1,0 @@
-S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\NetworkCommsDotNet\bin\Debug\NetworkCommsDotNet.dll
-S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\NetworkCommsDotNet\bin\Debug\NetworkCommsDotNet.pdb
-S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\NetworkCommsDotNet\bin\Debug\InTheHand.Net.Personal.dll
-S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\NetworkCommsDotNet\bin\Debug\InTheHand.Net.Personal.xml
-S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\NetworkCommsDotNet\obj\Debug\NetworkCommsDotNet.csproj.CoreCompileInputs.cache
-S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\NetworkCommsDotNet\obj\Debug\NetworkCommsDotNet.csproj.CopyComplete
-S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\NetworkCommsDotNet\obj\Debug\NetworkCommsDotNet.dll
-S:\School\Fall2021\PolyDesktop\NetworkComms.Net-master\NetworkComms.Net-master\Platforms\Net40\NetworkCommsDotNet\obj\Debug\NetworkCommsDotNet.pdb

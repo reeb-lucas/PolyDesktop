@@ -7,16 +7,83 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PolyBay">
+    <Page.Resources>
+        <DataTemplate x:Key="UserTemplate" >
+            <Grid HorizontalAlignment="Stretch">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFCFDCFF" Offset="1"/>
+                        <GradientStop Color="White" Offset="0"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="82" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <TextBlock  Margin="5,1,0,0" Text="{Binding Path=Filename}" FontWeight="Bold"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBlock Margin="0,1,0,0" HorizontalAlignment="Right" Text="{Binding Path=SourceInfoStr}"/>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <ProgressBar Maximum="1" Value="{Binding Path=CompletedPercent}" HorizontalAlignment="Stretch" Height="15" Margin="5,2,0,0" Foreground="#FFFFDC00" VerticalAlignment="Top"/>
+                </Grid>
+                <Grid  Grid.Column="3">
+                    <Button Margin="0,-1,4,0" Height="20" HorizontalAlignment="Right" IsEnabled="{Binding Path=IsCompleted}" Content="Delete" Click="DeleteFile_Clicked"/>
+                    <Button Margin="0,-1,46,0" Height="20" HorizontalAlignment="Right" IsEnabled="{Binding Path=IsCompleted}" Content="Save" Click="SaveFile_Clicked"/>
+                </Grid>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="138" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0">
-            <Button Content="Send File To Remote" HorizontalAlignment="Left" Margin="8,3,0,0" Name="sendFileButton" VerticalAlignment="Top" Height="25" Width="120" Click="sendFileButton_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27" />
+            <RowDefinition Height="45" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="262" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="75,2,0,0" Name="remoteIP" VerticalAlignment="Top" Width="97" />
+            <Label Content="Remote IP:" Height="28" HorizontalAlignment="Left" Margin="8,0,0,0" Name="label1" VerticalAlignment="Top" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="205,5,0,0" Name="remotePort" VerticalAlignment="Top" Width="47" Text="5069" />
+                <Label Content="Port:" Height="28" HorizontalAlignment="Left" Margin="172,0,0,0" Name="label2" VerticalAlignment="Top" />
         </Grid>
-        <Grid Grid.Column="1">
-            <ProgressBar Maximum="1" Name="sendProgress" HorizontalAlignment="Stretch" Height="15" Margin="0,8,8,0" VerticalAlignment="Top" Foreground="#FFFFDC00"/>
         </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="138" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Content="Send File To Remote" HorizontalAlignment="Left" Margin="8,10,0,0" Name="sendFileButton" VerticalAlignment="Top" Height="25" Width="120" Click="sendFileButton_Click"/>
+            <Grid Grid.Column="1">
+                <ProgressBar Maximum="1" Name="sendProgress" HorizontalAlignment="Stretch" Height="15" Margin="0,15,8,0" VerticalAlignment="Top" Foreground="#FFFFDC00"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2">
+            
+        </Grid>
+        <Grid Grid.Row="3">
+            <Label Content="Received Files:" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Top"/>
+            <ScrollViewer Name ="fileScroller" Margin="0,25,0,0" >
+                <ListBox HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" IsSynchronizedWithCurrentItem="True" Name="lbReceivedFiles" ItemsSource="{Binding}" ItemTemplate="{StaticResource UserTemplate}" VerticalAlignment="Stretch" BorderBrush="{DynamicResource MahApps.Brushes.Button.Border}" Background="{DynamicResource MahApps.Brushes.ThemeBackground}" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}" />
+            </ScrollViewer>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Label Content="Client Log:" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Top"/>
+            <ScrollViewer Name ="scroller" Margin="0,25,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Button.Border}" Background="{DynamicResource MahApps.Brushes.ThemeBackground}" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}" >
+                <TextBlock Margin="5,0,0,0" ToolTip="Client Log Output" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="logBox" />
+            </ScrollViewer>
+        </Grid>
+        
     </Grid>
 </Page>
