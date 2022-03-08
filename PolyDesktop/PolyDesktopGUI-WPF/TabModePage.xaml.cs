@@ -28,6 +28,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ControlzEx.Theming;
 using MahApps.Metro.Controls;
+using NetworkCommsDotNet.Connections;
 
 namespace PolyDesktopGUI_WPF
 {
@@ -128,8 +129,7 @@ namespace PolyDesktopGUI_WPF
             {
                 m_VNCList[i].Disconnect();
             }
+            Connection.StopListening();                                      //stop the ability to recieve files on poly bay
         }
-
-
     }
 }

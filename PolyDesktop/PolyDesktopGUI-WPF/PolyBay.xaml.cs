@@ -170,12 +170,13 @@ namespace PolyDesktopGUI_WPF
                 }
             }
         }
-
+        
         /// <summary>
         /// Toggles the use of compression for sending files
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        /// 
         //private void UseCompression_Changed(object sender, RoutedEventArgs e)
         //{
         //    if (this.UseCompression.IsChecked == true)
@@ -191,6 +192,7 @@ namespace PolyDesktopGUI_WPF
         //        AddLineToLog("Disabled compression.");
         //    }
         //}
+        
 
         /// <summary>
         /// Correctly shutdown NetworkComms.Net if the application is closed
@@ -221,7 +223,6 @@ namespace PolyDesktopGUI_WPF
             NetworkComms.AppendGlobalIncomingPacketHandler<byte[]>("PartialFileData", IncomingPartialFileData);
             //Trigger IncomingPartialFileDataInfo method if we receive a packet of type 'PartialFileDataInfo'
             NetworkComms.AppendGlobalIncomingPacketHandler<SendInfo>("PartialFileDataInfo", IncomingPartialFileDataInfo);
-
             //Trigger the method OnConnectionClose so that we can do some clean-up
             NetworkComms.AppendGlobalConnectionCloseHandler(OnConnectionClose);
 
@@ -435,103 +436,108 @@ namespace PolyDesktopGUI_WPF
                 string remoteIP = this.remoteIP.Text;        //TODO: change logic here to loop through a list of the connected IPs given by the VNC
                 string remotePort = this.remotePort.Text;
 
-                //Set the send progress bar to 0
-                UpdateSendProgress(0);
+                sendFile(filename, remoteIP, remotePort);
+                
+            }
+        }
+        private void sendFile(string filename, string remoteIP, string remotePort) 
+        {
+            //Set the send progress bar to 0
+            UpdateSendProgress(0);
 
-                //Perform the send in a task so that we don't lock the GUI
-                Task.Factory.StartNew(() =>
+            //Perform the send in a task so that we don't lock the GUI
+            Task.Factory.StartNew(() =>
+            {
+                try
                 {
+                    //Create a fileStream from the selected file
+                    FileStream stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
+
+                    //Wrap the fileStream in a threadSafeStream so that future operations are thread safe
+                    StreamTools.ThreadSafeStream safeStream = new StreamTools.ThreadSafeStream(stream);
+
+                    //Get the filename without the associated path information
+                    string shortFileName = System.IO.Path.GetFileName(filename);
+
+                    //Parse the remote connectionInfo
+                    //We have this in a separate try catch so that we can write a clear message to the log window
+                    //if there are problems
+                    ConnectionInfo remoteInfo;
                     try
                     {
-                        //Create a fileStream from the selected file
-                        FileStream stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
-
-                        //Wrap the fileStream in a threadSafeStream so that future operations are thread safe
-                        StreamTools.ThreadSafeStream safeStream = new StreamTools.ThreadSafeStream(stream);
-
-                        //Get the filename without the associated path information
-                        string shortFileName = System.IO.Path.GetFileName(filename);
-
-                        //Parse the remote connectionInfo
-                        //We have this in a separate try catch so that we can write a clear message to the log window
-                        //if there are problems
-                        ConnectionInfo remoteInfo;
-                        try
-                        {
-                            remoteInfo = new ConnectionInfo(remoteIP, int.Parse(remotePort));
-                        }
-                        catch (Exception)
-                        {
-                            throw new InvalidDataException("Failed to parse remote IP and port. Check and try again.");
-                        }
-
-                        //Get a connection to the remote side
-                        Connection connection = TCPConnection.GetConnection(remoteInfo);
-
-                        //Break the send into 20 segments. The less segments the less overhead 
-                        //but we still want the progress bar to update in sensible steps
-                        long sendChunkSizeBytes = (long)(stream.Length / 20.0) + 1;
-
-                        //Limit send chunk size to 500MB
-                        long maxChunkSizeBytes = 500L * 1024L * 1024L;
-                        if (sendChunkSizeBytes > maxChunkSizeBytes) sendChunkSizeBytes = maxChunkSizeBytes;
-
-                        long totalBytesSent = 0;
-                        do
-                        {
-                            //Check the number of bytes to send as the last one may be smaller
-                            long bytesToSend = (totalBytesSent + sendChunkSizeBytes < stream.Length ? sendChunkSizeBytes : stream.Length - totalBytesSent);
-
-                            //Wrap the threadSafeStream in a StreamSendWrapper so that we can get NetworkComms.Net
-                            //to only send part of the stream.
-                            StreamTools.StreamSendWrapper streamWrapper = new StreamTools.StreamSendWrapper(safeStream, totalBytesSent, bytesToSend);
-
-                            //We want to record the packetSequenceNumber
-                            long packetSequenceNumber;
-                            //Send the select data
-                            connection.SendObject("PartialFileData", streamWrapper, customOptions, out packetSequenceNumber);
-                            //Send the associated SendInfo for this send so that the remote can correctly rebuild the data
-                            connection.SendObject("PartialFileDataInfo", new SendInfo(shortFileName, stream.Length, totalBytesSent, packetSequenceNumber), customOptions);
-
-                            totalBytesSent += bytesToSend;
-
-                            //Update the GUI with our send progress
-                            UpdateSendProgress((double)totalBytesSent / stream.Length);
-                        } while (totalBytesSent < stream.Length);
-
-                        //Clean up any unused memory
-                        GC.Collect();
-
-                        AddLineToLog("Completed file send to '" + connection.ConnectionInfo.ToString() + "'.");
+                        remoteInfo = new ConnectionInfo(remoteIP, int.Parse(remotePort));
                     }
-                    catch (CommunicationException)
+                    catch (Exception)
                     {
-                        //If there is a communication exception then we just write a connection
-                        //closed message to the log window
-                        AddLineToLog("Failed to complete send as connection was closed.");
-                    }
-                    catch (Exception ex)
-                    {
-                        //If we get any other exception which is not an InvalidDataException
-                        //we log the error
-                        if (!windowClosing && ex.GetType() != typeof(InvalidDataException))
-                        {
-                            AddLineToLog(ex.Message.ToString());
-                            LogTools.LogException(ex, "SendFileError");
-                        }
+                        throw new InvalidDataException("Failed to parse remote IP and port. Check and try again.");
                     }
 
-                    //Once the send is finished reset the send progress bar
-                    UpdateSendProgress(0);
+                    //Get a connection to the remote side
+                    Connection connection = TCPConnection.GetConnection(remoteInfo);
 
-                    //Once complete enable the send button again
-                    sendFileButton.Dispatcher.BeginInvoke(new Action(() =>
+                    //Break the send into 20 segments. The less segments the less overhead 
+                    //but we still want the progress bar to update in sensible steps
+                    long sendChunkSizeBytes = (long)(stream.Length / 20.0) + 1;
+
+                    //Limit send chunk size to 500MB
+                    long maxChunkSizeBytes = 500L * 1024L * 1024L;
+                    if (sendChunkSizeBytes > maxChunkSizeBytes) sendChunkSizeBytes = maxChunkSizeBytes;
+
+                    long totalBytesSent = 0;
+                    do
                     {
-                        sendFileButton.IsEnabled = true;
-                        //UseCompression.IsEnabled = true;
-                    }));
-                });
-            }
+                        //Check the number of bytes to send as the last one may be smaller
+                        long bytesToSend = (totalBytesSent + sendChunkSizeBytes < stream.Length ? sendChunkSizeBytes : stream.Length - totalBytesSent);
+
+                        //Wrap the threadSafeStream in a StreamSendWrapper so that we can get NetworkComms.Net
+                        //to only send part of the stream.
+                        StreamTools.StreamSendWrapper streamWrapper = new StreamTools.StreamSendWrapper(safeStream, totalBytesSent, bytesToSend);
+
+                        //We want to record the packetSequenceNumber
+                        long packetSequenceNumber;
+                        //Send the select data
+                        connection.SendObject("PartialFileData", streamWrapper, customOptions, out packetSequenceNumber);
+                        //Send the associated SendInfo for this send so that the remote can correctly rebuild the data
+                        connection.SendObject("PartialFileDataInfo", new SendInfo(shortFileName, stream.Length, totalBytesSent, packetSequenceNumber), customOptions);
+
+                        totalBytesSent += bytesToSend;
+
+                        //Update the GUI with our send progress
+                        UpdateSendProgress((double)totalBytesSent / stream.Length);
+                    } while (totalBytesSent < stream.Length);
+
+                    //Clean up any unused memory
+                    GC.Collect();
+
+                    AddLineToLog("Completed file send to '" + connection.ConnectionInfo.ToString() + "'.");
+                }
+                catch (CommunicationException)
+                {
+                    //If there is a communication exception then we just write a connection
+                    //closed message to the log window
+                    AddLineToLog("Failed to complete send as connection was closed.");
+                }
+                catch (Exception ex)
+                {
+                    //If we get any other exception which is not an InvalidDataException
+                    //we log the error
+                    if (!windowClosing && ex.GetType() != typeof(InvalidDataException))
+                    {
+                        AddLineToLog(ex.Message.ToString());
+                        LogTools.LogException(ex, "SendFileError");
+                    }
+                }
+
+                //Once the send is finished reset the send progress bar
+                UpdateSendProgress(0);
+
+                //Once complete enable the send button again
+                sendFileButton.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    sendFileButton.IsEnabled = true;
+                    //UseCompression.IsEnabled = true;
+                }));
+            });
         }
         #endregion
     }
