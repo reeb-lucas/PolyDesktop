@@ -1,0 +1,15 @@
+Base Exception Type: NetworkCommsDotNet.ConnectionSetupException: Error during TCP connection establish with destination ([TCP-E-S] 0.0.0.0:0 -> 10.42.1.112:5069). Destination may not be listening or connect timed out. NetworkCommsDotNet.ConnectionSetupException: Timeout waiting for remoteEndPoint to accept TCP connection.
+   at NetworkCommsDotNet.Connections.TCP.TCPConnection.ConnectSocket()
+   at NetworkCommsDotNet.Connections.TCP.TCPConnection.ConnectSocket()
+   at NetworkCommsDotNet.Connections.TCP.TCPConnection.EstablishConnectionSpecific()
+   at NetworkCommsDotNet.Connections.Connection.EstablishConnection()
+   at NetworkCommsDotNet.Connections.TCP.TCPConnection.GetConnection(ConnectionInfo connectionInfo, SendReceiveOptions defaultSendReceiveOptions, TcpClient tcpClient, Boolean establishIfRequired, SSLOptions sslOptions)
+   at NetworkCommsDotNet.Connections.TCP.TCPConnection.GetConnection(ConnectionInfo connectionInfo, Boolean establishIfRequired)
+   at PolyDesktopGUI_WPF.PolyBay.<>c__DisplayClass19_0.<sendFile>b__0() in C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\PolyBay.xaml.cs:line 476
+
+Stack Trace:    at NetworkCommsDotNet.Connections.TCP.TCPConnection.ConnectSocket()
+   at NetworkCommsDotNet.Connections.TCP.TCPConnection.EstablishConnectionSpecific()
+   at NetworkCommsDotNet.Connections.Connection.EstablishConnection()
+   at NetworkCommsDotNet.Connections.TCP.TCPConnection.GetConnection(ConnectionInfo connectionInfo, SendReceiveOptions defaultSendReceiveOptions, TcpClient tcpClient, Boolean establishIfRequired, SSLOptions sslOptions)
+   at NetworkCommsDotNet.Connections.TCP.TCPConnection.GetConnection(ConnectionInfo connectionInfo, Boolean establishIfRequired)
+   at PolyDesktopGUI_WPF.PolyBay.<>c__DisplayClass19_0.<sendFile>b__0() in C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\PolyBay.xaml.cs:line 476

@@ -9,11 +9,8 @@ S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsof
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.pdb
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.pdb
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.xml
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\MahApps.Metro.pdb
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\MahApps.Metro.xml
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.pdb
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\de\MahApps.Metro.resources.dll
@@ -143,8 +140,11 @@ C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\D
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.pdb
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.xml
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\MahApps.Metro.pdb
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\MahApps.Metro.xml
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.pdb
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\de\MahApps.Metro.resources.dll
@@ -231,7 +231,36 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.baml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.baml
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.baml
-C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
-C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.baml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.baml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Collections.Immutable.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Collections.Immutable.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.baml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.xml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.xml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.baml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.g.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Collections.Immutable.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Collections.Immutable.xml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
