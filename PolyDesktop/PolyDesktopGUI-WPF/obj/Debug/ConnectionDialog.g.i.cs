@@ -9,8 +9,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using PollRobots.OmotVnc.Controls;
-using PolyDesktopGUI_WPF;
 using System;
 using System.Diagnostics;
 using System.Windows;

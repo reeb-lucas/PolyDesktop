@@ -251,8 +251,6 @@ S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.N
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.baml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.dll
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.dll
@@ -264,3 +262,5 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Collections.Immutable.xml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.baml

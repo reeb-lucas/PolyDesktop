@@ -7,7 +7,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>OmotVnc</RootNamespace>
     <AssemblyName>OmotVnc</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <FileUpgradeFlags>
     </FileUpgradeFlags>

@@ -29,6 +29,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ControlzEx.Theming;
 using MahApps.Metro.Controls;
+using NetworkCommsDotNet.Connections;
 
 namespace PolyDesktopGUI_WPF
 {
@@ -49,12 +50,18 @@ namespace PolyDesktopGUI_WPF
             //this tab will hold PolyBay
             MetroTabItem tabPolyBay = new MetroTabItem();
             tabPolyBay.Header = "PolyBay";
-            
+
 
             //TODO: make content PolyBay
-            TextBlock PBtext = new TextBlock();
-            PBtext.Text = "Put PolyBay here";
-            tabPolyBay.Content = PBtext;
+            //TextBlock PBtext = new TextBlock();
+            //PBtext.Text = "Put PolyBay here";
+            //tabPolyBay.Content = PBtext;
+            //m_tabItemList.Add(tabPolyBay);
+
+            Frame PolyBFrame = new Frame();
+            tabPolyBay.Content = PolyBFrame;
+            PolyBay polyBay = new PolyBay();
+            PolyBFrame.Navigate(polyBay);
             m_tabItemList.Add(tabPolyBay);
 
             //this tab acts as button to add new tabs
@@ -137,6 +144,7 @@ namespace PolyDesktopGUI_WPF
             {
                 m_VNCList[i].Disconnect();
             }
+            Connection.StopListening();
         }
     }
 }
