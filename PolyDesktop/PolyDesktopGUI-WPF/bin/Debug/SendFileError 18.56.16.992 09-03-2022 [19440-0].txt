@@ -1,0 +1,61 @@
+Base Exception Type: System.IO.FileNotFoundException: Could not load file or assembly 'System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.
+File name: 'System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+   at ProtoBuf.Serializers.RepeatedSerializers..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///C:/Users/User/OneDrive/College/Junior/Fall/Junior Project/Project/PolyDesktop/PolyDesktop/PolyDesktopGUI-WPF/bin/Debug/
+LOG: Initial PrivatePath = NULL
+Calling assembly : protobuf-net, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.Config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: Attempting download of new URL file:///C:/Users/User/OneDrive/College/Junior/Fall/Junior Project/Project/PolyDesktop/PolyDesktop/PolyDesktopGUI-WPF/bin/Debug/System.Collections.Immutable.DLL.
+LOG: Attempting download of new URL file:///C:/Users/User/OneDrive/College/Junior/Fall/Junior Project/Project/PolyDesktop/PolyDesktop/PolyDesktopGUI-WPF/bin/Debug/System.Collections.Immutable/System.Collections.Immutable.DLL.
+LOG: Attempting download of new URL file:///C:/Users/User/OneDrive/College/Junior/Fall/Junior Project/Project/PolyDesktop/PolyDesktop/PolyDesktopGUI-WPF/bin/Debug/System.Collections.Immutable.EXE.
+LOG: Attempting download of new URL file:///C:/Users/User/OneDrive/College/Junior/Fall/Junior Project/Project/PolyDesktop/PolyDesktop/PolyDesktopGUI-WPF/bin/Debug/System.Collections.Immutable/System.Collections.Immutable.EXE.
+
+Inner Exception Type: System.IO.FileNotFoundException: Could not load file or assembly 'System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.
+File name: 'System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+   at ProtoBuf.Serializers.RepeatedSerializers..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///C:/Users/User/OneDrive/College/Junior/Fall/Junior Project/Project/PolyDesktop/PolyDesktop/PolyDesktopGUI-WPF/bin/Debug/
+LOG: Initial PrivatePath = NULL
+Calling assembly : protobuf-net, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.Config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: Attempting download of new URL file:///C:/Users/User/OneDrive/College/Junior/Fall/Junior Project/Project/PolyDesktop/PolyDesktop/PolyDesktopGUI-WPF/bin/Debug/System.Collections.Immutable.DLL.
+LOG: Attempting download of new URL file:///C:/Users/User/OneDrive/College/Junior/Fall/Junior Project/Project/PolyDesktop/PolyDesktop/PolyDesktopGUI-WPF/bin/Debug/System.Collections.Immutable/System.Collections.Immutable.DLL.
+LOG: Attempting download of new URL file:///C:/Users/User/OneDrive/College/Junior/Fall/Junior Project/Project/PolyDesktop/PolyDesktop/PolyDesktopGUI-WPF/bin/Debug/System.Collections.Immutable.EXE.
+LOG: Attempting download of new URL file:///C:/Users/User/OneDrive/College/Junior/Fall/Junior Project/Project/PolyDesktop/PolyDesktop/PolyDesktopGUI-WPF/bin/Debug/System.Collections.Immutable/System.Collections.Immutable.EXE.
+
+
+Stack Trace:    at ProtoBuf.Serializers.RepeatedSerializers.TryGetRepeatedProvider(Type type)
+   at ProtoBuf.Meta.RuntimeTypeModel.TryGetRepeatedProvider(Type type, CompatibilityLevel ambient) in /_/src/protobuf-net/Meta/RuntimeTypeModel.cs:line 1472
+   at ProtoBuf.Meta.RuntimeTypeModel.<GetServicesSlow>g__GetServicesImpl|88_0(RuntimeTypeModel model, Type type, CompatibilityLevel ambient) in /_/src/protobuf-net/Meta/RuntimeTypeModel.cs:line 1021
+   at ProtoBuf.Meta.RuntimeTypeModel.GetServicesSlow(Type type, CompatibilityLevel ambient) in /_/src/protobuf-net/Meta/RuntimeTypeModel.cs:line 998
+   at ProtoBuf.Meta.RuntimeTypeModel.GetServices[T](CompatibilityLevel ambient) in /_/src/protobuf-net/Meta/RuntimeTypeModel.cs:line 974
+   at ProtoBuf.Meta.RuntimeTypeModel.GetSerializer[T]() in /_/src/protobuf-net/Meta/RuntimeTypeModel.cs:line 961
+   at ProtoBuf.Meta.TypeModel.TryGetSerializer[T](TypeModel model) in /_/src/protobuf-net.Core/Meta/TypeModel.cs:line 1460
+   at ProtoBuf.Internal.DynamicStub.ConcreteStub`1.TrySerializeRoot(TypeModel model, State& state, Object value) in /_/src/protobuf-net.Core/Internal/DynamicStub.cs:line 274
+   at ProtoBuf.Internal.DynamicStub.TrySerializeRoot(Type type, TypeModel model, State& state, Object value) in /_/src/protobuf-net.Core/Internal/DynamicStub.cs:line 35
+   at ProtoBuf.Meta.TypeModel.SerializeRootFallback(State& state, Object value) in /_/src/protobuf-net.Core/Meta/TypeModel.cs:line 288
+   at ProtoBuf.Serializer.NonGeneric.Serialize(Stream dest, Object instance) in /_/src/protobuf-net/Serializer.cs:line 295
+   at NetworkCommsDotNet.DPSBase.ProtobufSerializer.SerialiseDataObjectInt(Stream ouputStream, Object objectToSerialise, Dictionary`2 options) in C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\ProtobufSerializer.cs:line 52
+   at NetworkCommsDotNet.DPSBase.DataSerializer.SerialiseGeneralObject[T](T objectToSerialise, List`1 dataProcessors, Dictionary`2 options)
+   at NetworkCommsDotNet.DPSBase.DataSerializer.SerialiseDataObject[T](T objectToSerialise, List`1 dataProcessors, Dictionary`2 options)
+   at NetworkCommsDotNet.Packet.Constructor[payloadObjectType](String sendingPacketTypeStr, String requestReturnPacketTypeStr, payloadObjectType payloadObject, SendReceiveOptions options, Boolean isNested)
+   at NetworkCommsDotNet.Packet..ctor(String sendingPacketTypeStr, Object payloadObject, SendReceiveOptions options)
+   at NetworkCommsDotNet.Connections.Connection.SendObject[sendObjectType](String sendingPacketType, sendObjectType objectToSend, SendReceiveOptions options)
+   at PolyDesktopGUI_WPF.PolyBay.<>c__DisplayClass19_0.<sendFile>b__0() in C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\PolyBay.xaml.cs:line 501
