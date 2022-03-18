@@ -89,8 +89,20 @@ namespace PolyDesktopGUI_WPF
             //tab creation
             MetroTabItem tab = new MetroTabItem();
             tab.Header = string.Format("Computer {0}", count - 1);
-            tab.Name = string.Format("Computer{0}", count - 1); //TODO: Computer Name here
+            tab.Name = string.Format("Computer{0}", count - 1);
             tab.CloseButtonEnabled = true;
+
+            //Give the abiliby to right click and change the Nickname
+            ContextMenu nameMenu = new ContextMenu();
+            MenuItem change = new MenuItem();
+            change.Header = "Change Nickname";
+            change.Click += Change_Click;
+            MenuItem remove = new MenuItem();
+            remove.Header = "Remove Nickname";
+            remove.Click += Remove_Click;
+            nameMenu.Items.Add(change);
+            nameMenu.Items.Add(remove);
+            tab.ContextMenu = nameMenu;
 
             //adds content to tab
             Frame VncFrame = new Frame();
@@ -120,21 +132,11 @@ namespace PolyDesktopGUI_WPF
                 }
             }
         }
-        public void UpdateNames() //updates the names of all tabs called in VncPage
+        public void UpdateNames() //Changed this to only update the currently selected tab
         {
-            if (m_tabItemList != null)
+            if (m_tabItemList != null && m_VNCList[tabControl.SelectedIndex - 1].GetConnectedName() != "")
             {
-                for (int i = 1; i < m_tabItemList.Count - 2; i++)
-                {
-                    try
-                    {
-                        if (m_VNCList[i - 1].GetConnectedName() != "")
-                        {
-                            m_tabItemList[i].Header = m_VNCList[i - 1].GetConnectedName();
-                        }
-                    }
-                    catch { }
-                }
+                m_tabItemList[tabControl.SelectedIndex].Header = m_VNCList[tabControl.SelectedIndex - 1].GetConnectedName();
             }
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -145,6 +147,14 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList[i].Disconnect();
             }
             Connection.StopListening();
+        }
+        private void Change_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO: open Flyout to change tab header text
+        }
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO: revert tab name to uncPage.GetConnectedNmae()
         }
     }
 }
