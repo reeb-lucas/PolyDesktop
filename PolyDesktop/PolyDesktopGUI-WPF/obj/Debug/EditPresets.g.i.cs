@@ -78,21 +78,13 @@ namespace PolyDesktopGUI_WPF {
         
         #line 47 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button PresetSaveButton;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 48 "..\..\EditPresets.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox NameBox;
         
         #line default
         #line hidden
         
         
-        #line 72 "..\..\EditPresets.xaml"
+        #line 71 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListView ComputerTable;
         
@@ -100,7 +92,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 79 "..\..\EditPresets.xaml"
+        #line 78 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button TestButton;
         
@@ -108,7 +100,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 80 "..\..\EditPresets.xaml"
+        #line 79 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button AddComputerButton;
         
@@ -116,7 +108,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 81 "..\..\EditPresets.xaml"
+        #line 80 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock NumberOfComputersLabel;
         
@@ -124,7 +116,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 82 "..\..\EditPresets.xaml"
+        #line 81 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock NumBlock;
         
@@ -132,7 +124,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 83 "..\..\EditPresets.xaml"
+        #line 82 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button DeletePresetButton;
         
@@ -140,7 +132,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 84 "..\..\EditPresets.xaml"
+        #line 83 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal MahApps.Metro.Controls.Flyout ModePickerFlyout;
         
@@ -148,7 +140,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 86 "..\..\EditPresets.xaml"
+        #line 85 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button TabButton;
         
@@ -156,7 +148,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 87 "..\..\EditPresets.xaml"
+        #line 86 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button GroupButton;
         
@@ -164,7 +156,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 90 "..\..\EditPresets.xaml"
+        #line 89 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal MahApps.Metro.Controls.Flyout ComputerFlyout;
         
@@ -172,7 +164,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 93 "..\..\EditPresets.xaml"
+        #line 92 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock FlyoutIDBlock;
         
@@ -180,7 +172,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 95 "..\..\EditPresets.xaml"
+        #line 94 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock FlyoutNameBlock;
         
@@ -188,7 +180,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 97 "..\..\EditPresets.xaml"
+        #line 96 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox FlyoutNicknameBox;
         
@@ -196,7 +188,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 99 "..\..\EditPresets.xaml"
+        #line 98 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button NicknameChangeButton;
         
@@ -204,7 +196,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 100 "..\..\EditPresets.xaml"
+        #line 99 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button RemoveComputerButton;
         
@@ -212,7 +204,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 104 "..\..\EditPresets.xaml"
+        #line 103 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal MahApps.Metro.Controls.Flyout AddComputerFlyout;
         
@@ -220,7 +212,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 106 "..\..\EditPresets.xaml"
+        #line 105 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox SearchBox;
         
@@ -228,7 +220,7 @@ namespace PolyDesktopGUI_WPF {
         #line hidden
         
         
-        #line 107 "..\..\EditPresets.xaml"
+        #line 106 "..\..\EditPresets.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListView SearchListBox;
         
@@ -293,132 +285,123 @@ namespace PolyDesktopGUI_WPF {
             #line hidden
             return;
             case 4:
-            this.PresetSaveButton = ((System.Windows.Controls.Button)(target));
-            
-            #line 47 "..\..\EditPresets.xaml"
-            this.PresetSaveButton.Click += new System.Windows.RoutedEventHandler(this.PresetSaveButton_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 5:
             this.NameBox = ((System.Windows.Controls.TextBox)(target));
             
-            #line 48 "..\..\EditPresets.xaml"
+            #line 47 "..\..\EditPresets.xaml"
             this.NameBox.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.NameBox_TextChanged);
             
             #line default
             #line hidden
             return;
-            case 6:
+            case 5:
             this.ComputerTable = ((System.Windows.Controls.ListView)(target));
             
-            #line 72 "..\..\EditPresets.xaml"
+            #line 71 "..\..\EditPresets.xaml"
             this.ComputerTable.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.ComputerTable_SelectionChanged);
             
             #line default
             #line hidden
             return;
-            case 7:
+            case 6:
             this.TestButton = ((System.Windows.Controls.Button)(target));
             
-            #line 79 "..\..\EditPresets.xaml"
+            #line 78 "..\..\EditPresets.xaml"
             this.TestButton.Click += new System.Windows.RoutedEventHandler(this.TestButton_Click);
             
             #line default
             #line hidden
             return;
-            case 8:
+            case 7:
             this.AddComputerButton = ((System.Windows.Controls.Button)(target));
             
-            #line 80 "..\..\EditPresets.xaml"
+            #line 79 "..\..\EditPresets.xaml"
             this.AddComputerButton.Click += new System.Windows.RoutedEventHandler(this.AddComputerButton_Click);
             
             #line default
             #line hidden
             return;
-            case 9:
+            case 8:
             this.NumberOfComputersLabel = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 10:
+            case 9:
             this.NumBlock = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 11:
+            case 10:
             this.DeletePresetButton = ((System.Windows.Controls.Button)(target));
             
-            #line 83 "..\..\EditPresets.xaml"
+            #line 82 "..\..\EditPresets.xaml"
             this.DeletePresetButton.Click += new System.Windows.RoutedEventHandler(this.DeletePresetButton_Click);
             
             #line default
             #line hidden
             return;
-            case 12:
+            case 11:
             this.ModePickerFlyout = ((MahApps.Metro.Controls.Flyout)(target));
             return;
-            case 13:
+            case 12:
             this.TabButton = ((System.Windows.Controls.Button)(target));
             
-            #line 86 "..\..\EditPresets.xaml"
+            #line 85 "..\..\EditPresets.xaml"
             this.TabButton.Click += new System.Windows.RoutedEventHandler(this.TabButton_Click);
             
             #line default
             #line hidden
             return;
-            case 14:
+            case 13:
             this.GroupButton = ((System.Windows.Controls.Button)(target));
             
-            #line 87 "..\..\EditPresets.xaml"
+            #line 86 "..\..\EditPresets.xaml"
             this.GroupButton.Click += new System.Windows.RoutedEventHandler(this.GroupButton_Click);
             
             #line default
             #line hidden
             return;
-            case 15:
+            case 14:
             this.ComputerFlyout = ((MahApps.Metro.Controls.Flyout)(target));
             return;
-            case 16:
+            case 15:
             this.FlyoutIDBlock = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 17:
+            case 16:
             this.FlyoutNameBlock = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 18:
+            case 17:
             this.FlyoutNicknameBox = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 19:
+            case 18:
             this.NicknameChangeButton = ((System.Windows.Controls.Button)(target));
             
-            #line 99 "..\..\EditPresets.xaml"
+            #line 98 "..\..\EditPresets.xaml"
             this.NicknameChangeButton.Click += new System.Windows.RoutedEventHandler(this.NicknameChangeButton_Click);
             
             #line default
             #line hidden
             return;
-            case 20:
+            case 19:
             this.RemoveComputerButton = ((System.Windows.Controls.Button)(target));
             
-            #line 100 "..\..\EditPresets.xaml"
+            #line 99 "..\..\EditPresets.xaml"
             this.RemoveComputerButton.Click += new System.Windows.RoutedEventHandler(this.RemoveComputerButton_Click);
             
             #line default
             #line hidden
             return;
-            case 21:
+            case 20:
             this.AddComputerFlyout = ((MahApps.Metro.Controls.Flyout)(target));
             return;
-            case 22:
+            case 21:
             this.SearchBox = ((System.Windows.Controls.TextBox)(target));
             
-            #line 106 "..\..\EditPresets.xaml"
+            #line 105 "..\..\EditPresets.xaml"
             this.SearchBox.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.search_QueryChanged);
             
             #line default
             #line hidden
             return;
-            case 23:
+            case 22:
             this.SearchListBox = ((System.Windows.Controls.ListView)(target));
             
-            #line 107 "..\..\EditPresets.xaml"
+            #line 106 "..\..\EditPresets.xaml"
             this.SearchListBox.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.SearchListBox_SelectionChanged);
             
             #line default
