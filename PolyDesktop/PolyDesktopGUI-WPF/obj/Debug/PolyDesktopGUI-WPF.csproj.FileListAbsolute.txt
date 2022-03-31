@@ -260,3 +260,7 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CopyComplete
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.g.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.baml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\AdvancedModePage.g.cs
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\AdvancedModePage.baml
