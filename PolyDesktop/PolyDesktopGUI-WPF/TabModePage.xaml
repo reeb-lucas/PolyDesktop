@@ -15,5 +15,13 @@
         <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
             <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
         </Button>
+        <Button x:Name="SaveButton" Content="Save As Preset" ToolTip="Save current tabs and nicknames as a preset" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" Click="SaveButton_Click"/>
+        <mah:Flyout x:Name="NicknameFlyout" Header="Nickname" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
+            <StackPanel>
+                <TextBlock Name="ComputerNameBlock"/>
+                <TextBox x:Name="NameBox" TextChanged="Nickname_Changed"/>
+                <Button Name="NNSaveButton" Content="Save" Click="NNSaveButton_Click"/>
+            </StackPanel>
+        </mah:Flyout>
     </Grid>
 </Page>

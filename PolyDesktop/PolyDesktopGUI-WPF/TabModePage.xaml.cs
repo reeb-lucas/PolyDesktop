@@ -94,8 +94,8 @@ namespace PolyDesktopGUI_WPF
 
             //tab creation
             MetroTabItem tab = new MetroTabItem();
-            tab.Header = string.Format("Computer {0}", count - 1);
-            tab.Name = string.Format("Computer{0}", count - 1);
+            tab.Header = string.Format("Computer {0}", count - 2);
+            tab.Name = string.Format("Computer{0}", count - 2);
             tab.CloseButtonEnabled = true;
 
             //Give the abiliby to right click and change the Nickname
@@ -117,7 +117,7 @@ namespace PolyDesktopGUI_WPF
             VncFrame.Navigate(localSession);
 
             m_tabItemList.Insert(count - 1, tab);
-            m_VNCList.Insert(count - 2, localSession);
+            m_VNCList.Insert(count - 3, localSession);
             return tab;
         }
 
@@ -140,9 +140,9 @@ namespace PolyDesktopGUI_WPF
         }
         public void UpdateNames() //Changed this to only update the currently selected tab
         {
-            if (m_tabItemList != null && m_VNCList[tabControl.SelectedIndex - 1].GetConnectedName() != "")
+            if (m_tabItemList != null && m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName() != "")
             {
-                m_tabItemList[tabControl.SelectedIndex].Header = m_VNCList[tabControl.SelectedIndex - 1].GetConnectedName();
+                m_tabItemList[tabControl.SelectedIndex].Header = m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName();
             }
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -156,11 +156,25 @@ namespace PolyDesktopGUI_WPF
         }
         private void Change_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: open Flyout to change tab header text
+            ComputerNameBlock.Text = "Nickname for: " + m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName();
+            NicknameFlyout.IsOpen = true;
+        }
+        private void Nickname_Changed(object sender, TextChangedEventArgs e)
+        {
+            m_tabItemList[tabControl.SelectedIndex].Header = NameBox.Text;
         }
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: revert tab name to uncPage.GetConnectedNmae()
+            m_tabItemList[tabControl.SelectedIndex].Header = m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName();
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO: Save tabs as Preset
+        }
+        private void NNSaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            NicknameFlyout.IsOpen = false;
         }
     }
 }
