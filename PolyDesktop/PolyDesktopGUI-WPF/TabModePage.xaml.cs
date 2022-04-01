@@ -47,6 +47,12 @@ namespace PolyDesktopGUI_WPF
             m_tabItemList = new List<MetroTabItem>();
             m_VNCList = new List<VncPage>();
 
+            //tab to space the rest out
+            MetroTabItem tabSpace = new MetroTabItem();
+            tabSpace.Header = "      ";
+            tabSpace.Focusable = false;
+            m_tabItemList.Add(tabSpace);
+
             //this tab will hold PolyBay
             MetroTabItem tabPolyBay = new MetroTabItem();
             tabPolyBay.Header = "PolyBay";
