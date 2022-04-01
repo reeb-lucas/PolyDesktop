@@ -95,11 +95,8 @@ C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\D
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.pdb
-C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.pdb
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.xml
-C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\MahApps.Metro.pdb
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\MahApps.Metro.xml
-C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.pdb
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\de\MahApps.Metro.resources.dll
@@ -110,7 +107,6 @@ C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\D
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\EditPresets.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.g.cs
-C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ScriptStats.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.cache
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.lref
@@ -119,7 +115,6 @@ C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\D
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.baml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\EditPresets.baml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.baml
-C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ScriptStats.baml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.g.resources
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI_WPF.Properties.Resources.resources
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.GenerateResource.cache
@@ -262,3 +257,17 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CopyComplete
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.g.cs
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.g.cs
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.xml
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.xml
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.baml
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.baml
+C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.baml
