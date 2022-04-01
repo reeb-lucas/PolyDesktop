@@ -121,9 +121,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AdvancedModePage.xaml.cs">
-      <DependentUpon>AdvancedModePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ConnectionDialog.xaml.cs">
       <DependentUpon>ConnectionDialog.xaml</DependentUpon>
     </Compile>
@@ -153,10 +150,6 @@
     <Compile Include="VncPage.xaml.cs">
       <DependentUpon>VncPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="AdvancedModePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="BasicModePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

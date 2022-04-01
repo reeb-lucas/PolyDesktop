@@ -67,14 +67,6 @@ namespace PolyDesktopGUI_WPF
         }
         private void StartPDButton_Click(object sender, RoutedEventArgs e)
         {
-            if((bool)(App.Current.Properties["AdvancedMode"]) == true)
-            {
-                AdvancedButton.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                AdvancedButton.Visibility = Visibility.Hidden;
-            }
             ModePickerFlyout.IsOpen = true;
         }
         private void BasicButton_Click(object sender, RoutedEventArgs e)
@@ -91,11 +83,6 @@ namespace PolyDesktopGUI_WPF
         {
             ModePickerFlyout.IsOpen = false;
             NavFrame.Navigate(new GroupModePage()); //Group
-        }
-        private void AdvancedButton_Click(object sender, RoutedEventArgs e)
-        {
-            ModePickerFlyout.IsOpen = false;
-            NavFrame.Navigate(new AdvancedModePage()); //Advanced
         }
     }
 }

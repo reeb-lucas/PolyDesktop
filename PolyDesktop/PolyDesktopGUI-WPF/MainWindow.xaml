@@ -57,7 +57,6 @@
                 <Button Name="BasicButton" Content="Basic Mode" Click="BasicButton_Click"/>
                 <Button Name="TabButton" Content="Tab Mode" Click="TabButton_Click"/>
                 <Button Name="GroupButton" Content="Group Mode" Click="GroupButton_Click"/>
-                <Button Name="AdvancedButton" Content="Advanced Mode" Click="AdvancedButton_Click"/>
             </StackPanel>
         </mah:Flyout>
     </Grid>
