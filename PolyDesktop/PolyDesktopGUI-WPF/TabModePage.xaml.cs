@@ -156,7 +156,7 @@ namespace PolyDesktopGUI_WPF
         }
         private void Change_Click(object sender, RoutedEventArgs e)
         {
-            ComputerNameBlock.Text = "Nickname for: " + m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName();
+            ComputerNameBlock.Text = m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName();
             NicknameFlyout.IsOpen = true;
         }
         private void Nickname_Changed(object sender, TextChangedEventArgs e)
@@ -175,6 +175,12 @@ namespace PolyDesktopGUI_WPF
         private void NNSaveButton_Click(object sender, RoutedEventArgs e)
         {
             NicknameFlyout.IsOpen = false;
+            NameBox.Text = "";
+        }
+        private void closeTab(object sender, RoutedEventArgs e)
+        {
+            //end VNC session
+            //TODO: Make this work
         }
     }
 }
