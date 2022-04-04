@@ -27,7 +27,7 @@ namespace PolyDesktopGUI_WPF
             InitializeComponent();
             //TODO: have user choose computers to connect to, this will likely change VncPage creation in DisplayComputers
             //temp hard coding for testing
-            connectedComputers = 1;
+            connectedComputers = 3;
             m_VNCList = new List<VncPage>();
 
             DisplayComputers(connectedComputers);
@@ -84,7 +84,44 @@ namespace PolyDesktopGUI_WPF
             }
             else if (connectedComputers == 3)
             {
-                //side by side out to 3
+                //column Width and Height not enumerated, should fill whole grid
+                ColumnDefinition column = new ColumnDefinition();
+                BaseGrid.ColumnDefinitions.Add(column);
+                ColumnDefinition column2 = new ColumnDefinition();
+                BaseGrid.ColumnDefinitions.Add(column2);
+                ColumnDefinition column3 = new ColumnDefinition();
+                BaseGrid.ColumnDefinitions.Add(column3);
+                //row Width and Height not enumerated, should fill whole grid
+                RowDefinition row = new RowDefinition();
+                BaseGrid.RowDefinitions.Add(row);
+
+                //first connection
+                VncPage localSession1 = new VncPage();
+                Frame VncFrame1 = new Frame();
+                Grid.SetColumn(VncFrame1, 0);
+                Grid.SetRow(VncFrame1, 0);
+                BaseGrid.Children.Add(VncFrame1);
+                VncFrame1.Navigate(localSession1);
+                m_VNCList.Insert(count, localSession1);
+
+                //second connection
+                VncPage localSession2 = new VncPage();
+                Frame VncFrame2 = new Frame();
+                Grid.SetColumn(VncFrame2, 1);
+                Grid.SetRow(VncFrame2, 0);
+                BaseGrid.Children.Add(VncFrame2);
+                VncFrame2.Navigate(localSession2);
+                m_VNCList.Insert(count, localSession2);
+
+                //third connection
+                VncPage localSession3 = new VncPage();
+                Frame VncFrame3 = new Frame();
+                Grid.SetColumn(VncFrame3, 2);
+                Grid.SetRow(VncFrame3, 0);
+                BaseGrid.Children.Add(VncFrame3);
+                VncFrame3.Navigate(localSession3);
+                m_VNCList.Insert(count, localSession3);
+
             }
             else if (connectedComputers == 4)
             {

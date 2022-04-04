@@ -126,14 +126,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="160192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="160704">
       <assemblyIdentity name="PolyDesktopGUI-WPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yPEaQvBJuGEZGX3JGL4s3JGE4rxCg1g1fxlwDrYKfjY=</dsig:DigestValue>
+        <dsig:DigestValue>CZp/MCF1SfSFheuWiZvlG/ZaOIYd5godbwkk3vnXYzM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
