@@ -19,6 +19,8 @@ namespace ChatClient.MVVM.ViewModel
         public RelayCommand ConnectToServerCommand { get; set; }
         public RelayCommand SendMessageCommand { get; set; }
         public string Username { get; set; }
+        public string ServerAddress { get; set; }
+        public string ServerPort { get; set; }
         public string Message { get; set; }
 
         private Server _server;
@@ -30,7 +32,16 @@ namespace ChatClient.MVVM.ViewModel
             _server.connectedEvent += UserConnected;
             _server.msgReceivedEvent += MessageReceived;
             _server.userDisconnectedEvent += RemoveUser;
-            ConnectToServerCommand = new RelayCommand(o => _server.ConnectToSever(Username), o => !string.IsNullOrEmpty(Username));
+            try
+            {
+                //Connection button requires Username, ServerAddress and ServerPort fields to all be filled with values to be pressed
+                ConnectToServerCommand = new RelayCommand(o => _server.ConnectToSever(Username, ServerAddress, Int32.Parse(ServerPort)), 
+                    o => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(ServerAddress) && !string.IsNullOrEmpty(ServerPort));
+            }
+            catch
+            {
+                //TODO, Add Error message and display it to client somewhere
+            }
 
             SendMessageCommand = new RelayCommand(o => _server.SendMessageToServer(Message), o => !string.IsNullOrEmpty(Message));
         }

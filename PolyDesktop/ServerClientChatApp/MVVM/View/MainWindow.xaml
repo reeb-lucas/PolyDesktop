@@ -18,9 +18,36 @@
         </Grid.ColumnDefinitions>
 
         <DockPanel>
-            <TextBox Height="25"
-                 DockPanel.Dock="Top"
-                     Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"/>
+            <Grid DockPanel.Dock="Top">
+                <TextBlock Text="Username" Foreground="LightGray" Name="UsernameHint"/>
+                <TextBox Height="25"
+                         DockPanel.Dock="Top"
+                         Background="Transparent"
+                         Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                         TextChanged="UsernameBox_TextChanged"
+                         Name="UsernameBox"/>
+            </Grid>
+            
+            <Grid DockPanel.Dock="Top">
+                <TextBlock Text="IP Address" Foreground="LightGray" Name="ServerAddressHint"/>
+                <TextBox Height="25"
+                         DockPanel.Dock="Top"
+                         Background="Transparent"
+                         Text="{Binding ServerAddress, UpdateSourceTrigger=PropertyChanged}"
+                         TextChanged="ServerAddressBox_TextChanged"
+                         Name="ServerAddressBox"/>
+            </Grid>
+
+            <Grid DockPanel.Dock="Top">
+                <TextBlock Text="Port Number" Foreground="LightGray" Name="ServerPortHint"/>
+                <TextBox Height="25" 
+                         DockPanel.Dock="Top"
+                         Background="Transparent"
+                         Text="{Binding ServerPort, UpdateSourceTrigger=PropertyChanged}"
+                         TextChanged="ServerPortBox_TextChanged"
+                         Name="ServerPortBox"/>
+            </Grid>
+
             <Button Height="25"
                     DockPanel.Dock="Top"
                     Content="Connect"
@@ -34,8 +61,8 @@
             </ListView>
         </DockPanel>
 
-        <StackPanel Grid.Column="1">
-            <ListView Height="380" ItemsSource="{Binding Messages}"/>
+        <StackPanel Grid.Column="1" VerticalAlignment="Bottom">
+            <ListView ItemsSource="{Binding Messages}"/>
             <StackPanel Orientation="Horizontal">
                 <TextBox Height="55"
                          Width="545" 

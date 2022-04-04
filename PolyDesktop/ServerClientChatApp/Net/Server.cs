@@ -23,11 +23,18 @@ namespace ChatClient.Net
             _client = new TcpClient();
         }
 
-        public void ConnectToSever(string username)
+        public void ConnectToSever(string username, string serverAddress, int serverPort)
         {
             if(!_client.Connected)
             {
-                _client.Connect("10.32.61.39", 5906);
+                try
+                {
+                    _client.Connect(serverAddress, serverPort);
+                }
+                catch
+                {
+                   //TODO, Add error handling here, display error connecting message somewhere 
+                }
                 PacketReader = new PacketReader(_client.GetStream());
 
                 if (!string.IsNullOrEmpty(username))
@@ -73,7 +80,14 @@ namespace ChatClient.Net
             var messagePacket = new PacketBuilder();
             messagePacket.WriteOpCode(5);
             messagePacket.WriteMessage(message);
-            _client.Client.Send(messagePacket.GetPacketBytes());
+            try
+            {
+                _client.Client.Send(messagePacket.GetPacketBytes());
+            }
+            catch
+            {
+                //TODO, Add error message to display somewhere
+            }
         }
     }
 }
