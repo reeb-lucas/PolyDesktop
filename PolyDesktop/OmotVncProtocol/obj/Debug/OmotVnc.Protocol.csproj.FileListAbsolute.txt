@@ -25,3 +25,4 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.CoreCompileInputs.cache
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.AssemblyReference.cache
