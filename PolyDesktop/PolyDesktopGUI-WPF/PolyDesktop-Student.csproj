@@ -131,16 +131,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ChatAppBase.cs" />
-    <Compile Include="ChatAppWPF.cs" />
-    <Compile Include="ChatMessage.cs" />
     <Compile Include="DesktopProperties.xaml.cs">
       <DependentUpon>DesktopProperties.xaml</DependentUpon>
     </Compile>
     <Compile Include="EditPresets.xaml.cs">
       <DependentUpon>EditPresets.xaml</DependentUpon>
     </Compile>
-    <Compile Include="JSONSerializer.cs" />
     <Compile Include="PolyBay.xaml.cs">
       <DependentUpon>PolyBay.xaml</DependentUpon>
     </Compile>
