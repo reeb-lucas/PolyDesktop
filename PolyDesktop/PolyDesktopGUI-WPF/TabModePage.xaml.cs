@@ -14,6 +14,8 @@
  **************************************************************/
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -40,6 +42,10 @@ namespace PolyDesktopGUI_WPF
     {
         private List<MetroTabItem> m_tabItemList;
         private List<VncPage> m_VNCList;
+        static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\PolyDesktop\\Presets\\";
+        DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
+        string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
+        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
         public TabModePage()
         {
             InitializeComponent();
@@ -161,7 +167,14 @@ namespace PolyDesktopGUI_WPF
         }
         private void Nickname_Changed(object sender, TextChangedEventArgs e)
         {
-            m_tabItemList[tabControl.SelectedIndex].Header = NameBox.Text;
+            if (NameBox.Text.Replace(",", "") == "")
+            {
+                Remove_Click(sender, e);
+            }
+            else
+            {
+                m_tabItemList[tabControl.SelectedIndex].Header = NameBox.Text.Replace(",", "");
+            }
         }
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
@@ -170,17 +183,49 @@ namespace PolyDesktopGUI_WPF
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: Save tabs as Preset
+            PresetFlyout.IsOpen = true;
+        }
+
+        private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            string bucket = PresetNameBox.Text.Replace(",", "") + ",Tab,";
+            for (int i = 2; i < m_tabItemList.Count - 2; i++)
+            {
+                string ID = "";
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string sql = "SELECT c_ID FROM PolyDesktop.dbo.desktop WHERE c_name = \'" + m_VNCList[i - 2].GetConnectedName() + "\'";
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                ID = reader.GetInt32(0).ToString();
+                                reader.Close();
+                            }
+                        }
+                    }
+                }
+                bucket += ID;
+                bucket += ",";
+                bucket += m_tabItemList[i].Header.ToString().Replace(",", "");
+                bucket += ",";
+            }
+            bucket = bucket.TrimEnd(',');
+            File.WriteAllText(filename + Directory.GetFiles(localApplicationData).Length + ".txt", bucket);
+            PresetFlyout.IsOpen = false;
         }
         private void NNSaveButton_Click(object sender, RoutedEventArgs e)
         {
             NicknameFlyout.IsOpen = false;
-            NameBox.Text = "";
         }
-        private void closeTab(object sender, RoutedEventArgs e)
+        private void CloseTab(object sender, RoutedEventArgs e) //TODO: do this when a tab is closed
         {
-            //end VNC session
-            //TODO: Make this work
+            m_VNCList[tabControl.SelectedIndex - 2].Disconnect();
+            tabControl.Items.MoveCurrentToNext();
         }
     }
 }

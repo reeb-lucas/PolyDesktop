@@ -11,7 +11,7 @@
       xmlns:Controls="clr-namespace:PollRobots.OmotVnc.Controls;assembly=OmotVnc.Controls">
 
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
-        <mah:MetroAnimatedSingleRowTabControl Margin="0,0,0,0" Name="tabControl" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged" CloseTabCommand="{Binding closeTab}"/>
+        <mah:MetroAnimatedSingleRowTabControl Margin="0,0,0,0" Name="tabControl" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged"/>
         <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
             <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
         </Button>
@@ -21,6 +21,13 @@
                 <TextBlock Name="ComputerNameBlock"/>
                 <TextBox x:Name="NameBox" TextChanged="Nickname_Changed"/>
                 <Button Name="NNSaveButton" Content="Save" Click="NNSaveButton_Click" Margin="0,10,0,0"/>
+            </StackPanel>
+        </mah:Flyout>
+        <mah:Flyout x:Name="PresetFlyout" Header="Preset Title" Theme="Adapt" Position="Right" Width="175" IsOpen="False">
+            <StackPanel HorizontalAlignment="Center" Width="150">
+                <TextBlock Name="PresetNameBlock"/>
+                <TextBox x:Name="PresetNameBox" Text="MyPreset"/>
+                <Button Name="PresetSaveButton" Content="Save" Click="PresetSaveButton_Click" Margin="0,10,0,0"/>
             </StackPanel>
         </mah:Flyout>
     </Grid>
