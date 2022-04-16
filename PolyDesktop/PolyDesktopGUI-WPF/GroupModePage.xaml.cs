@@ -351,6 +351,14 @@ namespace PolyDesktopGUI_WPF
         {
             //TODO: change pages in this function
         }
+        private void AddConnection(object sender, RoutedEventArgs e)
+        {
+            //TODO: connectedComputers--
+        }
+        private void RemoveConnection(object sender, RoutedEventArgs e)
+        {
+            //TODO: connectedComputers--
+        }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
