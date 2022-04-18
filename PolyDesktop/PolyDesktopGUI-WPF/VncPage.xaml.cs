@@ -39,19 +39,6 @@ namespace PolyDesktopGUI_WPF
         private TabModePage _tab = null;
 
         private string _connectedName = "";
-       /* public VncPage()
-        {
-            InitializeCommands();
-
-            InitializeComponent();
-
-            ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
-            ThemeManager.Current.SyncTheme();
-
-            DataContext = this;
-
-            SearchListBox.ItemsSource = GatherAllComputers();
-        }*/
         public VncPage(TabModePage tab = null)
         {
             InitializeCommands();
@@ -62,6 +49,15 @@ namespace PolyDesktopGUI_WPF
             ThemeManager.Current.SyncTheme();
 
             DataContext = this;
+
+            if ((bool)(App.Current.Properties["AdvancedMode"]) == true)
+            {
+                AdvancedSwitch.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                AdvancedSwitch.Visibility = Visibility.Hidden;
+            }
 
             SearchListBox.ItemsSource = GatherAllComputers();
             if (tab != null)
@@ -112,9 +108,37 @@ namespace PolyDesktopGUI_WPF
         private async void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
         {
             ComputerPanel.Visibility = Visibility.Hidden;
-            
+
             await VncHost.ConnectAsync(SearchListBox.SelectedValue.ToString(), 5901, "1234"); //TODO: PW CHANGE
+
             _connectedName = SearchListBox.SelectedValue.ToString();
+            await Task.Delay(150);
+            VncHost.DisplayAreaSizeChanged(); //initialize scaling
+            if (_tab != null)//check to see if we are in a tab mode page
+            {
+                _tab.UpdateNames();
+            }
+        }
+        private void AdvancedSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (AdvancedSwitch.IsOn)
+            {
+                AdvancedPanel.Visibility = Visibility.Visible;
+                BasicPanel.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                BasicPanel.Visibility = Visibility.Visible;
+                AdvancedPanel.Visibility = Visibility.Hidden;
+            }
+        }
+        private async void ConnectButton_Click(object sender, RoutedEventArgs e)
+        {
+            ComputerPanel.Visibility = Visibility.Hidden;
+
+            await VncHost.ConnectAsync(ServerNameBox.Text, Int32.Parse(PortBox.Text), PWBox.Password);
+
+            _connectedName = ServerNameBox.Text;
             await Task.Delay(150);
             VncHost.DisplayAreaSizeChanged(); //initialize scaling
             if (_tab != null)//check to see if we are in a tab mode page
@@ -131,10 +155,6 @@ namespace PolyDesktopGUI_WPF
                 if (param != null && int.TryParse(param.ToString(), out scale))
                 {
                     Scale = scale;
-                }
-                else
-                {
-                    //TODO: show message box?
                 }
             });
 

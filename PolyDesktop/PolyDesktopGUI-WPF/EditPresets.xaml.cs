@@ -86,7 +86,6 @@ namespace PolyDesktopGUI_WPF
                     }
                 }
                 NumBlock.Text = (index - 1).ToString();
-
             }
             catch { }
         }
@@ -216,6 +215,8 @@ namespace PolyDesktopGUI_WPF
             {
                 bucket[index] = NormalizeInput(FlyoutNicknameBox.Text);
             }
+            SavePreset();
+            ComputerFlyout.IsOpen = false; //close flyout
         }
         private void PresetSaveButton_Click(object sender, RoutedEventArgs e) //write back to file using bucket object
         {
@@ -243,7 +244,6 @@ namespace PolyDesktopGUI_WPF
             //FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
             OpenSingleFlyout(AddComputerFlyout);
             SearchListBox.ItemsSource = GatherAllComputers();
-
         }
         private void RemoveComputerButton_Click(object sender, RoutedEventArgs e) //remove computer from preset
         {
@@ -260,6 +260,8 @@ namespace PolyDesktopGUI_WPF
             bucket = temp.Split(',');
             File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", temp);
             ComputerTable.ItemsSource = Computers;
+
+            ComputerFlyout.IsOpen = false; //close flyout
         }
         private void TestButton_Click(object sender, RoutedEventArgs e) //this fills the computer with test presets
         {
@@ -267,6 +269,7 @@ namespace PolyDesktopGUI_WPF
             File.WriteAllText(filename + 1 + ".txt", "TestPreset2,Group,6,948516,TestNickname 0,213286983,TestNickname 1,158964,TestNickname 2,162,TestNickname 3,102538501,TestNickname 4,25389172,TestNickname 5");
             File.WriteAllText(filename + 2 + ".txt", "TestPreset3,Group,4,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3");
             File.WriteAllText(filename + 3 + ".txt", "TestPreset4,Tab,5,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3,102538501,TestNickname 4");
+            File.WriteAllText(filename + 4 + ".txt", "TestPreset5,Tab,1,948516,TestNickname 0");
             PresetList.ItemsSource = Presets;
         }
         private void ModeButton_Click(object sender, RoutedEventArgs e)
@@ -276,10 +279,14 @@ namespace PolyDesktopGUI_WPF
         private void TabButton_Click(object sender, RoutedEventArgs e)
         {
             ModeButton.Content = "Tab";
+            SavePreset();
+            ModePickerFlyout.IsOpen = false;
         }
         private void GroupButton_Click(object sender, RoutedEventArgs e)
         {
             ModeButton.Content = "Group";
+            SavePreset();
+            ModePickerFlyout.IsOpen = false;
         }
         private string NormalizeInput(string input) //remove commas from input to make sure file is structured correctly
         {
@@ -319,9 +326,8 @@ namespace PolyDesktopGUI_WPF
             {
                 bool alreadyExists = false;
                 Computer temp = (Computer)SearchListBox.SelectedItem;
-                for (int i = 0; i < Convert.ToInt32(bucket[2]); i++)
+                for (int i = 1; i < Convert.ToInt32(bucket[2]) * 2; i += 2)
                 {
-                    i++; //add another to skip over computer names and just check ID
                     if (bucket[i + 2] == temp.ID)
                     {
                         alreadyExists = true;
@@ -339,6 +345,18 @@ namespace PolyDesktopGUI_WPF
                     File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", tempBucket);
                     ComputerTable.ItemsSource = Computers;
                     AddComputerFlyout.IsOpen = false;
+                }
+            }
+        }
+        private void NameBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (PresetList.SelectedIndex != -1)
+            {
+                bucket[0] = NormalizeInput(NameBox.Text);
+                string saveString = string.Join(",", bucket);
+                if (saveString != null)
+                {
+                    File.WriteAllText(filename + PresetList.SelectedIndex + ".txt", saveString);
                 }
             }
         }

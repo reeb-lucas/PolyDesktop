@@ -30,6 +30,7 @@ namespace PolyDesktopGUI_WPF
             InitializeComponent();
             ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
             ThemeManager.Current.SyncTheme();
+            App.Current.Properties["AdvancedMode"] = false;
         }
         private void EditDeskPre_Click(object sender, RoutedEventArgs e)
         {
@@ -41,12 +42,6 @@ namespace PolyDesktopGUI_WPF
         {
             ModePickerFlyout.IsOpen = false;
             NavFrame.Navigate(new DesktopProperties());
-        }
-
-        private void ViewScirptS_Click(object sender, RoutedEventArgs e)
-        {
-            ModePickerFlyout.IsOpen = false;
-            NavFrame.Navigate(new ScriptStats());
         }
         /// <summary>
         /// Uses navString to change the frame to the .xaml specified
@@ -65,28 +60,25 @@ namespace PolyDesktopGUI_WPF
         {
             ModePickerFlyout.IsOpen = false;
         }
-
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             ModePickerFlyout.IsOpen = false;
+            NavFrame.Navigate(new SettingsPage()); //Settings
         }
         private void StartPDButton_Click(object sender, RoutedEventArgs e)
         {
             ModePickerFlyout.IsOpen = true;
         }
-
         private void BasicButton_Click(object sender, RoutedEventArgs e)
         {
             ModePickerFlyout.IsOpen = false;
             NavFrame.Navigate(new BasicModePage()); //Basic
         }
-
         private void TabButton_Click(object sender, RoutedEventArgs e)
         {
             ModePickerFlyout.IsOpen = false;
             NavFrame.Navigate(new TabModePage()); //Tabs
         }
-
         private void GroupButton_Click(object sender, RoutedEventArgs e)
         {
             ModePickerFlyout.IsOpen = false;

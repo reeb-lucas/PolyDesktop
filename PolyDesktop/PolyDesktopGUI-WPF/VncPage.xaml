@@ -30,10 +30,20 @@
                     </Border.Clip>
 
                     <Grid>
-                        <StackPanel HorizontalAlignment="Center">
+                        <mah:ToggleSwitch Name="AdvancedSwitch" Header="Advanced Connection" OffContent="Disabled" OnContent="Enabled" Toggled="AdvancedSwitch_Toggled" Margin="0,201,0,0" Visibility="Hidden"/>
+                        <StackPanel HorizontalAlignment="Center" Name="BasicPanel">
                             <TextBlock Text="Search Databased Computers" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
                             <TextBox x:Name="SearchBox" TextChanged="search_QueryChanged" Height="5" Width="200"/>
                             <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" DisplayMemberPath="Name" SelectedValuePath="Name"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Center" Name="AdvancedPanel" Visibility="Hidden">
+                            <TextBlock Text="Computer Name or IP Address"/>
+                            <TextBox Name="ServerNameBox"/>
+                            <TextBlock Text="Port" Margin="0,15,0,0"/>
+                            <TextBox Name="PortBox" Text="5901"/>
+                            <TextBlock Text="Password" Margin="0,15,0,0"/>
+                            <PasswordBox Name="PWBox"/>
+                            <Button Name="ConnectButton" Content="Connect" Margin="0,20,0,0" Click="ConnectButton_Click"/>
                         </StackPanel>
                     </Grid>
                 </Border>
