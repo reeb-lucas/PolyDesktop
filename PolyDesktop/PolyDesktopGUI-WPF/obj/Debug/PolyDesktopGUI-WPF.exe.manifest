@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>R5ury+5ZxaiEbLVHLu5ZZPRxrA+PNlAW88oeTOXaTZw=</dsig:DigestValue>
+        <dsig:DigestValue>6MAS9a7QxBAwWOgxc/LTYd0AQza7SBf6XCG0KTgq4to=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -121,19 +121,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>E84i1AMJ8XZxKgyQ9RkNvm/ZDftPH7owDa9fu53HP3M=</dsig:DigestValue>
+        <dsig:DigestValue>wIjcs2DubFc+StJgYiDHXJHkJUHGSQpZWRwfg/rujuU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="164288">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="164800">
       <assemblyIdentity name="PolyDesktopGUI-WPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>W4tXqMW8wvxLD7Gu9eOrOb0Ev/1PQPyQfWMsEtUveJo=</dsig:DigestValue>
+        <dsig:DigestValue>d6fiysQgMMRXC+KWY6AQxzn2rNN2SHsZMesZmCdCGqQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

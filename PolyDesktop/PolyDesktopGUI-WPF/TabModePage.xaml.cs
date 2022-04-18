@@ -79,7 +79,6 @@ namespace PolyDesktopGUI_WPF
             //this tab acts as button to add new tabs
             MetroTabItem tabAdder = new MetroTabItem();
             tabAdder.Header = "+";
-            tabAdder.MouseLeftButtonUp += TabAdder_MouseLeftButtonUp;
 
             m_tabItemList.Add(tabAdder);
 
@@ -88,12 +87,6 @@ namespace PolyDesktopGUI_WPF
             tabControl.SelectedIndex = 0;
 
         }
-
-        private void TabAdder_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            this.AddTabItem();
-        }
-
         private MetroTabItem AddTabItem()
         {
             int count = m_tabItemList.Count;
@@ -188,7 +181,7 @@ namespace PolyDesktopGUI_WPF
 
         private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
         {
-            string bucket = PresetNameBox.Text.Replace(",", "") + ",Tab," + m_VNCList.Count + ",";
+            string bucket = PresetNameBox.Text.Replace(",", "") + ",Tab," + (m_VNCList.Count - 1) + ",";
             for (int i = 2; i < m_tabItemList.Count - 2; i++)
             {
                 string ID = "";

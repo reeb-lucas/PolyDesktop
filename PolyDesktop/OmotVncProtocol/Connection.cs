@@ -262,8 +262,11 @@ namespace PollRobots.OmotVnc.Protocol
 
                 using (var cancellation = CreateCancellationTokenSource())
                 {
-                    await writeStream.WriteAsync(packet, 0, packet.Length, cancellation.Token);
-                    await writeStream.FlushAsync();
+                    if (writeStream != null)
+                    {
+                        await writeStream.WriteAsync(packet, 0, packet.Length, cancellation.Token);
+                        await writeStream.FlushAsync();
+                    }
                 }
             }
             catch (Exception e)
@@ -595,30 +598,33 @@ namespace PollRobots.OmotVnc.Protocol
                 {
                     byte[] serverMessagePacket = new byte[1];
 
-                    var read = await readStream.ReadAsync(serverMessagePacket, 0, serverMessagePacket.Length);
-
-                    if (read != serverMessagePacket.Length)
+                    if (readStream != null)
                     {
-                        RaiseProtocolException("Unable to read packet id", new InvalidDataException());
-                    }
+                        var read = await readStream.ReadAsync(serverMessagePacket, 0, serverMessagePacket.Length);
 
-                    switch (serverMessagePacket[0])
-                    {
-                        case VNC_SERVERTOCLIENT_FRAMEBUFFERUPDATE:
-                            await ReadFramebufferUpdate();
-                            break;
+                        if (read != serverMessagePacket.Length)
+                        {
+                            RaiseProtocolException("Unable to read packet id", new InvalidDataException());
+                        }
 
-                        case VNC_SERVERTOCLIENT_SETCOLORMAPENTRIES:
-                            SetColourMapEntries();
-                            break;
+                        switch (serverMessagePacket[0])
+                        {
+                            case VNC_SERVERTOCLIENT_FRAMEBUFFERUPDATE:
+                                await ReadFramebufferUpdate();
+                                break;
 
-                        case VNC_SERVERTOCLIENT_BELL:
-                            Bell();
-                            break;
+                            case VNC_SERVERTOCLIENT_SETCOLORMAPENTRIES:
+                                SetColourMapEntries();
+                                break;
 
-                        case VNC_SERVERTOCLIENT_SERVERCUTTEXT:
-                            ServerCutText();
-                            break;
+                            case VNC_SERVERTOCLIENT_BELL:
+                                Bell();
+                                break;
+
+                            case VNC_SERVERTOCLIENT_SERVERCUTTEXT:
+                                ServerCutText();
+                                break;
+                        }
                     }
                 }
                 catch { }
