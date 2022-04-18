@@ -1469,16 +1469,6 @@
             Available to all callers in the same assembly, or assemblies specified via [InternalsVisibleTo(...)]
             </summary>
         </member>
-        <member name="M:ProtoBuf.Meta.RuntimeTypeModel.Compile(System.String,System.String)">
-            <summary>
-            Fully compiles the current model into a static-compiled serialization dll
-            (the serialization dll still requires protobuf-net for support services).
-            </summary>
-            <remarks>A full compilation is restricted to accessing public types / members</remarks>
-            <param name="name">The name of the TypeModel class to create</param>
-            <param name="path">The path for the new dll</param>
-            <returns>An instance of the newly created compiled type-model</returns>
-        </member>
         <member name="M:ProtoBuf.Meta.RuntimeTypeModel.Compile(ProtoBuf.Meta.RuntimeTypeModel.CompilerOptions)">
             <summary>
             Fully compiles the current model into a static-compiled serialization dll
@@ -2051,13 +2041,6 @@
             are provided on a single API as it is essential that both are mapped identically at all times.
             </summary>
         </member>
-        <member name="M:ProtoBuf.Meta.TypeModel.CreateFormatter(System.Type)">
-            <summary>
-            Creates a new IFormatter that uses protocol-buffer [de]serialization.
-            </summary>
-            <returns>A new IFormatter to be used during [de]serialization.</returns>
-            <param name="type">The type of object to be [de]deserialized by the formatter.</param>
-        </member>
         <member name="T:ProtoBuf.Meta.ValueMember">
             <summary>
             Represents a member (property/field) that is mapped to a protobuf field
@@ -2349,9 +2332,6 @@
             <summary>Creates a new ProtoException instance.</summary>
         </member>
         <member name="M:ProtoBuf.ProtoException.#ctor(System.String,System.Exception)">
-            <summary>Creates a new ProtoException instance.</summary>
-        </member>
-        <member name="M:ProtoBuf.ProtoException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>Creates a new ProtoException instance.</summary>
         </member>
         <member name="T:ProtoBuf.ProtoIgnoreAttribute">
@@ -3085,21 +3065,6 @@
             A default SerializationContext, with minimal information.
             </summary>
         </member>
-        <member name="P:ProtoBuf.SerializationContext.State">
-            <summary>
-            Gets or sets the source or destination of the transmitted data.
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.SerializationContext.op_Implicit(ProtoBuf.SerializationContext)~System.Runtime.Serialization.StreamingContext">
-            <summary>
-            Convert a SerializationContext to a StreamingContext
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.SerializationContext.op_Implicit(System.Runtime.Serialization.StreamingContext)~ProtoBuf.SerializationContext">
-            <summary>
-            Convert a StreamingContext to a SerializationContext
-            </summary>
-        </member>
         <member name="T:ProtoBuf.Serializer">
             <summary>
             Provides protocol-buffer serialization capability for concrete, attributed types. This
@@ -3178,23 +3143,6 @@
             <param name="instance">The existing instance to use as a template.</param>
             <returns>A new instane of type TNewType, with the data from TOldType.</returns>
         </member>
-        <member name="M:ProtoBuf.Serializer.Serialize``1(System.Runtime.Serialization.SerializationInfo,``0)">
-            <summary>
-            Writes a protocol-buffer representation of the given instance to the supplied SerializationInfo.
-            </summary>
-            <typeparam name="T">The type being serialized.</typeparam>
-            <param name="instance">The existing instance to be serialized (cannot be null).</param>
-            <param name="info">The destination SerializationInfo to write to.</param>
-        </member>
-        <member name="M:ProtoBuf.Serializer.Serialize``1(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,``0)">
-            <summary>
-            Writes a protocol-buffer representation of the given instance to the supplied SerializationInfo.
-            </summary>
-            <typeparam name="T">The type being serialized.</typeparam>
-            <param name="instance">The existing instance to be serialized (cannot be null).</param>
-            <param name="info">The destination SerializationInfo to write to.</param>
-            <param name="context">Additional information about this serialization operation.</param>
-        </member>
         <member name="M:ProtoBuf.Serializer.Serialize``1(System.Xml.XmlWriter,``0)">
             <summary>
             Writes a protocol-buffer representation of the given instance to the supplied XmlWriter.
@@ -3211,34 +3159,10 @@
             <param name="instance">The existing instance to be modified (cannot be null).</param>
             <param name="reader">The XmlReader containing the data to apply to the instance (cannot be null).</param>
         </member>
-        <member name="M:ProtoBuf.Serializer.Merge``1(System.Runtime.Serialization.SerializationInfo,``0)">
-            <summary>
-            Applies a protocol-buffer from a SerializationInfo to an existing instance.
-            </summary>
-            <typeparam name="T">The type being merged.</typeparam>
-            <param name="instance">The existing instance to be modified (cannot be null).</param>
-            <param name="info">The SerializationInfo containing the data to apply to the instance (cannot be null).</param>
-        </member>
-        <member name="M:ProtoBuf.Serializer.Merge``1(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,``0)">
-            <summary>
-            Applies a protocol-buffer from a SerializationInfo to an existing instance.
-            </summary>
-            <typeparam name="T">The type being merged.</typeparam>
-            <param name="instance">The existing instance to be modified (cannot be null).</param>
-            <param name="info">The SerializationInfo containing the data to apply to the instance (cannot be null).</param>
-            <param name="context">Additional information about this serialization operation.</param>
-        </member>
         <member name="M:ProtoBuf.Serializer.PrepareSerializer``1">
             <summary>
             Precompiles the serializer for a given type.
             </summary>
-        </member>
-        <member name="M:ProtoBuf.Serializer.CreateFormatter``1">
-            <summary>
-            Creates a new IFormatter that uses protocol-buffer [de]serialization.
-            </summary>
-            <typeparam name="T">The type of object to be [de]deserialized by the formatter.</typeparam>
-            <returns>A new IFormatter to be used during [de]serialization.</returns>
         </member>
         <member name="M:ProtoBuf.Serializer.DeserializeItems``1(System.IO.Stream,ProtoBuf.PrefixStyle,System.Int32)">
             <summary>
@@ -3478,127 +3402,6 @@
             <param name="entity">For nested values, the instance holding the values; note
             that this is not always provided - a null means not supplied. Since this is always
             a variable or argument, it is not necessary to consume this value.</param>
-        </member>
-        <member name="T:ProtoBuf.ServiceModel.ProtoBehaviorAttribute">
-            <summary>
-            Uses protocol buffer serialization on the specified operation; note that this
-            must be enabled on both the client and server.
-            </summary>
-        </member>
-        <member name="T:ProtoBuf.ServiceModel.ProtoBehaviorExtension">
-            <summary>
-            Configuration element to swap out DatatContractSerilaizer with the XmlProtoSerializer for a given endpoint.
-            </summary>
-            <seealso cref="T:ProtoBuf.ServiceModel.ProtoEndpointBehavior"/>
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.ProtoBehaviorExtension.#ctor">
-            <summary>
-            Creates a new ProtoBehaviorExtension instance.
-            </summary>
-        </member>
-        <member name="P:ProtoBuf.ServiceModel.ProtoBehaviorExtension.BehaviorType">
-            <summary>
-            Gets the type of behavior.
-            </summary>     
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.ProtoBehaviorExtension.CreateBehavior">
-            <summary>
-            Creates a behavior extension based on the current configuration settings.
-            </summary>
-            <returns>The behavior extension.</returns>
-        </member>
-        <member name="T:ProtoBuf.ServiceModel.ProtoEndpointBehavior">
-            <summary>
-            Behavior to swap out DatatContractSerilaizer with the XmlProtoSerializer for a given endpoint.
-             <example>
-            Add the following to the server and client app.config in the system.serviceModel section:
-             <behaviors>
-               <endpointBehaviors>
-                 <behavior name="ProtoBufBehaviorConfig">
-                   <ProtoBufSerialization/>
-                 </behavior>
-               </endpointBehaviors>
-             </behaviors>
-             <extensions>
-               <behaviorExtensions>
-                 <add name="ProtoBufSerialization" type="ProtoBuf.ServiceModel.ProtoBehaviorExtension, protobuf-net, Version=1.0.0.255, Culture=neutral, PublicKeyToken=257b51d87d2e4d67"/>
-               </behaviorExtensions>
-             </extensions>
-            
-            Configure your endpoints to have a behaviorConfiguration as follows:
-            
-             <service name="TK.Framework.Samples.ServiceModel.Contract.SampleService">
-               <endpoint address="http://myhost:9003/SampleService" binding="basicHttpBinding" behaviorConfiguration="ProtoBufBehaviorConfig"
-                bindingConfiguration="basicHttpBindingConfig" name="basicHttpProtoBuf" contract="ISampleServiceContract" />
-             </service>
-             <client>
-                 <endpoint address="http://myhost:9003/SampleService" binding="basicHttpBinding"
-                     bindingConfiguration="basicHttpBindingConfig" contract="ISampleServiceContract"
-                     name="BasicHttpProtoBufEndpoint" behaviorConfiguration="ProtoBufBehaviorConfig"/>
-              </client>
-            </example>
-            </summary>
-        </member>
-        <member name="T:ProtoBuf.ServiceModel.ProtoOperationBehavior">
-            <summary>
-            Describes a WCF operation behaviour that can perform protobuf serialization
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.ProtoOperationBehavior.#ctor(System.ServiceModel.Description.OperationDescription)">
-            <summary>
-            Create a new ProtoOperationBehavior instance
-            </summary>
-        </member>
-        <member name="P:ProtoBuf.ServiceModel.ProtoOperationBehavior.Model">
-            <summary>
-            The type-model that should be used with this behaviour
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.ProtoOperationBehavior.CreateSerializer(System.Type,System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString,System.Collections.Generic.IList{System.Type})">
-            <summary>
-            Creates a protobuf serializer if possible (falling back to the default WCF serializer)
-            </summary>
-        </member>
-        <member name="T:ProtoBuf.ServiceModel.XmlProtoSerializer">
-            <summary>
-            An xml object serializer that can embed protobuf data in a base-64 hunk (looking like a byte[])
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.TryCreate(ProtoBuf.Meta.TypeModel,System.Type)">
-            <summary>
-            Attempt to create a new serializer for the given model and type
-            </summary>
-            <returns>A new serializer instance if the type is recognised by the model; null otherwise</returns>
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.#ctor(ProtoBuf.Meta.TypeModel,System.Type)">
-            <summary>
-            Creates a new serializer for the given model and type
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.WriteEndObject(System.Xml.XmlDictionaryWriter)">
-            <summary>
-            Ends an object in the output
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.WriteStartObject(System.Xml.XmlDictionaryWriter,System.Object)">
-            <summary>
-            Begins an object in the output
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.WriteObjectContent(System.Xml.XmlDictionaryWriter,System.Object)">
-            <summary>
-            Writes the body of an object in the output
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.IsStartObject(System.Xml.XmlDictionaryReader)">
-            <summary>
-            Indicates whether this is the start of an object we are prepared to handle
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.ReadObject(System.Xml.XmlDictionaryReader,System.Boolean)">
-            <summary>
-            Reads the body of an object
-            </summary>
         </member>
         <member name="T:ProtoBuf.SubItemToken">
             <summary>

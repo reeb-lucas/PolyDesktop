@@ -434,7 +434,7 @@ namespace PolyDesktopGUI_WPF
                 //Parse the necessary remote information
                 string filename = openDialog.FileName;
                 string remoteIP = this.remoteIP.Text;        //TODO: change logic here to loop through a list of the connected IPs given by the VNC
-                string remotePort = this.remotePort.Text;
+                string remotePort = "5069";
 
                 sendFile(filename, remoteIP, remotePort);
                 
