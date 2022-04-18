@@ -51,5 +51,43 @@ namespace ServerClientChatApp
                 ServerPortHint.Visibility = Visibility.Hidden;
             }
         }
+
+        private void MessageBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            //Send the message in textbox if "Enter" key is pressed, and the textbox is not empty.
+            if(e.Key == Key.Return && MessageBox.Text != "")
+            {
+                SendButton.Command.Execute(SendButton.Content);
+                MessageBox.Text = ""; //Clear Content
+            }
+        }
+
+        private void SendButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Text = ""; //Clear Content
+        }
+
+        //private void ConnectButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //Hide connection options, including this button
+        //    ServerAddressBox.Visibility = Visibility.Collapsed;
+        //    ServerPortBox.Visibility = Visibility.Collapsed;
+        //    ConnectButton.Visibility = Visibility.Collapsed;
+
+        //    //Display Disconnect Button
+        //    DisconnectButton.Visibility = Visibility.Visible;
+        //}
+
+        //WIP
+        //private void DisconnectButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //Hide Disconnect Button
+        //    DisconnectButton.Visibility = Visibility.Collapsed;
+
+        //    //Display connection options
+        //    ServerAddressBox.Visibility = Visibility.Visible;
+        //    ServerPortBox.Visibility = Visibility.Visible;
+        //    ConnectButton.Visibility = Visibility.Visible;
+        //}
     }
 }

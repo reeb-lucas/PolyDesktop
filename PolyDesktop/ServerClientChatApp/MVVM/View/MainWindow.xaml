@@ -10,11 +10,12 @@
     <Window.DataContext>
         <viewmodel:MainViewModel/>
     </Window.DataContext>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width=" 200"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="183*"/>
         </Grid.ColumnDefinitions>
 
         <DockPanel>
@@ -27,7 +28,7 @@
                          TextChanged="UsernameBox_TextChanged"
                          Name="UsernameBox"/>
             </Grid>
-            
+
             <Grid DockPanel.Dock="Top">
                 <TextBlock Text="IP Address" Foreground="LightGray" Name="ServerAddressHint"/>
                 <TextBox Height="25"
@@ -48,27 +49,53 @@
                          Name="ServerPortBox"/>
             </Grid>
 
-            <Button Height="25"
+            <Button x:Name="ConnectButton"
+                    Height="25"
                     DockPanel.Dock="Top"
                     Content="Connect"
                     Command="{Binding ConnectToServerCommand}"/>
-            <ListView ItemsSource="{Binding Users}">
+                    <!--="ConnectButton_Click"-->
+
+            <!--WIP-->
+            <!-- Start Collapsed-->
+            <!--<Button x:Name="DisconnectButton"
+                    Height="25"
+                    DockPanel.Dock="Top"
+                    Content="Disconnect"
+                    Command="{Binding DisconnectFromServerCommand}"
+                    Click="DisconnectButton_Click"
+                    Visibility="Collapsed"/>-->
+
+            <ListView x:Name="ConnectedUsers"  ItemsSource="{Binding Users}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Username}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <!-- WIP
+            <Button Height="25"
+                    VerticalAlignment="Bottom"
+                    Content="Request Help"/>
+            -->
+
         </DockPanel>
 
-        <StackPanel Grid.Column="1" VerticalAlignment="Bottom">
+        <StackPanel Grid.Column="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
             <ListView ItemsSource="{Binding Messages}"/>
             <StackPanel Orientation="Horizontal">
-                <TextBox Height="55"
+                <TextBox x:Name="MessageBox"
+                         Height="55"
                          Width="545" 
                          VerticalContentAlignment="Center"
-                         Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"/>
-                <Button Width="55" Content="Send" Command="{Binding SendMessageCommand}"/>
+                         Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"
+                         KeyDown="MessageBox_KeyDown"/>
+                
+                <Button x:Name="SendButton" 
+                        Width="55" Content="Send" 
+                        Command="{Binding SendMessageCommand}"
+                        Click="SendButton_Click"/>
             </StackPanel>
         </StackPanel>
 

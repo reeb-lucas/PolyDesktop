@@ -14,9 +14,9 @@ namespace ChatClient.Net
         TcpClient _client;
         public PacketReader PacketReader;
 
-        public event Action connectedEvent;
-        public event Action msgReceivedEvent;
-        public event Action userDisconnectedEvent;
+        public event Action ConnectedEvent;
+        public event Action MsgReceivedEvent;
+        public event Action UserDisconnectedEvent;
 
         public Server()
         {
@@ -30,24 +30,30 @@ namespace ChatClient.Net
                 try
                 {
                     _client.Connect(serverAddress, serverPort);
+                    PacketReader = new PacketReader(_client.GetStream());
+
+                    if (!string.IsNullOrEmpty(username))
+                    {
+                        var connectPacket = new PacketBuilder();
+                        connectPacket.WriteOpCode(0);
+                        connectPacket.WriteMessage(username);
+                        _client.Client.Send(connectPacket.GetPacketBytes());
+                    }
+
+                    ReadPackets();
                 }
                 catch
                 {
-                   //TODO, Add error handling here, display error connecting message somewhere 
+                    //TODO, Add error handling here, display error connecting message somewhere
                 }
-                PacketReader = new PacketReader(_client.GetStream());
-
-                if (!string.IsNullOrEmpty(username))
-                {
-                    var connectPacket = new PacketBuilder();
-                    connectPacket.WriteOpCode(0);
-                    connectPacket.WriteMessage(username);
-                    _client.Client.Send(connectPacket.GetPacketBytes());
-                }
-
-                ReadPackets();
             }
         }
+
+        //WIP
+        /*public void DisconnectFromServer()
+        {
+            _client.Close();
+        }*/
 
         private void ReadPackets()
         {
@@ -59,13 +65,13 @@ namespace ChatClient.Net
                     switch(opcode)
                     {
                         case 1:
-                            connectedEvent?.Invoke();
+                            ConnectedEvent?.Invoke();
                             break;
                         case 5:
-                            msgReceivedEvent?.Invoke();
+                            MsgReceivedEvent?.Invoke();
                             break;
                         case 10:
-                            userDisconnectedEvent?.Invoke();
+                            UserDisconnectedEvent?.Invoke();
                             break;
                         default:
                             Console.WriteLine("???");

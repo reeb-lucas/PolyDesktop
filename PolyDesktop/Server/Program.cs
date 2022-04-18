@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 
 namespace Server
@@ -13,8 +14,21 @@ namespace Server
         static void Main(string[] args)
         {
             _users = new List<Client>();
-            _listener = new TcpListener(System.Net.IPAddress.Parse("192.168.1.100"), 5906); 
+            _listener = new TcpListener(System.Net.IPAddress.Any, 0);
             _listener.Start();
+
+            //Get and Dispplay Local IP Address
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    Console.WriteLine("Server Address: " + ip.ToString());
+                }
+            }
+
+            //Display Port Number
+            Console.WriteLine("Server Port: " + ((IPEndPoint)_listener.LocalEndpoint).Port.ToString());
             
             while(true)
             {
