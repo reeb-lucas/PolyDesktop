@@ -27,7 +27,7 @@ namespace PolyDesktopGUI_WPF
             InitializeComponent();
             //TODO: have user choose computers to connect to, this will likely change VncPage creation in DisplayComputers
             //temp hard coding for testing
-            connectedComputers = 0;
+            connectedComputers = 6;
             m_VNCList = new List<VncPage>();
 
             DisplayComputers(connectedComputers);
@@ -295,8 +295,8 @@ namespace PolyDesktopGUI_WPF
                 //sixth connection
                 VncPage localSession6 = new VncPage();
                 Frame VncFrame6 = new Frame();
-                Grid.SetColumn(VncFrame6, 1);
-                Grid.SetRow(VncFrame6, 2);
+                Grid.SetColumn(VncFrame6, 2);
+                Grid.SetRow(VncFrame6, 1);
                 BaseGrid.Children.Add(VncFrame6);
                 VncFrame6.Navigate(localSession6);
                 m_VNCList.Insert(count, localSession6);
