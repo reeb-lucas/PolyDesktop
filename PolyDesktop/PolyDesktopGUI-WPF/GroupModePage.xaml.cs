@@ -22,12 +22,12 @@ namespace PolyDesktopGUI_WPF
     {
         private List<VncPage> m_VNCList;
         private int connectedComputers;
-        public GroupModePage()
+        public GroupModePage(int numConnection = 1)
         {
             InitializeComponent();
             //TODO: have user choose computers to connect to, this will likely change VncPage creation in DisplayComputers
             //temp hard coding for testing
-            connectedComputers = 6;
+            connectedComputers = numConnection;
             m_VNCList = new List<VncPage>();
 
             DisplayComputers(connectedComputers);
@@ -353,11 +353,11 @@ namespace PolyDesktopGUI_WPF
         }
         private void AddConnection(object sender, RoutedEventArgs e)
         {
-            //TODO: connectedComputers--
+            NavigationService.Navigate(new GroupModePage(connectedComputers + 1)); //Group
         }
         private void RemoveConnection(object sender, RoutedEventArgs e)
         {
-            //TODO: connectedComputers--
+            NavigationService.Navigate(new GroupModePage(connectedComputers - 1)); //Group
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
