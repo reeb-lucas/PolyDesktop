@@ -188,7 +188,7 @@ namespace PolyDesktopGUI_WPF
 
         private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
         {
-            string bucket = PresetNameBox.Text.Replace(",", "") + ",Tab,";
+            string bucket = PresetNameBox.Text.Replace(",", "") + ",Tab," + m_VNCList.Count + ",";
             for (int i = 2; i < m_tabItemList.Count - 2; i++)
             {
                 string ID = "";

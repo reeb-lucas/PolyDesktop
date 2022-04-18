@@ -591,33 +591,37 @@ namespace PollRobots.OmotVnc.Protocol
         {
             while (true)
             {
-                byte[] serverMessagePacket = new byte[1];
-
-                var read = await readStream.ReadAsync(serverMessagePacket, 0, serverMessagePacket.Length);
-
-                if (read != serverMessagePacket.Length)
+                try
                 {
-                    RaiseProtocolException("Unable to read packet id", new InvalidDataException());
+                    byte[] serverMessagePacket = new byte[1];
+
+                    var read = await readStream.ReadAsync(serverMessagePacket, 0, serverMessagePacket.Length);
+
+                    if (read != serverMessagePacket.Length)
+                    {
+                        RaiseProtocolException("Unable to read packet id", new InvalidDataException());
+                    }
+
+                    switch (serverMessagePacket[0])
+                    {
+                        case VNC_SERVERTOCLIENT_FRAMEBUFFERUPDATE:
+                            await ReadFramebufferUpdate();
+                            break;
+
+                        case VNC_SERVERTOCLIENT_SETCOLORMAPENTRIES:
+                            SetColourMapEntries();
+                            break;
+
+                        case VNC_SERVERTOCLIENT_BELL:
+                            Bell();
+                            break;
+
+                        case VNC_SERVERTOCLIENT_SERVERCUTTEXT:
+                            ServerCutText();
+                            break;
+                    }
                 }
-
-                switch (serverMessagePacket[0])
-                {
-                    case VNC_SERVERTOCLIENT_FRAMEBUFFERUPDATE:
-                        await ReadFramebufferUpdate();
-                        break;
-
-                    case VNC_SERVERTOCLIENT_SETCOLORMAPENTRIES:
-                        SetColourMapEntries();
-                        break;
-
-                    case VNC_SERVERTOCLIENT_BELL:
-                        Bell();
-                        break;
-
-                    case VNC_SERVERTOCLIENT_SERVERCUTTEXT:
-                        ServerCutText();
-                        break;
-                }
+                catch { }
             }
         }
 

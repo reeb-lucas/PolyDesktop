@@ -73,3 +73,18 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.csproj.CopyComplete
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.pdb
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Debug\OmotVnc.Controls.dll
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Debug\OmotVnc.Controls.pdb
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Debug\OmotVnc.Protocol.dll
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\bin\Debug\OmotVnc.Protocol.pdb
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.csproj.AssemblyReference.cache
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\VncHost.baml
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\VncHost.g.cs
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls_MarkupCompile.cache
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.g.resources
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\PollRobots.OmotVnc.Controls.Properties.Resources.resources
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.csproj.GenerateResource.cache
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.csproj.CoreCompileInputs.cache
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.csproj.CopyComplete
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.dll
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVnc.Controls\obj\Debug\OmotVnc.Controls.pdb

@@ -86,7 +86,6 @@ namespace PolyDesktopGUI_WPF
                     }
                 }
                 NumBlock.Text = (index - 1).ToString();
-
             }
             catch { }
         }
