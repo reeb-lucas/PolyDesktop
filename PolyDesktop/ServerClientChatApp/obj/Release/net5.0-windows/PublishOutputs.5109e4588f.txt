@@ -1,0 +1,5 @@
+C:\Users\japre\OneDrive\Desktop\JP\ChatClient.exe
+C:\Users\japre\OneDrive\Desktop\JP\ChatClient.dll
+C:\Users\japre\OneDrive\Desktop\JP\ChatClient.deps.json
+C:\Users\japre\OneDrive\Desktop\JP\ChatClient.runtimeconfig.json
+C:\Users\japre\OneDrive\Desktop\JP\ChatClient.pdb

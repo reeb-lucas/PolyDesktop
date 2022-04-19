@@ -481,10 +481,19 @@ namespace PollRobots.OmotVnc.Controls
         /// <param name="e">The parameter is not used.</param>
         public void DisplayAreaSizeChanged(object sender = null, SizeChangedEventArgs e = null)
         {
-            if (ScaleToFit)
+            SetScaling();
+        }
+        public void SetScaling(bool inGroup = false)
+        {
+            if (!inGroup)
             {
                 ScaleY = DisplayArea.ActualHeight / FrameHeight / 1.01; //Thin bezels
                 ScaleX = ScaleY; //DisplayArea.ActualWidth / FrameWidth / 1.01;
+            }
+            else
+            {
+                ScaleX = DisplayArea.ActualWidth / FrameWidth / 1.01;
+                ScaleY = ScaleX;
             }
         }
         /// <summary>Handles mouse move events in the display area.</summary>
