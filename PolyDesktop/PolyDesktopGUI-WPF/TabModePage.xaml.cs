@@ -84,7 +84,7 @@ namespace PolyDesktopGUI_WPF
 
             //bind tab list
             tabControl.DataContext = m_tabItemList;
-            tabControl.SelectedIndex = 0;
+            tabControl.SelectedIndex = 1;
 
         }
         private MetroTabItem AddTabItem()

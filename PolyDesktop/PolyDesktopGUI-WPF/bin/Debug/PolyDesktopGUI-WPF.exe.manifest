@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rlKYLUhfFjVQaM/09MGeQ95aKpYEQusbp9vK0OcNHgI=</dsig:DigestValue>
+        <dsig:DigestValue>ZE2wx471IYVAswuvZZJXUsBUx6KipiuWy+dmILYXazM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -121,43 +121,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Yj6X9NB8veyCzWKE5ZD0AH3sRZ6PrdnZrPHOMjLS5sc=</dsig:DigestValue>
+        <dsig:DigestValue>pnO+NvmPA6QXRp+/hKbLC0XSi0VNu+tfPDlZFcyu7rE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="165312">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="165824">
       <assemblyIdentity name="PolyDesktopGUI-WPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>39u2zvAlJ4D3q3d7kmAELRMiRV8ommAcROBI+CxxJRE=</dsig:DigestValue>
+        <dsig:DigestValue>B8jcRT6Dr7C+LxInC4mMFwDbztGyIJAx2Ft8iYVaWlI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="protobuf-net.dll" size="254464">
-      <assemblyIdentity name="protobuf-net" version="3.0.0.0" publicKeyToken="257B51D87D2E4D67" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="protobuf-net.dll" size="285184">
+      <assemblyIdentity name="protobuf-net" version="2.4.0.0" publicKeyToken="257B51D87D2E4D67" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zFTchHVO8Tx/NU8Y8scwzCqomXteUOqQLFfGzDp+Nig=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="protobuf-net.Core.dll" size="259584">
-      <assemblyIdentity name="protobuf-net.Core" version="3.0.0.0" publicKeyToken="257B51D87D2E4D67" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>st74C+/0WVPQX1YcH356Jt/ZZ90SCZxID9nyBHZ5qtI=</dsig:DigestValue>
+        <dsig:DigestValue>nwHZ8u0H5jDsB476XXYHYsPIrTsG6eipBio31j1XsCY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

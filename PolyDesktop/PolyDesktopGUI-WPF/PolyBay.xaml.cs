@@ -7,6 +7,7 @@ using NetworkCommsDotNet.Tools;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -64,13 +65,14 @@ namespace PolyDesktopGUI_WPF
         /// Boolean used for suppressing errors during GUI close
         /// </summary>
         static volatile bool windowClosing = false;
+        private string _remoteName = "";
         #endregion
         public PolyBay()
         {
             InitializeComponent();
             //Set the listbox data context
             lbReceivedFiles.DataContext = receivedFiles;
-
+            SearchListBox.ItemsSource = GatherAllComputers();
             //Start listening for new TCP connections
             StartListening();
         }
@@ -412,7 +414,46 @@ namespace PolyDesktopGUI_WPF
             //Write some useful information the log window
             AddLineToLog("Connection closed with " + conn.ConnectionInfo.ToString());
         }
+        public Computer[] AllComputers { get { return GatherAllComputers(); } }
+        public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
+        {
+            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
+            Computer[] container = new Computer[5];
 
+            using (var connection = new SqlConnection(connectionString))
+            {
+                string sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop";
+                if (searchTerm != null)
+                {
+                    sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop WHERE c_name LIKE'%" + searchTerm + "%' OR c_ID LIKE '%" + searchTerm + "%'";
+                }
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        for (int i = 0; i < 5 && reader.Read(); i++) //only returns a max of 15 results
+                        {
+                            Computer temp = new Computer();
+                            temp.ID = reader.GetInt32(0).ToString();
+                            temp.Name = reader.GetString(1); //UUUUUUHHHHHHH, I can't get more than the first row
+                            temp.Nickname = temp.Name;
+                            container[i] = temp;
+                        }
+                        reader.Close();
+                    }
+                }
+            }
+            return container;
+        }
+        private void search_QueryChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchListBox.ItemsSource = GatherAllComputers(SearchBox.Text);
+        }
+        private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
+        {
+            _remoteName = SearchListBox.SelectedValue.ToString();
+        }
         /// <summary>
         /// Sends requested file to the remoteIP and port set in GUI
         /// </summary>
@@ -433,11 +474,12 @@ namespace PolyDesktopGUI_WPF
 
                 //Parse the necessary remote information
                 string filename = openDialog.FileName;
-                string remoteIP = this.remoteIP.Text;        //TODO: change logic here to loop through a list of the connected IPs given by the VNC
-                string remotePort = this.remotePort.Text;
-
-                sendFile(filename, remoteIP, remotePort);
-                
+                string remotePort = "5069";
+                IPAddress[] addre = Dns.GetHostAddresses(_remoteName);
+                foreach (IPAddress address in addre)                        //TODO: change logic here to loop through IPs more effeciently
+                {
+                    sendFile(filename, address.ToString(), remotePort);
+                }
             }
         }
         private void sendFile(string filename, string remoteIP, string remotePort) 
