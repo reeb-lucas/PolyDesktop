@@ -22,6 +22,7 @@ namespace PolyDesktopGUI_WPF
     {
         private List<VncPage> m_VNCList;
         private int connectedComputers;
+        private Array pages = new Array[1];
         public GroupModePage(int numConnection = 1)
         {
             InitializeComponent();
@@ -348,25 +349,19 @@ namespace PolyDesktopGUI_WPF
             }
             else if (connectedComputers >= 6)
             {
-                Array pages = new Array[1];
+                
                 for (int i = 0; i <= connectedComputers / 6; i++)
                 {
                     //TODO: do i pages of 6 computers in a 3 x 3, add arrows to these pages
                     //column Width and Height not enumerated, should fill whole grid
                     //EXCEPTION Width of Prev Button and Next Button set as not necessacary to
                     //be uniform.
-                    ColumnDefinition prevButtonColumn = new ColumnDefinition();
-                    prevButtonColumn.SetValue(WidthProperty, 25);
-                    BaseGrid.ColumnDefinitions.Add(prevButtonColumn);
                     ColumnDefinition column = new ColumnDefinition();
                     BaseGrid.ColumnDefinitions.Add(column);
                     ColumnDefinition column2 = new ColumnDefinition();
                     BaseGrid.ColumnDefinitions.Add(column2);
                     ColumnDefinition column3 = new ColumnDefinition();
                     BaseGrid.ColumnDefinitions.Add(column3);
-                    ColumnDefinition nextButtonColumn = new ColumnDefinition();
-                    nextButtonColumn.SetValue(WidthProperty, 25);
-                    BaseGrid.ColumnDefinitions.Add(nextButtonColumn);
                     //row Width and Height not enumerated, should fill whole grid
                     RowDefinition row = new RowDefinition();
                     BaseGrid.RowDefinitions.Add(row);
@@ -411,6 +406,16 @@ namespace PolyDesktopGUI_WPF
             {
                 m_VNCList[i].Disconnect();
             }
+        }
+
+        private void PrevPageButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NextPageButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
