@@ -22,7 +22,7 @@ namespace PolyDesktopGUI_WPF
     {
         private List<VncPage> m_VNCList;
         private int connectedComputers;
-        private Array pages = new Array[1];
+        private GroupModePage[] pages;
         public GroupModePage(int numConnection = 1)
         {
             InitializeComponent();
@@ -350,25 +350,10 @@ namespace PolyDesktopGUI_WPF
             else if (connectedComputers >= 6)
             {
                 
-                for (int i = 0; i <= connectedComputers / 6; i++)
+                for (int i = 0; i <= connectedComputers / 6; ++i)
                 {
-                    //TODO: do i pages of 6 computers in a 3 x 3, add arrows to these pages
-                    //column Width and Height not enumerated, should fill whole grid
-                    //EXCEPTION Width of Prev Button and Next Button set as not necessacary to
-                    //be uniform.
-                    ColumnDefinition column = new ColumnDefinition();
-                    BaseGrid.ColumnDefinitions.Add(column);
-                    ColumnDefinition column2 = new ColumnDefinition();
-                    BaseGrid.ColumnDefinitions.Add(column2);
-                    ColumnDefinition column3 = new ColumnDefinition();
-                    BaseGrid.ColumnDefinitions.Add(column3);
-                    //row Width and Height not enumerated, should fill whole grid
-                    RowDefinition row = new RowDefinition();
-                    BaseGrid.RowDefinitions.Add(row);
-                    RowDefinition row2 = new RowDefinition();
-                    BaseGrid.RowDefinitions.Add(row2);
-                    //TODO: index pages by i for arrow navigation
-                    //TODO: Arrow click event calls OverSixConnectedNav to flip pages
+                    pages[i] = new GroupModePage();
+                    NavigationService.Navigate(pages[i]);
                 }
                 int remainderComputers = connectedComputers % 6;
                 if (remainderComputers > 0)
@@ -380,16 +365,6 @@ namespace PolyDesktopGUI_WPF
             }
         }
 
-        /// <summary>
-        /// Used to navigate between pages when over six computers are connected.
-        /// Is passed current page and direction to navigate through pages
-        /// </summary>
-        /// <param name="currentPageNum">Page that arrow was clicked on</param>
-        /// <param name="direction">0 if left arrow, 1 if right arrow</param>
-        private void OverSixConnectedNav(int currentPageNum, int direction)
-        {
-            //TODO: change pages in this function
-        }
         private void AddConnection(object sender, RoutedEventArgs e) //TODO: FIX
         {
             NavigationService.Navigate(new GroupModePage(connectedComputers + 1)); //Group
