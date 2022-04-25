@@ -32,3 +32,8 @@ C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.dll
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.pdb
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.AssemblyReference.cache
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Protocol.dll
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Protocol.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.CoreCompileInputs.cache
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.dll
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.pdb

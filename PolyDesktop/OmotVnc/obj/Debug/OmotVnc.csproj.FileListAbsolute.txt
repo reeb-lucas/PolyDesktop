@@ -98,3 +98,23 @@ C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.cspro
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.csproj.CopyComplete
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.exe
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\bin\Debug\OmotVnc.exe.config
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\bin\Debug\OmotVnc.exe
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\bin\Debug\OmotVnc.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\bin\Debug\OmotVnc.Controls.dll
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\bin\Debug\OmotVnc.Protocol.dll
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\bin\Debug\OmotVnc.Controls.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\bin\Debug\OmotVnc.Protocol.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.csprojAssemblyReference.cache
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.csproj.ResolveComReference.cache
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\ConnectionDialog.baml
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\MainWindow.baml
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\ConnectionDialog.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\MainWindow.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\App.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc_MarkupCompile.cache
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.g.resources
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.csproj.CoreCompileInputs.cache
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.csproj.CopyComplete
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.exe
+S:\CST 316\PolyDesktop\PolyDesktop\OmotVnc\obj\Debug\OmotVnc.pdb

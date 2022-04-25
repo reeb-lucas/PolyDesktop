@@ -54,26 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MahApps.Metro.dll" size="3566880">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MahApps.Metro.dll" size="3446896">
       <assemblyIdentity name="MahApps.Metro" version="2.0.0.0" publicKeyToken="51482D6F650B2B3F" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HzxpTsYI//Ik6Y+6gQ/nCtvH5HD1arYXvguBLFsRE9A=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\MahApps.Metro.resources.dll" size="10752">
-      <assemblyIdentity name="MahApps.Metro.resources" version="2.0.0.0" publicKeyToken="51482D6F650B2B3F" language="de" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6gqxF/jzhPxeIrWvxSu4nqKy1BmKsmc2NreqNmA+hPM=</dsig:DigestValue>
+        <dsig:DigestValue>8UNvRpDh3nqiwIbSnufG/Oz5YFbwKafJeQL7CL19HKk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,7 +97,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZE2wx471IYVAswuvZZJXUsBUx6KipiuWy+dmILYXazM=</dsig:DigestValue>
+        <dsig:DigestValue>APikAHr3N5icZXtaTUR4aR1ITWF3+qKxwE2oIzPvnRQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -121,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pnO+NvmPA6QXRp+/hKbLC0XSi0VNu+tfPDlZFcyu7rE=</dsig:DigestValue>
+        <dsig:DigestValue>eYU6bSKIQabTHG/V9Q2rgMyV8awMHZSnpEs+jTNXYNM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -133,7 +121,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>B8jcRT6Dr7C+LxInC4mMFwDbztGyIJAx2Ft8iYVaWlI=</dsig:DigestValue>
+        <dsig:DigestValue>aW+7us7fTzam0fTc57jAYIMrQrXrV4504dwpUR8zgAU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

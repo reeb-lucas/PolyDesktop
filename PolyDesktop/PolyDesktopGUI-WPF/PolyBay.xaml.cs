@@ -448,11 +448,19 @@ namespace PolyDesktopGUI_WPF
         }
         private void search_QueryChanged(object sender, TextChangedEventArgs e)
         {
+            SearchListBox.IsEnabled = false;
+            _remoteName = "";
+            SearchListBox.UnselectAll();
             SearchListBox.ItemsSource = GatherAllComputers(SearchBox.Text);
+            SearchListBox.IsEnabled = true;
         }
         private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
         {
-            _remoteName = SearchListBox.SelectedValue.ToString();
+           if(SearchListBox.SelectedValue != null)
+            { 
+                _remoteName = SearchListBox.SelectedValue.ToString();
+            }
+
         }
         /// <summary>
         /// Sends requested file to the remoteIP and port set in GUI
@@ -566,7 +574,7 @@ namespace PolyDesktopGUI_WPF
                     if (!windowClosing && ex.GetType() != typeof(InvalidDataException))
                     {
                         AddLineToLog(ex.Message.ToString());
-                        LogTools.LogException(ex, "SendFileError");
+                        //LogTools.LogException(ex, "SendFileError");
                     }
                 }
 
