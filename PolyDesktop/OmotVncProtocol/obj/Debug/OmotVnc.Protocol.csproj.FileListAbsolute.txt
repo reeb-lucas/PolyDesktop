@@ -19,12 +19,6 @@ C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotV
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.dll
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.pdb
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Protocol.dll
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Protocol.pdb
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.AssemblyReference.cache
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.CoreCompileInputs.cache
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.dll
-C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.pdb
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.AssemblyReference.cache
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Protocol.dll
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Protocol.pdb
@@ -33,3 +27,9 @@ C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.dll
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.pdb
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csprojAssemblyReference.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Protocol.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\bin\Debug\OmotVnc.Protocol.pdb
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\OmotVncProtocol\obj\Debug\OmotVnc.Protocol.pdb

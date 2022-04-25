@@ -47,10 +47,16 @@
         <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden"/>
         <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Theme="Adapt" Position="Top" Width="336" Height="140" IsOpen="False">
             <StackPanel VerticalAlignment="Center">
-                <Button Name="PresetButton" Content="Preset"/>
+                <Button Name="PresetButton" Content="Preset" Click="PresetButton_Click"/>
                 <Button Name="BasicButton" Content="Basic Mode" Click="BasicButton_Click"/>
                 <Button Name="TabButton" Content="Tab Mode" Click="TabButton_Click"/>
                 <Button Name="GroupButton" Content="Group Mode" Click="GroupButton_Click"/>
+            </StackPanel>
+        </mah:Flyout>
+        <mah:Flyout x:Name="PresetPickerFlyout" Header="Choose a Preset" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
+            <StackPanel Name="PresetPickerPanel" CanVerticallyScroll="True">
+                <TextBox x:Name="SearchBox" TextChanged="search_QueryChanged"/>
+                <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" DisplayMemberPath="Name"/>
             </StackPanel>
         </mah:Flyout>
     </Grid>

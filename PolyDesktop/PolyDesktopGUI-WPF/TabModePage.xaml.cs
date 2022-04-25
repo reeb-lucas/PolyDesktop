@@ -46,7 +46,7 @@ namespace PolyDesktopGUI_WPF
         DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
         string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
         private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
-        public TabModePage()
+        public TabModePage(Computer[] source = null, int num = 0)
         {
             InitializeComponent();
 
@@ -55,7 +55,7 @@ namespace PolyDesktopGUI_WPF
 
             //tab to space the rest out
             MetroTabItem tabSpace = new MetroTabItem();
-            tabSpace.Header = "      ";
+            tabSpace.Header = "   ";
             tabSpace.Focusable = false;
             m_tabItemList.Add(tabSpace);
 
@@ -84,10 +84,17 @@ namespace PolyDesktopGUI_WPF
 
             //bind tab list
             tabControl.DataContext = m_tabItemList;
-            tabControl.SelectedIndex = 0;
+            tabControl.SelectedIndex = 2;
 
+            if(source != null)
+            {
+                for(int i = 0; i < num; i++)
+                {
+                    AddTabItem(source[i]);
+                }
+            }
         }
-        private MetroTabItem AddTabItem()
+        private MetroTabItem AddTabItem(Computer computer = null)
         {
             int count = m_tabItemList.Count;
 
@@ -112,7 +119,16 @@ namespace PolyDesktopGUI_WPF
             //adds content to tab
             Frame VncFrame = new Frame();
             tab.Content = VncFrame;
-            VncPage localSession = new VncPage(this);
+            VncPage localSession;
+            if(computer != null)
+            {
+                localSession = new VncPage(null, null, computer.Name);
+                tab.Header = computer.Nickname;
+            }
+            else
+            {
+                localSession = new VncPage(this);
+            }
             VncFrame.Navigate(localSession);
 
             m_tabItemList.Insert(count - 1, tab);
@@ -181,8 +197,8 @@ namespace PolyDesktopGUI_WPF
 
         private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
         {
-            string bucket = PresetNameBox.Text.Replace(",", "") + ",Tab," + (m_VNCList.Count - 1) + ",";
-            for (int i = 2; i < m_tabItemList.Count - 2; i++)
+            string bucket = PresetNameBox.Text.Replace(",", "") + ",Tab," + m_VNCList.Count + ",";
+            for (int i = 2; i < m_tabItemList.Count - 1; i++)
             {
                 string ID = "";
                 using (var connection = new SqlConnection(connectionString))
