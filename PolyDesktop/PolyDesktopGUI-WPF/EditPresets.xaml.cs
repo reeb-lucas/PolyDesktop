@@ -372,7 +372,6 @@ namespace PolyDesktopGUI_WPF
         public string ID { get; set; }
         public string Name { get; set; }
         public string Nickname { get; set; }
-        public bool isFull { get; set; } = false;
     }
 }
 

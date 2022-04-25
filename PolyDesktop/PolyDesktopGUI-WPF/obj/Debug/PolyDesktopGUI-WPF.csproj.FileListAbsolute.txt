@@ -82,6 +82,8 @@ C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\D
 C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ScriptStats.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ScriptStats.baml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.config
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.manifest
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.application
@@ -132,26 +134,30 @@ S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.baml
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.g.cs
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Collections.Immutable.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.xml
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Collections.Immutable.xml
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.xml
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.xml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.baml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.g.cs
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
-C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.xml
-C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.xml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.baml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.baml
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.baml
@@ -216,6 +222,63 @@ C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\Po
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CopyComplete
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.config
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.manifest
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.application
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.dll
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.dll
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.dll
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.dll
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.dll
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.xml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\MahApps.Metro.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\MahApps.Metro.xml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.xml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csprojAssemblyReference.cache
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ConnectionDialog.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\BasicModePage.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ConnectionDialog.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\EditPresets.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\TabModePage.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.cache
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.lref
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\BasicModePage.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\EditPresets.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\TabModePage.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.baml
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.g.resources
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI_WPF.Properties.Resources.resources
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.GenerateResource.cache
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CoreCompileInputs.cache
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe.manifest
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.application
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CopyComplete
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
+S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.config
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.manifest
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.application
@@ -226,6 +289,7 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.dll
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Collections.Immutable.dll
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
@@ -239,6 +303,7 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\MahApps.Metro.xml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.xml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Collections.Immutable.xml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.pdb
@@ -277,17 +342,6 @@ C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\Po
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CopyComplete
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
 C:\Users\User\OneDrive\College\Junior\Fall\Junior Project\Project\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.AssemblyReference.cache
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.SuggestedBindingRedirects.cache
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ConnectionDialog.baml
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ConnectionDialog.g.cs
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\TabModePage.g.cs
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.g.cs
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.cache
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.lref
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.config
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.manifest
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.application
@@ -298,7 +352,6 @@ C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.dll
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.dll
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
@@ -312,19 +365,27 @@ C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.xml
-C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.xml
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.xml
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.xml
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.pdb
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.AssemblyReference.cache
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.SuggestedBindingRedirects.cache
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ConnectionDialog.baml
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\BasicModePage.g.cs
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ConnectionDialog.g.cs
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.g.cs
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\EditPresets.g.cs
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.g.cs
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.g.cs
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.g.cs
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\TabModePage.g.cs
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.g.cs
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.g.cs
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.cache
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.lref
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.baml
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\BasicModePage.baml
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.baml
@@ -342,62 +403,5 @@ C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe.manifest
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.application
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CopyComplete
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.g.cs
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.baml
-S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ConnectionDialog.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\ConnectionDialog.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.cache
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF_MarkupCompile.lref
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.config
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe.manifest
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.application
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.exe
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\PolyDesktopGUI-WPF.pdb
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.dll
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.dll
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.dll
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.dll
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.dll
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.pdb
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.pdb
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.xml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.pdb
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.xml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.pdb
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\BasicModePage.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\EditPresets.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\TabModePage.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.g.cs
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\BasicModePage.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\DesktopProperties.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\EditPresets.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MainWindow.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\TabModePage.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.baml
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.g.resources
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI_WPF.Properties.Resources.resources
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.GenerateResource.cache
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CoreCompileInputs.cache
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe.manifest
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.application
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.CopyComplete
-S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csprojAssemblyReference.cache
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
