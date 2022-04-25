@@ -50,23 +50,25 @@
             </Grid>
 
             <Button x:Name="ConnectButton"
+                    Background="Transparent"
                     Height="25"
                     DockPanel.Dock="Top"
                     Content="Connect"
-                    Command="{Binding ConnectToServerCommand}"/>
-                    <!--="ConnectButton_Click"-->
+                    Command="{Binding ConnectToServerCommand}"
+                    Click="ConnectButton_Click"/>
 
-            <!--WIP-->
-            <!-- Start Collapsed-->
-            <!--<Button x:Name="DisconnectButton"
+
+            <Button x:Name="ChangeListButton" 
                     Height="25"
                     DockPanel.Dock="Top"
-                    Content="Disconnect"
-                    Command="{Binding DisconnectFromServerCommand}"
-                    Click="DisconnectButton_Click"
-                    Visibility="Collapsed"/>-->
+                    Content="Show Help Queue"
+                    Click="ChangeListButton_Click"/>
 
-            <ListView x:Name="ConnectedUsers"  ItemsSource="{Binding Users}">
+            <!--Start Collapsed until user connects-->
+            <ListView x:Name="ConnectedUsers" 
+                      ItemsSource="{Binding Users}"
+                      DockPanel.Dock="Top"
+                      Visibility="Collapsed">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Username}"/>
@@ -74,29 +76,39 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <!-- WIP
-            <Button Height="25"
+            <Button x:Name="RequestHelpButton" 
+                    Height="25"
+                    DockPanel.Dock="Bottom"
                     VerticalAlignment="Bottom"
                     Content="Request Help"/>
-            -->
-
+            
         </DockPanel>
 
         <StackPanel Grid.Column="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
-            <ListView ItemsSource="{Binding Messages}"/>
-            <StackPanel Orientation="Horizontal">
+            
+            <!--Start Collapsed until SendButton pressed-->
+            <ListView x:Name="MessageList"
+                      Visibility="Collapsed"
+                      ItemsSource="{Binding Messages}"/>
+
+            <Grid>
+
                 <TextBox x:Name="MessageBox"
+                         Grid.Column="0"
                          Height="55"
-                         Width="545" 
+                         Width="Auto"
                          VerticalContentAlignment="Center"
                          Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"
                          KeyDown="MessageBox_KeyDown"/>
-                
-                <Button x:Name="SendButton" 
+
+                <Button x:Name="SendButton"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
                         Width="55" Content="Send" 
                         Command="{Binding SendMessageCommand}"
                         Click="SendButton_Click"/>
-            </StackPanel>
+
+            </Grid>
         </StackPanel>
 
     </Grid>

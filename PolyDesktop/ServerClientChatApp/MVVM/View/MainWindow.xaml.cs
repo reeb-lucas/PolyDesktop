@@ -64,30 +64,37 @@ namespace ServerClientChatApp
 
         private void SendButton_Click(object sender, RoutedEventArgs e)
         {
+            //Update Message list to be visible after message sent first time
+            if (MessageList.Visibility == Visibility.Collapsed)
+            {
+                MessageList.Visibility = Visibility.Visible;
+            }
+
             MessageBox.Text = ""; //Clear Content
         }
 
-        //private void ConnectButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    //Hide connection options, including this button
-        //    ServerAddressBox.Visibility = Visibility.Collapsed;
-        //    ServerPortBox.Visibility = Visibility.Collapsed;
-        //    ConnectButton.Visibility = Visibility.Collapsed;
+        private void ChangeListButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Change content of button, then change visibility of listview objects
+            if(ChangeListButton.Content.ToString() == "Show Help Queue")
+            {
+                ChangeListButton.Content = "Show Connected Users";
+                ConnectedUsers.Visibility = Visibility.Collapsed;
+                //HelpQueueUsers.Visibility = Visibility.Visible;
+            }
+            else if(ChangeListButton.Content.ToString() == "Show Connected Users")
+            {
+                ChangeListButton.Content = "Show Help Queue";
+                //HelpQueueUsers.Visibility = Visibility.Collapsed; 
+                ConnectedUsers.Visibility = Visibility.Visible;
+            }
+        }
 
-        //    //Display Disconnect Button
-        //    DisconnectButton.Visibility = Visibility.Visible;
-        //}
-
-        //WIP
-        //private void DisconnectButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    //Hide Disconnect Button
-        //    DisconnectButton.Visibility = Visibility.Collapsed;
-
-        //    //Display connection options
-        //    ServerAddressBox.Visibility = Visibility.Visible;
-        //    ServerPortBox.Visibility = Visibility.Visible;
-        //    ConnectButton.Visibility = Visibility.Visible;
-        //}
+        private void ConnectButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Make connected users visible after user is connected
+            //(This assumes connection works on the first click)
+            ConnectedUsers.Visibility = Visibility.Visible;
+        }
     }
 }
