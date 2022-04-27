@@ -15,8 +15,10 @@ namespace ChatClient.MVVM.ViewModel
     {
 
         public ObservableCollection<UserModel> Users { get; set; }
+        public ObservableCollection<UserModel> HelpQueue { get; set; }
         public ObservableCollection<string> Messages { get; set; }
         public RelayCommand ConnectToServerCommand { get; set; }
+        public RelayCommand RequestHelpCommand { get; set; }
         public RelayCommand DisconnectFromServerCommand { get; set; }
         public RelayCommand SendMessageCommand { get; set; }
         public string Username { get; set; }
@@ -28,11 +30,14 @@ namespace ChatClient.MVVM.ViewModel
         public MainViewModel()
         {
             Users = new ObservableCollection<UserModel>();
+            HelpQueue = new ObservableCollection<UserModel>();
             Messages = new ObservableCollection<string>();
             _server = new Server();
             _server.ConnectedEvent += UserConnected;
+            _server.HelpRequestEvent += UserHelpRequest;
             _server.MsgReceivedEvent += MessageReceived;
             _server.UserDisconnectedEvent += RemoveUser;
+            //WIP: A HelpQueueRemovedEvent for when server removes user from help queue
 
             //Initialize Relay Commands
             #region
@@ -41,8 +46,7 @@ namespace ChatClient.MVVM.ViewModel
             ConnectToServerCommand = new RelayCommand(o => _server.ConnectToSever(Username, ServerAddress, Int32.Parse(ServerPort)), 
                 o => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(ServerAddress) && !string.IsNullOrEmpty(ServerPort));
 
-            //WIP
-            //DisconnectFromServerCommand = new RelayCommand(o => _server.DisconnectFromServer());
+            RequestHelpCommand = new RelayCommand(o => _server.RequestHelp(Username), o => !string.IsNullOrEmpty(Username));
 
             SendMessageCommand = new RelayCommand(o => _server.SendMessageToServer(Message), o => !string.IsNullOrEmpty(Message));
             #endregion
@@ -70,6 +74,17 @@ namespace ChatClient.MVVM.ViewModel
             if (!Users.Any(x => x.UID == user.UID))
             {
                 Application.Current.Dispatcher.Invoke(() => Users.Add(user));
+            }
+        }
+
+        private void UserHelpRequest()
+        {
+            var uid = _server.PacketReader.ReadMessage();
+            var user = Users.Where(x => x.UID == uid).FirstOrDefault();
+
+            if (!HelpQueue.Any(x => x.UID == user.UID))
+            {
+                Application.Current.Dispatcher.Invoke(() => HelpQueue.Add(user));
             }
         }
     }

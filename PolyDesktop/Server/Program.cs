@@ -65,6 +65,17 @@ namespace Server
             }
         }
 
+        public static void AddToHelpQueue(string uid)
+        {
+            foreach (var user in _users)
+            {
+                var requestPacket = new PacketBuilder();
+                requestPacket.WriteOpCode(15);
+                requestPacket.WriteMessage(uid);
+                user.ClientSocket.Client.Send(requestPacket.GetPacketBytes());
+            }
+        }
+
         public static void BroadcastDisconnect(string uid)
         {
             var disconnectedUser = _users.Where(x => x.UID.ToString() == uid).FirstOrDefault();

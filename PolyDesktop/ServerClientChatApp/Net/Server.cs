@@ -15,6 +15,7 @@ namespace ChatClient.Net
         public PacketReader PacketReader;
 
         public event Action ConnectedEvent;
+        public event Action HelpRequestEvent;
         public event Action MsgReceivedEvent;
         public event Action UserDisconnectedEvent;
 
@@ -49,11 +50,30 @@ namespace ChatClient.Net
             }
         }
 
-        //WIP
-        /*public void DisconnectFromServer()
+        public void RequestHelp(string username)
         {
-            _client.Close();
-        }*/
+            try 
+            {
+                if (_client.Connected)
+                {
+                    var requestPacket = new PacketBuilder();
+                    requestPacket.WriteOpCode(15);
+                    requestPacket.WriteMessage(username);
+                    try
+                    {
+                        _client.Client.Send(requestPacket.GetPacketBytes());
+                    }
+                    catch
+                    {
+                        //TODO, Add error message to display somewhere
+                    }
+                }
+            }
+            catch
+            {
+                //TODO, Add error handling here, display error connecting message somewhere
+            }
+        }
 
         private void ReadPackets()
         {
@@ -61,21 +81,31 @@ namespace ChatClient.Net
             { 
                 while(true)
                 {
-                    var opcode = PacketReader.ReadByte();
-                    switch(opcode)
+                    try 
                     {
-                        case 1:
-                            ConnectedEvent?.Invoke();
-                            break;
-                        case 5:
-                            MsgReceivedEvent?.Invoke();
-                            break;
-                        case 10:
-                            UserDisconnectedEvent?.Invoke();
-                            break;
-                        default:
-                            Console.WriteLine("???");
-                            break;
+                        var opcode = PacketReader.ReadByte();
+                        switch (opcode)
+                        {
+                            case 1:
+                                ConnectedEvent?.Invoke();
+                                break;
+                            case 5:
+                                MsgReceivedEvent?.Invoke();
+                                break;
+                            case 10:
+                                UserDisconnectedEvent?.Invoke();
+                                break;
+                            case 15:
+                                HelpRequestEvent?.Invoke();
+                                break;
+                            default:
+                                Console.WriteLine("Error: Wrong opcode received");
+                                break;
+                        }
+                    }
+                    catch 
+                    {
+                        //TODO: Display Error Message of forceful disconnection
                     }
                 }
             });

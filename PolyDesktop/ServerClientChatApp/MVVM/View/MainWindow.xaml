@@ -76,11 +76,24 @@
                 </ListView.ItemTemplate>
             </ListView>
 
+            <!--Start Collapsed until user joins queue-->
+            <ListView x:Name="HelpQueueUsers" 
+                      ItemsSource="{Binding HelpQueue}"
+                      DockPanel.Dock="Top"
+                      Visibility="Collapsed">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Username}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
             <Button x:Name="RequestHelpButton" 
                     Height="25"
                     DockPanel.Dock="Bottom"
                     VerticalAlignment="Bottom"
-                    Content="Request Help"/>
+                    Content="Request Help"
+                    Command="{Binding RequestHelpCommand}"/>
             
         </DockPanel>
 

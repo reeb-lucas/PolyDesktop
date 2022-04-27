@@ -44,6 +44,11 @@ namespace Server
                             Console.WriteLine($"[{DateTime.Now}]: Message recieved! {msg}");
                             Program.BroadcastMessage($"[{DateTime.Now}]: [{Username}]: {msg}");
                             break;
+                        case 15:
+                            var username = _packetReader.ReadMessage();
+                            Console.WriteLine($"[{DateTime.Now}]:[{Username}]: Has requested help!");
+                            Program.AddToHelpQueue(UID.ToString());
+                            break;
                         default:
                             break;
                     }

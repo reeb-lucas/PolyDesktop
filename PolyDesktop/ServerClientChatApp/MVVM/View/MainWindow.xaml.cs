@@ -80,12 +80,12 @@ namespace ServerClientChatApp
             {
                 ChangeListButton.Content = "Show Connected Users";
                 ConnectedUsers.Visibility = Visibility.Collapsed;
-                //HelpQueueUsers.Visibility = Visibility.Visible;
+                HelpQueueUsers.Visibility = Visibility.Visible;
             }
             else if(ChangeListButton.Content.ToString() == "Show Connected Users")
             {
                 ChangeListButton.Content = "Show Help Queue";
-                //HelpQueueUsers.Visibility = Visibility.Collapsed; 
+                HelpQueueUsers.Visibility = Visibility.Collapsed; 
                 ConnectedUsers.Visibility = Visibility.Visible;
             }
         }
