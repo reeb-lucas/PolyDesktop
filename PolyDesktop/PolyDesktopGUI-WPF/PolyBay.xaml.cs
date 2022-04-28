@@ -234,9 +234,9 @@ namespace PolyDesktopGUI_WPF
             Connection.StartListening(ConnectionType.TCP, new IPEndPoint(IPAddress.Any, 5069));
 
             //Write out some useful debugging information the log window
-            AddLineToLog("Initialised WPF file transfer example. Accepting TCP connections on:");
-            foreach (IPEndPoint listenEndPoint in Connection.ExistingLocalListenEndPoints(ConnectionType.TCP))
-                AddLineToLog(listenEndPoint.Address + ":" + listenEndPoint.Port);
+            AddLineToLog("Initialised Polybay Ready to Send or Receive Files");
+            //foreach (IPEndPoint listenEndPoint in Connection.ExistingLocalListenEndPoints(ConnectionType.TCP))
+            //    AddLineToLog(listenEndPoint.Address + ":" + listenEndPoint.Port);
         }
         private void IncomingPartialFileData(PacketHeader header, Connection connection, byte[] data)
         {
@@ -298,7 +298,7 @@ namespace PolyDesktopGUI_WPF
             {
                 //If an exception occurs we write to the log window and also create an error file
                 AddLineToLog("Exception - " + ex.ToString());
-                LogTools.LogException(ex, "IncomingPartialFileDataError");
+               // LogTools.LogException(ex, "IncomingPartialFileDataError");
             }
         }
 
@@ -369,7 +369,7 @@ namespace PolyDesktopGUI_WPF
             {
                 //If an exception occurs we write to the log window and also create an error file
                 AddLineToLog("Exception - " + ex.ToString());
-                LogTools.LogException(ex, "IncomingPartialFileDataInfo");
+               // LogTools.LogException(ex, "IncomingPartialFileDataInfo");
             }
         }
 
@@ -490,7 +490,33 @@ namespace PolyDesktopGUI_WPF
                 }
             }
         }
-        private void sendFile(string filename, string remoteIP, string remotePort) 
+       
+        private void sendAllButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Create an OpenFileDialog so that we can request the file to send
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.Multiselect = false;
+
+            //If a file was selected
+            if (openDialog.ShowDialog() == true)
+            {
+                //Disable the send and compression buttons
+                sendAllButton.IsEnabled = false;
+                //UseCompression.IsEnabled = false;
+
+                //Parse the necessary remote information
+                string filename = openDialog.FileName;
+                string remotePort = "5069";
+                //Foreach (computer in tab list loop)
+                IPAddress[] addre = Dns.GetHostAddresses(_remoteName);
+                foreach (IPAddress address in addre)                        //TODO: change logic here to loop through IPs more effeciently
+                {
+                    sendFile(filename, address.ToString(), remotePort);
+                }
+            }
+        }
+
+        private void sendFile(string filename, string remoteIP, string remotePort)
         {
             //Set the send progress bar to 0
             UpdateSendProgress(0);
@@ -590,5 +616,7 @@ namespace PolyDesktopGUI_WPF
             });
         }
         #endregion
+
+
     }
 }
