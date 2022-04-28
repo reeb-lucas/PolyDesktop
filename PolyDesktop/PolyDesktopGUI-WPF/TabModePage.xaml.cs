@@ -104,6 +104,7 @@ namespace PolyDesktopGUI_WPF
             tab.Name = string.Format("Computer{0}", count - 2);
             tab.CloseButtonEnabled = true;
 
+
             //Give the abiliby to right click and change the Nickname
             ContextMenu nameMenu = new ContextMenu();
             MenuItem change = new MenuItem();
