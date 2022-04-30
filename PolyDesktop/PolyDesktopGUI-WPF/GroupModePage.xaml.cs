@@ -347,17 +347,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession6);
 
             }
-            else if (connectedComputers >= 6)
+            else if (connectedComputers > 6)
             {
-                
-                for (int i = 0; i <= connectedComputers / 6; ++i)
-                {
-                    pages[i] = new GroupModePage();
-                    NavigationService.Navigate(pages[i]);
-                }
-                int remainderComputers = connectedComputers % 6;
-                if (remainderComputers > 0)
-                    DisplayComputers(remainderComputers);
+                string tooManyComputersError = "Only 6 computers are support in group mode. You can not have 7.";
+                MessageBox.Show(tooManyComputersError);
+                connectedComputers -= 1;
+                DisplayComputers(6);
             }
             else //If there are no connectedComputers, give user ability to add one through a VncFrame
             {
@@ -381,16 +376,6 @@ namespace PolyDesktopGUI_WPF
             {
                 m_VNCList[i].Disconnect();
             }
-        }
-
-        private void PrevPageButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void NextPageButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
