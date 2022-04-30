@@ -265,11 +265,11 @@ namespace PolyDesktopGUI_WPF
         }
         private void TestButton_Click(object sender, RoutedEventArgs e) //this fills the computer with test presets
         {
-            File.WriteAllText(filename + 0 + ".txt", "TestPreset1,Tab,3,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2");
-            File.WriteAllText(filename + 1 + ".txt", "TestPreset2,Group,6,948516,TestNickname 0,213286983,TestNickname 1,158964,TestNickname 2,162,TestNickname 3,102538501,TestNickname 4,25389172,TestNickname 5");
-            File.WriteAllText(filename + 2 + ".txt", "TestPreset3,Group,4,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3");
-            File.WriteAllText(filename + 3 + ".txt", "TestPreset4,Tab,5,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3,102538501,TestNickname 4");
-            File.WriteAllText(filename + 4 + ".txt", "TestPreset5,Tab,1,948516,TestNickname 0");
+            File.WriteAllText(filename + 0 + ".txt", "TabPreset1,Tab,3,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2");
+            File.WriteAllText(filename + 1 + ".txt", "GroupPreset2,Group,6,948516,TestNickname 0,213286983,TestNickname 1,158964,TestNickname 2,162,TestNickname 3,102538501,TestNickname 4,25389172,TestNickname 5");
+            File.WriteAllText(filename + 2 + ".txt", "GroupPreset3,Group,4,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3");
+            File.WriteAllText(filename + 3 + ".txt", "TabPreset4,Tab,5,948516,TestNickname 0,162,TestNickname 1,158964,TestNickname 2,213286983,TestNickname 3,102538501,TestNickname 4");
+            File.WriteAllText(filename + 4 + ".txt", "TabPreset5,Tab,1,948516,TestNickname 0");
             PresetList.ItemsSource = Presets;
         }
         private void ModeButton_Click(object sender, RoutedEventArgs e)

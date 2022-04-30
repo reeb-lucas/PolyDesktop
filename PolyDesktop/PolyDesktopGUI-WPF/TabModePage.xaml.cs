@@ -32,6 +32,7 @@ using System.Windows.Shapes;
 using ControlzEx.Theming;
 using MahApps.Metro.Controls;
 using NetworkCommsDotNet.Connections;
+using OmotVnc.View.ViewModel;
 
 namespace PolyDesktopGUI_WPF
 {
@@ -46,6 +47,7 @@ namespace PolyDesktopGUI_WPF
         DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
         string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
         private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
+
         public TabModePage(Computer[] source = null, int num = 0)
         {
             InitializeComponent();
@@ -62,13 +64,6 @@ namespace PolyDesktopGUI_WPF
             //this tab will hold PolyBay
             MetroTabItem tabPolyBay = new MetroTabItem();
             tabPolyBay.Header = "PolyBay";
-
-
-            //TODO: make content PolyBay
-            //TextBlock PBtext = new TextBlock();
-            //PBtext.Text = "Put PolyBay here";
-            //tabPolyBay.Content = PBtext;
-            //m_tabItemList.Add(tabPolyBay);
 
             Frame PolyBFrame = new Frame();
             tabPolyBay.Content = PolyBFrame;
@@ -232,10 +227,15 @@ namespace PolyDesktopGUI_WPF
         {
             NicknameFlyout.IsOpen = false;
         }
-        private void CloseTab(object sender, RoutedEventArgs e) //TODO: do this when a tab is closed
+        private void tabControl_TabItemClosingEvent(object sender, BaseMetroTabControl.TabItemClosingEventArgs e)
         {
-            m_VNCList[tabControl.SelectedIndex - 2].Disconnect();
-            tabControl.Items.MoveCurrentToNext();
+            int tempIndex = tabControl.SelectedIndex;
+            m_tabItemList.RemoveAt(tempIndex);
+            m_VNCList[tempIndex - 2].Disconnect();
+            m_VNCList.Remove(m_VNCList[tempIndex - 2]);
+            tabControl.DataContext = null;
+            tabControl.DataContext = m_tabItemList;
+            tabControl.SelectedIndex = tempIndex - 1;
         }
     }
 }

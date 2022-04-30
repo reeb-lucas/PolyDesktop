@@ -11,13 +11,12 @@
       xmlns:Controls="clr-namespace:PollRobots.OmotVnc.Controls;assembly=OmotVnc.Controls">
 
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
-        <mah:MetroAnimatedSingleRowTabControl Margin="0,0,0,0" Name="tabControl" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged">
+        <mah:MetroAnimatedSingleRowTabControl Margin="0,0,0,0" Name="tabControl" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged" TabItemClosingEvent="tabControl_TabItemClosingEvent">
             <mah:MetroAnimatedSingleRowTabControl.ItemContainerStyle>
                 <Style TargetType="{x:Type mah:MetroTabItem}" BasedOn="{StaticResource {x:Type mah:MetroTabItem}}">
                     <Setter Property="FontSize" Value="24"/>
                 </Style>
             </mah:MetroAnimatedSingleRowTabControl.ItemContainerStyle>
-            <mah:MetroTabItem CloseButtonEnabled="True" CloseTabCommand="{Binding CloseTab}"></mah:MetroTabItem>
         </mah:MetroAnimatedSingleRowTabControl>
         <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
             <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
