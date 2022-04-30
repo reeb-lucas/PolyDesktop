@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fXk4juHpjvzjRuyz2dJVGJ/ytRtwtl5YB8bmKwqlzD0=</dsig:DigestValue>
+        <dsig:DigestValue>1ipLOKuho4tPrwnr2eqpe+jbd3RnuDgGzF6V6G9fOYc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -126,14 +126,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="178624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="179136">
       <assemblyIdentity name="PolyDesktopGUI-WPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sRjFrfdgS2jC688d5FOV4to0pHsqWvspvqwmF7lL9qk=</dsig:DigestValue>
+        <dsig:DigestValue>ladhsXE16rufSwL0OhF/hyvrc7gvKum/5orZd251D7c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

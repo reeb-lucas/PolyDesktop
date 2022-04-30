@@ -280,7 +280,8 @@ namespace PollRobots.OmotVnc.Controls
         {
             if (_connection == null)
             {
-                _timer.Stop();
+                if(_timer != null)
+                    _timer.Stop();
             }
             else
             {

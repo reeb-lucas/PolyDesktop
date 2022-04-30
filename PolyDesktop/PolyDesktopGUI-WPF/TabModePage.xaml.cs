@@ -47,7 +47,8 @@ namespace PolyDesktopGUI_WPF
         DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
         string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
         private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
-
+        int prevIndex = 2; //used for dynamic connections
+        bool initialized = false;
         public TabModePage(Computer[] source = null, int num = 0)
         {
             InitializeComponent();
@@ -129,6 +130,7 @@ namespace PolyDesktopGUI_WPF
 
             m_tabItemList.Insert(count - 1, tab);
             m_VNCList.Insert(count - 3, localSession);
+            prevIndex = tabControl.SelectedIndex;
             return tab;
         }
 
@@ -146,6 +148,15 @@ namespace PolyDesktopGUI_WPF
                     MetroTabItem newTab = this.AddTabItem();
                     tabControl.DataContext = m_tabItemList;
                     tabControl.SelectedItem = newTab;
+                }
+                else if ((m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName() != "") && m_VNCList.Count > 1) //dynamic connection
+                {
+                    m_VNCList[tabControl.SelectedIndex - 2].Reconnect();
+                    if (prevIndex == -1)
+                        prevIndex = 2;
+                    if (prevIndex >= 2 && prevIndex - 2 < m_VNCList.Count)
+                        m_VNCList[prevIndex - 2].Disconnect();
+                    prevIndex = tabControl.SelectedIndex;
                 }
             }
         }

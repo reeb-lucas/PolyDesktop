@@ -74,6 +74,10 @@ namespace PolyDesktopGUI_WPF
         {
             return _connectedName;
         }
+        public void Reconnect()
+        {
+            Connect(_connectedName);
+        }
         public Computer[] AllComputers { get { return GatherAllComputers(); } }
         public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
         {
