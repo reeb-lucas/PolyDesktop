@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using MahApps.Metro.Controls;
+using Microsoft.Win32;
 using NetworkCommsDotNet;
 using NetworkCommsDotNet.Connections;
 using NetworkCommsDotNet.Connections.TCP;
@@ -28,6 +29,7 @@ namespace PolyDesktopGUI_WPF
     /// <summary>
     /// Interaction logic for PolyBay.xaml
     /// </summary>
+    
     public partial class PolyBay : Page
     {
         #region Private Fields
@@ -66,14 +68,16 @@ namespace PolyDesktopGUI_WPF
         /// </summary>
         static volatile bool windowClosing = false;
         private string _remoteName = "";
+        private TabModePage _tab = null;
         #endregion
-        public PolyBay()
+        public PolyBay(TabModePage tab = null)
         {
             InitializeComponent();
             //Set the listbox data context
             lbReceivedFiles.DataContext = receivedFiles;
             SearchListBox.ItemsSource = GatherAllComputers();
             //Start listening for new TCP connections
+            _tab = tab;
             StartListening();
         }
 
@@ -502,17 +506,17 @@ namespace PolyDesktopGUI_WPF
             {
                 //Disable the send and compression buttons
                 sendAllButton.IsEnabled = false;
-                //UseCompression.IsEnabled = false;
-
                 //Parse the necessary remote information
                 string filename = openDialog.FileName;
                 string remotePort = "5069";
-                //Foreach (MetroTabItem tab in m_tabItemList)
-                //IPAddress[] addre = Dns.GetHostAddresses(tab.header);
-                IPAddress[] addre = Dns.GetHostAddresses(_remoteName);
-                foreach (IPAddress address in addre)                        //TODO: change logic here to loop through IPs more effeciently
-                {
-                    sendFile(filename, address.ToString(), remotePort);
+                foreach (VncPage ctab in _tab.m_VNCList)
+                { 
+                    IPAddress[] addre = Dns.GetHostAddresses(ctab.GetConnectedName());
+                    //IPAddress[] addre = Dns.GetHostAddresses(_remoteName);
+                    foreach (IPAddress address in addre)                        //TODO: change logic here to loop through IPs more effeciently
+                    {
+                        sendFile(filename, address.ToString(), remotePort);
+                    }
                 }
             }
         }
@@ -616,8 +620,7 @@ namespace PolyDesktopGUI_WPF
                 }));
             });
         }
+
         #endregion
-
-
     }
 }

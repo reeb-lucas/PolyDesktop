@@ -41,7 +41,7 @@ namespace PolyDesktopGUI_WPF
     public partial class TabModePage : Page
     {
         private List<MetroTabItem> m_tabItemList;
-        private List<VncPage> m_VNCList;
+        public List<VncPage> m_VNCList;
         static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\PolyDesktop\\Presets\\";
         DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
         string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
@@ -62,10 +62,11 @@ namespace PolyDesktopGUI_WPF
             //this tab will hold PolyBay
             MetroTabItem tabPolyBay = new MetroTabItem();
             tabPolyBay.Header = "PolyBay";
+            tabPolyBay.Name = "PolyBay";
 
             Frame PolyBFrame = new Frame();
             tabPolyBay.Content = PolyBFrame;
-            PolyBay polyBay = new PolyBay();
+            PolyBay polyBay = new PolyBay(this);
             PolyBFrame.Navigate(polyBay);
             m_tabItemList.Add(tabPolyBay);
 
