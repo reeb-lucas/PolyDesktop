@@ -507,7 +507,8 @@ namespace PolyDesktopGUI_WPF
                 //Parse the necessary remote information
                 string filename = openDialog.FileName;
                 string remotePort = "5069";
-                //Foreach (computer in tab list loop)
+                //Foreach (MetroTabItem tab in m_tabItemList)
+                //IPAddress[] addre = Dns.GetHostAddresses(tab.header);
                 IPAddress[] addre = Dns.GetHostAddresses(_remoteName);
                 foreach (IPAddress address in addre)                        //TODO: change logic here to loop through IPs more effeciently
                 {

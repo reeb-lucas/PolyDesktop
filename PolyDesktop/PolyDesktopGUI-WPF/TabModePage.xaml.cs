@@ -63,13 +63,6 @@ namespace PolyDesktopGUI_WPF
             MetroTabItem tabPolyBay = new MetroTabItem();
             tabPolyBay.Header = "PolyBay";
 
-
-            //TODO: make content PolyBay
-            //TextBlock PBtext = new TextBlock();
-            //PBtext.Text = "Put PolyBay here";
-            //tabPolyBay.Content = PBtext;
-            //m_tabItemList.Add(tabPolyBay);
-
             Frame PolyBFrame = new Frame();
             tabPolyBay.Content = PolyBFrame;
             PolyBay polyBay = new PolyBay();
