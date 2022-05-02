@@ -55,7 +55,7 @@ namespace ServerClientChatApp
         private void MessageBox_KeyDown(object sender, KeyEventArgs e)
         {
             //Send the message in textbox if "Enter" key is pressed, and the textbox is not empty.
-            if(e.Key == Key.Return && MessageBox.Text != "")
+            if (e.Key == Key.Return && MessageBox.Text != "")
             {
                 SendButton.Command.Execute(SendButton.Content);
                 MessageBox.Text = ""; //Clear Content
@@ -76,16 +76,16 @@ namespace ServerClientChatApp
         private void ChangeListButton_Click(object sender, RoutedEventArgs e)
         {
             //Change content of button, then change visibility of listview objects
-            if(ChangeListButton.Content.ToString() == "Show Help Queue")
+            if (ChangeListButton.Content.ToString() == "Show Help Queue")
             {
                 ChangeListButton.Content = "Show Connected Users";
                 ConnectedUsers.Visibility = Visibility.Collapsed;
                 HelpQueueUsers.Visibility = Visibility.Visible;
             }
-            else if(ChangeListButton.Content.ToString() == "Show Connected Users")
+            else if (ChangeListButton.Content.ToString() == "Show Connected Users")
             {
                 ChangeListButton.Content = "Show Help Queue";
-                HelpQueueUsers.Visibility = Visibility.Collapsed; 
+                HelpQueueUsers.Visibility = Visibility.Collapsed;
                 ConnectedUsers.Visibility = Visibility.Visible;
             }
         }
