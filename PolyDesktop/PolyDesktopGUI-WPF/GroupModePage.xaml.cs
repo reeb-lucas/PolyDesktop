@@ -57,6 +57,8 @@ namespace PolyDesktopGUI_WPF
                 BaseGrid.Children.Add(VncFrame);
                 VncFrame.Navigate(localSession);
                 m_VNCList.Insert(count, localSession);
+
+                RemoveButton.IsEnabled = false;
             }
             else if (connectedComputers == 2)
             {
@@ -346,13 +348,7 @@ namespace PolyDesktopGUI_WPF
                 VncFrame6.Navigate(localSession6);
                 m_VNCList.Insert(count, localSession6);
 
-            }
-            else if (connectedComputers > 6)
-            {
-                string tooManyComputersError = "Only 6 computers are support in group mode. You can not have 7.";
-                MessageBox.Show(tooManyComputersError);
-                connectedComputers -= 1;
-                DisplayComputers(6);
+                AddButton.IsEnabled = false;
             }
             else //If there are no connectedComputers, give user ability to add one through a VncFrame
             {
