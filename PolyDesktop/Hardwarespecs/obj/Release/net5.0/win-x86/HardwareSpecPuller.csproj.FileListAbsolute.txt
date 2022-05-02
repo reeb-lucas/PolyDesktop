@@ -225,7 +225,6 @@ S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\win-
 S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\win-x86\hostfxr.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\win-x86\hostpolicy.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\win-x86\mscordaccore.dll
-S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\win-x86\mscordaccore_x86_x86_5.0.1321.56516.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\win-x86\mscordbi.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\win-x86\mscorrc.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\win-x86\ucrtbase.dll
@@ -238,3 +237,5 @@ S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\win-
 S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\win-x86\ref\HardwareSpecPuller.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\win-x86\HardwareSpecPuller.pdb
 S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\obj\Release\net5.0\win-x86\HardwareSpecPuller.genruntimeconfig.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\win-x86\api-ms-win-core-fibers-l1-1-0.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Hardwarespecs\bin\Release\net5.0\win-x86\mscordaccore_x86_x86_5.0.1622.16705.dll

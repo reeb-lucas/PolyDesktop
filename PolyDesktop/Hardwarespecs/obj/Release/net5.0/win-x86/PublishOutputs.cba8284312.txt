@@ -1,0 +1,7 @@
+S:\School\Fall2021\HSP_1\HardwareSpecPuller.pdb
+S:\School\Fall2021\HSP_1\clrcompression.dll
+S:\School\Fall2021\HSP_1\clrjit.dll
+S:\School\Fall2021\HSP_1\coreclr.dll
+S:\School\Fall2021\HSP_1\mscordaccore.dll
+S:\School\Fall2021\HSP_1\sni.dll
+S:\School\Fall2021\HSP_1\HardwareSpecPuller.exe

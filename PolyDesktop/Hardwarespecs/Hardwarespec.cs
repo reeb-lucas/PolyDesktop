@@ -23,7 +23,6 @@ namespace Hardwarespecs
         {
             WriteToDB();
         }
-
         private static void WriteToDB()
         {
             string PCName = GetPCName();
@@ -169,7 +168,6 @@ namespace Hardwarespecs
             }
             return info;
         }
-
         private static string GetStorageInfo()
         {
             ManagementClass mc = new ManagementClass("win32_LogicalDisk");
@@ -185,12 +183,11 @@ namespace Hardwarespecs
             }
             return info;
         }
-
         static string GetGPUInfo()
         {
             ManagementClass mc = new ManagementClass("win32_VideoController");
             ManagementObjectCollection moc = mc.GetInstances();
-            String info = string.Empty;
+            String info = "";
 
             foreach (ManagementObject mo in moc)
             {
@@ -211,7 +208,6 @@ namespace Hardwarespecs
             }
             return GHz.ToString();
         }
-
         static string GetCPUInfo()
         {
             ManagementClass mc = new ManagementClass("win32_processor");
