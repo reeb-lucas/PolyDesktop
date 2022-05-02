@@ -1,0 +1,21 @@
+﻿<Page x:Class="PolyDesktopGUI_WPF.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PolyDesktopGUI_WPF" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="SettingsPage">
+
+    <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
+        <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="235,-115,235,0"/>
+
+        <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
+            <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
+        </Button>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,100,0,0">
+            <mah:ToggleSwitch Name="AdvancedSwitch" Header="Advanced Mode" OffContent="Disabled" OnContent="Enabled" Toggled="AdvancedSwitch_Toggled" />
+        </StackPanel>
+    </Grid>
+</Page>

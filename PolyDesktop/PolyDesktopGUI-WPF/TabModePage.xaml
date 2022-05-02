@@ -11,14 +11,24 @@
       xmlns:Controls="clr-namespace:PollRobots.OmotVnc.Controls;assembly=OmotVnc.Controls">
 
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
-         <!--TODO:MahApps Tab Control with individual dock panels for each VNC instance-->
-        <mah:MetroAnimatedSingleRowTabControl Margin="0,0,0,0" Name="tabControl" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged">
-            <!--<mah:MetroTabItem Header="PolyBay" CloseButtonEnabled="False">
-                <Label Content="Dock Panel For PolyBay Here"/>
-            </mah:MetroTabItem>-->
-        </mah:MetroAnimatedSingleRowTabControl>
+        <mah:MetroAnimatedSingleRowTabControl Margin="0,0,0,0" Name="tabControl" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged"/>
         <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
             <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
         </Button>
+        <Button x:Name="SaveButton" Content="Save As Preset" ToolTip="Save current tabs and nicknames as a preset" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" Click="SaveButton_Click"/>
+        <mah:Flyout x:Name="NicknameFlyout" Header="Nickname" Theme="Adapt" Position="Right" Width="175" IsOpen="False">
+            <StackPanel HorizontalAlignment="Center" Width="150">
+                <TextBlock Name="ComputerNameBlock"/>
+                <TextBox x:Name="NameBox" TextChanged="Nickname_Changed"/>
+                <Button Name="NNSaveButton" Content="Save" Click="NNSaveButton_Click" Margin="0,10,0,0"/>
+            </StackPanel>
+        </mah:Flyout>
+        <mah:Flyout x:Name="PresetFlyout" Header="Preset Title" Theme="Adapt" Position="Right" Width="175" IsOpen="False">
+            <StackPanel HorizontalAlignment="Center" Width="150">
+                <TextBlock Name="PresetNameBlock"/>
+                <TextBox x:Name="PresetNameBox" Text="MyPreset"/>
+                <Button Name="PresetSaveButton" Content="Save" Click="PresetSaveButton_Click" Margin="0,10,0,0"/>
+            </StackPanel>
+        </mah:Flyout>
     </Grid>
 </Page>

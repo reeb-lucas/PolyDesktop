@@ -36,7 +36,7 @@
 
                     <Grid>
                         <StackPanel HorizontalAlignment="Center">
-                            <ListView Name="PresetList" DisplayMemberPath="Name" HorizontalAlignment="Center" Width="180" SelectionChanged="ListView_SelectionChanged" SelectedIndex="0"/>
+                            <ListView Name="PresetList" DisplayMemberPath="Name" HorizontalAlignment="Center" Width="180" SelectionChanged="ListView_SelectionChanged" SelectedIndex="-1"/>
                         </StackPanel>
                     </Grid>
                 </Border>
@@ -44,8 +44,7 @@
         </StackPanel>
         <TextBlock Text="Presets" Margin="-640,170,0,500" HorizontalAlignment="Center" Foreground="White"/>
         <Button x:Name="ModeButton" Margin="320,250,0,400" Width="108" VerticalAlignment="Top" HorizontalAlignment="Center" Click="ModeButton_Click"/>
-        <Button x:Name="PresetSaveButton" HorizontalAlignment="Center" Content="Save Preset" Margin="660,301,0,0" VerticalAlignment="Top" Click="PresetSaveButton_Click"/>
-        <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="70,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="70,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" TextChanged="NameBox_TextChanged"/>
         <TextBlock HorizontalAlignment="Center" Margin="320,220,0,0" Text="Mode" TextWrapping="Wrap" VerticalAlignment="Top" />
         <TextBlock HorizontalAlignment="Center" Margin="70,220,0,0" Text="Preset Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <StackPanel Margin="120,300,0,0" HorizontalAlignment="Center" Width="400">
@@ -80,7 +79,7 @@
         <Button x:Name="AddComputerButton" HorizontalAlignment="Center" Content="Add Computer" Margin="-185,250,0,0" VerticalAlignment="Top" Click="AddComputerButton_Click"/>
         <TextBlock Name="NumberOfComputersLabel" HorizontalAlignment="Center" Margin="560,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock Name="NumBlock" HorizontalAlignment="Center" Margin="560,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="DeletePresetButton" Content="Delete Preset" Margin="670,353,0,0" VerticalAlignment="Top" Click="DeletePresetButton_Click" HorizontalAlignment="Center" Background="#674ea7" Foreground="White"/>
+        <Button x:Name="DeletePresetButton" Content="Delete Preset" Margin="670,301,0,0" VerticalAlignment="Top" Click="DeletePresetButton_Click" HorizontalAlignment="Center" Background="#674ea7" Foreground="White"/>
         <mah:Flyout x:Name="ModePickerFlyout" Header="Choose a Mode" Theme="Adapt" Position="Right" Width="215" IsOpen="False">
             <StackPanel>
                 <Button Name="TabButton" Content="Tab" Click="TabButton_Click"/>
