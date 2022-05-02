@@ -10,10 +10,12 @@ namespace Server
     class Program
     {
         static List<Client> _users;
+        static List<Client> _helpqueue;
         static TcpListener _listener;
         static void Main(string[] args)
         {
             _users = new List<Client>();
+            _helpqueue = new List<Client>();
             _listener = new TcpListener(System.Net.IPAddress.Any, 0);
             _listener.Start();
 
@@ -35,7 +37,9 @@ namespace Server
                 var client = new Client(_listener.AcceptTcpClient());
                 _users.Add(client);
 
+                //Broadcast current connections and helpqueue to every new client connection
                 BroadcastConnection();
+                BroadcastHelpQueue();
             }
         }
 
@@ -65,15 +69,27 @@ namespace Server
             }
         }
 
-        public static void AddToHelpQueue(string uid)
+        static void BroadcastHelpQueue()
         {
             foreach (var user in _users)
             {
-                var requestPacket = new PacketBuilder();
-                requestPacket.WriteOpCode(15);
-                requestPacket.WriteMessage(uid);
-                user.ClientSocket.Client.Send(requestPacket.GetPacketBytes());
+                foreach (var usr in _helpqueue)
+                {
+                    var requestPacket = new PacketBuilder();
+                    requestPacket.WriteOpCode(15);
+                    requestPacket.WriteMessage(usr.UID.ToString());
+                    user.ClientSocket.Client.Send(requestPacket.GetPacketBytes());
+                }
             }
+        }
+
+        public static void AddToHelpQueue(string uid)
+        {
+            var requestingUser = _users.Where(x => x.UID.ToString() == uid).FirstOrDefault();
+            _helpqueue.Add(requestingUser);
+
+            //After adding a new user to queue, rebroadcast it to everyone
+            BroadcastHelpQueue();
         }
 
         public static void BroadcastDisconnect(string uid)
