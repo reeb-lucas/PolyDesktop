@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7eYfe8BfKM3GHNNdtSPONYLJOZZxAXrSN1Rxjr/uuBs=</dsig:DigestValue>
+        <dsig:DigestValue>dS1hpwFd4xEZ1+FfY1sGH/p32movj+XbYQV0LsuuWYg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -121,19 +121,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>a+EJZVuSOcNoKA4CaiiTBkiY9T61oTQOIUkujGEI69E=</dsig:DigestValue>
+        <dsig:DigestValue>V2ViaMZ78EE+WqjqJwmyubsHnFaOKe4EChXXMhoMM+c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="168896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PolyDesktopGUI-WPF.exe" size="179136">
       <assemblyIdentity name="PolyDesktopGUI-WPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pcltTonhf5uHt5omRjogGPLoGbkNGI7vy4xAb1Enp0c=</dsig:DigestValue>
+        <dsig:DigestValue>G9Yukg2APlydH9LJiRPbBDN6ehymR9PEedkMna0M1LE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -185,13 +185,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="PolyDesktopGUI-WPF.exe.config" size="1051">
+  <file name="PolyDesktopGUI-WPF.exe.config" size="1536">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7UF1pbdBAkT/yVvF5z30hGy/MQS6sajw4II9sPcQDXE=</dsig:DigestValue>
+      <dsig:DigestValue>5FXRcoanxDLHjUDldWtVAxfZfcqqwwLmRJ7zUNi5utA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

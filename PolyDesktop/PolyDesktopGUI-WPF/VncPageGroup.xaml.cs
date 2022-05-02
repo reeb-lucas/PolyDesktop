@@ -22,7 +22,7 @@ using PollRobots.OmotVnc.Controls;
 
 namespace PolyDesktopGUI_WPF
 {
-    public partial class VncPage : Page
+    public partial class VncPageGroup : Page
     {
         private int _scale;
         private bool _scaleToFit;
@@ -40,7 +40,7 @@ namespace PolyDesktopGUI_WPF
         private GroupModePage _group = null;
 
         private string _connectedName = "";
-        public VncPage(TabModePage tab = null, GroupModePage group = null, string targetConnect = "")
+        public VncPageGroup(TabModePage tab = null, GroupModePage group = null, string targetConnect = "")
         {
             InitializeCommands();
 
@@ -73,10 +73,6 @@ namespace PolyDesktopGUI_WPF
         public string GetConnectedName()
         {
             return _connectedName;
-        }
-        public void Reconnect()
-        {
-            Connect(_connectedName);
         }
         public Computer[] AllComputers { get { return GatherAllComputers(); } }
         public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview

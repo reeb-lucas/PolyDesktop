@@ -11,7 +11,7 @@
       xmlns:Controls="clr-namespace:PollRobots.OmotVnc.Controls;assembly=OmotVnc.Controls">
 
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
-        <mah:MetroAnimatedSingleRowTabControl Margin="0,0,0,0" Name="tabControl" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged">
+        <mah:MetroAnimatedSingleRowTabControl Margin="0,0,0,0" Name="tabControl" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged" TabItemClosingEvent="tabControl_TabItemClosingEvent">
             <mah:MetroAnimatedSingleRowTabControl.ItemContainerStyle>
                 <Style TargetType="{x:Type mah:MetroTabItem}" BasedOn="{StaticResource {x:Type mah:MetroTabItem}}">
                     <Setter Property="FontSize" Value="24"/>
