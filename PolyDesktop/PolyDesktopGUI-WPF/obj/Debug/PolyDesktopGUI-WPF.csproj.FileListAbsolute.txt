@@ -186,11 +186,9 @@ C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Ma
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\NetworkCommsDotNet.dll
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.dll
-C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.dll
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.dll
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Buffers.dll
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Memory.dll
-C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.dll
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Controls.pdb
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\ControlzEx.pdb
@@ -200,7 +198,6 @@ C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Ma
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.xml
-C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\protobuf-net.Core.xml
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\OmotVnc.Protocol.pdb
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\de\MahApps.Metro.resources.dll
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\App.baml
@@ -411,3 +408,7 @@ C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\D
 C:\Users\Tyler\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPageGroup.baml
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPageGroup.g.cs
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPageGroup.baml
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.csproj.SuggestedBindingRedirects.cache
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPageGroup.g.cs
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPageGroup.baml

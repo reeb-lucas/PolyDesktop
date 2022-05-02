@@ -262,7 +262,7 @@ namespace PolyDesktopGUI_WPF
                 VncFrame5.Width = System.Windows.SystemParameters.PrimaryScreenWidth / 3;
                 VncFrame5.Height = System.Windows.SystemParameters.PrimaryScreenHeight / 2;
                 BaseGrid.Children.Add(VncFrame5);
-                VncFrame4.Navigate(localSession5);
+                VncFrame5.Navigate(localSession5);
                 m_VNCList.Insert(count, localSession5);
             }
             else if(connectedComputers == 6)

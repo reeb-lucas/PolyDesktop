@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1ipLOKuho4tPrwnr2eqpe+jbd3RnuDgGzF6V6G9fOYc=</dsig:DigestValue>
+        <dsig:DigestValue>+uNBsavIGEwQAMnGbYJ2oF0D5ft3u5bP25V8dO2knYY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -121,7 +121,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Gu4raDPep4GhbvQgG63Ai8CWEohQj+/sd+TWzBx2ius=</dsig:DigestValue>
+        <dsig:DigestValue>xOi2U3p4lEM5DHKEBj12EQ6PZ8OfiV9Kd9wa2l/K4eQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -133,7 +133,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ladhsXE16rufSwL0OhF/hyvrc7gvKum/5orZd251D7c=</dsig:DigestValue>
+        <dsig:DigestValue>+9cH9Z7rjg22IzuBzER3OMnPMUpgVjlJzTHYPgTJ8bM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -150,26 +150,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Buffers.dll" size="20856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Buffers.dll" size="21376">
       <assemblyIdentity name="System.Buffers" version="4.0.3.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rMzPvkXZ8I/+7ZkW43sz6YxlvgEs//bn+ntnIQzh/vs=</dsig:DigestValue>
+        <dsig:DigestValue>xl//YDsoPclm0ai3MMEdXl51DoAhvSRkBhL2zD8sb7c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Memory.dll" size="141184">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Memory.dll" size="141688">
       <assemblyIdentity name="System.Memory" version="4.0.1.1" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jnYxjosGaSq/fasRadJ9FVV/fwo002r2Rj7/D+ISE8c=</dsig:DigestValue>
+        <dsig:DigestValue>0uOUn886Ozogu5pWik2lgtmpDWTzTAvcB8kCm/6PGFg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -185,13 +185,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="PolyDesktopGUI-WPF.exe.config" size="1051">
+  <file name="PolyDesktopGUI-WPF.exe.config" size="1700">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7UF1pbdBAkT/yVvF5z30hGy/MQS6sajw4II9sPcQDXE=</dsig:DigestValue>
+      <dsig:DigestValue>r+ps5Yi713fLNbFsUm7K2T9LxsrxyhegwtYSdKjhfFQ=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
