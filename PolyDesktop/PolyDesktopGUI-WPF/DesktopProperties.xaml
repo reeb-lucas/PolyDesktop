@@ -11,27 +11,13 @@
 
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
         <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="235,-115,235,0"/>
-        <Button x:Name="RefreshButton" Margin="575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58" Click="RefreshButton_Click" ToolTip="Refresh">
-            <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE895;"/>
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button x:Name="BackButton" Margin="-575,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" Width="58"  Click="BackButton_Click" ToolTip="Back">
+        <Button x:Name="BackButton" Click="BackButton_Click" ToolTip="Return to Main Menu" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
             <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE830;"/>
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
         </Button>
         <DataGrid x:Name="dataGrid"
                   RowDetailsVisibilityMode="VisibleWhenSelected"
                   Visibility="Hidden"
                   CanUserSortColumns="True"
-                  Sorting="dataGrid_Sorting"
                   BorderThickness="2"
                   BorderBrush="Gray"
                   GridLinesVisibility="All"

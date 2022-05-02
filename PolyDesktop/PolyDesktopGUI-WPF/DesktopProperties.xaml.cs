@@ -111,13 +111,6 @@ namespace PolyDesktopGUI_WPF
 
             RefreshContents(table, grid);
         }
-        private void dataGrid_Sorting(object sender, DataGridColumnEventArgs e) //Allow sorting by values
-        {
-            // 0 = asc
-            // 1 = desc
-
-          
-        }
         private void RefreshContents(DataTable table, DataGrid grid) // Create collection
         {
             var collection = new ObservableCollection<object>();
@@ -131,10 +124,6 @@ namespace PolyDesktopGUI_WPF
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
-        }
-        private void RefreshButton_Click(object sender, RoutedEventArgs e)
-        {
-            ExecuteQuery("SELECT * FROM PolyDestopn.dbo.desktop");
         }
     }
 }

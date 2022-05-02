@@ -37,9 +37,10 @@ namespace PolyDesktopGUI_WPF
         private RelayCommand _disconnectCommand;
         private RelayCommand _toggleLocalCursorCommand;
         private TabModePage _tab = null;
+        private GroupModePage _group = null;
 
         private string _connectedName = "";
-        public VncPage(TabModePage tab = null)
+        public VncPage(TabModePage tab = null, GroupModePage group = null, string targetConnect = "")
         {
             InitializeCommands();
 
@@ -60,14 +61,22 @@ namespace PolyDesktopGUI_WPF
             }
 
             SearchListBox.ItemsSource = GatherAllComputers();
-            if (tab != null)
+
+            _tab = tab;
+            _group = group;
+
+            if (targetConnect != "")
             {
-                _tab = tab;
+                Connect(targetConnect);
             }
         }
         public string GetConnectedName()
         {
             return _connectedName;
+        }
+        public void Reconnect()
+        {
+            Connect(_connectedName);
         }
         public Computer[] AllComputers { get { return GatherAllComputers(); } }
         public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
@@ -105,15 +114,34 @@ namespace PolyDesktopGUI_WPF
         {
             SearchListBox.ItemsSource = GatherAllComputers(SearchBox.Text);
         }
-        private async void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
+        private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
+        {
+            Connect();
+        }
+        private async void Connect(string target = "")
         {
             ComputerPanel.Visibility = Visibility.Hidden;
 
-            await VncHost.ConnectAsync(SearchListBox.SelectedValue.ToString(), 5901, "1234"); //TODO: PW CHANGE
+            if (target == "")
+            {
+                _connectedName = SearchListBox.SelectedValue.ToString();
+            }
+            else
+            {
+                _connectedName = target;
+            }
 
-            _connectedName = SearchListBox.SelectedValue.ToString();
-            await Task.Delay(150);
-            VncHost.DisplayAreaSizeChanged(); //initialize scaling
+            await VncHost.ConnectAsync(_connectedName, 5901, "1234"); //TODO: PW CHANGE
+
+            await Task.Delay(250);
+            if (_group == null)
+            {
+                VncHost.SetScaling(); //initialize scaling
+            }
+            else
+            {
+                VncHost.SetScaling(true); //initialize scaling for groupMode
+            }
             if (_tab != null)//check to see if we are in a tab mode page
             {
                 _tab.UpdateNames();

@@ -183,8 +183,10 @@ namespace PollRobots.OmotVnc.Protocol
         /// <summary>Implements the Dispose method.</summary>
         public void Dispose()
         {
-            readStream.Dispose();
-            writeStream.Dispose();
+            if(readStream != null)
+                readStream.Dispose();
+            if (writeStream != null)
+                writeStream.Dispose();
 
             readStream = null;
             writeStream = null;

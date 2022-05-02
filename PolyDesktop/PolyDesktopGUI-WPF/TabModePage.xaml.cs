@@ -32,6 +32,7 @@ using System.Windows.Shapes;
 using ControlzEx.Theming;
 using MahApps.Metro.Controls;
 using NetworkCommsDotNet.Connections;
+using OmotVnc.View.ViewModel;
 
 namespace PolyDesktopGUI_WPF
 {
@@ -46,7 +47,9 @@ namespace PolyDesktopGUI_WPF
         DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
         string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
         private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
-        public TabModePage()
+        int prevIndex = 2; //used for dynamic connections
+        bool initialized = false;
+        public TabModePage(Computer[] source = null, int num = 0)
         {
             InitializeComponent();
 
@@ -55,20 +58,13 @@ namespace PolyDesktopGUI_WPF
 
             //tab to space the rest out
             MetroTabItem tabSpace = new MetroTabItem();
-            tabSpace.Header = "      ";
+            tabSpace.Header = "   ";
             tabSpace.Focusable = false;
             m_tabItemList.Add(tabSpace);
 
             //this tab will hold PolyBay
             MetroTabItem tabPolyBay = new MetroTabItem();
             tabPolyBay.Header = "PolyBay";
-
-
-            //TODO: make content PolyBay
-            //TextBlock PBtext = new TextBlock();
-            //PBtext.Text = "Put PolyBay here";
-            //tabPolyBay.Content = PBtext;
-            //m_tabItemList.Add(tabPolyBay);
 
             Frame PolyBFrame = new Frame();
             tabPolyBay.Content = PolyBFrame;
@@ -84,10 +80,17 @@ namespace PolyDesktopGUI_WPF
 
             //bind tab list
             tabControl.DataContext = m_tabItemList;
-            tabControl.SelectedIndex = 0;
+            tabControl.SelectedIndex = 2;
 
+            if(source != null)
+            {
+                for(int i = 0; i < num; i++)
+                {
+                    AddTabItem(source[i]);
+                }
+            }
         }
-        private MetroTabItem AddTabItem()
+        private MetroTabItem AddTabItem(Computer computer = null)
         {
             int count = m_tabItemList.Count;
 
@@ -96,6 +99,7 @@ namespace PolyDesktopGUI_WPF
             tab.Header = string.Format("Computer {0}", count - 2);
             tab.Name = string.Format("Computer{0}", count - 2);
             tab.CloseButtonEnabled = true;
+
 
             //Give the abiliby to right click and change the Nickname
             ContextMenu nameMenu = new ContextMenu();
@@ -112,11 +116,21 @@ namespace PolyDesktopGUI_WPF
             //adds content to tab
             Frame VncFrame = new Frame();
             tab.Content = VncFrame;
-            VncPage localSession = new VncPage(this);
+            VncPage localSession;
+            if(computer != null)
+            {
+                localSession = new VncPage(null, null, computer.Name);
+                tab.Header = computer.Nickname;
+            }
+            else
+            {
+                localSession = new VncPage(this);
+            }
             VncFrame.Navigate(localSession);
 
             m_tabItemList.Insert(count - 1, tab);
             m_VNCList.Insert(count - 3, localSession);
+            prevIndex = tabControl.SelectedIndex;
             return tab;
         }
 
@@ -134,6 +148,15 @@ namespace PolyDesktopGUI_WPF
                     MetroTabItem newTab = this.AddTabItem();
                     tabControl.DataContext = m_tabItemList;
                     tabControl.SelectedItem = newTab;
+                }
+                else if ((m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName() != "") && m_VNCList.Count > 1) //dynamic connection
+                {
+                    m_VNCList[tabControl.SelectedIndex - 2].Reconnect();
+                    if (prevIndex == -1)
+                        prevIndex = 2;
+                    if (prevIndex >= 2 && prevIndex - 2 < m_VNCList.Count)
+                        m_VNCList[prevIndex - 2].Disconnect();
+                    prevIndex = tabControl.SelectedIndex;
                 }
             }
         }
@@ -181,8 +204,8 @@ namespace PolyDesktopGUI_WPF
 
         private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
         {
-            string bucket = PresetNameBox.Text.Replace(",", "") + ",Tab," + (m_VNCList.Count - 1) + ",";
-            for (int i = 2; i < m_tabItemList.Count - 2; i++)
+            string bucket = PresetNameBox.Text.Replace(",", "") + ",Tab," + m_VNCList.Count + ",";
+            for (int i = 2; i < m_tabItemList.Count - 1; i++)
             {
                 string ID = "";
                 using (var connection = new SqlConnection(connectionString))
@@ -215,10 +238,15 @@ namespace PolyDesktopGUI_WPF
         {
             NicknameFlyout.IsOpen = false;
         }
-        private void CloseTab(object sender, RoutedEventArgs e) //TODO: do this when a tab is closed
+        private void tabControl_TabItemClosingEvent(object sender, BaseMetroTabControl.TabItemClosingEventArgs e)
         {
-            m_VNCList[tabControl.SelectedIndex - 2].Disconnect();
-            tabControl.Items.MoveCurrentToNext();
+            int tempIndex = tabControl.SelectedIndex;
+            m_tabItemList.RemoveAt(tempIndex);
+            m_VNCList[tempIndex - 2].Disconnect();
+            m_VNCList.Remove(m_VNCList[tempIndex - 2]);
+            tabControl.DataContext = null;
+            tabControl.DataContext = m_tabItemList;
+            tabControl.SelectedIndex = tempIndex - 1;
         }
     }
 }
