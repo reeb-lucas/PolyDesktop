@@ -23,7 +23,16 @@ namespace ChatServer.Net.IO
             msgBuffer = new byte[length];
             _ns.Read(msgBuffer, 0, length);
 
-            var msg = Encoding.ASCII.GetString(msgBuffer);
+            //Error code if the message is unable to be read in the try
+            var msg = "Failed to read message";
+
+            try
+            {
+                msg = Encoding.ASCII.GetString(msgBuffer);
+            }
+            catch 
+            { }
+
             return msg;
         }
     }

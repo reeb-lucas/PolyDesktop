@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 
 namespace Server
@@ -9,19 +10,36 @@ namespace Server
     class Program
     {
         static List<Client> _users;
+        static List<Client> _helpqueue;
         static TcpListener _listener;
         static void Main(string[] args)
         {
             _users = new List<Client>();
-            _listener = new TcpListener(System.Net.IPAddress.Parse("192.168.1.100"), 5906); 
+            _helpqueue = new List<Client>();
+            _listener = new TcpListener(System.Net.IPAddress.Any, 0);
             _listener.Start();
+
+            //Get and Dispplay Local IP Address
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    Console.WriteLine("Server Address: " + ip.ToString());
+                }
+            }
+
+            //Display Port Number
+            Console.WriteLine("Server Port: " + ((IPEndPoint)_listener.LocalEndpoint).Port.ToString());
             
             while(true)
             {
                 var client = new Client(_listener.AcceptTcpClient());
                 _users.Add(client);
 
+                //Broadcast current connections and helpqueue to every new client connection
                 BroadcastConnection();
+                BroadcastHelpQueue();
             }
         }
 
@@ -49,6 +67,29 @@ namespace Server
                 msgPacket.WriteMessage(message);
                 user.ClientSocket.Client.Send(msgPacket.GetPacketBytes());
             }
+        }
+
+        static void BroadcastHelpQueue()
+        {
+            foreach (var user in _users)
+            {
+                foreach (var usr in _helpqueue)
+                {
+                    var requestPacket = new PacketBuilder();
+                    requestPacket.WriteOpCode(15);
+                    requestPacket.WriteMessage(usr.UID.ToString());
+                    user.ClientSocket.Client.Send(requestPacket.GetPacketBytes());
+                }
+            }
+        }
+
+        public static void AddToHelpQueue(string uid)
+        {
+            var requestingUser = _users.Where(x => x.UID.ToString() == uid).FirstOrDefault();
+            _helpqueue.Add(requestingUser);
+
+            //After adding a new user to queue, rebroadcast it to everyone
+            BroadcastHelpQueue();
         }
 
         public static void BroadcastDisconnect(string uid)
