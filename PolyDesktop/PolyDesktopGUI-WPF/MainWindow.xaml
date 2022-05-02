@@ -6,7 +6,7 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
         mc:Ignorable="d"
-        Title="PolyDesktop" Height="720" Width="1280" MinHeight="700" MinWidth="1000">
+        Title="PolyDesktop" Height="600" Width="640" MinHeight="500" MinWidth="600">
 
     <Grid Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
         <mah:MetroAnimatedSingleRowTabControl Margin="0,0,0,0" Name="tabControl" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged"/>

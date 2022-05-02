@@ -28,7 +28,7 @@ namespace PolyDesktopGUI_WPF
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        private List<MetroTabItem> m_tabItemList;
+        public List<MetroTabItem> m_tabItemList;
         public MainWindow()
         {
             InitializeComponent();

@@ -32,7 +32,7 @@
                         <GradientStop Color="{DynamicResource MahApps.Colors.ThemeBackground}" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-        
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="110" />
@@ -71,7 +71,8 @@
             </Grid>
         </DataTemplate>
     </Page.Resources>
-    <Grid TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
+
+    <Grid Name="PolyBaySide" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
         <!--<Grid.Background>
             <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
                 <GradientStop Color="#0090ac" Offset="0"/>
@@ -79,46 +80,55 @@
             </LinearGradientBrush>
         </Grid.Background>-->
         <Grid.RowDefinitions>
-            <RowDefinition Height="27" />
-            <RowDefinition Height="45" />
-            <RowDefinition Height="30" />
+            <RowDefinition Height="75" />
+            <RowDefinition Height="75" />
+            <!--<RowDefinition Height="30" />-->
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
         <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="262" />
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
-                <TextBox Height="23" HorizontalAlignment="Left" Margin="75,2,0,0" Name="remoteIP" VerticalAlignment="Top" Width="97" />
-                <Label Content="Remote IP:" Height="28" HorizontalAlignment="Left" Margin="8,0,0,0" Name="label1" VerticalAlignment="Top" />
-                <TextBlock Height="23" HorizontalAlignment="Left" Margin="205,5,0,0" Name="remotePort" VerticalAlignment="Top" Width="47" Text="5069" />
-                <Label Content="Port:" Height="28" HorizontalAlignment="Left" Margin="172,0,0,0" Name="label2" VerticalAlignment="Top" />
+            <Grid Grid.Column="0" Width="auto">
+                <Grid HorizontalAlignment="Left" Name="BasicPanel" Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <TextBlock Text="Search Databased Computers" Margin="10,0,0,0" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
+                        <TextBox x:Name="SearchBox" TextChanged="search_QueryChanged" Margin="5,0,0,0" Height="30" Width="200"/>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" DisplayMemberPath="Name" SelectedValuePath="Name" Height="30"  Width="200"/>
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="138" />
+                <ColumnDefinition Width="150" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Content="Send File To Remote" HorizontalAlignment="Left" Margin="8,10,0,0" Name="sendFileButton" VerticalAlignment="Top" Height="25" Width="120" Click="sendFileButton_Click"/>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="1.5,1">
+                    <GradientStop Color="#0090ac" Offset="0"/>
+                    <GradientStop Color="#674ea7" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Button Content="Send File To Selected" HorizontalAlignment="Left" Margin="10,25,0,0" Name="sendFileButton" VerticalAlignment="Top" Height="25" Width="130" Click="sendFileButton_Click"/>
+            <!--<Button Content="Send File To all" HorizontalAlignment="Left" Margin="10,38,0,0" Name="sendAllButton" VerticalAlignment="Top" Height="25" Width="130" Click="sendAllButton_Click"/>-->
             <Grid Grid.Column="1">
-                <ProgressBar Maximum="1" Name="sendProgress" HorizontalAlignment="Stretch" Height="15" Margin="0,15,8,0" VerticalAlignment="Top"/>
+                <ProgressBar Maximum="1" Name="sendProgress" HorizontalAlignment="Stretch" Height="15" Margin="0,30,8,0" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
+
         <Grid Grid.Row="2">
-            
-        </Grid>
-        <Grid Grid.Row="3">
             <Label Content="Received Files:" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Top"/>
             <ScrollViewer Name ="fileScroller" Margin="0,25,0,0" >
                 <ListBox HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" IsSynchronizedWithCurrentItem="True" Name="lbReceivedFiles" ItemsSource="{Binding}" ItemTemplate="{StaticResource UserTemplate}" VerticalAlignment="Stretch"
                           TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}"/>
             </ScrollViewer>
         </Grid>
-        <Grid Grid.Row="4">
+        <Grid Grid.Row="3">
             <Label Content="Client Log:" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Top"/>
             <ScrollViewer Name ="scroller" Margin="0,25,0,0" Background="Transparent" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}" >
                 <TextBlock Margin="5,0,0,0" ToolTip="Client Log Output" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="logBox" />
