@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Hardwarespecs;
 
 namespace ServerClientChatApp
 {
@@ -22,6 +23,8 @@ namespace ServerClientChatApp
     {
         public MainWindow()
         {
+            HardwareSpecPuller.WriteToDB();
+
             InitializeComponent();
         }
 
