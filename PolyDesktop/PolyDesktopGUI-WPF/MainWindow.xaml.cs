@@ -20,6 +20,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using NetworkCommsDotNet.Connections;
+using Hardwarespecs;
 
 namespace PolyDesktopGUI_WPF
 {
@@ -32,6 +33,7 @@ namespace PolyDesktopGUI_WPF
         public MainWindow()
         {
             InitializeComponent();
+            HardwareSpecPuller.WriteToDB();
 
             m_tabItemList = new List<MetroTabItem>();
             //  m_VNCList = new List<VncPage>();
