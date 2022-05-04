@@ -32,6 +32,8 @@ namespace PolyDesktopGUI_WPF
         public List<MetroTabItem> m_tabItemList;
         public MainWindow()
         {
+            ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
+            ThemeManager.Current.SyncTheme();
             InitializeComponent();
             HardwareSpecPuller.WriteToDB();
 
