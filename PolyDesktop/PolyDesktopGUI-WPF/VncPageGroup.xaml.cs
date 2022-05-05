@@ -40,7 +40,7 @@ namespace PolyDesktopGUI_WPF
         private GroupModePage _group = null;
 
         private string _connectedName = "";
-        public VncPageGroup(TabModePage tab = null, GroupModePage group = null, string targetConnect = "")
+        public VncPageGroup(TabModePage tab = null, GroupModePage group = null, Computer target = null)
         {
             InitializeCommands();
 
@@ -65,9 +65,9 @@ namespace PolyDesktopGUI_WPF
             _tab = tab;
             _group = group;
 
-            if (targetConnect != "")
+            if (target != null)
             {
-                Connect(targetConnect);
+                Connect(target);
             }
         }
         public string GetConnectedName()
@@ -114,19 +114,19 @@ namespace PolyDesktopGUI_WPF
         {
             Connect();
         }
-        private async void Connect(string target = "")
+        private async void Connect(Computer target = null)
         {
             ComputerPanel.Visibility = Visibility.Hidden;
             ComputerPanel.Focusable = false;
             ComputerNameBox.Visibility = Visibility.Visible;
 
-            if (target == "")
+            if (target == null)
             {
                 _connectedName = SearchListBox.SelectedValue.ToString();
             }
             else
             {
-                _connectedName = target;
+                _connectedName = target.Name;
             }
 
             await VncHost.ConnectAsync(_connectedName, 5901, "1234"); //TODO: PW CHANGE
@@ -134,11 +134,18 @@ namespace PolyDesktopGUI_WPF
             await Task.Delay(250);
             
             VncHost.SetScaling(true); //initialize scaling for groupMode
-            UpdateName();
+            if(target != null)
+                UpdateName(target.Nickname);
+            else
+                UpdateName();
         }
-        private void UpdateName()
+        private void UpdateName(string nickname = "")
         {
-            if (_connectedName != "")
+            if (nickname != "")
+            {
+                ComputerNameBox.Text = nickname;
+            }
+            else if (_connectedName != "")
             {
                 ComputerNameBox.Text = _connectedName;
             }

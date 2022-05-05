@@ -38,6 +38,7 @@ namespace PolyDesktopGUI_WPF
             InitializeComponent();
             ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
             ThemeManager.Current.SyncTheme();
+
             App.Current.Properties["AdvancedMode"] = false;
         }
         private void EditDeskPre_Click(object sender, RoutedEventArgs e)
@@ -160,7 +161,7 @@ namespace PolyDesktopGUI_WPF
                 }
                 else if (target.Mode == "Group")
                 {
-                    //NavFrame.Navigate(new GroupModePage(computers, target.numComputers)); //Tabs
+                    NavFrame.Navigate(new GroupModePage(target.numComputers, computers)); //computers
                 }
                 ModePickerFlyout.IsOpen = false;
                 PresetPickerFlyout.IsOpen = false;
