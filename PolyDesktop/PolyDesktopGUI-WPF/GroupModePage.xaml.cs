@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +24,10 @@ namespace PolyDesktopGUI_WPF
     {
         private List<VncPageGroup> m_VNCList;
         private int connectedComputers;
-        private GroupModePage[] pages;
+        static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\PolyDesktop\\Presets\\";
+        DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
+        string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
+        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
         public GroupModePage(int numConnection = 2)
         {
             InitializeComponent();
@@ -336,7 +341,6 @@ namespace PolyDesktopGUI_WPF
                 DisplayComputers(2);
             }
         }
-
         private void AddConnection(object sender, RoutedEventArgs e) //TODO: FIX
         {
             NavigationService.Navigate(new GroupModePage(connectedComputers + 1)); //Group
@@ -352,6 +356,42 @@ namespace PolyDesktopGUI_WPF
             {
                 m_VNCList[i].Disconnect();
             }
+        }
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            PresetFlyout.IsOpen = true;
+        }
+        private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            string bucket = PresetNameBox.Text.Replace(",", "") + ",Group," + connectedComputers + ",";
+            for (int i = 0; i < connectedComputers; i++)
+            {
+                string ID = "";
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string sql = "SELECT c_ID FROM PolyDesktop.dbo.desktop WHERE c_name = \'" + m_VNCList[i].GetConnectedName() + "\'";
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                ID = reader.GetInt32(0).ToString();
+                                reader.Close();
+                            }
+                        }
+                    }
+                }
+                bucket += ID;
+                bucket += ",";
+                bucket += m_VNCList[i].ComputerNameBox.Text.Replace(",", "");
+                bucket += ",";
+            }
+            bucket = bucket.TrimEnd(',');
+            File.WriteAllText(filename + Directory.GetFiles(localApplicationData).Length + ".txt", bucket);
+            PresetFlyout.IsOpen = false;
         }
     }
 }
