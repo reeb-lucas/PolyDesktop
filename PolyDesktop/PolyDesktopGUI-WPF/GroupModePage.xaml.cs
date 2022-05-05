@@ -23,7 +23,7 @@ namespace PolyDesktopGUI_WPF
         private List<VncPageGroup> m_VNCList;
         private int connectedComputers;
         private GroupModePage[] pages;
-        public GroupModePage(int numConnection = 1)
+        public GroupModePage(int numConnection = 2)
         {
             InitializeComponent();
             //TODO: have user choose computers to connect to, this will likely change VncPage creation in DisplayComputers
@@ -37,30 +37,11 @@ namespace PolyDesktopGUI_WPF
         private void DisplayComputers(int connectedComputers, List<VncPageGroup> vncList = null, string[] nickNames = null)
         {
             int count = m_VNCList.Count;
-            if (connectedComputers < 1)
+            if (connectedComputers < 2)
             {
-                connectedComputers = 1;
+                connectedComputers = 2;
             }
-            if (connectedComputers == 1)
-            {
-                //column Width and Height not enumerated, should fill whole grid
-                ColumnDefinition column = new ColumnDefinition();              
-                BaseGrid.ColumnDefinitions.Add(column);
-                //row Width and Height not enumerated, should fill whole grid
-                RowDefinition row = new RowDefinition();              
-                BaseGrid.RowDefinitions.Add(row);
-
-                VncPageGroup localSession = new VncPageGroup(null, this);
-                Frame VncFrame = new Frame();
-                Grid.SetColumn(VncFrame, 0);
-                Grid.SetRow(VncFrame, 0);
-                BaseGrid.Children.Add(VncFrame);
-                VncFrame.Navigate(localSession);
-                m_VNCList.Insert(count, localSession);
-
-                RemoveButton.IsEnabled = false;
-            }
-            else if (connectedComputers == 2)
+            if (connectedComputers == 2)
             {
                 //column Width and Height not enumerated, should fill whole grid
                 ColumnDefinition column = new ColumnDefinition();
@@ -352,7 +333,7 @@ namespace PolyDesktopGUI_WPF
             }
             else //If there are no connectedComputers, give user ability to add one through a VncFrame
             {
-                DisplayComputers(1);
+                DisplayComputers(2);
             }
         }
 
@@ -364,7 +345,6 @@ namespace PolyDesktopGUI_WPF
         {
             NavigationService.Navigate(new GroupModePage(connectedComputers - 1)); //Group
         }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);

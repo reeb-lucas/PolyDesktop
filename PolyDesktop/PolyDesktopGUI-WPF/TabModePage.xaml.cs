@@ -48,7 +48,6 @@ namespace PolyDesktopGUI_WPF
         string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
         private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
         int prevIndex = 2; //used for dynamic connections
-        bool initialized = false;
         public TabModePage(Computer[] source = null, int num = 0)
         {
             InitializeComponent();
