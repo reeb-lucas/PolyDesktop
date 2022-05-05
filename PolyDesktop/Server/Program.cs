@@ -92,6 +92,19 @@ namespace Server
             BroadcastHelpQueue();
         }
 
+        //WIP
+        public static void PopFromHelpQueue() 
+        {
+            //Remove first element of list to simulate popping from a queue
+            if (_helpqueue.Count > 0)
+            {
+                _helpqueue.RemoveAt(0);
+            }
+
+            //After updating queue, rebroadcast it to everyone
+            BroadcastHelpQueue();
+        }
+
         public static void BroadcastDisconnect(string uid)
         {
             var disconnectedUser = _users.Where(x => x.UID.ToString() == uid).FirstOrDefault();
