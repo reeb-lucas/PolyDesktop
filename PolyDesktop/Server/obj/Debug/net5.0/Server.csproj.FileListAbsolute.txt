@@ -1,0 +1,63 @@
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\bin\Debug\net5.0\Server.exe
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\bin\Debug\net5.0\Server.deps.json
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\bin\Debug\net5.0\Server.runtimeconfig.json
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\bin\Debug\net5.0\Server.runtimeconfig.dev.json
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\bin\Debug\net5.0\Server.dll
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\bin\Debug\net5.0\ref\Server.dll
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\bin\Debug\net5.0\Server.pdb
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\obj\Debug\net5.0\Server.csproj.AssemblyReference.cache
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\obj\Debug\net5.0\Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\obj\Debug\net5.0\Server.AssemblyInfoInputs.cache
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\obj\Debug\net5.0\Server.AssemblyInfo.cs
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\obj\Debug\net5.0\Server.csproj.CoreCompileInputs.cache
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\obj\Debug\net5.0\Server.dll
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\obj\Debug\net5.0\ref\Server.dll
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\obj\Debug\net5.0\Server.pdb
+C:\Users\nate2\source\repos\ServerClientChatApp\Server\obj\Debug\net5.0\Server.genruntimeconfig.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.exe
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.deps.json
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.runtimeconfig.json
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.runtimeconfig.dev.json
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.dll
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\ref\Server.dll
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.pdb
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.csproj.AssemblyReference.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.AssemblyInfoInputs.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.AssemblyInfo.cs
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.csproj.CoreCompileInputs.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.dll
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\ref\Server.dll
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.pdb
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.genruntimeconfig.cache
+S:\CST 316\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.exe
+S:\CST 316\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.deps.json
+S:\CST 316\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.runtimeconfig.json
+S:\CST 316\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.runtimeconfig.dev.json
+S:\CST 316\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\ref\Server.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.GeneratedMSBuildEditorConfig.editorconfig
+S:\CST 316\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.AssemblyInfoInputs.cache
+S:\CST 316\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.AssemblyInfo.cs
+S:\CST 316\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.csproj.CoreCompileInputs.cache
+S:\CST 316\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\ref\Server.dll
+S:\CST 316\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.genruntimeconfig.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.exe
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.deps.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.runtimeconfig.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.runtimeconfig.dev.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\ref\Server.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\bin\Debug\net5.0\Server.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.csproj.AssemblyReference.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.GeneratedMSBuildEditorConfig.editorconfig
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.AssemblyInfoInputs.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.AssemblyInfo.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.csproj.CoreCompileInputs.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\ref\Server.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\Server\obj\Debug\net5.0\Server.genruntimeconfig.cache

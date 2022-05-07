@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using MahApps.Metro.Controls;
+using Microsoft.Win32;
 using NetworkCommsDotNet;
 using NetworkCommsDotNet.Connections;
 using NetworkCommsDotNet.Connections.TCP;
@@ -7,6 +8,7 @@ using NetworkCommsDotNet.Tools;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -27,6 +29,7 @@ namespace PolyDesktopGUI_WPF
     /// <summary>
     /// Interaction logic for PolyBay.xaml
     /// </summary>
+    
     public partial class PolyBay : Page
     {
         #region Private Fields
@@ -64,14 +67,17 @@ namespace PolyDesktopGUI_WPF
         /// Boolean used for suppressing errors during GUI close
         /// </summary>
         static volatile bool windowClosing = false;
+        private string _remoteName = "";
+        private TabModePage _tab = null;
         #endregion
-        public PolyBay()
+        public PolyBay(TabModePage tab = null)
         {
             InitializeComponent();
             //Set the listbox data context
             lbReceivedFiles.DataContext = receivedFiles;
-
+            SearchListBox.ItemsSource = GatherAllComputers();
             //Start listening for new TCP connections
+            _tab = tab;
             StartListening();
         }
 
@@ -232,9 +238,9 @@ namespace PolyDesktopGUI_WPF
             Connection.StartListening(ConnectionType.TCP, new IPEndPoint(IPAddress.Any, 5069));
 
             //Write out some useful debugging information the log window
-            AddLineToLog("Initialised WPF file transfer example. Accepting TCP connections on:");
-            foreach (IPEndPoint listenEndPoint in Connection.ExistingLocalListenEndPoints(ConnectionType.TCP))
-                AddLineToLog(listenEndPoint.Address + ":" + listenEndPoint.Port);
+            AddLineToLog("Initialised Polybay Ready to Send or Receive Files");
+            //foreach (IPEndPoint listenEndPoint in Connection.ExistingLocalListenEndPoints(ConnectionType.TCP))
+            //    AddLineToLog(listenEndPoint.Address + ":" + listenEndPoint.Port);
         }
         private void IncomingPartialFileData(PacketHeader header, Connection connection, byte[] data)
         {
@@ -296,7 +302,7 @@ namespace PolyDesktopGUI_WPF
             {
                 //If an exception occurs we write to the log window and also create an error file
                 AddLineToLog("Exception - " + ex.ToString());
-                LogTools.LogException(ex, "IncomingPartialFileDataError");
+               // LogTools.LogException(ex, "IncomingPartialFileDataError");
             }
         }
 
@@ -367,7 +373,7 @@ namespace PolyDesktopGUI_WPF
             {
                 //If an exception occurs we write to the log window and also create an error file
                 AddLineToLog("Exception - " + ex.ToString());
-                LogTools.LogException(ex, "IncomingPartialFileDataInfo");
+               // LogTools.LogException(ex, "IncomingPartialFileDataInfo");
             }
         }
 
@@ -412,7 +418,54 @@ namespace PolyDesktopGUI_WPF
             //Write some useful information the log window
             AddLineToLog("Connection closed with " + conn.ConnectionInfo.ToString());
         }
+        public Computer[] AllComputers { get { return GatherAllComputers(); } }
+        public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
+        {
+            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
+            Computer[] container = new Computer[5];
 
+            using (var connection = new SqlConnection(connectionString))
+            {
+                string sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop";
+                if (searchTerm != null)
+                {
+                    sql = "SELECT c_ID, c_name FROM PolyDesktop.dbo.desktop WHERE c_name LIKE'%" + searchTerm + "%' OR c_ID LIKE '%" + searchTerm + "%'";
+                }
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        for (int i = 0; i < 5 && reader.Read(); i++) //only returns a max of 15 results
+                        {
+                            Computer temp = new Computer();
+                            temp.ID = reader.GetInt32(0).ToString();
+                            temp.Name = reader.GetString(1); //UUUUUUHHHHHHH, I can't get more than the first row
+                            temp.Nickname = temp.Name;
+                            container[i] = temp;
+                        }
+                        reader.Close();
+                    }
+                }
+            }
+            return container;
+        }
+        private void search_QueryChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchListBox.IsEnabled = false;
+            _remoteName = "";
+            SearchListBox.UnselectAll();
+            SearchListBox.ItemsSource = GatherAllComputers(SearchBox.Text);
+            SearchListBox.IsEnabled = true;
+        }
+        private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
+        {
+           if(SearchListBox.SelectedValue != null)
+            { 
+                _remoteName = SearchListBox.SelectedValue.ToString();
+            }
+
+        }
         /// <summary>
         /// Sends requested file to the remoteIP and port set in GUI
         /// </summary>
@@ -433,14 +486,42 @@ namespace PolyDesktopGUI_WPF
 
                 //Parse the necessary remote information
                 string filename = openDialog.FileName;
-                string remoteIP = this.remoteIP.Text;        //TODO: change logic here to loop through a list of the connected IPs given by the VNC
-                string remotePort = this.remotePort.Text;
-
-                sendFile(filename, remoteIP, remotePort);
-                
+                string remotePort = "5069";
+                IPAddress[] addre = Dns.GetHostAddresses(_remoteName);
+                foreach (IPAddress address in addre)                        //TODO: change logic here to loop through IPs more effeciently
+                {
+                    sendFile(filename, address.ToString(), remotePort);
+                }
             }
         }
-        private void sendFile(string filename, string remoteIP, string remotePort) 
+       
+        private void sendAllButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Create an OpenFileDialog so that we can request the file to send
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.Multiselect = false;
+
+            //If a file was selected
+            if (openDialog.ShowDialog() == true)
+            {
+                //Disable the send and compression buttons
+                sendAllButton.IsEnabled = false;
+                //Parse the necessary remote information
+                string filename = openDialog.FileName;
+                string remotePort = "5069";
+                foreach (VncPage ctab in _tab.m_VNCList)
+                { 
+                    IPAddress[] addre = Dns.GetHostAddresses(ctab.GetConnectedName());
+                    //IPAddress[] addre = Dns.GetHostAddresses(_remoteName);
+                    foreach (IPAddress address in addre)                        //TODO: change logic here to loop through IPs more effeciently
+                    {
+                        sendFile(filename, address.ToString(), remotePort);
+                    }
+                }
+            }
+        }
+
+        private void sendFile(string filename, string remoteIP, string remotePort)
         {
             //Set the send progress bar to 0
             UpdateSendProgress(0);
@@ -524,7 +605,7 @@ namespace PolyDesktopGUI_WPF
                     if (!windowClosing && ex.GetType() != typeof(InvalidDataException))
                     {
                         AddLineToLog(ex.Message.ToString());
-                        LogTools.LogException(ex, "SendFileError");
+                        //LogTools.LogException(ex, "SendFileError");
                     }
                 }
 
@@ -539,6 +620,7 @@ namespace PolyDesktopGUI_WPF
                 }));
             });
         }
+
         #endregion
     }
 }

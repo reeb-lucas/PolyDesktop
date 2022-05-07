@@ -1,0 +1,91 @@
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.exe
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.deps.json
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.runtimeconfig.json
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.runtimeconfig.dev.json
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.dll
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\bin\Debug\net5.0-windows\ref\ChatClient.dll
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.pdb
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.AssemblyReference.cache
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\MVVM\View\MainWindow.g.cs
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient_MarkupCompile.cache
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient_MarkupCompile.lref
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\MVVM\View\MainWindow.baml
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.g.resources
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.AssemblyInfoInputs.cache
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.AssemblyInfo.cs
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.CoreCompileInputs.cache
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.dll
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ref\ChatClient.dll
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.pdb
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.genruntimeconfig.cache
+C:\Users\nate2\source\repos\ServerClientChatApp\ServerClientChatApp\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.exe
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.deps.json
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.runtimeconfig.json
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.runtimeconfig.dev.json
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.dll
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ref\ChatClient.dll
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.pdb
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.AssemblyReference.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\MVVM\View\MainWindow.g.cs
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient_MarkupCompile.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient_MarkupCompile.lref
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\MVVM\View\MainWindow.baml
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.g.resources
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.AssemblyInfoInputs.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.AssemblyInfo.cs
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.CoreCompileInputs.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.dll
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ref\ChatClient.dll
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.pdb
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.genruntimeconfig.cache
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.exe
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.deps.json
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.runtimeconfig.json
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.runtimeconfig.dev.json
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.dll
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ref\ChatClient.dll
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\MVVM\View\MainWindow.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\App.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient_MarkupCompile.cache
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient_MarkupCompile.lref
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\MVVM\View\MainWindow.baml
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.g.resources
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.GeneratedMSBuildEditorConfig.editorconfig
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.AssemblyInfoInputs.cache
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.AssemblyInfo.cs
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.CoreCompileInputs.cache
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.dll
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ref\ChatClient.dll
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.pdb
+S:\CST 316\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.genruntimeconfig.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.exe
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.deps.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.runtimeconfig.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.runtimeconfig.dev.json
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ref\ChatClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\ChatClient.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.AssemblyReference.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\MVVM\View\MainWindow.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\App.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient_MarkupCompile.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient_MarkupCompile.lref
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\MVVM\View\MainWindow.baml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.g.resources
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.GeneratedMSBuildEditorConfig.editorconfig
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.AssemblyInfoInputs.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.AssemblyInfo.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.CoreCompileInputs.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ref\ChatClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.pdb
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.genruntimeconfig.cache
