@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,45 +24,36 @@ namespace PolyDesktopGUI_WPF
     {
         private List<VncPageGroup> m_VNCList;
         private int connectedComputers;
-        private GroupModePage[] pages;
-        public GroupModePage(int numConnection = 1)
+        static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\PolyDesktop\\Presets\\";
+        DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
+        string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
+        private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
+        public GroupModePage(int numConnection = 2, Computer[] source = null)
         {
             InitializeComponent();
-            //TODO: have user choose computers to connect to, this will likely change VncPage creation in DisplayComputers
-            //temp hard coding for testing
+
             connectedComputers = numConnection;
             m_VNCList = new List<VncPageGroup>();
 
-            DisplayComputers(connectedComputers);
+            if(source != null)
+            {
+                DisplayComputers(connectedComputers, source);
+            }
+            else
+            {
+                DisplayComputers(connectedComputers);
+            }
         }
 
-        private void DisplayComputers(int connectedComputers, List<VncPageGroup> vncList = null, string[] nickNames = null)
+        private void DisplayComputers(int connectedComputers, Computer[] source = null)
         {
             int count = m_VNCList.Count;
-            if (connectedComputers < 1)
+            int i = 0;
+            if (connectedComputers < 2)
             {
-                connectedComputers = 1;
+                connectedComputers = 2;
             }
-            if (connectedComputers == 1)
-            {
-                //column Width and Height not enumerated, should fill whole grid
-                ColumnDefinition column = new ColumnDefinition();              
-                BaseGrid.ColumnDefinitions.Add(column);
-                //row Width and Height not enumerated, should fill whole grid
-                RowDefinition row = new RowDefinition();              
-                BaseGrid.RowDefinitions.Add(row);
-
-                VncPageGroup localSession = new VncPageGroup(null, this);
-                Frame VncFrame = new Frame();
-                Grid.SetColumn(VncFrame, 0);
-                Grid.SetRow(VncFrame, 0);
-                BaseGrid.Children.Add(VncFrame);
-                VncFrame.Navigate(localSession);
-                m_VNCList.Insert(count, localSession);
-
-                RemoveButton.IsEnabled = false;
-            }
-            else if (connectedComputers == 2)
+            if (connectedComputers == 2)
             {
                 //column Width and Height not enumerated, should fill whole grid
                 ColumnDefinition column = new ColumnDefinition();
@@ -72,7 +65,12 @@ namespace PolyDesktopGUI_WPF
                 BaseGrid.RowDefinitions.Add(row);
 
                 //first connection
-                VncPageGroup localSession1 = new VncPageGroup(null, this);
+                VncPageGroup localSession1 = null;
+                if (source == null)
+                    localSession1 = new VncPageGroup(null, this);
+                else
+                    localSession1 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame1 = new Frame();
                 Grid.SetColumn(VncFrame1, 0);
                 Grid.SetRow(VncFrame1, 0);
@@ -83,7 +81,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession1);
 
                 //second connection
-                VncPageGroup localSession2 = new VncPageGroup(null, this);
+                VncPageGroup localSession2 = null;
+                if (source == null)
+                    localSession2 = new VncPageGroup(null, this);
+                else
+                    localSession2 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame2 = new Frame();
                 Grid.SetColumn(VncFrame2, 1);
                 Grid.SetRow(VncFrame2, 0);
@@ -107,7 +110,12 @@ namespace PolyDesktopGUI_WPF
                 BaseGrid.RowDefinitions.Add(row);
 
                 //first connection
-                VncPageGroup localSession1 = new VncPageGroup(null, this);
+                VncPageGroup localSession1 = null;
+                if (source == null)
+                    localSession1 = new VncPageGroup(null, this);
+                else
+                    localSession1 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame1 = new Frame();
                 Grid.SetColumn(VncFrame1, 0);
                 Grid.SetRow(VncFrame1, 0);
@@ -118,7 +126,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession1);
 
                 //second connection
-                VncPageGroup localSession2 = new VncPageGroup(null, this);
+                VncPageGroup localSession2 = null;
+                if (source == null)
+                    localSession2 = new VncPageGroup(null, this);
+                else
+                    localSession2 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame2 = new Frame();
                 Grid.SetColumn(VncFrame2, 1);
                 Grid.SetRow(VncFrame2, 0);
@@ -129,7 +142,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession2);
 
                 //third connection
-                VncPageGroup localSession3 = new VncPageGroup(null, this);
+                VncPageGroup localSession3 = null;
+                if (source == null)
+                    localSession3 = new VncPageGroup(null, this);
+                else
+                    localSession3 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame3 = new Frame();
                 Grid.SetColumn(VncFrame3, 2);
                 Grid.SetRow(VncFrame3, 0);
@@ -154,7 +172,12 @@ namespace PolyDesktopGUI_WPF
                 BaseGrid.RowDefinitions.Add(row2);
 
                 //first connection
-                VncPageGroup localSession1 = new VncPageGroup(null, this);
+                VncPageGroup localSession1 = null;
+                if (source == null)
+                    localSession1 = new VncPageGroup(null, this);
+                else
+                    localSession1 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame1 = new Frame();
                 Grid.SetColumn(VncFrame1, 0);
                 Grid.SetRow(VncFrame1, 0);
@@ -165,7 +188,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession1);
 
                 //second connection
-                VncPageGroup localSession2 = new VncPageGroup(null, this);
+                VncPageGroup localSession2 = null;
+                if (source == null)
+                    localSession2 = new VncPageGroup(null, this);
+                else
+                    localSession2 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame2 = new Frame();
                 Grid.SetColumn(VncFrame2, 1);
                 Grid.SetRow(VncFrame2, 0);
@@ -176,7 +204,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession2);
 
                 //third connection
-                VncPageGroup localSession3 = new VncPageGroup(null, this);
+                VncPageGroup localSession3 = null;
+                if (source == null)
+                    localSession3 = new VncPageGroup(null, this);
+                else
+                    localSession3 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame3 = new Frame();
                 Grid.SetColumn(VncFrame3, 0);
                 Grid.SetRow(VncFrame3, 1);
@@ -187,7 +220,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession3);
 
                 //fourth connection
-                VncPageGroup localSession4 = new VncPageGroup(null, this);
+                VncPageGroup localSession4 = null;
+                if (source == null)
+                    localSession4 = new VncPageGroup(null, this);
+                else
+                    localSession4 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame4 = new Frame();
                 Grid.SetColumn(VncFrame4, 1);
                 Grid.SetRow(VncFrame4, 1);
@@ -213,7 +251,12 @@ namespace PolyDesktopGUI_WPF
                 BaseGrid.RowDefinitions.Add(row2);
 
                 //first connection
-                VncPageGroup localSession1 = new VncPageGroup(null, this);
+                VncPageGroup localSession1 = null;
+                if (source == null)
+                    localSession1 = new VncPageGroup(null, this);
+                else
+                    localSession1 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame1 = new Frame();
                 Grid.SetColumn(VncFrame1, 0);
                 Grid.SetRow(VncFrame1, 0);
@@ -224,7 +267,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession1);
 
                 //second connection
-                VncPageGroup localSession2 = new VncPageGroup(null, this);
+                VncPageGroup localSession2 = null;
+                if (source == null)
+                    localSession2 = new VncPageGroup(null, this);
+                else
+                    localSession2 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame2 = new Frame();
                 Grid.SetColumn(VncFrame2, 1);
                 Grid.SetRow(VncFrame2, 0);
@@ -235,7 +283,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession2);
 
                 //third connection
-                VncPageGroup localSession3 = new VncPageGroup(null, this);
+                VncPageGroup localSession3 = null;
+                if (source == null)
+                    localSession3 = new VncPageGroup(null, this);
+                else
+                    localSession3 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame3 = new Frame();
                 Grid.SetColumn(VncFrame3, 2);
                 Grid.SetRow(VncFrame3, 0);
@@ -246,7 +299,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession3);
 
                 //fourth connection
-                VncPageGroup localSession4 = new VncPageGroup(null, this);
+                VncPageGroup localSession4 = null;
+                if (source == null)
+                    localSession4 = new VncPageGroup(null, this);
+                else
+                    localSession4 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame4 = new Frame();
                 Grid.SetColumn(VncFrame4, 0);
                 Grid.SetRow(VncFrame4, 1);
@@ -257,7 +315,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession4);
 
                 //fifth connection
-                VncPageGroup localSession5 = new VncPageGroup(null, this);
+                VncPageGroup localSession5 = null;
+                if (source == null)
+                    localSession5 = new VncPageGroup(null, this);
+                else
+                    localSession5 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame5 = new Frame();
                 Grid.SetColumn(VncFrame5, 1);
                 Grid.SetRow(VncFrame5, 1);
@@ -283,7 +346,12 @@ namespace PolyDesktopGUI_WPF
                 BaseGrid.RowDefinitions.Add(row2);
 
                 //first connection
-                VncPageGroup localSession1 = new VncPageGroup(null, this);
+                VncPageGroup localSession1 = null;
+                if (source == null)
+                    localSession1 = new VncPageGroup(null, this);
+                else
+                    localSession1 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame1 = new Frame();
                 Grid.SetColumn(VncFrame1, 0);
                 Grid.SetRow(VncFrame1, 0);
@@ -294,7 +362,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession1);
 
                 //second connection
-                VncPageGroup localSession2 = new VncPageGroup(null, this);
+                VncPageGroup localSession2 = null;
+                if (source == null)
+                    localSession2 = new VncPageGroup(null, this);
+                else
+                    localSession2 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame2 = new Frame();
                 Grid.SetColumn(VncFrame2, 1);
                 Grid.SetRow(VncFrame2, 0);
@@ -305,7 +378,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession2);
 
                 //third connection
-                VncPageGroup localSession3 = new VncPageGroup(null, this);
+                VncPageGroup localSession3 = null;
+                if (source == null)
+                    localSession3 = new VncPageGroup(null, this);
+                else
+                    localSession3 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame3 = new Frame();
                 Grid.SetColumn(VncFrame3, 2);
                 Grid.SetRow(VncFrame3, 0);
@@ -316,7 +394,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession3);
 
                 //fourth connection
-                VncPageGroup localSession4 = new VncPageGroup(null, this);
+                VncPageGroup localSession4 = null;
+                if (source == null)
+                    localSession4 = new VncPageGroup(null, this);
+                else
+                    localSession4 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame4 = new Frame();
                 Grid.SetColumn(VncFrame4, 0);
                 Grid.SetRow(VncFrame4, 1);
@@ -327,7 +410,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession4);
 
                 //fifth connection
-                VncPageGroup localSession5 = new VncPageGroup(null, this);
+                VncPageGroup localSession5 = null;
+                if (source == null)
+                    localSession5 = new VncPageGroup(null, this);
+                else
+                    localSession5 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame5 = new Frame();
                 Grid.SetColumn(VncFrame5, 1);
                 Grid.SetRow(VncFrame5, 1);
@@ -338,7 +426,12 @@ namespace PolyDesktopGUI_WPF
                 m_VNCList.Insert(count, localSession5);
 
                 //sixth connection
-                VncPageGroup localSession6 = new VncPageGroup(null, this);
+                VncPageGroup localSession6 = null;
+                if (source == null)
+                    localSession6 = new VncPageGroup(null, this);
+                else
+                    localSession6 = new VncPageGroup(null, this, source[i]);
+                i++;
                 Frame VncFrame6 = new Frame();
                 Grid.SetColumn(VncFrame6, 2);
                 Grid.SetRow(VncFrame6, 1);
@@ -350,12 +443,11 @@ namespace PolyDesktopGUI_WPF
 
                 AddButton.IsEnabled = false;
             }
-            else //If there are no connectedComputers, give user ability to add one through a VncFrame
+            else //If there is an abnormal # of connections, default to 2
             {
-                DisplayComputers(1);
+                DisplayComputers(2);
             }
         }
-
         private void AddConnection(object sender, RoutedEventArgs e) //TODO: FIX
         {
             NavigationService.Navigate(new GroupModePage(connectedComputers + 1)); //Group
@@ -364,7 +456,6 @@ namespace PolyDesktopGUI_WPF
         {
             NavigationService.Navigate(new GroupModePage(connectedComputers - 1)); //Group
         }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
@@ -372,6 +463,42 @@ namespace PolyDesktopGUI_WPF
             {
                 m_VNCList[i].Disconnect();
             }
+        }
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            PresetFlyout.IsOpen = true;
+        }
+        private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            string bucket = PresetNameBox.Text.Replace(",", "") + ",Group," + connectedComputers + ",";
+            for (int i = 0; i < connectedComputers; i++)
+            {
+                string ID = "";
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string sql = "SELECT c_ID FROM PolyDesktop.dbo.desktop WHERE c_name = \'" + m_VNCList[i].GetConnectedName() + "\'";
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                ID = reader.GetInt32(0).ToString();
+                                reader.Close();
+                            }
+                        }
+                    }
+                }
+                bucket += ID;
+                bucket += ",";
+                bucket += m_VNCList[i].ComputerNameBox.Text.Replace(",", "");
+                bucket += ",";
+            }
+            bucket = bucket.TrimEnd(',');
+            File.WriteAllText(filename + Directory.GetFiles(localApplicationData).Length + ".txt", bucket);
+            PresetFlyout.IsOpen = false;
         }
     }
 }

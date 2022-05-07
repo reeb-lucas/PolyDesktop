@@ -40,7 +40,7 @@ namespace PolyDesktopGUI_WPF
         private GroupModePage _group = null;
 
         private string _connectedName = "";
-        public VncPageGroup(TabModePage tab = null, GroupModePage group = null, string targetConnect = "")
+        public VncPageGroup(TabModePage tab = null, GroupModePage group = null, Computer target = null)
         {
             InitializeCommands();
 
@@ -65,9 +65,9 @@ namespace PolyDesktopGUI_WPF
             _tab = tab;
             _group = group;
 
-            if (targetConnect != "")
+            if (target != null)
             {
-                Connect(targetConnect);
+                Connect(target);
             }
         }
         public string GetConnectedName()
@@ -114,36 +114,43 @@ namespace PolyDesktopGUI_WPF
         {
             Connect();
         }
-        private async void Connect(string target = "")
+        private async void Connect(Computer target = null)
         {
             ComputerPanel.Visibility = Visibility.Hidden;
+            ComputerPanel.Focusable = false;
+            ComputerNameBox.Visibility = Visibility.Visible;
 
-            if (target == "")
+            if (target == null)
             {
                 _connectedName = SearchListBox.SelectedValue.ToString();
             }
             else
             {
-                _connectedName = target;
+                _connectedName = target.Name;
             }
 
             await VncHost.ConnectAsync(_connectedName, 5901, "1234"); //TODO: PW CHANGE
 
             await Task.Delay(250);
-            if (_group == null)
-            {
-                VncHost.SetScaling(); //initialize scaling
-            }
+            
+            VncHost.SetScaling(true); //initialize scaling for groupMode
+            if(target != null)
+                UpdateName(target.Nickname);
             else
+                UpdateName();
+        }
+        private void UpdateName(string nickname = "")
+        {
+            if (nickname != "")
             {
-                VncHost.SetScaling(true); //initialize scaling for groupMode
+                ComputerNameBox.Text = nickname;
             }
-            if (_tab != null)//check to see if we are in a tab mode page
+            else if (_connectedName != "")
             {
-                _tab.UpdateNames();
+                ComputerNameBox.Text = _connectedName;
             }
         }
-        private void AdvancedSwitch_Toggled(object sender, RoutedEventArgs e)
+            private void AdvancedSwitch_Toggled(object sender, RoutedEventArgs e)
         {
             if (AdvancedSwitch.IsOn)
             {
@@ -364,6 +371,14 @@ namespace PolyDesktopGUI_WPF
             {
                 propertyChangedEventHandler(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+        private void Nickname_Changed(object sender, TextChangedEventArgs e)
+        {
+                ComputerNameBox.Text = ComputerNameBox.Text.Replace(",", "");
+        }
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            ComputerNameBox.Text = _connectedName;
         }
     }
 }
