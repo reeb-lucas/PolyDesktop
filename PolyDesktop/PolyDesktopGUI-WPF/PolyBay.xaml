@@ -84,8 +84,8 @@
             </LinearGradientBrush>
         </Grid.Background>-->
             <Grid.RowDefinitions>
-                <RowDefinition Height="75" />
-                <RowDefinition Height="75" />
+                <RowDefinition Height="300" />
+                <RowDefinition Height="80" />
                 <!--<RowDefinition Height="30" />-->
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -98,11 +98,17 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
-                            <TextBlock Text="Search Databased Computers" Margin="10,0,0,0" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
-                            <TextBox x:Name="SearchBox" TextChanged="search_QueryChanged" Margin="5,0,0,0" Height="30" Width="200"/>
-                        </Grid>
+                            <StackPanel>
+                                <TextBlock Text="Search Connected Computers" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
+                                <TextBox x:Name="SearchBox" TextChanged="search_QueryChanged" Margin="0,0,0,0" Height="30" Width="200"/>
+                                <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" DisplayMemberPath="Name" SelectedValuePath="Name" Height="auto"  Width="200"/>
+                            </StackPanel>
+                           </Grid>
                         <Grid Grid.Column="2">
-                            <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" DisplayMemberPath="Name" SelectedValuePath="Name" Height="75"  Width="200"/>
+                            <StackPanel>
+                                <TextBlock Text="Selected Computers" HorizontalAlignment="Center" Margin="0,0,0,0" Height="auto" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
+                                <ListView x:Name="SelectedListBox" DisplayMemberPath="Name" SelectedValuePath="Name" Height="75"  Width="200"/>
+                            </StackPanel>
                         </Grid>
                     </Grid>
                 </Grid>
