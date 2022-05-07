@@ -67,7 +67,7 @@ namespace PolyDesktopGUI_WPF
 
             Frame PolyBFrame = new Frame();
             tabPolyBay.Content = PolyBFrame;
-            PolyBay polyBay = new PolyBay(this);
+            PolyBay polyBay = new PolyBay();
             PolyBFrame.Navigate(polyBay);
             m_tabItemList.Add(tabPolyBay);
 
@@ -148,8 +148,7 @@ namespace PolyDesktopGUI_WPF
                     tabControl.DataContext = m_tabItemList;
                     tabControl.SelectedItem = newTab;
                 }
-                
-                else if (tabControl.SelectedIndex>=2 && (m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName() != "") && m_VNCList.Count > 1) //dynamic connection
+                else if (tabControl.SelectedIndex >= 2 && (m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName() != "") && m_VNCList.Count > 1) //dynamic connection
                 {
                     m_VNCList[tabControl.SelectedIndex - 2].Reconnect();
                     if (prevIndex == -1)
