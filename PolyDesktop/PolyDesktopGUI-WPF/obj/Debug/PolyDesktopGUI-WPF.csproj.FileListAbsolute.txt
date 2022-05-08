@@ -346,3 +346,8 @@ S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupMod
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.g.cs
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.baml
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.baml
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GroupModePage.g.cs
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyBay.g.cs
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\SettingsPage.g.cs
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\TabModePage.g.cs
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.g.cs

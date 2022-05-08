@@ -16,7 +16,7 @@ namespace ServerChat.MVVM.ViewModel
         public ObservableCollection<UserModel> Users { get; set; }
         public ObservableCollection<UserModel> HelpQueue { get; set; }
         public ObservableCollection<string> Messages { get; set; }
-        public RelayCommand PopHelpQueueCommand { get; set; } //TESTING
+        public RelayCommand PopHelpQueueCommand { get; set; }
         public RelayCommand ConnectToServerCommand { get; set; }
         public RelayCommand RequestHelpCommand { get; set; }
         public RelayCommand DisconnectFromServerCommand { get; set; }
@@ -54,10 +54,12 @@ namespace ServerChat.MVVM.ViewModel
             #endregion
         }
 
-        //TESTING
         private void PopHelpQueue()
         {
-            Application.Current.Dispatcher.Invoke(() => HelpQueue.RemoveAt(0));
+            if(HelpQueue.Count > 0)
+            {
+                Application.Current.Dispatcher.Invoke(() => HelpQueue.RemoveAt(0));
+            }
         }
 
         private void RemoveUser()

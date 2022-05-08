@@ -36,6 +36,7 @@ namespace ChatClient.MVVM.ViewModel
             _server.HelpRequestEvent += UserHelpRequest;
             _server.MsgReceivedEvent += MessageReceived;
             _server.UserDisconnectedEvent += RemoveUser;
+            _server.PopHelpQueueEvent += PopHelpQueue;
 
             //Initialize Relay Commands
             #region
@@ -49,6 +50,13 @@ namespace ChatClient.MVVM.ViewModel
             #endregion
         }
 
+        private void PopHelpQueue()
+        {
+            if (HelpQueue.Count > 0)
+            {
+                Application.Current.Dispatcher.Invoke(() => HelpQueue.RemoveAt(0));
+            }
+        }
         private void RemoveUser()
         {
             var uid = _server.PacketReader.ReadMessage();

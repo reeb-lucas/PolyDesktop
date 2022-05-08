@@ -92,13 +92,19 @@ namespace Server
             BroadcastHelpQueue();
         }
 
-        //WIP
-        public static void PopFromHelpQueue() 
+        public static void PopHelpQueue()
         {
-            //Remove first element of list to simulate popping from a queue
-            if (_helpqueue.Count > 0)
+            //Remove the first element of the collection to simulate queue functionality
+            if(_helpqueue.Count > 0)
             {
                 _helpqueue.RemoveAt(0);
+
+                foreach (var user in _users)
+                {
+                    var popPacket = new PacketBuilder();
+                    popPacket.WriteOpCode(20);
+                    user.ClientSocket.Client.Send(popPacket.GetPacketBytes());
+                }
             }
 
             //After updating queue, rebroadcast it to everyone

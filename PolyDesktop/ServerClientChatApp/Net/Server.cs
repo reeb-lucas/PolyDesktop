@@ -18,6 +18,7 @@ namespace ChatClient.Net
         public event Action HelpRequestEvent;
         public event Action MsgReceivedEvent;
         public event Action UserDisconnectedEvent;
+        public event Action PopHelpQueueEvent;
 
         public Server()
         {
@@ -97,6 +98,9 @@ namespace ChatClient.Net
                                 break;
                             case 15:
                                 HelpRequestEvent?.Invoke();
+                                break;
+                            case 20:
+                                PopHelpQueueEvent?.Invoke();
                                 break;
                             default:
                                 Console.WriteLine("Error: Wrong opcode received");
