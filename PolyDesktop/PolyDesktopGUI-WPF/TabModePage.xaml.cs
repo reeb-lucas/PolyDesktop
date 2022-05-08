@@ -43,6 +43,7 @@ namespace PolyDesktopGUI_WPF
     {
         private List<MetroTabItem> m_tabItemList;
         public List<VncPage> m_VNCList;
+        PolyBay m_polyBay;
         static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\PolyDesktop\\Presets\\";
         DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
         string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
@@ -67,8 +68,8 @@ namespace PolyDesktopGUI_WPF
 
             Frame PolyBFrame = new Frame();
             tabPolyBay.Content = PolyBFrame;
-            PolyBay polyBay = new PolyBay();
-            PolyBFrame.Navigate(polyBay);
+            m_polyBay = new PolyBay(this);
+            PolyBFrame.Navigate(m_polyBay);
             m_tabItemList.Add(tabPolyBay);
 
             //this tab acts as button to add new tabs
@@ -147,6 +148,10 @@ namespace PolyDesktopGUI_WPF
                     MetroTabItem newTab = this.AddTabItem();
                     tabControl.DataContext = m_tabItemList;
                     tabControl.SelectedItem = newTab;
+                }
+                else if (tab.Header.Equals("PolyBay")) //PolyBay
+                {
+                    m_polyBay.UpdateConnectedList();
                 }
                 else if (tabControl.SelectedIndex >= 2 && (m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName() != "") && m_VNCList.Count > 1) //dynamic connection
                 {

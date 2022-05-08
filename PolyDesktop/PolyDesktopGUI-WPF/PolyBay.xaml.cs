@@ -67,15 +67,17 @@ namespace PolyDesktopGUI_WPF
         /// Boolean used for suppressing errors during GUI close
         /// </summary>
         static volatile bool windowClosing = false;
-        private string _remoteName = "";
+        private List<string> _selectedComputers;
+        //private string _remoteName = "";
         private TabModePage _tab = null;
         #endregion
         public PolyBay(TabModePage tab = null)
         {
             InitializeComponent();
             //Set the listbox data context
+            _selectedComputers = new List<string>();
             lbReceivedFiles.DataContext = receivedFiles;
-            SearchListBox.ItemsSource = GatherAllComputers();
+            SearchListBox.ItemsSource = GatherConnectedComputers();
             //Start listening for new TCP connections
             _tab = tab;
             StartListening();
@@ -418,10 +420,9 @@ namespace PolyDesktopGUI_WPF
             //Write some useful information the log window
             AddLineToLog("Connection closed with " + conn.ConnectionInfo.ToString());
         }
-        public Computer[] AllComputers { get { return GatherAllComputers(); } }
-        public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
+        public string[] GatherConnectedComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
         {
-            string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
+            /*string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
             Computer[] container = new Computer[5];
 
             using (var connection = new SqlConnection(connectionString))
@@ -447,30 +448,60 @@ namespace PolyDesktopGUI_WPF
                         reader.Close();
                     }
                 }
+            }*/
+            List<string> connectedComputers = new List<string>();
+
+            if (_tab != null && _tab.m_VNCList != null)
+            { 
+                for (int i = 0; i < _tab.m_VNCList.Count; i++)
+                {
+                    connectedComputers.Add(_tab.m_VNCList[i].GetConnectedName());
+                }
             }
+
+            string[] container = new string[connectedComputers.Count]; //convert List<> to array of strings to be used as Item source
+            for (int i = 0; i < container.Length; i++)
+            {
+                container[i] = connectedComputers[i];
+            }
+
             return container;
+        }
+        public void UpdateConnectedList()
+        {
+            SearchListBox.ItemsSource = GatherConnectedComputers();
         }
         private void search_QueryChanged(object sender, TextChangedEventArgs e)
         {
             SearchListBox.IsEnabled = false;
-            _remoteName = "";
+            //_remoteName = "";
             SearchListBox.UnselectAll();
-            SearchListBox.ItemsSource = GatherAllComputers(SearchBox.Text);
+            SearchListBox.ItemsSource = GatherConnectedComputers(SearchBox.Text);
             SearchListBox.IsEnabled = true;
         }
         private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
         {
-           if(SearchListBox.SelectedValue != null)
+           if(SearchListBox.SelectedValue != null && SearchListBox.SelectedItem != null)
             { 
-                _remoteName = SearchListBox.SelectedValue.ToString();
+                //_remoteName = SearchListBox.SelectedValue.ToString();
+                _selectedComputers.Add(SearchListBox.SelectedValue.ToString());
+                SelectedListBox.ItemsSource = UpdateSelection();
             }
-
         }
-        /// <summary>
-        /// Sends requested file to the remoteIP and port set in GUI
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        private string[] UpdateSelection() //convert List<> to array of strings to be used as Item source
+        {
+            string[] computers = new string[_selectedComputers.Count];
+            for(int i = 0; i < computers.Length; i++)
+            {
+                computers[i] = _selectedComputers[i];
+            }
+            return computers;
+        }
+            /// <summary>
+            /// Sends requested file to the remoteIP and port set in GUI
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
         private void sendFileButton_Click(object sender, RoutedEventArgs e)
         {
             //Create an OpenFileDialog so that we can request the file to send
@@ -478,19 +509,22 @@ namespace PolyDesktopGUI_WPF
             openDialog.Multiselect = false;
 
             //If a file was selected
-            if (openDialog.ShowDialog() == true)
+            for (int i = 0; i < _selectedComputers.Count; i++)
             {
-                //Disable the send and compression buttons
-                sendFileButton.IsEnabled = false;
-                //UseCompression.IsEnabled = false;
-
-                //Parse the necessary remote information
-                string filename = openDialog.FileName;
-                string remotePort = "5069";
-                IPAddress[] addre = Dns.GetHostAddresses(_remoteName);
-                foreach (IPAddress address in addre)                        //TODO: change logic here to loop through IPs more effeciently
+                if (openDialog.ShowDialog() == true)
                 {
-                    sendFile(filename, address.ToString(), remotePort);
+                    //Disable the send and compression buttons
+                    sendFileButton.IsEnabled = false;
+                    //UseCompression.IsEnabled = false;
+
+                    //Parse the necessary remote information
+                    string filename = openDialog.FileName;
+                    string remotePort = "5069";
+                    IPAddress[] addre = Dns.GetHostAddresses(_selectedComputers[i]);
+                    foreach (IPAddress address in addre)
+                    {
+                        sendFile(filename, address.ToString(), remotePort);
+                    }
                 }
             }
         }
