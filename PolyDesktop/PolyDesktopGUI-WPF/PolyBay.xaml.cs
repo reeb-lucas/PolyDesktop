@@ -462,10 +462,10 @@ namespace PolyDesktopGUI_WPF
                     }
                 }
             }*/
-List<string> connectedComputers = new List<string>();
+            List<string> connectedComputers = new List<string>();
 
             if (_tab != null && _tab.m_VNCList != null)
-            { 
+            {
                 for (int i = 0; i < _tab.m_VNCList.Count; i++)
                 {
                     connectedComputers.Add(_tab.m_VNCList[i].GetConnectedName());
