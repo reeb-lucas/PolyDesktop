@@ -94,3 +94,5 @@ S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktop-Stud
 S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.exe
 S:\CST 316\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktopGUI-WPF.pdb
 S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\PolyDesktop-Student.csproj.AssemblyReference.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MVVM\View\ChatMain.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
