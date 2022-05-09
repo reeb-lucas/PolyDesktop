@@ -1,5 +1,4 @@
 ﻿/**************************************************************
- * Copyright (c) 2022
  * Author: Tyler Lucas
  * Filename: MainWindow.xaml.cs
  * Date Created:  2/8/2022
@@ -33,7 +32,20 @@ using ControlzEx.Theming;
 using MahApps.Metro.Controls;
 using NetworkCommsDotNet.Connections;
 using OmotVnc.View.ViewModel;
-
+/**********************************************************
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * NEtworkCommsDotNet, protobuf-net
+**********************************************************/
 namespace PolyDesktopGUI_WPF
 {
     /// <summary>
@@ -43,6 +55,7 @@ namespace PolyDesktopGUI_WPF
     {
         private List<MetroTabItem> m_tabItemList;
         public List<VncPage> m_VNCList;
+        PolyBay m_polyBay;
         static string localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\PolyDesktop\\Presets\\";
         DirectoryInfo di = Directory.CreateDirectory(localApplicationData); //Create directory if not exist
         string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
@@ -67,8 +80,8 @@ namespace PolyDesktopGUI_WPF
 
             Frame PolyBFrame = new Frame();
             tabPolyBay.Content = PolyBFrame;
-            PolyBay polyBay = new PolyBay();
-            PolyBFrame.Navigate(polyBay);
+            m_polyBay = new PolyBay(this);
+            PolyBFrame.Navigate(m_polyBay);
             m_tabItemList.Add(tabPolyBay);
 
             //this tab acts as button to add new tabs
@@ -147,6 +160,10 @@ namespace PolyDesktopGUI_WPF
                     MetroTabItem newTab = this.AddTabItem();
                     tabControl.DataContext = m_tabItemList;
                     tabControl.SelectedItem = newTab;
+                }
+                else if (tab.Header.Equals("PolyBay")) //PolyBay
+                {
+                    m_polyBay.UpdateConnectedList();
                 }
                 else if (tabControl.SelectedIndex >= 2 && (m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName() != "") && m_VNCList.Count > 1) //dynamic connection
                 {

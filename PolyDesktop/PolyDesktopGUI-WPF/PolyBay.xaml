@@ -101,13 +101,13 @@
                             <StackPanel>
                                 <TextBlock Text="Search Connected Computers" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
                                 <TextBox x:Name="SearchBox" TextChanged="search_QueryChanged" Margin="0,0,0,0" Height="30" Width="200"/>
-                                <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" DisplayMemberPath="Name" SelectedValuePath="Name" Height="auto"  Width="200"/>
+                                <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" Height="250" Width="200"/>
                             </StackPanel>
                            </Grid>
                         <Grid Grid.Column="2">
                             <StackPanel>
                                 <TextBlock Text="Selected Computers" HorizontalAlignment="Center" Margin="0,0,0,0" Height="auto" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
-                                <ListView x:Name="SelectedListBox" DisplayMemberPath="Name" SelectedValuePath="Name" Height="75"  Width="200"/>
+                                <ListView x:Name="SelectedListBox" Height="280" Width="200"/>
                             </StackPanel>
                         </Grid>
                     </Grid>
