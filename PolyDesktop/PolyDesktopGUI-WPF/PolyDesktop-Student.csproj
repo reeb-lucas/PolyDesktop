@@ -150,9 +150,6 @@
     <Compile Include="PolyBay.xaml.cs">
       <DependentUpon>PolyBay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PolyChat.xaml.cs">
-      <DependentUpon>PolyChat.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ProtobufSerializer.cs" />
     <Compile Include="ReceivedFile.cs" />
     <Compile Include="RelayCommand.cs" />
@@ -183,10 +180,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PolyBay.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PolyChat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

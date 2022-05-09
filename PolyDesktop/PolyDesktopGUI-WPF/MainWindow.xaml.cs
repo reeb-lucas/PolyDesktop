@@ -21,6 +21,8 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using NetworkCommsDotNet.Connections;
 using Hardwarespecs;
+using ChatClient;
+using PolyDesktopGUI_WPF.MVVM.View;
 
 namespace PolyDesktopGUI_WPF
 {
@@ -46,7 +48,7 @@ namespace PolyDesktopGUI_WPF
 
             Frame PolyCFrame = new Frame();
             tabPolyChat.Content = PolyCFrame;
-            PolyChat polyChat = new PolyChat();
+            ChatMain polyChat = new ChatMain();
             PolyCFrame.Navigate(polyChat);
             m_tabItemList.Add(tabPolyChat);
 
