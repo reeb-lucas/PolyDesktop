@@ -522,9 +522,10 @@ namespace PolyDesktopGUI_WPF
             openDialog.Multiselect = false;
 
             //If a file was selected
-            for (int i = 0; i < _selectedComputers.Count; i++)
+
+            if (openDialog.ShowDialog() == true)
             {
-                if (openDialog.ShowDialog() == true)
+                for (int i = 0; i < _selectedComputers.Count; i++)
                 {
                     //Disable the send and compression buttons
                     sendFileButton.IsEnabled = false;
@@ -533,10 +534,17 @@ namespace PolyDesktopGUI_WPF
                     //Parse the necessary remote information
                     string filename = openDialog.FileName;
                     string remotePort = "5069";
-                    IPAddress[] addre = Dns.GetHostAddresses(_selectedComputers[i]);
-                    foreach (IPAddress address in addre)
+                    try
                     {
-                        sendFile(filename, address.ToString(), remotePort);
+                        IPAddress[] addre = Dns.GetHostAddresses(_selectedComputers[i]);
+                        foreach (IPAddress address in addre)
+                        {
+                            sendFile(filename, address.ToString(), remotePort);
+                        }
+                    }
+                    catch
+                    {
+                        
                     }
                 }
             }
@@ -669,5 +677,13 @@ namespace PolyDesktopGUI_WPF
         }
 
         #endregion
+        private void SelectedListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            /*if (_selectedComputers != null && _selectedComputers.Count > 0)
+            {
+                _selectedComputers.RemoveAt(SelectedListBox.SelectedIndex);
+                UpdateConnectedList();
+            }*/
+        }
     }
 }

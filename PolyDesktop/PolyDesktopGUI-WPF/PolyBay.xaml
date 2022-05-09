@@ -107,7 +107,7 @@
                         <Grid Grid.Column="2">
                             <StackPanel>
                                 <TextBlock Text="Selected Computers" HorizontalAlignment="Center" Margin="0,0,0,0" Height="auto" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
-                                <ListView x:Name="SelectedListBox" Height="280" Width="200"/>
+                                <ListView x:Name="SelectedListBox" Height="280" Width="200" SelectionChanged="SelectedListBox_SelectionChanged"/>
                             </StackPanel>
                         </Grid>
                     </Grid>
