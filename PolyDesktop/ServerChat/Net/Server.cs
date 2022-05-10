@@ -1,13 +1,12 @@
-﻿using System;
+﻿using ServerChat.Net.IO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
-using System.Net.Sockets;
-using ChatClient.Net.IO;
-using ChatServer.Net.IO;
 
-namespace ChatClient.Net
+namespace ServerChat.Net
 {
     class Server
     {
@@ -27,7 +26,7 @@ namespace ChatClient.Net
 
         public void ConnectToSever(string username, string serverAddress, int serverPort)
         {
-            if(!_client.Connected)
+            if (!_client.Connected)
             {
                 try
                 {
@@ -53,7 +52,7 @@ namespace ChatClient.Net
 
         public void RequestHelp(string username)
         {
-            try 
+            try
             {
                 if (_client.Connected)
                 {
@@ -76,13 +75,42 @@ namespace ChatClient.Net
             }
         }
 
+        public void SendMessageToServer(string message)
+        {
+            var messagePacket = new PacketBuilder();
+            messagePacket.WriteOpCode(5);
+            messagePacket.WriteMessage(message);
+            try
+            {
+                _client.Client.Send(messagePacket.GetPacketBytes());
+            }
+            catch
+            {
+                //TODO, Add error message to display somewhere
+            }
+        }
+
+        public void PopHelpQueue()
+        {
+            var popQueuePacket = new PacketBuilder();
+            popQueuePacket.WriteOpCode(20);
+            try
+            {
+                _client.Client.Send(popQueuePacket.GetPacketBytes());
+            }
+            catch
+            {
+                //TODO, Add error message to display somewhere
+            }
+        }
+
         private void ReadPackets()
         {
             Task.Run(() =>
-            { 
-                while(true)
+            {
+                while (true)
                 {
-                    try 
+                    try
                     {
                         var opcode = PacketReader.ReadByte();
                         switch (opcode)
@@ -107,27 +135,12 @@ namespace ChatClient.Net
                                 break;
                         }
                     }
-                    catch 
+                    catch
                     {
                         //TODO: Display Error Message of forceful disconnection
                     }
                 }
             });
-        }
-
-        public void SendMessageToServer(string message)
-        {
-            var messagePacket = new PacketBuilder();
-            messagePacket.WriteOpCode(5);
-            messagePacket.WriteMessage(message);
-            try
-            {
-                _client.Client.Send(messagePacket.GetPacketBytes());
-            }
-            catch
-            {
-                //TODO, Add error message to display somewhere
-            }
         }
     }
 }

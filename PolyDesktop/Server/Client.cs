@@ -49,6 +49,9 @@ namespace Server
                             Console.WriteLine($"[{DateTime.Now}]:[{Username}]: Has requested help!");
                             Program.AddToHelpQueue(UID.ToString());
                             break;
+                        case 20: 
+                            Program.PopHelpQueue();
+                            break;
                         default:
                             break;
                     }

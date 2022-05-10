@@ -1,6 +1,6 @@
-﻿using ChatClient.MVVM.Core;
-using ChatClient.MVVM.Model;
-using ChatClient.Net;
+﻿using ServerChat.MVVM.Core;
+using ServerChat.MVVM.Model;
+using ServerChat.Net;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ChatClient.MVVM.ViewModel
+namespace ServerChat.MVVM.ViewModel
 {
     class MainViewModel
     {
         public ObservableCollection<UserModel> Users { get; set; }
         public ObservableCollection<UserModel> HelpQueue { get; set; }
         public ObservableCollection<string> Messages { get; set; }
+        public RelayCommand PopHelpQueueCommand { get; set; }
         public RelayCommand ConnectToServerCommand { get; set; }
         public RelayCommand RequestHelpCommand { get; set; }
         public RelayCommand DisconnectFromServerCommand { get; set; }
@@ -25,7 +26,7 @@ namespace ChatClient.MVVM.ViewModel
         public string ServerPort { get; set; }
         public string Message { get; set; }
 
-        private Server _server; 
+        private Server _server;
         public MainViewModel()
         {
             Users = new ObservableCollection<UserModel>();
@@ -40,23 +41,27 @@ namespace ChatClient.MVVM.ViewModel
 
             //Initialize Relay Commands
             #region
+
             //Connection button requires Username, ServerAddress and ServerPort fields to all be filled with values to be pressed
-            ConnectToServerCommand = new RelayCommand(o => _server.ConnectToSever(Username, ServerAddress, Int32.Parse(ServerPort)), 
+            ConnectToServerCommand = new RelayCommand(o => _server.ConnectToSever(Username, ServerAddress, Int32.Parse(ServerPort)),
                 o => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(ServerAddress) && !string.IsNullOrEmpty(ServerPort));
 
             RequestHelpCommand = new RelayCommand(o => _server.RequestHelp(Username), o => !string.IsNullOrEmpty(Username));
 
             SendMessageCommand = new RelayCommand(o => _server.SendMessageToServer(Message), o => !string.IsNullOrEmpty(Message));
+
+            PopHelpQueueCommand = new RelayCommand(o => _server.PopHelpQueue());
             #endregion
         }
 
         private void PopHelpQueue()
         {
-            if (HelpQueue.Count > 0)
+            if(HelpQueue.Count > 0)
             {
                 Application.Current.Dispatcher.Invoke(() => HelpQueue.RemoveAt(0));
             }
         }
+
         private void RemoveUser()
         {
             var uid = _server.PacketReader.ReadMessage();
