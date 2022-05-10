@@ -50,7 +50,7 @@ namespace ServerChat.MVVM.ViewModel
 
             SendMessageCommand = new RelayCommand(o => _server.SendMessageToServer(Message), o => !string.IsNullOrEmpty(Message));
 
-            PopHelpQueueCommand = new RelayCommand(o => _server.PopHelpQueue()); //TESTING
+            PopHelpQueueCommand = new RelayCommand(o => _server.PopHelpQueue());
             #endregion
         }
 
