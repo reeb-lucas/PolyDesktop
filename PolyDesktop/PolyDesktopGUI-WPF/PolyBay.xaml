@@ -224,12 +224,12 @@
                         </ListView.ItemTemplate>
                     </ListView>
 
-                    <Button x:Name="RequestHelpButton" 
+                    <Button x:Name="PopQueueButton" 
                     Height="25"
                     DockPanel.Dock="Bottom"
                     VerticalAlignment="Bottom"
-                    Content="Request Help"
-                    Command="{Binding RequestHelpCommand}"/>
+                    Content="Pop One From Queue"
+                    Command="{Binding PopHelpQueueCommand}"/>
 
                 </DockPanel>
 

@@ -723,7 +723,7 @@ namespace PolyDesktopGUI_WPF
                 {
                     MessageList.Visibility = Visibility.Visible;
                 }
-
+                
                 SendButton.Command.Execute(SendButton.Content);
                 MessageBox.Text = ""; //Clear Content
             }
