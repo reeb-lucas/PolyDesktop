@@ -145,5 +145,123 @@
                 </ScrollViewer>
             </Grid>
         </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=" 200"/>
+                    <ColumnDefinition Width="125*"/>
+                    <ColumnDefinition Width="183*"/>
+                </Grid.ColumnDefinitions>
+
+                <DockPanel>
+                    <Grid DockPanel.Dock="Top">
+                        <TextBlock Text="Username" Foreground="LightGray" Name="UsernameHint"/>
+                        <TextBox Height="25"
+                         DockPanel.Dock="Top"
+                         Background="Transparent"
+                         Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                         TextChanged="UsernameBox_TextChanged"
+                         Name="UsernameBox"/>
+                    </Grid>
+
+                    <Grid DockPanel.Dock="Top">
+                        <TextBlock Text="IP Address" Foreground="LightGray" Name="ServerAddressHint"/>
+                        <TextBox Height="25"
+                         DockPanel.Dock="Top"
+                         Background="Transparent"
+                         Text="{Binding ServerAddress, UpdateSourceTrigger=PropertyChanged}"
+                         TextChanged="ServerAddressBox_TextChanged"
+                         Name="ServerAddressBox"/>
+                    </Grid>
+
+                    <Grid DockPanel.Dock="Top">
+                        <TextBlock Text="Port Number" Foreground="LightGray" Name="ServerPortHint"/>
+                        <TextBox Height="25" 
+                         DockPanel.Dock="Top"
+                         Background="Transparent"
+                         Text="{Binding ServerPort, UpdateSourceTrigger=PropertyChanged}"
+                         TextChanged="ServerPortBox_TextChanged"
+                         Name="ServerPortBox"/>
+                    </Grid>
+
+                    <Button x:Name="ConnectButton"
+                    Background="Transparent"
+                    Height="25"
+                    DockPanel.Dock="Top"
+                    Content="Connect"
+                    Command="{Binding ConnectToServerCommand}"
+                    Click="ConnectButton_Click"/>
+
+
+                    <Button x:Name="ChangeListButton" 
+                    Height="25"
+                    DockPanel.Dock="Top"
+                    Content="Show Help Queue"
+                    Click="ChangeListButton_Click"/>
+
+                    <!--Start Collapsed until user connects-->
+                    <ListView x:Name="ConnectedUsers" 
+                      ItemsSource="{Binding Users}"
+                      DockPanel.Dock="Top"
+                      Visibility="Collapsed">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Username}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <!--Start Collapsed until user joins queue-->
+                    <ListView x:Name="HelpQueueUsers" 
+                      ItemsSource="{Binding HelpQueue}"
+                      DockPanel.Dock="Top"
+                      Visibility="Collapsed">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Username}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Button x:Name="RequestHelpButton" 
+                    Height="25"
+                    DockPanel.Dock="Bottom"
+                    VerticalAlignment="Bottom"
+                    Content="Request Help"
+                    Command="{Binding RequestHelpCommand}"/>
+
+                </DockPanel>
+
+                <StackPanel Grid.Column="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+
+                    <!--Start Collapsed until SendButton pressed-->
+                    <ListView x:Name="MessageList"
+                      Visibility="Collapsed"
+                      ItemsSource="{Binding Messages}"/>
+
+                    <Grid>
+
+                        <TextBox x:Name="MessageBox"
+                         Grid.Column="0"
+                         Height="55"
+                         Width="Auto"
+                         VerticalContentAlignment="Center"
+                         Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"
+                         KeyDown="MessageBox_KeyDown"/>
+
+                        <Button x:Name="SendButton"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        Width="55" Content="Send" 
+                        Command="{Binding SendMessageCommand}"
+                        Click="SendButton_Click"/>
+
+                    </Grid>
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+        
     </Grid>
 </Page>

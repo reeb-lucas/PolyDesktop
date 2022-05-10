@@ -1469,19 +1469,6 @@
             Available to all callers in the same assembly, or assemblies specified via [InternalsVisibleTo(...)]
             </summary>
         </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
-========
-        <member name="M:ProtoBuf.Meta.RuntimeTypeModel.Compile(System.String,System.String)">
-            <summary>
-            Fully compiles the current model into a static-compiled serialization dll
-            (the serialization dll still requires protobuf-net for support services).
-            </summary>
-            <remarks>A full compilation is restricted to accessing public types / members</remarks>
-            <param name="name">The name of the TypeModel class to create</param>
-            <param name="path">The path for the new dll</param>
-            <returns>An instance of the newly created compiled type-model</returns>
-        </member>
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
         <member name="M:ProtoBuf.Meta.RuntimeTypeModel.Compile(ProtoBuf.Meta.RuntimeTypeModel.CompilerOptions)">
             <summary>
             Fully compiles the current model into a static-compiled serialization dll
@@ -2059,18 +2046,8 @@
             Represents a member (property/field) that is mapped to a protobuf field
             </summary>
         </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="P:ProtoBuf.Meta.ValueMember.FieldNumber">
             <summary>
-========
-        <member name="T:ProtoBuf.Meta.ValueMember">
-            <summary>
-            Represents a member (property/field) that is mapped to a protobuf field
-            </summary>
-        </member>
-        <member name="P:ProtoBuf.Meta.ValueMember.FieldNumber">
-            <summary>
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
             The number that identifies this member in a protobuf stream
             </summary>
         </member>
@@ -3176,7 +3153,6 @@
             <param name="instance">The existing instance to use as a template.</param>
             <returns>A new instane of type TNewType, with the data from TOldType.</returns>
         </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="M:ProtoBuf.Serializer.Serialize``1(System.Xml.XmlWriter,``0)">
             <summary>
             Writes a protocol-buffer representation of the given instance to the supplied XmlWriter.
@@ -3196,34 +3172,8 @@
         <member name="M:ProtoBuf.Serializer.PrepareSerializer``1">
             <summary>
             Precompiles the serializer for a given type.
-========
-        <member name="M:ProtoBuf.Serializer.Serialize``1(System.Runtime.Serialization.SerializationInfo,``0)">
-            <summary>
-            Writes a protocol-buffer representation of the given instance to the supplied SerializationInfo.
             </summary>
-            <typeparam name="T">The type being serialized.</typeparam>
-            <param name="instance">The existing instance to be serialized (cannot be null).</param>
-            <param name="info">The destination SerializationInfo to write to.</param>
         </member>
-        <member name="M:ProtoBuf.Serializer.Serialize``1(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,``0)">
-            <summary>
-            Writes a protocol-buffer representation of the given instance to the supplied SerializationInfo.
-            </summary>
-            <typeparam name="T">The type being serialized.</typeparam>
-            <param name="instance">The existing instance to be serialized (cannot be null).</param>
-            <param name="info">The destination SerializationInfo to write to.</param>
-            <param name="context">Additional information about this serialization operation.</param>
-        </member>
-        <member name="M:ProtoBuf.Serializer.Serialize``1(System.Xml.XmlWriter,``0)">
-            <summary>
-            Writes a protocol-buffer representation of the given instance to the supplied XmlWriter.
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
-            </summary>
-            <typeparam name="T">The type being serialized.</typeparam>
-            <param name="instance">The existing instance to be serialized (cannot be null).</param>
-            <param name="writer">The destination XmlWriter to write to.</param>
-        </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="M:ProtoBuf.Serializer.DeserializeItems``1(System.IO.Stream,ProtoBuf.PrefixStyle,System.Int32)">
             <summary>
             Reads a sequence of consecutive length-prefixed items from a stream, using
@@ -3266,36 +3216,6 @@
             <summary>
             Applies a protocol-buffer stream to an existing instance, using length-prefixed
             data - useful with network IO.
-========
-        <member name="M:ProtoBuf.Serializer.Merge``1(System.Xml.XmlReader,``0)">
-            <summary>
-            Applies a protocol-buffer from an XmlReader to an existing instance.
-            </summary>
-            <typeparam name="T">The type being merged.</typeparam>
-            <param name="instance">The existing instance to be modified (cannot be null).</param>
-            <param name="reader">The XmlReader containing the data to apply to the instance (cannot be null).</param>
-        </member>
-        <member name="M:ProtoBuf.Serializer.Merge``1(System.Runtime.Serialization.SerializationInfo,``0)">
-            <summary>
-            Applies a protocol-buffer from a SerializationInfo to an existing instance.
-            </summary>
-            <typeparam name="T">The type being merged.</typeparam>
-            <param name="instance">The existing instance to be modified (cannot be null).</param>
-            <param name="info">The SerializationInfo containing the data to apply to the instance (cannot be null).</param>
-        </member>
-        <member name="M:ProtoBuf.Serializer.Merge``1(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,``0)">
-            <summary>
-            Applies a protocol-buffer from a SerializationInfo to an existing instance.
-            </summary>
-            <typeparam name="T">The type being merged.</typeparam>
-            <param name="instance">The existing instance to be modified (cannot be null).</param>
-            <param name="info">The SerializationInfo containing the data to apply to the instance (cannot be null).</param>
-            <param name="context">Additional information about this serialization operation.</param>
-        </member>
-        <member name="M:ProtoBuf.Serializer.PrepareSerializer``1">
-            <summary>
-            Precompiles the serializer for a given type.
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
             </summary>
             <typeparam name="T">The type being merged.</typeparam>
             <param name="instance">The existing instance to be modified (can be null).</param>
@@ -3305,7 +3225,6 @@
             either the original instance was null, or the stream defines a known sub-type of the
             original instance.</returns>
         </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="M:ProtoBuf.Serializer.SerializeWithLengthPrefix``1(System.IO.Stream,``0,ProtoBuf.PrefixStyle)">
             <summary>
             Writes a protocol-buffer representation of the given instance to the supplied stream,
@@ -3385,95 +3304,17 @@
             <returns>The updated instance</returns>
         </member>
         <member name="M:ProtoBuf.Serializer.NonGeneric.SerializeWithLengthPrefix(System.IO.Stream,System.Object,ProtoBuf.PrefixStyle,System.Int32)">
-========
-        <member name="M:ProtoBuf.Serializer.CreateFormatter``1">
-            <summary>
-            Creates a new IFormatter that uses protocol-buffer [de]serialization.
-            </summary>
-            <typeparam name="T">The type of object to be [de]deserialized by the formatter.</typeparam>
-            <returns>A new IFormatter to be used during [de]serialization.</returns>
-        </member>
-        <member name="M:ProtoBuf.Serializer.DeserializeItems``1(System.IO.Stream,ProtoBuf.PrefixStyle,System.Int32)">
-            <summary>
-            Reads a sequence of consecutive length-prefixed items from a stream, using
-            either base-128 or fixed-length prefixes. Base-128 prefixes with a tag
-            are directly comparable to serializing multiple items in succession
-            (use the <see cref="F:ProtoBuf.Serializer.ListItemTag"/> tag to emulate the implicit behavior
-            when serializing a list/array). When a tag is
-            specified, any records with different tags are silently omitted. The
-            tag is ignored. The tag is ignored for fixed-length prefixes.
-            </summary>
-            <typeparam name="T">The type of object to deserialize.</typeparam>
-            <param name="source">The binary stream containing the serialized records.</param>
-            <param name="style">The prefix style used in the data.</param>
-            <param name="fieldNumber">The tag of records to return (if non-positive, then no tag is
-            expected and all records are returned).</param>
-            <returns>The sequence of deserialized objects.</returns>
-        </member>
-        <member name="M:ProtoBuf.Serializer.DeserializeWithLengthPrefix``1(System.IO.Stream,ProtoBuf.PrefixStyle)">
-            <summary>
-            Creates a new instance from a protocol-buffer stream that has a length-prefix
-            on data (to assist with network IO).
-            </summary>
-            <typeparam name="T">The type to be created.</typeparam>
-            <param name="source">The binary stream to apply to the new instance (cannot be null).</param>
-            <param name="style">How to encode the length prefix.</param>
-            <returns>A new, initialized instance.</returns>
-        </member>
-        <member name="M:ProtoBuf.Serializer.DeserializeWithLengthPrefix``1(System.IO.Stream,ProtoBuf.PrefixStyle,System.Int32)">
-            <summary>
-            Creates a new instance from a protocol-buffer stream that has a length-prefix
-            on data (to assist with network IO).
-            </summary>
-            <typeparam name="T">The type to be created.</typeparam>
-            <param name="source">The binary stream to apply to the new instance (cannot be null).</param>
-            <param name="style">How to encode the length prefix.</param>
-            <param name="fieldNumber">The expected tag of the item (only used with base-128 prefix style).</param>
-            <returns>A new, initialized instance.</returns>
-        </member>
-        <member name="M:ProtoBuf.Serializer.MergeWithLengthPrefix``1(System.IO.Stream,``0,ProtoBuf.PrefixStyle)">
-            <summary>
-            Applies a protocol-buffer stream to an existing instance, using length-prefixed
-            data - useful with network IO.
-            </summary>
-            <typeparam name="T">The type being merged.</typeparam>
-            <param name="instance">The existing instance to be modified (can be null).</param>
-            <param name="source">The binary stream to apply to the instance (cannot be null).</param>
-            <param name="style">How to encode the length prefix.</param>
-            <returns>The updated instance; this may be different to the instance argument if
-            either the original instance was null, or the stream defines a known sub-type of the
-            original instance.</returns>
-        </member>
-        <member name="M:ProtoBuf.Serializer.SerializeWithLengthPrefix``1(System.IO.Stream,``0,ProtoBuf.PrefixStyle)">
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
             <summary>
             Writes a protocol-buffer representation of the given instance to the supplied stream,
             with a length-prefix. This is useful for socket programming,
             as DeserializeWithLengthPrefix/MergeWithLengthPrefix can be used to read the single object back
             from an ongoing stream.
             </summary>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
-========
-            <typeparam name="T">The type being serialized.</typeparam>
-            <param name="instance">The existing instance to be serialized (cannot be null).</param>
-            <param name="style">How to encode the length prefix.</param>
-            <param name="destination">The destination stream to write to.</param>
-        </member>
-        <member name="M:ProtoBuf.Serializer.SerializeWithLengthPrefix``1(System.IO.Stream,``0,ProtoBuf.PrefixStyle,System.Int32)">
-            <summary>
-            Writes a protocol-buffer representation of the given instance to the supplied stream,
-            with a length-prefix. This is useful for socket programming,
-            as DeserializeWithLengthPrefix/MergeWithLengthPrefix can be used to read the single object back
-            from an ongoing stream.
-            </summary>
-            <typeparam name="T">The type being serialized.</typeparam>
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
             <param name="instance">The existing instance to be serialized (cannot be null).</param>
             <param name="style">How to encode the length prefix.</param>
             <param name="destination">The destination stream to write to.</param>
             <param name="fieldNumber">The tag used as a prefix to each record (only used with base-128 style prefixes).</param>
         </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="M:ProtoBuf.Serializer.NonGeneric.TryDeserializeWithLengthPrefix(System.IO.Stream,ProtoBuf.PrefixStyle,ProtoBuf.Serializer.TypeResolver,System.Object@)">
             <summary>
             Applies a protocol-buffer stream to an existing instance (or null), using length-prefixed
@@ -3566,35 +3407,12 @@
         <member name="M:ProtoBuf.Serializers.IProtoSerializer.EmitRead(ProtoBuf.Compiler.CompilerContext,ProtoBuf.Compiler.Local)">
             <summary>
             Emit the IL necessary to perform the given actions to deserialize this data.
-========
-        <member name="M:ProtoBuf.Serializer.TryReadLengthPrefix(System.IO.Stream,ProtoBuf.PrefixStyle,System.Int32@)">
-            <summary>Indicates the number of bytes expected for the next message.</summary>
-            <param name="source">The stream containing the data to investigate for a length.</param>
-            <param name="style">The algorithm used to encode the length.</param>
-            <param name="length">The length of the message, if it could be identified.</param>
-            <returns>True if a length could be obtained, false otherwise.</returns>
-        </member>
-        <member name="M:ProtoBuf.Serializer.TryReadLengthPrefix(System.Byte[],System.Int32,System.Int32,ProtoBuf.PrefixStyle,System.Int32@)">
-            <summary>Indicates the number of bytes expected for the next message.</summary>
-            <param name="buffer">The buffer containing the data to investigate for a length.</param>
-            <param name="index">The offset of the first byte to read from the buffer.</param>
-            <param name="count">The number of bytes to read from the buffer.</param>
-            <param name="style">The algorithm used to encode the length.</param>
-            <param name="length">The length of the message, if it could be identified.</param>
-            <returns>True if a length could be obtained, false otherwise.</returns>
-        </member>
-        <member name="F:ProtoBuf.Serializer.ListItemTag">
-            <summary>
-            The field number that is used as a default when serializing/deserializing a list of objects.
-            The data is treated as repeated message with field number 1.
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
             </summary>
             <param name="ctx">Details and utilities for the method being generated.</param>
             <param name="entity">For nested values, the instance holding the values; note
             that this is not always provided - a null means not supplied. Since this is always
             a variable or argument, it is not necessary to consume this value.</param>
         </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="T:ProtoBuf.ServiceModel.ProtoBehaviorAttribute">
             <summary>
             Uses protocol buffer serialization on the specified operation; note that this
@@ -3636,40 +3454,13 @@
         <member name="T:ProtoBuf.ServiceModel.ProtoOperationBehavior">
             <summary>
             Describes a WCF operation behaviour that can perform protobuf serialization
-========
-        <member name="T:ProtoBuf.Serializer.NonGeneric">
-            <summary>
-            Provides non-generic access to the default serializer.
             </summary>
         </member>
-        <member name="M:ProtoBuf.Serializer.NonGeneric.DeepClone(System.Object)">
-            <summary>
-            Create a deep clone of the supplied instance; any sub-items are also cloned.
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.Serializer.NonGeneric.Serialize(System.IO.Stream,System.Object)">
-            <summary>
-            Writes a protocol-buffer representation of the given instance to the supplied stream.
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
-            </summary>
-            <param name="instance">The existing instance to be serialized (cannot be null).</param>
-            <param name="dest">The destination stream to write to.</param>
-        </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="M:ProtoBuf.ServiceModel.ProtoOperationBehavior.#ctor(System.ServiceModel.Description.OperationDescription)">
             <summary>
             Create a new ProtoOperationBehavior instance
-========
-        <member name="M:ProtoBuf.Serializer.NonGeneric.Deserialize(System.Type,System.IO.Stream)">
-            <summary>
-            Creates a new instance from a protocol-buffer stream
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
             </summary>
-            <param name="type">The type to be created.</param>
-            <param name="source">The binary stream to apply to the new instance (cannot be null).</param>
-            <returns>A new, initialized instance.</returns>
         </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="P:ProtoBuf.ServiceModel.ProtoOperationBehavior.Model">
             <summary>
             The type-model that should be used with this behaviour
@@ -3678,58 +3469,19 @@
         <member name="M:ProtoBuf.ServiceModel.ProtoOperationBehavior.CreateSerializer(System.Type,System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString,System.Collections.Generic.IList{System.Type})">
             <summary>
             Creates a protobuf serializer if possible (falling back to the default WCF serializer)
-========
-        <member name="M:ProtoBuf.Serializer.NonGeneric.Merge(System.IO.Stream,System.Object)">
-            <summary>Applies a protocol-buffer stream to an existing instance.</summary>
-            <param name="instance">The existing instance to be modified (cannot be null).</param>
-            <param name="source">The binary stream to apply to the instance (cannot be null).</param>
-            <returns>The updated instance</returns>
-        </member>
-        <member name="M:ProtoBuf.Serializer.NonGeneric.SerializeWithLengthPrefix(System.IO.Stream,System.Object,ProtoBuf.PrefixStyle,System.Int32)">
-            <summary>
-            Writes a protocol-buffer representation of the given instance to the supplied stream,
-            with a length-prefix. This is useful for socket programming,
-            as DeserializeWithLengthPrefix/MergeWithLengthPrefix can be used to read the single object back
-            from an ongoing stream.
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
             </summary>
-            <param name="instance">The existing instance to be serialized (cannot be null).</param>
-            <param name="style">How to encode the length prefix.</param>
-            <param name="destination">The destination stream to write to.</param>
-            <param name="fieldNumber">The tag used as a prefix to each record (only used with base-128 style prefixes).</param>
         </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="T:ProtoBuf.ServiceModel.XmlProtoSerializer">
             <summary>
             An xml object serializer that can embed protobuf data in a base-64 hunk (looking like a byte[])
-========
-        <member name="M:ProtoBuf.Serializer.NonGeneric.TryDeserializeWithLengthPrefix(System.IO.Stream,ProtoBuf.PrefixStyle,ProtoBuf.Serializer.TypeResolver,System.Object@)">
-            <summary>
-            Applies a protocol-buffer stream to an existing instance (or null), using length-prefixed
-            data - useful with network IO.
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
             </summary>
-            <param name="value">The existing instance to be modified (can be null).</param>
-            <param name="source">The binary stream to apply to the instance (cannot be null).</param>
-            <param name="style">How to encode the length prefix.</param>
-            <param name="resolver">Used to resolve types on a per-field basis.</param>
-            <returns>The updated instance; this may be different to the instance argument if
-            either the original instance was null, or the stream defines a known sub-type of the
-            original instance.</returns>
         </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.TryCreate(ProtoBuf.Meta.TypeModel,System.Type)">
             <summary>
             Attempt to create a new serializer for the given model and type
-========
-        <member name="M:ProtoBuf.Serializer.NonGeneric.CanSerialize(System.Type)">
-            <summary>
-            Indicates whether the supplied type is explicitly modelled by the model
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
             </summary>
             <returns>A new serializer instance if the type is recognised by the model; null otherwise</returns>
         </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.#ctor(ProtoBuf.Meta.TypeModel,System.Type)">
             <summary>
             Creates a new serializer for the given model and type
@@ -3753,93 +3505,12 @@
         <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.IsStartObject(System.Xml.XmlDictionaryReader)">
             <summary>
             Indicates whether this is the start of an object we are prepared to handle
-========
-        <member name="M:ProtoBuf.Serializer.NonGeneric.PrepareSerializer(System.Type)">
-            <summary>
-            Precompiles the serializer for a given type.
             </summary>
         </member>
-        <member name="T:ProtoBuf.Serializer.GlobalOptions">
-            <summary>
-            Global switches that change the behavior of protobuf-net
-            </summary>
-        </member>
-        <member name="P:ProtoBuf.Serializer.GlobalOptions.InferTagFromName">
-            <summary>
-            <see cref="P:ProtoBuf.Meta.RuntimeTypeModel.InferTagFromNameDefault"/>
-            </summary>
-        </member>
-        <member name="T:ProtoBuf.Serializer.TypeResolver">
-            <summary>
-            Maps a field-number to a type
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.Serializer.FlushPool">
-            <summary>
-            Releases any internal buffers that have been reserved for efficiency; this does not affect any serialization
-            operations; simply: it can be used (optionally) to release the buffers for garbage collection (at the expense
-            of having to re-allocate a new buffer for the next operation, rather than re-use prior buffers).
-            </summary>
-        </member>
-        <member name="P:ProtoBuf.Serializers.IProtoSerializer.ExpectedType">
-            <summary>
-            The type that this serializer is intended to work for.
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.Serializers.IProtoSerializer.Write(System.Object,ProtoBuf.ProtoWriter)">
-            <summary>
-            Perform the steps necessary to serialize this data.
-            </summary>
-            <param name="value">The value to be serialized.</param>
-            <param name="dest">The writer entity that is accumulating the output data.</param>
-        </member>
-        <member name="M:ProtoBuf.Serializers.IProtoSerializer.Read(System.Object,ProtoBuf.ProtoReader)">
-            <summary>
-            Perform the steps necessary to deserialize this data.
-            </summary>
-            <param name="value">The current value, if appropriate.</param>
-            <param name="source">The reader providing the input data.</param>
-            <returns>The updated / replacement value.</returns>
-        </member>
-        <member name="P:ProtoBuf.Serializers.IProtoSerializer.RequiresOldValue">
-            <summary>
-            Indicates whether a Read operation <em>replaces</em> the existing value, or
-            <em>extends</em> the value. If false, the "value" parameter to Read is
-            discarded, and should be passed in as null.
-            </summary>
-        </member>
-        <member name="P:ProtoBuf.Serializers.IProtoSerializer.ReturnsValue">
-            <summary>
-            Now all Read operations return a value (although most do); if false no
-            value should be expected.
-            </summary>
-        </member>
-        <member name="M:ProtoBuf.Serializers.IProtoSerializer.EmitWrite(ProtoBuf.Compiler.CompilerContext,ProtoBuf.Compiler.Local)">
-            <summary>Emit the IL necessary to perform the given actions
-            to serialize this data.
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
-            </summary>
-            <param name="ctx">Details and utilities for the method being generated.</param>
-            <param name="valueFrom">The source of the data to work against;
-            If the value is only needed once, then LoadValue is sufficient. If
-            the value is needed multiple times, then note that a "null"
-            means "the top of the stack", in which case you should create your
-            own copy - GetLocalWithValue.</param>
-        </member>
-<<<<<<<< HEAD:PolyDesktop/packages/protobuf-net.2.4.6/lib/netcoreapp2.1/protobuf-net.xml
         <member name="M:ProtoBuf.ServiceModel.XmlProtoSerializer.ReadObject(System.Xml.XmlDictionaryReader,System.Boolean)">
             <summary>
             Reads the body of an object
-========
-        <member name="M:ProtoBuf.Serializers.IProtoSerializer.EmitRead(ProtoBuf.Compiler.CompilerContext,ProtoBuf.Compiler.Local)">
-            <summary>
-            Emit the IL necessary to perform the given actions to deserialize this data.
->>>>>>>> Client:PolyDesktop/packages/protobuf-net.2.4.6/lib/net20/protobuf-net.xml
             </summary>
-            <param name="ctx">Details and utilities for the method being generated.</param>
-            <param name="entity">For nested values, the instance holding the values; note
-            that this is not always provided - a null means not supplied. Since this is always
-            a variable or argument, it is not necessary to consume this value.</param>
         </member>
         <member name="T:ProtoBuf.SubItemToken">
             <summary>
