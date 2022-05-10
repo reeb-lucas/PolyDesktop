@@ -679,11 +679,11 @@ namespace PolyDesktopGUI_WPF
         #endregion
         private void SelectedListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            /*if (_selectedComputers != null && _selectedComputers.Count > 0)
+            if (_selectedComputers != null && _selectedComputers.Count > 0 && SelectedListBox.SelectedIndex >= 0)
             {
                 _selectedComputers.RemoveAt(SelectedListBox.SelectedIndex);
-                UpdateConnectedList();
-            }*/
+                SelectedListBox.ItemsSource = UpdateSelection();
+            }
         }
     }
 }
