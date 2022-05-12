@@ -494,12 +494,13 @@ namespace PolyDesktopGUI_WPF
         }
         private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
         {
-           if(SearchListBox.SelectedValue != null && SearchListBox.SelectedItem != null)
-            { 
-                //_remoteName = SearchListBox.SelectedValue.ToString();
-                _selectedComputers.Add(SearchListBox.SelectedValue.ToString());
-                SelectedListBox.ItemsSource = UpdateSelection();
+           if(SearchListBox.SelectedValue != null && SearchListBox.SelectedItem != null && !_selectedComputers.Contains(SearchListBox.SelectedItem))
+            {
+                    //_remoteName = SearchListBox.SelectedValue.ToString();
+                    _selectedComputers.Add(SearchListBox.SelectedValue.ToString());
+                    SelectedListBox.ItemsSource = UpdateSelection();
             }
+            SearchListBox.SelectedIndex = -1;
         }
         private string[] UpdateSelection() //convert List<> to array of strings to be used as Item source
         {
@@ -681,11 +682,15 @@ namespace PolyDesktopGUI_WPF
         {
             if (_selectedComputers != null && _selectedComputers.Count > 0 && SelectedListBox.SelectedIndex >= 0)
             {
-                _selectedComputers.RemoveAt(SelectedListBox.SelectedIndex);
-                SelectedListBox.ItemsSource = UpdateSelection();
+                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Unselect this?", "Unselection Confirmation", System.Windows.MessageBoxButton.YesNo);
+                if (messageBoxResult == MessageBoxResult.Yes)
+                {
+                    _selectedComputers.RemoveAt(SelectedListBox.SelectedIndex);
+                    SelectedListBox.ItemsSource = UpdateSelection();
+                }
             }
+            SelectedListBox.SelectedIndex = -1;
         }
-
         private void UsernameBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             UsernameHint.Visibility = Visibility.Visible;

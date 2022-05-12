@@ -37,11 +37,11 @@
                             <ListView x:Name="SearchListBox" SelectionChanged="SearchListBox_SelectionChanged" DisplayMemberPath="Name" SelectedValuePath="Name"/>
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Center" Name="AdvancedPanel" Visibility="Hidden">
-                            <TextBlock Text="Computer Name or IP Address"/>
+                            <TextBlock Text="Computer Name or IP Address" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
                             <TextBox Name="ServerNameBox"/>
-                            <TextBlock Text="Port" Margin="0,15,0,0"/>
+                            <TextBlock Text="Port" Margin="0,15,0,0" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
                             <TextBox Name="PortBox" Text="5901"/>
-                            <TextBlock Text="Password" Margin="0,15,0,0"/>
+                            <TextBlock Text="Password" Margin="0,15,0,0" Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
                             <PasswordBox Name="PWBox"/>
                             <Button Name="ConnectButton" Content="Connect" Margin="0,20,0,0" Click="ConnectButton_Click"/>
                         </StackPanel>

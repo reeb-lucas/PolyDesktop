@@ -40,6 +40,7 @@ namespace PolyDesktopGUI_WPF
             ThemeManager.Current.SyncTheme();
 
             App.Current.Properties["AdvancedMode"] = false;
+            AdvancedSwitch.IsOn = false;
         }
         private void EditDeskPre_Click(object sender, RoutedEventArgs e)
         {
@@ -225,6 +226,17 @@ namespace PolyDesktopGUI_WPF
                         return name;
                     }
                 }
+            }
+        }
+        private void AdvancedSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (AdvancedSwitch.IsOn)
+            {
+                App.Current.Properties["AdvancedMode"] = true;
+            }
+            else
+            {
+                App.Current.Properties["AdvancedMode"] = false;
             }
         }
     }

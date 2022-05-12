@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
         mc:Ignorable="d"
         Title="PolyDesktop" Height="720" Width="1280" MinHeight="1000" MinWidth="1280"
-        WindowState="Maximized" ResizeMode="CanMinimize">
+        WindowState="Maximized" ResizeMode="CanMinimize" WindowTitleBrush="#674ea7" NonActiveWindowTitleBrush="#0090ac">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
             <Image Source="Resources/PolyDesktopBanner.png" Height="330" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-115,0,0"/>
@@ -35,14 +35,7 @@
                 </Button.Resources>
                 View Desktop Properites
             </Button>
-            <Button x:Name="Settings" Click="Settings_Click" Height="34" VerticalAlignment="Top" Margin="135,300,135,0" RenderTransformOrigin="0.48,0.52">
-                <mah:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#59155;" />
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="5"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+            <mah:ToggleSwitch Name="AdvancedSwitch" Header="Advanced Mode" OffContent="Disabled" OnContent="Enabled" Margin="180,300,135,0" Toggled="AdvancedSwitch_Toggled" />
 
         </Grid>
         <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden"/>
