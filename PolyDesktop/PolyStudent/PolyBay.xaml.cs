@@ -70,7 +70,7 @@ namespace PolyDesktopGUI_WPF
         #endregion
         public PolyBay()
         {
-            InitializeComponent();
+            this.InitializeComponent();
             //Set the listbox data context
             lbReceivedFiles.DataContext = receivedFiles;
             SearchListBox.ItemsSource = GatherAllComputers();
@@ -415,7 +415,13 @@ namespace PolyDesktopGUI_WPF
             //Write some useful information the log window
             AddLineToLog("Connection closed with " + conn.ConnectionInfo.ToString());
         }
-
+        public class Computer
+        {
+            public string ID { get; set; }
+            public string Name { get; set; }
+            public string Nickname { get; set; }
+            public bool isFull { get; set; } = false;
+        }
         public Computer[] AllComputers { get { return GatherAllComputers(); } }
         public Computer[] GatherAllComputers(string searchTerm = null) //returns up to 5 computers in an observable array to populate listview
         {
@@ -625,3 +631,4 @@ namespace PolyDesktopGUI_WPF
 
     }
 }
+

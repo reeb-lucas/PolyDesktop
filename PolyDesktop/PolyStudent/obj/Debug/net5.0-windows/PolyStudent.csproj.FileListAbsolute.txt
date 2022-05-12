@@ -1,0 +1,8 @@
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyStudent\obj\Debug\net5.0-windows\PolyStudent.csproj.AssemblyReference.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyStudent\obj\Debug\net5.0-windows\MainWindow.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyStudent\obj\Debug\net5.0-windows\MVVM\View\ChatMain.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyStudent\obj\Debug\net5.0-windows\App.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyStudent\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyStudent\obj\Debug\net5.0-windows\PolyStudent_MarkupCompile.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyStudent\obj\Debug\net5.0-windows\PolyStudent_MarkupCompile.lref
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyStudent\obj\Debug\net5.0-windows\PolyBay.g.cs
