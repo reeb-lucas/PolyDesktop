@@ -422,3 +422,5 @@ C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\D
 C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\TabModePage.baml
 C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPageGroup.baml
 C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\VncPage.baml
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MVVM\View\ChatMain.g.cs
+S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs

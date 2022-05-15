@@ -132,6 +132,12 @@
     <Compile Include="GroupModePage.xaml.cs">
       <DependentUpon>GroupModePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\View\ChatMain.xaml.cs">
+      <DependentUpon>ChatMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Net\IO\PacketBuilder.cs" />
+    <Compile Include="Net\IO\PacketReader.cs" />
+    <Compile Include="Net\Server.cs" />
     <Compile Include="PolyBay.xaml.cs">
       <DependentUpon>PolyBay.xaml</DependentUpon>
     </Compile>
@@ -187,6 +193,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\ChatMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PolyBay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -266,6 +276,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\PDBackArrowV_J02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MVVM\Core\" />
+    <Folder Include="MVVM\Model\" />
+    <Folder Include="MVVM\ViewModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
