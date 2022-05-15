@@ -52,10 +52,10 @@ namespace PolyDesktopGUI_WPF
         /// <param name="packetSequenceNumber">Packet sequence number corresponding to the associated data</param>
         public SendInfo(string filename, long totalBytes, long bytesStart, long packetSequenceNumber)
         {
-            this.Filename = filename;
-            this.TotalBytes = totalBytes;
-            this.BytesStart = bytesStart;
-            this.PacketSequenceNumber = packetSequenceNumber;
+              this.Filename = filename;
+              this.TotalBytes = totalBytes;
+              this.BytesStart = bytesStart;
+              this.PacketSequenceNumber = packetSequenceNumber;
         }
     }
 }

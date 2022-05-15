@@ -19,6 +19,7 @@ namespace ChatClient.Net
         public event Action MsgReceivedEvent;
         public event Action UserDisconnectedEvent;
         public event Action PopHelpQueueEvent;
+        public PacketBuilder errorPacket = new PacketBuilder();
 
         public Server()
         {
@@ -46,7 +47,7 @@ namespace ChatClient.Net
                 }
                 catch
                 {
-                    //TODO, Add error handling here, display error connecting message somewhere
+                    errorPacket.WriteMessage("Error 1: Connection to Chat Server failed.");
                 }
             }
         }
@@ -66,13 +67,13 @@ namespace ChatClient.Net
                     }
                     catch
                     {
-                        //TODO, Add error message to display somewhere
+                        errorPacket.WriteMessage("Error 2: help request failed.");
                     }
                 }
             }
             catch
             {
-                //TODO, Add error handling here, display error connecting message somewhere
+                errorPacket.WriteMessage("Error 1: Connection to Chat Server failed.");
             }
         }
 
@@ -109,7 +110,7 @@ namespace ChatClient.Net
                     }
                     catch 
                     {
-                        //TODO: Display Error Message of forceful disconnection
+                        errorPacket.WriteMessage("Error 3: Forcefully disconnected from host.");
                     }
                 }
             });
@@ -126,7 +127,7 @@ namespace ChatClient.Net
             }
             catch
             {
-                //TODO, Add error message to display somewhere
+                errorPacket.WriteMessage("Error 4: failed to send message.");
             }
         }
     }
