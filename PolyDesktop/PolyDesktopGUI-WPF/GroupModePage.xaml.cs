@@ -466,7 +466,14 @@ namespace PolyDesktopGUI_WPF
         }
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            PresetFlyout.IsOpen = true;
+            if ((bool)(App.Current.Properties["AdvancedMode"]) == true)
+            {
+                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Users cannot create Presets while in Advanced Mode", "Advanced Mode", System.Windows.MessageBoxButton.OK);
+            }
+            else
+            {
+                PresetFlyout.IsOpen = true;
+            }
         }
         private void PresetSaveButton_Click(object sender, RoutedEventArgs e)
         {

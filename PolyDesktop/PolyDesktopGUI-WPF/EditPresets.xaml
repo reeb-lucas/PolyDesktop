@@ -75,7 +75,7 @@
             </Border>
         </StackPanel>
         <TextBlock Text="Computers" Margin="-200,305,0,360" HorizontalAlignment="Center" Foreground="White"/>
-        <Button x:Name="TestButton" Content="Fill Test Presets" HorizontalAlignment="Center" Margin="652,103,0,0" VerticalAlignment="Top" Click="TestButton_Click"/>
+        <Button x:Name="TestButton" Content="Reset Test Presets" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Click="TestButton_Click"/>
         <Button x:Name="AddComputerButton" HorizontalAlignment="Center" Content="Add Computer" Margin="-185,250,0,0" VerticalAlignment="Top" Click="AddComputerButton_Click"/>
         <TextBlock Name="NumberOfComputersLabel" HorizontalAlignment="Center" Margin="560,220,0,0" Text="Number of Computers" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock Name="NumBlock" HorizontalAlignment="Center" Margin="560,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
