@@ -56,6 +56,12 @@ namespace PolyDesktopGUI_WPF.MVVM.View
             //Send the message in textbox if "Enter" key is pressed, and the textbox is not empty.
             if (e.Key == Key.Return && MessageBox.Text != "")
             {
+                //Update Message list to be visible after message sent first time
+                if (MessageList.Visibility == Visibility.Collapsed)
+                {
+                    MessageList.Visibility = Visibility.Visible;
+                }
+
                 SendButton.Command.Execute(SendButton.Content);
                 MessageBox.Text = ""; //Clear Content
             }
@@ -69,6 +75,7 @@ namespace PolyDesktopGUI_WPF.MVVM.View
                 MessageList.Visibility = Visibility.Visible;
             }
 
+            SendButton.Command.Execute(SendButton.Content);
             MessageBox.Text = ""; //Clear Content
         }
 

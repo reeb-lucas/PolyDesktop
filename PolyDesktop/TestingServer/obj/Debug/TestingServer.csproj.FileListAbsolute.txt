@@ -1,0 +1,7 @@
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\TestingServer\bin\Debug\TestingServer.exe.config
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\TestingServer\bin\Debug\TestingServer.exe
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\TestingServer\bin\Debug\TestingServer.pdb
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\TestingServer\obj\Debug\TestingServer.csproj.AssemblyReference.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\TestingServer\obj\Debug\TestingServer.csproj.CoreCompileInputs.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\TestingServer\obj\Debug\TestingServer.exe
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\TestingServer\obj\Debug\TestingServer.pdb

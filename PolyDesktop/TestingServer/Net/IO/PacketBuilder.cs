@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChatClient.Net.IO
+namespace Server.Net.IO
 {
     class PacketBuilder
     {
