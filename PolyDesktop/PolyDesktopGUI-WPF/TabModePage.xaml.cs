@@ -61,6 +61,7 @@ namespace PolyDesktopGUI_WPF
         string filename = System.IO.Path.Combine(localApplicationData, "Preset"); //filepath for presets with the word Prest appended to make future code easier
         private string connectionString = "server=satou.cset.oit.edu,5433; database=PolyDesktop; UID=PolyCode; password=P0lyC0d3";
         int prevIndex = 2; //used for dynamic connections
+        int connectingTabIndex;
         public TabModePage(Computer[] source = null, int num = 0)
         {
             InitializeComponent();
@@ -104,6 +105,10 @@ namespace PolyDesktopGUI_WPF
         }
         private MetroTabItem AddTabItem(Computer computer = null)
         {
+            foreach(TabItem tabItem in m_tabItemList)
+            {
+                tabItem.Focusable = false;
+            }
             int count = m_tabItemList.Count;
 
             //tab creation
@@ -181,6 +186,14 @@ namespace PolyDesktopGUI_WPF
             if (m_tabItemList != null && m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName() != "")
             {
                 m_tabItemList[tabControl.SelectedIndex].Header = m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName();
+            }
+            ReleaseTabs();
+        }
+        private void ReleaseTabs()
+        {
+            for(int i = 1; i < m_tabItemList.Count; i++)
+            {
+                m_tabItemList[i].Focusable = true;
             }
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -271,6 +284,7 @@ namespace PolyDesktopGUI_WPF
             tabControl.DataContext = null;
             tabControl.DataContext = m_tabItemList;
             tabControl.SelectedIndex = tempIndex - 1;
+            ReleaseTabs();
         }
     }
 }
