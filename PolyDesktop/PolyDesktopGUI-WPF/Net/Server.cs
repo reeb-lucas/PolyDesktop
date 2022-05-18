@@ -20,6 +20,7 @@ namespace ChatClient.Net
         public event Action UserDisconnectedEvent;
         public event Action PopHelpQueueEvent;
         public PacketBuilder errorPacket = new PacketBuilder();
+        private byte errCode = 2;
 
         public Server()
         {
@@ -38,8 +39,8 @@ namespace ChatClient.Net
                     if (!string.IsNullOrEmpty(username))
                     {
                         var connectPacket = new PacketBuilder();
-                        connectPacket.WriteOpCode(0);
-                        connectPacket.WriteMessage(username);
+                        //connectPacket.WriteOpCode(0);
+                        connectPacket.WriteMessage(0,username);
                         _client.Client.Send(connectPacket.GetPacketBytes());
                     }
 
@@ -47,7 +48,7 @@ namespace ChatClient.Net
                 }
                 catch
                 {
-                    errorPacket.WriteMessage("Error 1: Connection to Chat Server failed.");
+                    errorPacket.WriteMessage(errCode,"Error 1: Connection to Chat Server failed.");
                 }
             }
         }
@@ -59,21 +60,21 @@ namespace ChatClient.Net
                 if (_client.Connected)
                 {
                     var requestPacket = new PacketBuilder();
-                    requestPacket.WriteOpCode(15);
-                    requestPacket.WriteMessage(username);
+                    //requestPacket.WriteOpCode(15);
+                    requestPacket.WriteMessage(15,username);
                     try
                     {
                         _client.Client.Send(requestPacket.GetPacketBytes());
                     }
                     catch
                     {
-                        errorPacket.WriteMessage("Error 2: help request failed.");
+                        errorPacket.WriteMessage(errCode,"Error 2: help request failed.");
                     }
                 }
             }
             catch
             {
-                errorPacket.WriteMessage("Error 1: Connection to Chat Server failed.");
+                errorPacket.WriteMessage(errCode,"Error 1: Connection to Chat Server failed.");
             }
         }
 
@@ -110,7 +111,7 @@ namespace ChatClient.Net
                     }
                     catch 
                     {
-                        errorPacket.WriteMessage("Error 3: Forcefully disconnected from host.");
+                        errorPacket.WriteMessage(errCode,"Error 3: Forcefully disconnected from host.");
                     }
                 }
             });
@@ -119,15 +120,15 @@ namespace ChatClient.Net
         public void SendMessageToServer(string message)
         {
             var messagePacket = new PacketBuilder();
-            messagePacket.WriteOpCode(5);
-            messagePacket.WriteMessage(message);
+           // messagePacket.WriteOpCode(5);
+            messagePacket.WriteMessage(5,message);
             try
             {
                 _client.Client.Send(messagePacket.GetPacketBytes());
             }
             catch
             {
-                errorPacket.WriteMessage("Error 4: failed to send message.");
+                errorPacket.WriteMessage(errCode,"Error 4: failed to send message.");
             }
         }
     }
