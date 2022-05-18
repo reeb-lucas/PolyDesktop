@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using ChatClient.MVVM.ViewModel;
+//using ChatClient.MVVM.ViewModel;
 using PolyDesktopGUI_WPF.MVVM.View;
 using System;
 using System.Diagnostics;
