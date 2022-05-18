@@ -132,6 +132,9 @@
     <Compile Include="GroupModePage.xaml.cs">
       <DependentUpon>GroupModePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\Core\RelayCommand.cs" />
+    <Compile Include="MVVM\Model\UserModel.cs" />
+    <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\View\ChatMain.xaml.cs">
       <DependentUpon>ChatMain.xaml</DependentUpon>
     </Compile>
@@ -277,10 +280,6 @@
   <ItemGroup>
     <Resource Include="Resources\PDBackArrowV_J02.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MVVM\Core\" />
-    <Folder Include="MVVM\Model\" />
-    <Folder Include="MVVM\ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

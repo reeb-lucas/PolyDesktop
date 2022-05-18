@@ -139,7 +139,7 @@ namespace PolyDesktopGUI_WPF
                 localSession = new VncPage(this);
             }
             VncFrame.Navigate(localSession);
-
+            SaveButton.Visibility = Visibility.Hidden;
             m_tabItemList.Insert(count - 1, tab);
             m_VNCList.Insert(count - 3, localSession);
             prevIndex = tabControl.SelectedIndex;
@@ -155,7 +155,7 @@ namespace PolyDesktopGUI_WPF
                 {
                     //clear tabControl binding
                     tabControl.DataContext = null;
-
+                    SaveButton.Visibility = Visibility.Hidden;
                     //adds new tab, binds tab control, and seclects
                     MetroTabItem newTab = this.AddTabItem();
                     tabControl.DataContext = m_tabItemList;
@@ -164,9 +164,11 @@ namespace PolyDesktopGUI_WPF
                 else if (tab.Header.Equals("PolyBay")) //PolyBay
                 {
                     m_polyBay.UpdateConnectedList();
+                    SaveButton.Visibility = Visibility.Hidden;
                 }
                 else if (tabControl.SelectedIndex >= 2 && (m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName() != "") && m_VNCList.Count > 1) //dynamic connection
                 {
+                    SaveButton.Visibility = Visibility.Visible;
                     m_VNCList[tabControl.SelectedIndex - 2].Reconnect();
                     if (prevIndex == -1)
                         prevIndex = 2;
@@ -194,6 +196,7 @@ namespace PolyDesktopGUI_WPF
         }
         private void Change_Click(object sender, RoutedEventArgs e)
         {
+            SaveButton.Visibility = Visibility.Hidden;
             ComputerNameBlock.Text = m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName();
             NicknameFlyout.IsOpen = true;
         }

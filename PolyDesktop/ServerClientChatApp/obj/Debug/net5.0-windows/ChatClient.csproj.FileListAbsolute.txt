@@ -120,5 +120,4 @@ S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-
 S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Management.dll
-S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.AssemblyReference.cache
 S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.CopyComplete

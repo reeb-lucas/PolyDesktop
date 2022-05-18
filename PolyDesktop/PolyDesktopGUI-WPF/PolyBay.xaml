@@ -3,12 +3,15 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
+      xmlns:local="clr-namespace:PolyDesktopGUI_WPF" xmlns:viewmodel="clr-namespace:ChatClient.MVVM.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PolyBay"
       Background="{DynamicResource MahApps.Brushes.ThemeBackground}"
       >
+    <Page.DataContext>
+        <viewmodel:MainViewModel/>
+    </Page.DataContext>
     <!--<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="#0090ac" Offset="-1"/>
         <GradientStop Color="#674ea7" Offset="2"/>
@@ -71,12 +74,12 @@
             </Grid>
         </DataTemplate>
     </Page.Resources>
-    <Grid Name="PageSplit">
+    <Grid Name="PageSplit" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Grid Name="PolyBaySide" TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
+        <Grid Name="PolyBaySide">
             <!--<Grid.Background>
             <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
                 <GradientStop Color="#0090ac" Offset="0"/>
@@ -156,7 +159,8 @@
 
                 <DockPanel>
                     <Grid DockPanel.Dock="Top">
-                        <TextBlock Text="Username" Foreground="LightGray" Name="UsernameHint"/>
+                        <!--<TextBlock Text="Username" Foreground="LightGray" Name="UsernameHint"/>-->
+                        <TextBlock Text="Username" Name="UsernameHint"/>
                         <TextBox Height="25"
                          DockPanel.Dock="Top"
                          Background="Transparent"
@@ -166,7 +170,8 @@
                     </Grid>
 
                     <Grid DockPanel.Dock="Top">
-                        <TextBlock Text="IP Address" Foreground="LightGray" Name="ServerAddressHint"/>
+                        <TextBlock Text="IP Address"  Name="ServerAddressHint"/>
+                        <!--<TextBlock Text="IP Address" Foreground="LightGray" Name="ServerAddressHint"/>-->
                         <TextBox Height="25"
                          DockPanel.Dock="Top"
                          Background="Transparent"
@@ -176,7 +181,8 @@
                     </Grid>
 
                     <Grid DockPanel.Dock="Top">
-                        <TextBlock Text="Port Number" Foreground="LightGray" Name="ServerPortHint"/>
+                        <!--<TextBlock Text="Port Number" Foreground="LightGray" Name="ServerPortHint"/>-->
+                        <TextBlock Text="Port Number" Name="ServerPortHint"/>
                         <TextBox Height="25" 
                          DockPanel.Dock="Top"
                          Background="Transparent"

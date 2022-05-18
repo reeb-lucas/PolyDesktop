@@ -3,17 +3,15 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:PolyDesktopGUI_WPF.MVVM.View"
-      xmlns:viewmodel="clr-namespace:ChatClient.MVVM.ViewModel"
+      xmlns:local="clr-namespace:PolyDesktopGUI_WPF.MVVM.View" xmlns:viewmodel="clr-namespace:ChatClient.MVVM.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ChatMain">
-
     <Page.DataContext>
         <viewmodel:MainViewModel/>
     </Page.DataContext>
 
-    <Grid>
+    <Grid TextElement.Foreground="{DynamicResource MahApps.Brushes.Text}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width=" 200"/>
             <ColumnDefinition Width="125*"/>

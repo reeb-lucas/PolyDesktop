@@ -95,6 +95,7 @@ namespace PolyDesktopGUI_WPF
             _tab = tab;
             StartListening();
         }
+
         #region PolyBay Logic
         #region GUI Updates
         /// <summary>
@@ -665,6 +666,7 @@ namespace PolyDesktopGUI_WPF
 
         #endregion
         #endregion
+
         #region PolyChat logic
         private void UsernameBox_TextChanged(object sender, TextChangedEventArgs e)
         {
