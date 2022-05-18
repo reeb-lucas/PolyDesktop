@@ -1,0 +1,7 @@
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyChatServer\bin\Debug\PolyChatServer.exe.config
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyChatServer\bin\Debug\PolyChatServer.exe
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyChatServer\bin\Debug\PolyChatServer.pdb
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyChatServer\obj\Debug\PolyChatServer.csproj.AssemblyReference.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyChatServer\obj\Debug\PolyChatServer.csproj.CoreCompileInputs.cache
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyChatServer\obj\Debug\PolyChatServer.exe
+C:\Users\nate2\Documents\GitHub\PolyDesktop\PolyDesktop\PolyChatServer\obj\Debug\PolyChatServer.pdb
