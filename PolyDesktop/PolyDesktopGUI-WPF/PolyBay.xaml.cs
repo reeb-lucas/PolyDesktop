@@ -1,4 +1,16 @@
-﻿using MahApps.Metro.Controls;
+﻿/**************************************************************
+ * Author: Jerron Rhen
+ * Filename: PolyBay.xaml.cs
+ * Date Created:  2/8/2022
+ * Modifications: 
+ * 
+ **************************************************************/
+/**************************************************************
+ * Overview:
+ *      The file transfer and chat application page to be used 
+ *      as a tab in tabmode
+ **************************************************************/
+using MahApps.Metro.Controls;
 using Microsoft.Win32;
 using NetworkCommsDotNet;
 using NetworkCommsDotNet.Connections;
