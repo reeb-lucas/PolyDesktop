@@ -215,6 +215,7 @@ namespace PolyDesktopGUI_WPF
             {
                 _selectedComputers.RemoveAt(SelectedListBox.SelectedIndex);
                 SelectedListBox.ItemsSource = UpdateSelection();
+                SelectedListBox.SelectedIndex = -1;
             }
         }
 
@@ -484,8 +485,12 @@ namespace PolyDesktopGUI_WPF
            if(SearchListBox.SelectedValue != null && SearchListBox.SelectedItem != null)
             { 
                 //_remoteName = SearchListBox.SelectedValue.ToString();
-                _selectedComputers.Add(SearchListBox.SelectedValue.ToString());
+                if(!_selectedComputers.Contains(SearchListBox.SelectedValue.ToString()))
+                {
+                    _selectedComputers.Add(SearchListBox.SelectedValue.ToString());
+                }
                 SelectedListBox.ItemsSource = UpdateSelection();
+                SearchListBox.SelectedIndex = -1;
             }
         }
         private string[] UpdateSelection() //convert List<> to array of strings to be used as Item source
