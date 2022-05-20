@@ -95,7 +95,7 @@ namespace PolyDesktopGUI_WPF
             _tab = tab;
             StartListening();
         }
-
+        #region PolyBay Logic
         #region GUI Updates
         /// <summary>
         /// Adds a line to the GUI log window
@@ -191,30 +191,6 @@ namespace PolyDesktopGUI_WPF
                 }
             }
         }
-        
-        /// <summary>
-        /// Toggles the use of compression for sending files
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        /// 
-        //private void UseCompression_Changed(object sender, RoutedEventArgs e)
-        //{
-        //    if (this.UseCompression.IsChecked == true)
-        //    {
-        //        //Set the customOptions to use ProtobufSerializer as a serialiser and LZMACompressor as the only data processor
-        //        customOptions = new SendReceiveOptions<ProtobufSerializer, LZMACompressor>();
-        //        AddLineToLog("Enabled compression.");
-        //    }
-        //    else if (this.UseCompression.IsChecked == false)
-        //    {
-        //        //Set the customOptions to use ProtobufSerializer as a serialiser without any data processors
-        //        customOptions = new SendReceiveOptions<ProtobufSerializer>();
-        //        AddLineToLog("Disabled compression.");
-        //    }
-        //}
-        
-
         /// <summary>
         /// Correctly shutdown NetworkComms.Net if the application is closed
         /// </summary>
@@ -232,6 +208,17 @@ namespace PolyDesktopGUI_WPF
             windowClosing = true;
             NetworkComms.Shutdown();
         }
+
+        private void SelectedListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_selectedComputers != null && _selectedComputers.Count > 0 && SelectedListBox.SelectedIndex >= 0)
+            {
+                _selectedComputers.RemoveAt(SelectedListBox.SelectedIndex);
+                SelectedListBox.ItemsSource = UpdateSelection();
+            }
+        }
+
+       
         #endregion
 
         #region Comms
@@ -494,13 +481,12 @@ namespace PolyDesktopGUI_WPF
         }
         private void SearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //Adding computer to preset with default nickname being the computer name
         {
-           if(SearchListBox.SelectedValue != null && SearchListBox.SelectedItem != null && !_selectedComputers.Contains(SearchListBox.SelectedItem))
-            {
-                    //_remoteName = SearchListBox.SelectedValue.ToString();
-                    _selectedComputers.Add(SearchListBox.SelectedValue.ToString());
-                    SelectedListBox.ItemsSource = UpdateSelection();
+           if(SearchListBox.SelectedValue != null && SearchListBox.SelectedItem != null)
+            { 
+                //_remoteName = SearchListBox.SelectedValue.ToString();
+                _selectedComputers.Add(SearchListBox.SelectedValue.ToString());
+                SelectedListBox.ItemsSource = UpdateSelection();
             }
-            SearchListBox.SelectedIndex = -1;
         }
         private string[] UpdateSelection() //convert List<> to array of strings to be used as Item source
         {
@@ -678,19 +664,8 @@ namespace PolyDesktopGUI_WPF
         }
 
         #endregion
-        private void SelectedListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (_selectedComputers != null && _selectedComputers.Count > 0 && SelectedListBox.SelectedIndex >= 0)
-            {
-                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Unselect this?", "Unselection Confirmation", System.Windows.MessageBoxButton.YesNo);
-                if (messageBoxResult == MessageBoxResult.Yes)
-                {
-                    _selectedComputers.RemoveAt(SelectedListBox.SelectedIndex);
-                    SelectedListBox.ItemsSource = UpdateSelection();
-                }
-            }
-            SelectedListBox.SelectedIndex = -1;
-        }
+        #endregion
+        #region PolyChat logic
         private void UsernameBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             UsernameHint.Visibility = Visibility.Visible;
@@ -717,7 +692,6 @@ namespace PolyDesktopGUI_WPF
                 ServerPortHint.Visibility = Visibility.Hidden;
             }
         }
-
         private void MessageBox_KeyDown(object sender, KeyEventArgs e)
         {
             //Send the message in textbox if "Enter" key is pressed, and the textbox is not empty.
@@ -728,12 +702,11 @@ namespace PolyDesktopGUI_WPF
                 {
                     MessageList.Visibility = Visibility.Visible;
                 }
-                
+
                 SendButton.Command.Execute(SendButton.Content);
                 MessageBox.Text = ""; //Clear Content
             }
         }
-
         private void SendButton_Click(object sender, RoutedEventArgs e)
         {
             //Update Message list to be visible after message sent first time
@@ -745,7 +718,6 @@ namespace PolyDesktopGUI_WPF
             SendButton.Command.Execute(SendButton.Content);
             MessageBox.Text = ""; //Clear Content
         }
-
         private void ChangeListButton_Click(object sender, RoutedEventArgs e)
         {
             //Change content of button, then change visibility of listview objects
@@ -762,12 +734,12 @@ namespace PolyDesktopGUI_WPF
                 ConnectedUsers.Visibility = Visibility.Visible;
             }
         }
-
         private void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
             //Make connected users visible after user is connected
             //(This assumes connection works on the first click)
             ConnectedUsers.Visibility = Visibility.Visible;
         }
+        #endregion
     }
 }

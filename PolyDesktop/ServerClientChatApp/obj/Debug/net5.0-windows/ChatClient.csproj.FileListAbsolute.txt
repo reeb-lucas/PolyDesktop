@@ -111,3 +111,14 @@ C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientCha
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.pdb
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.genruntimeconfig.cache
 C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ref\ChatClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\System.CodeDom.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\System.Management.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Management.dll
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.AssemblyReference.cache
+S:\School\Fall2021\PolyDesktop\PolyDesktop\ServerClientChatApp\obj\Debug\net5.0-windows\ChatClient.csproj.CopyComplete
