@@ -132,6 +132,7 @@
     <Compile Include="GroupModePage.xaml.cs">
       <DependentUpon>GroupModePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HSP.cs" />
     <Compile Include="MVVM\Core\RelayCommand.cs" />
     <Compile Include="MVVM\Model\UserModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />

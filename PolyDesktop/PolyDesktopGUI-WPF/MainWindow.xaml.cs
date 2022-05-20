@@ -20,6 +20,7 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
+using Hardwarespecs;
 
 namespace PolyDesktopGUI_WPF
 {
@@ -38,6 +39,8 @@ namespace PolyDesktopGUI_WPF
             InitializeComponent();
             ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
             ThemeManager.Current.SyncTheme();
+
+            HardwareSpecPuller.WriteToDB();
 
             App.Current.Properties["AdvancedMode"] = false;
             AdvancedSwitch.IsOn = false;
