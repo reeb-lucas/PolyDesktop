@@ -10,6 +10,11 @@
       Title="PolyBay"
       Background="{DynamicResource MahApps.Brushes.ThemeBackground}"
       >
+
+    <Page.DataContext>
+        <viewmodel:MainViewModel/>
+    </Page.DataContext>
+
     <!--<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="#0090ac" Offset="-1"/>
         <GradientStop Color="#674ea7" Offset="2"/>
