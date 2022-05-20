@@ -101,9 +101,7 @@
 
         <StackPanel Grid.Column="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
 
-            <!--Start Collapsed until SendButton pressed-->
             <ListView x:Name="MessageList"
-                      Visibility="Collapsed"
                       ItemsSource="{Binding Messages}"/>
 
             <Grid>
