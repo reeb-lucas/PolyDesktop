@@ -147,7 +147,7 @@
         </Grid>
 
         <Grid Grid.Column="1">
-            <Grid>
+            <Grid Height="Auto">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width=" 200"/>
                     <ColumnDefinition Width="125*"/>
@@ -233,14 +233,14 @@
 
                 </DockPanel>
 
-                <StackPanel Grid.Column="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+                <StackPanel Grid.Column="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Height="Auto">
 
                     <!--Start Collapsed until SendButton pressed-->
                     <ListView x:Name="MessageList"
                       Visibility="Collapsed"
                       ItemsSource="{Binding Messages}"/>
 
-                    <Grid>
+                    <Grid Height="Auto">
 
                         <TextBox x:Name="MessageBox"
                          Grid.Column="0"

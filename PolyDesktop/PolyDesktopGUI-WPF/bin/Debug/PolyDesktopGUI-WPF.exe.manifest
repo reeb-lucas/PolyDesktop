@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AzdGehZoD6wdHtxw3tmTiXMZQq99Ilq/87kDVlRVyDs=</dsig:DigestValue>
+        <dsig:DigestValue>ubklTMjcyXmdiw7xg0cYYIcRjU18oC/t7a/2ButO+FU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -121,7 +121,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Xl0P2gkoAMmXvfKm+CZnbicrWLVYC/whbs5EiVuB0sI=</dsig:DigestValue>
+        <dsig:DigestValue>uQDHTKylUPqP6tnFWNydaLBOAihS7OWlwe53P1NRusk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -133,7 +133,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xw9PBFI+E73ePBDMxtnoZ0hArgY94wTEBGWyIOIKPnc=</dsig:DigestValue>
+        <dsig:DigestValue>aC3txQFe2nUIPS+RNBoGXzEpDMiM88wJ0l4vA86iQvg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -150,14 +150,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Buffers.dll" size="20856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Buffers.dll" size="21376">
       <assemblyIdentity name="System.Buffers" version="4.0.3.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rMzPvkXZ8I/+7ZkW43sz6YxlvgEs//bn+ntnIQzh/vs=</dsig:DigestValue>
+        <dsig:DigestValue>xl//YDsoPclm0ai3MMEdXl51DoAhvSRkBhL2zD8sb7c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

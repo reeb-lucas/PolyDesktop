@@ -6,7 +6,7 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:PolyDesktopGUI_WPF"
         mc:Ignorable="d"
-        Title="PolyDesktop" Height="720" Width="1280" MinHeight="1000" MinWidth="1280"
+        Title="PolyDesktop" Height="720" Width="1280" MinHeight="720" MinWidth="1280"
         WindowState="Maximized" ResizeMode="CanMinimize" WindowTitleBrush="#674ea7" NonActiveWindowTitleBrush="#0090ac">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
