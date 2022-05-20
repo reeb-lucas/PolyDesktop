@@ -16,6 +16,7 @@ namespace ChatClient.MVVM.ViewModel
         public ObservableCollection<UserModel> Users { get; set; }
         public ObservableCollection<UserModel> HelpQueue { get; set; }
         public ObservableCollection<string> Messages { get; set; }
+        public RelayCommand PopHelpQueueCommand { get; set; }
         public RelayCommand ConnectToServerCommand { get; set; }
         public RelayCommand RequestHelpCommand { get; set; }
         public RelayCommand DisconnectFromServerCommand { get; set; }
@@ -47,6 +48,8 @@ namespace ChatClient.MVVM.ViewModel
             RequestHelpCommand = new RelayCommand(o => _server.RequestHelp(Username), o => !string.IsNullOrEmpty(Username));
 
             SendMessageCommand = new RelayCommand(o => _server.SendMessageToServer(Message), o => !string.IsNullOrEmpty(Message));
+
+            PopHelpQueueCommand = new RelayCommand(o => _server.PopHelpQueue());
             #endregion
         }
 

@@ -702,8 +702,11 @@ namespace PolyDesktopGUI_WPF
                 {
                     MessageList.Visibility = Visibility.Visible;
                 }
-
-                SendButton.Command.Execute(SendButton.Content);
+                try
+                {
+                    SendButton.Command.Execute(SendButton.Content);
+                }
+                catch { }
                 MessageBox.Text = ""; //Clear Content
             }
         }

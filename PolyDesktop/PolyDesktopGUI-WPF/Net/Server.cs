@@ -76,6 +76,20 @@ namespace ChatClient.Net
             }
         }
 
+        public void PopHelpQueue()
+        {
+            var popQueuePacket = new PacketBuilder();
+            popQueuePacket.WriteOpCode(20);
+            try
+            {
+                _client.Client.Send(popQueuePacket.GetPacketBytes());
+            }
+            catch
+            {
+                //TODO, Add error message to display somewhere
+            }
+        }
+
         private void ReadPackets()
         {
             Task.Run(() =>
