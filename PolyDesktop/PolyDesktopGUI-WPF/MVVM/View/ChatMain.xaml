@@ -101,7 +101,6 @@
 
             <!--Start Collapsed until SendButton pressed-->
             <ListView x:Name="MessageList"
-                      Visibility="Collapsed"
                       ItemsSource="{Binding Messages}"/>
 
             <Grid>
