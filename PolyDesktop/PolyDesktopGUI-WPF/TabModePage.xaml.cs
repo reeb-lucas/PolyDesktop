@@ -282,8 +282,11 @@ namespace PolyDesktopGUI_WPF
         {
             int tempIndex = tabControl.SelectedIndex;
             m_tabItemList.RemoveAt(tempIndex);
-            m_VNCList[tempIndex - 2].Disconnect();
-            m_VNCList.Remove(m_VNCList[tempIndex - 2]);
+            if (tempIndex - 2 <= m_VNCList.Count)
+            {
+                m_VNCList[tempIndex - 2].Disconnect();
+                m_VNCList.Remove(m_VNCList[tempIndex - 2]);
+            }
             tabControl.DataContext = null;
             tabControl.DataContext = m_tabItemList;
             tabControl.SelectedIndex = tempIndex - 1;

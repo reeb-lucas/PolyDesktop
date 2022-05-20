@@ -426,3 +426,6 @@ S:\School\Fall2021\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\Generate
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MVVM\View\ChatMain.g.cs
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\lucas\Documents\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MVVM\View\ChatMain.baml
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MVVM\View\ChatMain.g.cs
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\japre\OneDrive\Documents\GitHub\PolyDesktop\PolyDesktop\PolyDesktopGUI-WPF\obj\Debug\MVVM\View\ChatMain.baml
