@@ -165,10 +165,12 @@ namespace PolyDesktopGUI_WPF
                     MetroTabItem newTab = this.AddTabItem();
                     tabControl.DataContext = m_tabItemList;
                     tabControl.SelectedItem = newTab;
+                    SaveButton.Visibility = Visibility.Visible;
                 }
                 else if (tab.Header.Equals("PolyBay")) //PolyBay
                 {
                     m_polyBay.UpdateConnectedList();
+                    SaveButton.Visibility = Visibility.Hidden;
                 }
                 else if (tabControl.SelectedIndex >= 2 && (m_VNCList[tabControl.SelectedIndex - 2].GetConnectedName() != "") && m_VNCList.Count > 1) //dynamic connection
                 {
@@ -178,6 +180,7 @@ namespace PolyDesktopGUI_WPF
                     if (prevIndex >= 2 && prevIndex - 2 < m_VNCList.Count)
                         m_VNCList[prevIndex - 2].Disconnect();
                     prevIndex = tabControl.SelectedIndex;
+                    SaveButton.Visibility = Visibility.Visible;
                 }
             }
         }
